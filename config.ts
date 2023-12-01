@@ -1,9 +1,9 @@
 import { Config } from "./src/config";
 
 export const defaultConfig: Config = {
-  url: "https://developer.apple.com/documentation/cloudkit/",
-  match: "https://developer.apple.com/documentation/cloudkit/**",
+  url: "https://developer.apple.com/documentation/healthkit/",
+  match: "https://developer.apple.com/documentation/healthkit/**",
   selector: `.doc-content`,
-  maxPagesToCrawl: 1500,
-  outputFileName: "cloudkit.json",
+  maxPagesToCrawl: 2500,
+  outputFileName: "healthkit.json",
 };
