@@ -13,5 +13,5 @@ storage
 !tsconfig.json
 
 # any output from the crawler
-*.json
+
 pnpm-lock.yaml

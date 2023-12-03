@@ -1,9 +1,9 @@
 import { Config } from "./src/config";
 
 export const defaultConfig: Config = {
-  url: "https://developer.apple.com/documentation/healthkit/",
-  match: "https://developer.apple.com/documentation/healthkit/**",
+  url: "https://developer.apple.com/documentation/coredata",
+  match: "https://developer.apple.com/documentation/coredata/**",
   selector: `.doc-content`,
-  maxPagesToCrawl: 2500,
-  outputFileName: "healthkit.json",
+  maxPagesToCrawl: 25000,
+  outputFileName: "coredata.json",
 };
