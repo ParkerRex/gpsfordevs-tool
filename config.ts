@@ -5,5 +5,5 @@ export const defaultConfig: Config = {
   match: "https://developer.apple.com/documentation/avfoundation/**",
   selector: `.doc-content`,
   maxPagesToCrawl: 25000,
-  outputFileName: "observation.json",
+  outputFileName: "avfoundation.json",
 };
