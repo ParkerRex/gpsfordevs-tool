@@ -1,9 +1,9 @@
 import { Config } from "./src/config";
 
 export const defaultConfig: Config = {
-  url: "https://developer.apple.com/documentation/pencilkit",
-  match: "https://developer.apple.com/documentation/pencilkit/**",
+  url: "https://developer.apple.com/documentation/foundation",
+  match: "https://developer.apple.com/documentation/foundation/**",
   selector: `.doc-content`,
   maxPagesToCrawl: 25000,
-  outputFileName: "pencilkit.json",
+  outputFileName: "foundation.json",
 };
