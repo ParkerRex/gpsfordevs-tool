@@ -1,9 +1,9 @@
 import { Config } from "./src/config";
 
 export const defaultConfig: Config = {
-  url: "https://developer.apple.com/documentation/avfoundation",
-  match: "https://developer.apple.com/documentation/avfoundation/**",
+  url: "https://developer.apple.com/documentation/Vision",
+  match: "https://developer.apple.com/documentation/Vision/**",
   selector: `.doc-content`,
-  maxPagesToCrawl: 25000,
-  outputFileName: "avfoundation.json",
+  maxPagesToCrawl: 100000,
+  outputFileName: "vision.json",
 };
