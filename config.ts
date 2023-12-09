@@ -1,9 +1,9 @@
 import { Config } from "./src/config";
 
 export const defaultConfig: Config = {
-  url: "https://developer.apple.com/documentation/Vision",
-  match: "https://developer.apple.com/documentation/Vision/**",
+  url: "https://developer.apple.com/documentation/charts",
+  match: "https://developer.apple.com/documentation/charts/**",
   selector: `.doc-content`,
   maxPagesToCrawl: 100000,
-  outputFileName: "vision.json",
+  outputFileName: "swiftcharts.json",
 };
