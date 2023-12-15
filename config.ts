@@ -1,9 +1,9 @@
 import { Config } from "./src/config";
 
 export const defaultConfig: Config = {
-  url: "https://developer.apple.com/documentation/musickit",
-  match: "https://developer.apple.com/documentation/musickit/**",
+  url: "https://developer.apple.com/documentation/Swift",
+  match: "https://developer.apple.com/documentation/Swift/**",
   selector: `.doc-content`,
-  maxPagesToCrawl: 1000000,
-  outputFileName: "musickit.json",
+  maxPagesToCrawl: 10000000,
+  outputFileName: "Swift.json",
 };
