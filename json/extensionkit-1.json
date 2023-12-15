@@ -1,0 +1,187 @@
+[
+  {
+    "title": "buildBlock(_:_:_:_:_:_:_:_:_:) | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/appextensionscenebuilder/3991455-buildblock",
+    "html": "Return Value\n\nThe composed scene.\n\nSee Also\nBuilding Content\nstatic func buildBlock<Content>(Content) -> AppExtensionScene\nPasses through a single extension scene unmodified.\nstatic func buildBlock<C0, C1>(C0, C1) -> AppExtensionScene\nBuilds an extension scene by combining two scenes.\nstatic func buildBlock<C0, C1, C2>(C0, C1, C2) -> AppExtensionScene\nBuilds an extension scene by combining three scenes.\nstatic func buildBlock<C0, C1, C2, C3>(C0, C1, C2, C3) -> AppExtensionScene\nBuilds an extension scene by combining four scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4>(C0, C1, C2, C3, C4) -> AppExtensionScene\nBuilds an extension scene by combining five scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5>(C0, C1, C2, C3, C4, C5) -> AppExtensionScene\nBuilds an extension scene by combining six scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6>(C0, C1, C2, C3, C4, C5, C6) -> AppExtensionScene\nBuilds an extension scene by combining seven scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7>(C0, C1, C2, C3, C4, C5, C6, C7) -> AppExtensionScene\nBuilds an extension scene by combining eight scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7, C8, C9>(C0, C1, C2, C3, C4, C5, C6, C7, C8, C9) -> AppExtensionScene\nBuilds an extension scene by combining ten scenes."
+  },
+  {
+    "title": "init(appExtension:sceneID:) | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/exhostviewcontroller/configuration/3991623-init",
+    "html": "Parameters\nappExtension\n\nThe app extension for this configuration object.\n\nsceneID\n\nThe unique identifier for the scene that uses this configuration."
+  },
+  {
+    "title": "hostViewControllerWillDeactivate(_:error:) | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/exhostviewcontrollerdelegate/3955291-hostviewcontrollerwilldeactivate",
+    "html": "Parameters\nviewController\n\nThe view controller for the extension that’s disconnecting\n\nerror\n\nAn error object containing information about why the object disconnected, or nil if it’s disconnecting without error.\n\nDiscussion\n\nCalled when the host view controller stops hosting the remote user interface. This can occur when the extension exits or when the view controller’s configuration property changes.\n\nSee Also\nDelegate Methods\nfunc hostViewControllerDidActivate(EXHostViewController)\nA delegate method the view controller calls when a connection succeeds."
+  },
+  {
+    "title": "appExtension | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/exhostviewcontroller/configuration/3991622-appextension",
+    "html": "See Also\nIdentifying the Extension\nvar sceneID: String\nThe unique identifier for this configuration object’s user interface."
+  },
+  {
+    "title": "buildBlock(_:_:_:_:_:_:) | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/appextensionscenebuilder/3991452-buildblock",
+    "html": "Return Value\n\nThe composed scene.\n\nSee Also\nBuilding Content\nstatic func buildBlock<Content>(Content) -> AppExtensionScene\nPasses through a single extension scene unmodified.\nstatic func buildBlock<C0, C1>(C0, C1) -> AppExtensionScene\nBuilds an extension scene by combining two scenes.\nstatic func buildBlock<C0, C1, C2>(C0, C1, C2) -> AppExtensionScene\nBuilds an extension scene by combining three scenes.\nstatic func buildBlock<C0, C1, C2, C3>(C0, C1, C2, C3) -> AppExtensionScene\nBuilds an extension scene by combining four scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4>(C0, C1, C2, C3, C4) -> AppExtensionScene\nBuilds an extension scene by combining five scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6>(C0, C1, C2, C3, C4, C5, C6) -> AppExtensionScene\nBuilds an extension scene by combining seven scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7>(C0, C1, C2, C3, C4, C5, C6, C7) -> AppExtensionScene\nBuilds an extension scene by combining eight scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7, C8>(C0, C1, C2, C3, C4, C5, C6, C7, C8) -> AppExtensionScene\nBuilds an extension scene by combining nine scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7, C8, C9>(C0, C1, C2, C3, C4, C5, C6, C7, C8, C9) -> AppExtensionScene\nBuilds an extension scene by combining ten scenes."
+  },
+  {
+    "title": "sceneID | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/exhostviewcontroller/configuration/3991624-sceneid",
+    "html": "See Also\nIdentifying the Extension\nvar appExtension: AppExtensionIdentity\nThe app extension for this configuration object."
+  },
+  {
+    "title": "buildBlock(_:_:_:_:_:_:_:_:_:_:) | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/appextensionscenebuilder/3991456-buildblock",
+    "html": "Return Value\n\nThe composed scene.\n\nSee Also\nBuilding Content\nstatic func buildBlock<Content>(Content) -> AppExtensionScene\nPasses through a single extension scene unmodified.\nstatic func buildBlock<C0, C1>(C0, C1) -> AppExtensionScene\nBuilds an extension scene by combining two scenes.\nstatic func buildBlock<C0, C1, C2>(C0, C1, C2) -> AppExtensionScene\nBuilds an extension scene by combining three scenes.\nstatic func buildBlock<C0, C1, C2, C3>(C0, C1, C2, C3) -> AppExtensionScene\nBuilds an extension scene by combining four scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4>(C0, C1, C2, C3, C4) -> AppExtensionScene\nBuilds an extension scene by combining five scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5>(C0, C1, C2, C3, C4, C5) -> AppExtensionScene\nBuilds an extension scene by combining six scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6>(C0, C1, C2, C3, C4, C5, C6) -> AppExtensionScene\nBuilds an extension scene by combining seven scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7>(C0, C1, C2, C3, C4, C5, C6, C7) -> AppExtensionScene\nBuilds an extension scene by combining eight scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7, C8>(C0, C1, C2, C3, C4, C5, C6, C7, C8) -> AppExtensionScene\nBuilds an extension scene by combining nine scenes."
+  },
+  {
+    "title": "buildBlock(_:_:_:_:_:_:_:_:) | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/appextensionscenebuilder/3991454-buildblock",
+    "html": "Return Value\n\nThe composed scene.\n\nSee Also\nBuilding Content\nstatic func buildBlock<Content>(Content) -> AppExtensionScene\nPasses through a single extension scene unmodified.\nstatic func buildBlock<C0, C1>(C0, C1) -> AppExtensionScene\nBuilds an extension scene by combining two scenes.\nstatic func buildBlock<C0, C1, C2>(C0, C1, C2) -> AppExtensionScene\nBuilds an extension scene by combining three scenes.\nstatic func buildBlock<C0, C1, C2, C3>(C0, C1, C2, C3) -> AppExtensionScene\nBuilds an extension scene by combining four scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4>(C0, C1, C2, C3, C4) -> AppExtensionScene\nBuilds an extension scene by combining five scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5>(C0, C1, C2, C3, C4, C5) -> AppExtensionScene\nBuilds an extension scene by combining six scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6>(C0, C1, C2, C3, C4, C5, C6) -> AppExtensionScene\nBuilds an extension scene by combining seven scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7, C8>(C0, C1, C2, C3, C4, C5, C6, C7, C8) -> AppExtensionScene\nBuilds an extension scene by combining nine scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7, C8, C9>(C0, C1, C2, C3, C4, C5, C6, C7, C8, C9) -> AppExtensionScene\nBuilds an extension scene by combining ten scenes."
+  },
+  {
+    "title": "hostViewControllerDidActivate(_:) | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/exhostviewcontrollerdelegate/3955290-hostviewcontrollerdidactivate",
+    "html": "Parameters\nviewController\n\nThe user interface object from the remote process.\n\nDiscussion\n\nThis delegate method gets called when the extension process has launched and the remote scene connects. After this delegate method gets called the host view controller can establish an XPC connection with the scene in the extension process.\n\nSee Also\nDelegate Methods\nfunc hostViewControllerWillDeactivate(EXHostViewController, error: Error?)\nA delegate method the host view controller calls when an extension disconnects."
+  },
+  {
+    "title": "buildBlock(_:_:_:_:) | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/appextensionscenebuilder/3991450-buildblock",
+    "html": "See Also\nBuilding Content\nstatic func buildBlock<Content>(Content) -> AppExtensionScene\nPasses through a single extension scene unmodified.\nstatic func buildBlock<C0, C1>(C0, C1) -> AppExtensionScene\nBuilds an extension scene by combining two scenes.\nstatic func buildBlock<C0, C1, C2>(C0, C1, C2) -> AppExtensionScene\nBuilds an extension scene by combining three scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4>(C0, C1, C2, C3, C4) -> AppExtensionScene\nBuilds an extension scene by combining five scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5>(C0, C1, C2, C3, C4, C5) -> AppExtensionScene\nBuilds an extension scene by combining six scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6>(C0, C1, C2, C3, C4, C5, C6) -> AppExtensionScene\nBuilds an extension scene by combining seven scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7>(C0, C1, C2, C3, C4, C5, C6, C7) -> AppExtensionScene\nBuilds an extension scene by combining eight scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7, C8>(C0, C1, C2, C3, C4, C5, C6, C7, C8) -> AppExtensionScene\nBuilds an extension scene by combining nine scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7, C8, C9>(C0, C1, C2, C3, C4, C5, C6, C7, C8, C9) -> AppExtensionScene\nBuilds an extension scene by combining ten scenes."
+  },
+  {
+    "title": "EXHostViewController.Configuration | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/exhostviewcontroller/configuration",
+    "html": "Topics\nCreating a Configuration Object\ninit(appExtension: AppExtensionIdentity, sceneID: String)\nCreates a new configuration object.\nIdentifying the Extension\nvar appExtension: AppExtensionIdentity\nThe app extension for this configuration object.\nvar sceneID: String\nThe unique identifier for this configuration object’s user interface.\nSee Also\nConfiguring the View Controller\nvar configuration: EXHostViewController.Configuration?\nThe view controller’s configuration.\nvar placeholderView: NSView\nA view that’s used when the view controller has no content to display."
+  },
+  {
+    "title": "buildBlock(_:_:_:_:_:_:_:) | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/appextensionscenebuilder/3991453-buildblock",
+    "html": "Return Value\n\nThe composed scene.\n\nSee Also\nBuilding Content\nstatic func buildBlock<Content>(Content) -> AppExtensionScene\nPasses through a single extension scene unmodified.\nstatic func buildBlock<C0, C1>(C0, C1) -> AppExtensionScene\nBuilds an extension scene by combining two scenes.\nstatic func buildBlock<C0, C1, C2>(C0, C1, C2) -> AppExtensionScene\nBuilds an extension scene by combining three scenes.\nstatic func buildBlock<C0, C1, C2, C3>(C0, C1, C2, C3) -> AppExtensionScene\nBuilds an extension scene by combining four scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4>(C0, C1, C2, C3, C4) -> AppExtensionScene\nBuilds an extension scene by combining five scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5>(C0, C1, C2, C3, C4, C5) -> AppExtensionScene\nBuilds an extension scene by combining six scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7>(C0, C1, C2, C3, C4, C5, C6, C7) -> AppExtensionScene\nBuilds an extension scene by combining eight scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7, C8>(C0, C1, C2, C3, C4, C5, C6, C7, C8) -> AppExtensionScene\nBuilds an extension scene by combining nine scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7, C8, C9>(C0, C1, C2, C3, C4, C5, C6, C7, C8, C9) -> AppExtensionScene\nBuilds an extension scene by combining ten scenes."
+  },
+  {
+    "title": "buildBlock(_:_:_:_:_:) | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/appextensionscenebuilder/3991451-buildblock",
+    "html": "Return Value\n\nThe composed scene.\n\nSee Also\nBuilding Content\nstatic func buildBlock<Content>(Content) -> AppExtensionScene\nPasses through a single extension scene unmodified.\nstatic func buildBlock<C0, C1>(C0, C1) -> AppExtensionScene\nBuilds an extension scene by combining two scenes.\nstatic func buildBlock<C0, C1, C2>(C0, C1, C2) -> AppExtensionScene\nBuilds an extension scene by combining three scenes.\nstatic func buildBlock<C0, C1, C2, C3>(C0, C1, C2, C3) -> AppExtensionScene\nBuilds an extension scene by combining four scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5>(C0, C1, C2, C3, C4, C5) -> AppExtensionScene\nBuilds an extension scene by combining six scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6>(C0, C1, C2, C3, C4, C5, C6) -> AppExtensionScene\nBuilds an extension scene by combining seven scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7>(C0, C1, C2, C3, C4, C5, C6, C7) -> AppExtensionScene\nBuilds an extension scene by combining eight scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7, C8>(C0, C1, C2, C3, C4, C5, C6, C7, C8) -> AppExtensionScene\nBuilds an extension scene by combining nine scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7, C8, C9>(C0, C1, C2, C3, C4, C5, C6, C7, C8, C9) -> AppExtensionScene\nBuilds an extension scene by combining ten scenes."
+  },
+  {
+    "title": "buildBlock(_:_:_:) | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/appextensionscenebuilder/3991449-buildblock",
+    "html": "Return Value\n\nThe composed scene.\n\nSee Also\nBuilding Content\nstatic func buildBlock<Content>(Content) -> AppExtensionScene\nPasses through a single extension scene unmodified.\nstatic func buildBlock<C0, C1>(C0, C1) -> AppExtensionScene\nBuilds an extension scene by combining two scenes.\nstatic func buildBlock<C0, C1, C2, C3>(C0, C1, C2, C3) -> AppExtensionScene\nBuilds an extension scene by combining four scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4>(C0, C1, C2, C3, C4) -> AppExtensionScene\nBuilds an extension scene by combining five scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5>(C0, C1, C2, C3, C4, C5) -> AppExtensionScene\nBuilds an extension scene by combining six scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6>(C0, C1, C2, C3, C4, C5, C6) -> AppExtensionScene\nBuilds an extension scene by combining seven scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7>(C0, C1, C2, C3, C4, C5, C6, C7) -> AppExtensionScene\nBuilds an extension scene by combining eight scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7, C8>(C0, C1, C2, C3, C4, C5, C6, C7, C8) -> AppExtensionScene\nBuilds an extension scene by combining nine scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7, C8, C9>(C0, C1, C2, C3, C4, C5, C6, C7, C8, C9) -> AppExtensionScene\nBuilds an extension scene by combining ten scenes."
+  },
+  {
+    "title": "buildBlock(_:_:) | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/appextensionscenebuilder/3991448-buildblock",
+    "html": "Return Value\n\nThe composed scene.\n\nSee Also\nBuilding Content\nstatic func buildBlock<Content>(Content) -> AppExtensionScene\nPasses through a single extension scene unmodified.\nstatic func buildBlock<C0, C1, C2>(C0, C1, C2) -> AppExtensionScene\nBuilds an extension scene by combining three scenes.\nstatic func buildBlock<C0, C1, C2, C3>(C0, C1, C2, C3) -> AppExtensionScene\nBuilds an extension scene by combining four scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4>(C0, C1, C2, C3, C4) -> AppExtensionScene\nBuilds an extension scene by combining five scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5>(C0, C1, C2, C3, C4, C5) -> AppExtensionScene\nBuilds an extension scene by combining six scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6>(C0, C1, C2, C3, C4, C5, C6) -> AppExtensionScene\nBuilds an extension scene by combining seven scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7>(C0, C1, C2, C3, C4, C5, C6, C7) -> AppExtensionScene\nBuilds an extension scene by combining eight scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7, C8>(C0, C1, C2, C3, C4, C5, C6, C7, C8) -> AppExtensionScene\nBuilds an extension scene by combining nine scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7, C8, C9>(C0, C1, C2, C3, C4, C5, C6, C7, C8, C9) -> AppExtensionScene\nBuilds an extension scene by combining ten scenes."
+  },
+  {
+    "title": "buildBlock(_:) | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/appextensionscenebuilder/3991447-buildblock",
+    "html": "Return Value\n\nThe composed scene.\n\nSee Also\nBuilding Content\nstatic func buildBlock<C0, C1>(C0, C1) -> AppExtensionScene\nBuilds an extension scene by combining two scenes.\nstatic func buildBlock<C0, C1, C2>(C0, C1, C2) -> AppExtensionScene\nBuilds an extension scene by combining three scenes.\nstatic func buildBlock<C0, C1, C2, C3>(C0, C1, C2, C3) -> AppExtensionScene\nBuilds an extension scene by combining four scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4>(C0, C1, C2, C3, C4) -> AppExtensionScene\nBuilds an extension scene by combining five scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5>(C0, C1, C2, C3, C4, C5) -> AppExtensionScene\nBuilds an extension scene by combining six scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6>(C0, C1, C2, C3, C4, C5, C6) -> AppExtensionScene\nBuilds an extension scene by combining seven scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7>(C0, C1, C2, C3, C4, C5, C6, C7) -> AppExtensionScene\nBuilds an extension scene by combining eight scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7, C8>(C0, C1, C2, C3, C4, C5, C6, C7, C8) -> AppExtensionScene\nBuilds an extension scene by combining nine scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7, C8, C9>(C0, C1, C2, C3, C4, C5, C6, C7, C8, C9) -> AppExtensionScene\nBuilds an extension scene by combining ten scenes."
+  },
+  {
+    "title": "EXHostViewControllerDelegate | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/exhostviewcontrollerdelegate",
+    "html": "Overview\n\nTopics\nDelegate Methods\nfunc hostViewControllerDidActivate(EXHostViewController)\nA delegate method the view controller calls when a connection succeeds.\nfunc hostViewControllerWillDeactivate(EXHostViewController, error: Error?)\nA delegate method the host view controller calls when an extension disconnects.\nRelationships\nInherits From\nNSObjectProtocol\nSee Also\nConnecting to the Extension\nfunc makeXPCConnection() -> NSXPCConnection\nAttempts to connect to the extension over XPC.\nvar delegate: EXHostViewControllerDelegate?\nThe connection delegate."
+  },
+  {
+    "title": "init(_:configuration:) | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/appextensionsceneconfiguration/3991460-init",
+    "html": "Parameters\ncontent\n\nThe SwiftUI closure from which to build the user interface for the scene configuration.\n\nconfiguration\n\nAn optional extension configuration file.\n\nDiscussion\n\nTo provide a user interface, the extension’s configuration must be an AppExtensionSceneConfiguration, which combines an AppExtensionScene with an optional non-UI AppExtensionConfiguration. The configuration value you pass manages global interprocess comunications with the host process, while the content value you pass defines the extension’s user interface.\n\nSee Also\nCreating Configuration Files\ninit<Content>(() -> Content)\nCreates a scene configuration from a closure."
+  },
+  {
+    "title": "accept(connection:) | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/appextensionsceneconfiguration/3991458-accept",
+    "html": "Parameters\nconnection\n\nThe incoming XPC connection object.\n\nReturn Value\n\nA boolean value that indicates whether the extension accepts the connection.\n\nRelationships\nFrom Protocol\nAppExtensionConfiguration"
+  },
+  {
+    "title": "init(_:) | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/appextensionsceneconfiguration/3991459-init",
+    "html": "Parameters\ncontent\n\nThe SwiftUI closure from which to build the user interface for the scene configuration.\n\nSee Also\nCreating Configuration Files\ninit<Content, Configuration>(() -> Content, configuration: Configuration?)\nCreates a scene configuration object from a closure and extension configuration."
+  },
+  {
+    "title": "debugDescription | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/primitiveappextensionscene/3991467-debugdescription",
+    "html": "Relationships\nFrom Protocol\nCustomDebugStringConvertible\nSee Also\nDefining the Scene\nvar body: Never\nThe scene’s user interface.\ntypealias PrimitiveAppExtensionScene.Body\nThe type for the scene’s user interface."
+  },
+  {
+    "title": "PrimitiveAppExtensionScene.Body | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/primitiveappextensionscene/body",
+    "html": "See Also\nDefining the Scene\nvar body: Never\nThe scene’s user interface.\nvar debugDescription: String\nA string that provides information about the scene."
+  },
+  {
+    "title": "Body | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/appextensionscene/3991444-body",
+    "html": "Required\n\nSee Also\nConfiguring the App Extension\nvar body: Self.Body\nThe content and behavior of the scene’s user interface.\n\nRequired Default implementation provided."
+  },
+  {
+    "title": "body | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/primitiveappextensionscene/3991466-body",
+    "html": "Relationships\nFrom Protocol\nAppExtensionScene\nSee Also\nDefining the Scene\ntypealias PrimitiveAppExtensionScene.Body\nThe type for the scene’s user interface.\nvar debugDescription: String\nA string that provides information about the scene."
+  },
+  {
+    "title": "placeholderView | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/exhostviewcontroller/3955288-placeholderview",
+    "html": "See Also\nConfiguring the View Controller\nvar configuration: EXHostViewController.Configuration?\nThe view controller’s configuration.\nstruct EXHostViewController.Configuration\nAn object that holds configuration options for a host view controller."
+  },
+  {
+    "title": "makeXPCConnection() | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/exhostviewcontroller/3955287-makexpcconnection",
+    "html": "Return Value\n\nAn object representing the connection.\n\nSee Also\nConnecting to the Extension\nvar delegate: EXHostViewControllerDelegate?\nThe connection delegate.\nprotocol EXHostViewControllerDelegate\nThe delegate for a hosted view controller."
+  },
+  {
+    "title": "delegate | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/exhostviewcontroller/3955286-delegate",
+    "html": "See Also\nConnecting to the Extension\nfunc makeXPCConnection() -> NSXPCConnection\nAttempts to connect to the extension over XPC.\nprotocol EXHostViewControllerDelegate\nThe delegate for a hosted view controller."
+  },
+  {
+    "title": "AppExtensionSceneBuilder | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/appextensionscenebuilder",
+    "html": "Topics\nBuilding Content\nstatic func buildBlock<Content>(Content) -> AppExtensionScene\nPasses through a single extension scene unmodified.\nstatic func buildBlock<C0, C1>(C0, C1) -> AppExtensionScene\nBuilds an extension scene by combining two scenes.\nstatic func buildBlock<C0, C1, C2>(C0, C1, C2) -> AppExtensionScene\nBuilds an extension scene by combining three scenes.\nstatic func buildBlock<C0, C1, C2, C3>(C0, C1, C2, C3) -> AppExtensionScene\nBuilds an extension scene by combining four scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4>(C0, C1, C2, C3, C4) -> AppExtensionScene\nBuilds an extension scene by combining five scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5>(C0, C1, C2, C3, C4, C5) -> AppExtensionScene\nBuilds an extension scene by combining six scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6>(C0, C1, C2, C3, C4, C5, C6) -> AppExtensionScene\nBuilds an extension scene by combining seven scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7>(C0, C1, C2, C3, C4, C5, C6, C7) -> AppExtensionScene\nBuilds an extension scene by combining eight scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7, C8>(C0, C1, C2, C3, C4, C5, C6, C7, C8) -> AppExtensionScene\nBuilds an extension scene by combining nine scenes.\nstatic func buildBlock<C0, C1, C2, C3, C4, C5, C6, C7, C8, C9>(C0, C1, C2, C3, C4, C5, C6, C7, C8, C9) -> AppExtensionScene\nBuilds an extension scene by combining ten scenes.\nSee Also\nUI App Extensions\nprotocol AppExtensionScene\nA protocol that defines the user interface for an application extension.\nstruct AppExtensionSceneConfiguration\nAn object that holds configuration options for an extension scene.\nstruct PrimitiveAppExtensionScene\nA primitive you use to compose specialized app extension points."
+  },
+  {
+    "title": "configuration | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/exhostviewcontroller/3991625-configuration",
+    "html": "See Also\nConfiguring the View Controller\nstruct EXHostViewController.Configuration\nAn object that holds configuration options for a host view controller.\nvar placeholderView: NSView\nA view that’s used when the view controller has no content to display."
+  },
+  {
+    "title": "init(id:content:onConnection:) | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/primitiveappextensionscene/3991468-init",
+    "html": "Parameters\nid\n\nA unique identifier for the scene.\n\ncontent\n\nThe scene’s user interface.\n\nonConnection\n\nA closure that runs when the extension connects to its host."
+  },
+  {
+    "title": "body | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/appextensionscene/3991445-body",
+    "html": "Required Default implementation provided.\n\nDefault Implementations\nDeviceActivityReportScene Implementations\nvar body: AppExtensionScene\nA shared implementation for the body of all device activity report scenes.\nSee Also\nConfiguring the App Extension\nassociatedtype Body\nThe type for this scene’s body.\n\nRequired"
+  },
+  {
+    "title": "EXHostViewController | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/exhostviewcontroller",
+    "html": "Topics\nConfiguring the View Controller\nvar configuration: EXHostViewController.Configuration?\nThe view controller’s configuration.\nstruct EXHostViewController.Configuration\nAn object that holds configuration options for a host view controller.\nvar placeholderView: NSView\nA view that’s used when the view controller has no content to display.\nConnecting to the Extension\nfunc makeXPCConnection() -> NSXPCConnection\nAttempts to connect to the extension over XPC.\nvar delegate: EXHostViewControllerDelegate?\nThe connection delegate.\nprotocol EXHostViewControllerDelegate\nThe delegate for a hosted view controller.\nRelationships\nInherits From\nNSViewController\nSee Also\nHost Apps\nclass EXAppExtensionBrowserViewController\nA view controller that allows users to enable and disable extensions."
+  },
+  {
+    "title": "AppExtensionSceneConfiguration | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/appextensionsceneconfiguration",
+    "html": "Topics\nCreating Configuration Files\ninit<Content>(() -> Content)\nCreates a scene configuration from a closure.\ninit<Content, Configuration>(() -> Content, configuration: Configuration?)\nCreates a scene configuration object from a closure and extension configuration.\nManaging the Connection\nfunc accept(connection: NSXPCConnection) -> Bool\nA closure the framework calls when a host tries to connect to this extension.\nRelationships\nConforms To\nAppExtensionConfiguration\nSee Also\nUI App Extensions\nprotocol AppExtensionScene\nA protocol that defines the user interface for an application extension.\nstruct AppExtensionSceneBuilder\nA custom parameter attribute that constructs extension scenes from closures.\nstruct PrimitiveAppExtensionScene\nA primitive you use to compose specialized app extension points."
+  },
+  {
+    "title": "AppExtensionScene | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/appextensionscene",
+    "html": "Topics\nConfiguring the App Extension\nvar body: Self.Body\nThe content and behavior of the scene’s user interface.\n\nRequired Default implementation provided.\n\nassociatedtype Body\nThe type for this scene’s body.\n\nRequired\n\nRelationships\nInherited By\nDeviceActivityReportScene\nFinancialConnectionUIExtensionScene\nConforming Types\nArray\nConforms when Element conforms to AppExtensionScene.\nNever\nPrimitiveAppExtensionScene\nSee Also\nUI App Extensions\nstruct AppExtensionSceneConfiguration\nAn object that holds configuration options for an extension scene.\nstruct AppExtensionSceneBuilder\nA custom parameter attribute that constructs extension scenes from closures.\nstruct PrimitiveAppExtensionScene\nA primitive you use to compose specialized app extension points."
+  },
+  {
+    "title": "PrimitiveAppExtensionScene | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/primitiveappextensionscene",
+    "html": "Topics\nCreating an Extension Scene\ninit<Content>(id: String, content: () -> Content, onConnection: (NSXPCConnection) -> Bool)\nCreates a new app extension scene.\nDefining the Scene\nvar body: Never\nThe scene’s user interface.\ntypealias PrimitiveAppExtensionScene.Body\nThe type for the scene’s user interface.\nvar debugDescription: String\nA string that provides information about the scene.\nRelationships\nConforms To\nAppExtensionScene\nCustomDebugStringConvertible\nSee Also\nUI App Extensions\nprotocol AppExtensionScene\nA protocol that defines the user interface for an application extension.\nstruct AppExtensionSceneConfiguration\nAn object that holds configuration options for an extension scene.\nstruct AppExtensionSceneBuilder\nA custom parameter attribute that constructs extension scenes from closures."
+  },
+  {
+    "title": "EXAppExtensionBrowserViewController | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit/exappextensionbrowserviewcontroller",
+    "html": "Relationships\nInherits From\nNSViewController\nSee Also\nHost Apps\nclass EXHostViewController\nA view controller that hosts remote views provided by an extension."
+  },
+  {
+    "title": "ExtensionKit | Apple Developer Documentation",
+    "url": "https://developer.apple.com/documentation/extensionkit",
+    "html": "Overview\n\nExtensions are executable code bundles, in one app that perform functions in a second, host app. Host apps declare extension points that control the kinds of functionality its extensions can implement. Extensions allow iOS and Mac apps to include code that runs inside system apps. For example, Messages provides extension points so apps can create iMessage apps. Messages automatically finds extension bundles that target its extension points and makes them available in its app drawer. A Mac app can also declare its own extension points so that other apps can extend the Mac app’s functionality.\n\nPrior to macOS 13, apps use NSExtension property lists to declare and configure extensions. ExtensionKit supports this approach, but also adds the ability to configure extensions and extension points entirely in Swift code.\n\nExtensions come in two basic forms: UI and non-UI.\n\nUI extensions\n\nVend remote views and view controllers that the host app adds to its own view hierarchy.\n\nNon-UI extensions\n\nPresent no user interface, but perform some work on behalf of the host app.\n\nAn iMessage app, which can include sophisticated user interfaces — even entire games — is an example of a UI extension. SiriKit app intents, which gives people the ability to interact with your app using Siri, is an example of a non-UI extension.\n\nUse ExtensionKit, in combination with ExtensionFoundation, to create extensions and extension points for UI extensions. To create extensions with no user interface, use ExtensionFoundation.\n\nTopics\nUI App Extensions\nprotocol AppExtensionScene\nA protocol that defines the user interface for an application extension.\nstruct AppExtensionSceneConfiguration\nAn object that holds configuration options for an extension scene.\nstruct AppExtensionSceneBuilder\nA custom parameter attribute that constructs extension scenes from closures.\nstruct PrimitiveAppExtensionScene\nA primitive you use to compose specialized app extension points.\nHost Apps\nclass EXHostViewController\nA view controller that hosts remote views provided by an extension.\nclass EXAppExtensionBrowserViewController\nA view controller that allows users to enable and disable extensions."
+  }
+]
