@@ -65,7 +65,7 @@ export async function crawl(config: Config) {
           await page.context().addCookies([cookie]);
         }
 
-        const title = await page.title();
+        const title = (await page.title()).replace(" | Apple Developer Documentation", "");
         pageCounter++;
         log.info(
           `Crawling: Page ${pageCounter} / ${config.maxPagesToCrawl} - URL: ${request.loadedUrl}...`,
