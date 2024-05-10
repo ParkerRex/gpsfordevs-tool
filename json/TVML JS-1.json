@@ -1,0 +1,1152 @@
+[
+  {
+    "title": "CustomEvent",
+    "url": "https://developer.apple.com/documentation/tvmljs/customevent",
+    "html": "Topics\nInstance Properties\ndetail\nInstance Methods\ninitCustomEvent\nRelationships\nInherits From\nEvent"
+  },
+  {
+    "title": "DOMParser",
+    "url": "https://developer.apple.com/documentation/tvmljs/domparser",
+    "html": "Topics\nInstance Methods\nDOMParser\nparseFromString"
+  },
+  {
+    "title": "Comment",
+    "url": "https://developer.apple.com/documentation/tvmljs/comment",
+    "html": "Relationships\nInherits From\nCharacterData"
+  },
+  {
+    "title": "DOMImplementation",
+    "url": "https://developer.apple.com/documentation/tvmljs/domimplementation",
+    "html": "Topics\nInstance Methods\ncreateCSSStyleSheet\ncreateDocument\ncreateDocumentType\ncreateHTMLDocument\nhasFeature"
+  },
+  {
+    "title": "CharacterData",
+    "url": "https://developer.apple.com/documentation/tvmljs/characterdata",
+    "html": "Topics\nInstance Properties\ndata\nlength\nInstance Methods\nappendData\ndeleteData\ninsertData\nreplaceData\nsubstringData\nRelationships\nInherits From\nNode"
+  },
+  {
+    "title": "NodeList",
+    "url": "https://developer.apple.com/documentation/tvmljs/nodelist",
+    "html": "Topics\nInstance Properties\n>\nlength\nInstance Methods\nitem"
+  },
+  {
+    "title": "NamedNodeMap",
+    "url": "https://developer.apple.com/documentation/tvmljs/namednodemap",
+    "html": "Topics\nInstance Properties\nlength\nInstance Methods\ngetNamedItem\ngetNamedItemNS\nitem\nremoveNamedItem\nremoveNamedItemNS\nsetNamedItem\nsetNamedItemNS\nRelationships\nInherits From\nNodeList"
+  },
+  {
+    "title": "ParentNode",
+    "url": "https://developer.apple.com/documentation/tvmljs/parentnode",
+    "html": "Topics\nInstance Properties\nchildElementCount\nchildren\nfirstElementChild\nlastElementChild\nInstance Methods\nappend\nprepend\nquerySelector\nquerySelectorAll"
+  },
+  {
+    "title": "Node",
+    "url": "https://developer.apple.com/documentation/tvmljs/node",
+    "html": "Topics\nInstance Properties\nbaseURI\nchildNodes\ndataItem\nfirstChild\nisConnected\nlastChild\nnextSibling\nnodeName\nnodeType\nnodeValue\nownerDocument\nparentElement\nparentNode\npreviousSibling\ntextContent\nInstance Methods\nappendChild\ncloneNode\ncompareDocumentPosition\ncontains\ngetFeature\ngetRootNode\nhasChildNodes\ninsertBefore\nisDefaultNamespace\nisEqualNode\nisSameNode\nlookupNamespaceURI\nlookupPrefix\nnormalize\nremoveChild\nreplaceChild\nMiscellaneous\nATTRIBUTE_NODE\nCDATA_SECTION_NODE\nCOMMENT_NODE\nDOCUMENT_FRAGMENT_NODE\nDOCUMENT_NODE\nDOCUMENT_POSITION_CONTAINED_BY\nDOCUMENT_POSITION_CONTAINS\nDOCUMENT_POSITION_DISCONNECTED\nDOCUMENT_POSITION_FOLLOWING\nDOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC\nDOCUMENT_POSITION_PRECEDING\nDOCUMENT_TYPE_NODE\nELEMENT_NODE\nENTITY_NODE\nENTITY_REFERENCE_NODE\nNOTATION_NODE\nPROCESSING_INSTRUCTION_NODE\nTEXT_NODE\nRelationships\nInherits From\nEventTarget"
+  },
+  {
+    "title": "HTMLCollection",
+    "url": "https://developer.apple.com/documentation/tvmljs/htmlcollection",
+    "html": "Topics\nInstance Properties\nlength\nInstance Methods\nitem\nnamedItem"
+  },
+  {
+    "title": "setPropertyPath",
+    "url": "https://developer.apple.com/documentation/tvmljs/dataitem/2897832-setpropertypath",
+    "html": "Parameters\npath\n\nThe dot-separated sequence of properties from the receiver. The path can contain array indexers. For example, items[0].title refers to the title property stored in index location 0 in the items array.\n\nvalue\n\nAn object associated with the property path.\n\nDiscussion\n\nSet the property path to associate the data item objects contained in the value parameter with a section element. Listing 1 shows an example of data item objects contained in the newItems object added to the section that binds the images path; for example <section binding=\"items:{images};\" />.\n\nListing 1 Setting the property path\nlet section = shelf.getElementsByTagName(\"section\").item(0)section.dataItem = new DataItem()\n\n\nlet newItems = results.map((result) => {\n    let objectItem = new DataItem(result.type, result.ID);\n    objectItem.url = result.url;\n    return objectItem;\n});\n\n\nsection.dataItem.setPropertyPath(\"images\", newItems)\n\nSee Also\nWorking with Property Paths\ngetPropertyPath\nRetrieves the value associated with a property path.\ntouchPropertyPath\nUpdates the property path."
+  },
+  {
+    "title": "type",
+    "url": "https://developer.apple.com/documentation/tvmljs/dataitem/2897825-type",
+    "html": "Discussion\n\nWhen the data item is converted to a DOM element, this property maps a data item to a prototype attribute. For example, <lockup prototype=\"artwork\"> associates all data items with the artwork type to the lockup element.\n\nSee Also\nRetrieving Data Item Information\nidentifier\nA unique identifier for a data item provided by the associated JSON object."
+  },
+  {
+    "title": "dataSource",
+    "url": "https://developer.apple.com/documentation/tvmljs/loadindexesrequest/3192160-datasource",
+    "html": "See Also\nAccessing Request Properties\nrange\nThe index range to load."
+  },
+  {
+    "title": "start",
+    "url": "https://developer.apple.com/documentation/tvmljs/slideshow/1657265-start",
+    "html": "Parameters\nimageRequests\n\nAn array of image request objects.\n\noptions\n\nAn optional set of options that modify the slideshow. If no options are specified, a default of false or 0is used.\n\nexitCB\n\nAn optional callback function that is called when the slideshow is dismissed. If this parameter is not specified, the page on top of the navigation stack is displayed.\n\nDiscussion\n\nWhen a new slideshow beings using the start function, if there is a currently running slideshow, that slideshow is dismissed. The imageRequests parameter contains an array of image request objects that can have the following formatting:\n\nAn array of URLs.\n\nA dictionary with two key-value pairs, headers and urls. headers provides a dictionary of headers that is included with all image requests. urls contains an array of URLs.\n\nIf the showSettings key in the options parameter is set to true or 1, the user will be asked to pick a theme before the slideshow begins. Listing 1 shows an example of a simple slideshow that is created with two images.\n\nListing 1 Creating a new slideshow example\nfunction mySlideshow() {\n   var images = ['path to image', 'path to image'];\n   Slideshow.start(images, { 'showSettings': '0' });\n}\n\nSee Also\nCreating and Modifying a Slideshow\nappend\nAdd additional images to a currently running slideshow.\ndismiss\nDismisses a currently running slideshow."
+  },
+  {
+    "title": "formatDuration",
+    "url": "https://developer.apple.com/documentation/tvmljs/1627346-formatduration",
+    "html": "Parameters\nduration\n\nAn integer specifying the duration, in seconds.\n\nReturn Value\n\nA string containing the formatted duration.\n\nDiscussion\n\nThis function changes a number of seconds into the standard hour:minute:second format. For example, formatDuration(90) returns “1:30”.\n\nSee Also\nFormatting Information\nformatDate\nFormats the given date into the given format.\nformatNumber\nFormats the specified number into the given format."
+  },
+  {
+    "title": "interitemSpacing",
+    "url": "https://developer.apple.com/documentation/tvmljs/browser/3192098-interitemspacing",
+    "html": "See Also\nModifying a Browser\nmaskInset\nThe insets from the edges of the full screen layout.\ncornerRadius\nThe corner radius of each full screen browser item."
+  },
+  {
+    "title": "range",
+    "url": "https://developer.apple.com/documentation/tvmljs/loadindexesrequest/3192161-range",
+    "html": "See Also\nAccessing Request Properties\ndataSource\nA reference to the data source object that originated the request."
+  },
+  {
+    "title": "cancel",
+    "url": "https://developer.apple.com/documentation/tvmljs/loadindexesrequest/3192158-cancel",
+    "html": "Discussion\n\nThe cancel event is invoked when TVMLKit wants to cancel a previous LoadIndexesRequest. This could happen if the indexes disappear from view, making the it unnecessary to load data for those indexes.\n\nYour implementation can ignore this event and still load the requested data if needed, but ideally the event should be handled to cancel any opened XHR requests."
+  },
+  {
+    "title": "close",
+    "url": "https://developer.apple.com/documentation/tvmljs/loadindexesrequest/3192159-close",
+    "html": "Discussion\n\nThe Boolean value passed into the close method signals whether or not the data fetch succeeded. If true is passed, then those indexes are marked internally as loaded, and a loadindexes event for these indexes won't be invoked again. If false is passed, the loadindexes event will be invoked only when those indexes are needed again."
+  },
+  {
+    "title": "dismiss",
+    "url": "https://developer.apple.com/documentation/tvmljs/slideshow/1657241-dismiss",
+    "html": "See Also\nCreating and Modifying a Slideshow\nappend\nAdd additional images to a currently running slideshow.\nstart\nStarts a slideshow with the given set of images."
+  },
+  {
+    "title": "onload",
+    "url": "https://developer.apple.com/documentation/tvmljs/xmlhttprequest/1627316-onload",
+    "html": "Discussion\n\nThis attribute must be set to a function; for example, XMLHttpRequest.onload = function () {}.\n\nSee Also\nImplementing Callback Functions\nonabort\nA callback function called when a request is cancelled by the user.\nonerror\nA callback function that is called if the request fails due to an error.\nonloadend\nA callback function that is called when the request is completed for any reason.\nonloadstart\nA callback function that is called when the request begins.\nonreadystatechange\nA callback function that is called when the readyState attribute changes.\nontimeout\nA callback function that is called when a request times out."
+  },
+  {
+    "title": "Event",
+    "url": "https://developer.apple.com/documentation/tvmljs/event",
+    "html": "Topics\nInstance Properties\nbubbles\ncancelBubble\ncancelable\ncomposed\ncurrentTarget\ndefaultPrevented\neventPhase\nisTrusted\nreturnValue\nsrcElement\ntarget\ntimeStamp\ntype\nInstance Methods\nEvent\ncomposedPath\ninitEvent\npreventDefault\nstopImmediatePropagation\nstopPropagation\nMiscellaneous\nAT_TARGET\nBLUR\nBUBBLING_PHASE\nCAPTURING_PHASE\nCHANGE\nCLICK\nDBLCLICK\nDRAGDROP\nFOCUS\nKEYDOWN\nKEYPRESS\nKEYUP\nMOUSEDOWN\nMOUSEDRAG\nMOUSEMOVE\nMOUSEOUT\nMOUSEOVER\nMOUSEUP\nNONE\nSELECT"
+  },
+  {
+    "title": "DocumentFragment",
+    "url": "https://developer.apple.com/documentation/tvmljs/documentfragment",
+    "html": "Relationships\nInherits From\nNode"
+  },
+  {
+    "title": "EventTarget",
+    "url": "https://developer.apple.com/documentation/tvmljs/eventtarget",
+    "html": "Topics\nInstance Methods\naddEventListener\ndispatchEvent\nremoveEventListener"
+  },
+  {
+    "title": "getItem",
+    "url": "https://developer.apple.com/documentation/tvmljs/storage/1627333-getitem",
+    "html": "Parameters\nkey\n\nA String object containing the key being searched for.\n\nReturn Value\n\nA String object containing the data associated with the passed key.\n\nDiscussion\n\nThe getItem function retrieves the data associated with the given key. If the key does not exist, the function returns null.\n\nSee Also\nAccessing Key-Value Pair Information\nclear\nRemoves all instances of key-value pairs from the storage list.\nkey\nReturns the key located in the specified location.\nlength\nThe number of key-value pairs currently in the storage list.\nremoveItem\nDeletes a key and all associated data from storage.\nsetItem\nAssociates the given data with the given key."
+  },
+  {
+    "title": "clear",
+    "url": "https://developer.apple.com/documentation/tvmljs/storage/1627404-clear",
+    "html": "See Also\nAccessing Key-Value Pair Information\ngetItem\nRetrieves the data associated with the specified key.\nkey\nReturns the key located in the specified location.\nlength\nThe number of key-value pairs currently in the storage list.\nremoveItem\nDeletes a key and all associated data from storage.\nsetItem\nAssociates the given data with the given key."
+  },
+  {
+    "title": "identifier",
+    "url": "https://developer.apple.com/documentation/tvmljs/dataitem/2897829-identifier",
+    "html": "Discussion\n\nThe identifier property is mapped to the itemID attribute when the data item is converted to a DOM element. The underlying JSON objects being mapped must have a unique identifier for all JSON objects grouped under the same type.\n\nSee Also\nRetrieving Data Item Information\ntype\nThe type for a data item provided by the associated JSON object."
+  },
+  {
+    "title": "User Info Dictionary Keys",
+    "url": "https://developer.apple.com/documentation/tvmljs/tverror/user_info_dictionary_keys",
+    "html": "Topics\nConstants\nNSLocalizedDesciptionKey\nThe corresponding value is a localized string representation of the error.\nNSFilePathErrorKey\nThe corresponding value is a String object that contains the file path of the error.\nNSStringEncodingErrorKey\nThe corresponding value is a Number object containing the NSStringEncoding value.\nNSUnderlyingErrorKey\nThe corresponding value is an error that was encountered in an underlying implementation and caused the error that the receiver represents to occur.\nNSURLErrorKey\nThe corresponding value is an NSURL object.\nNSLocalizedFailureReasonErrorKey\nThe corresponding value is a localized string representation containing the reason for the failure that, if present, will be returned by localizedFailureReason.\nNSLocalizedRecoverySuggestionErrorKey\nThe corresponding value is a string containing the localized recovery suggestion for the error. This string is suitable for displaying as the secondary message in an alert panel.\nNSLocalizedRecoveryOptionsErrorKey\nThe corresponding value is an array containing the localized titles of buttons appropriate for displaying in an alert panel. The first string is the title of the right-most and default button, the second the one to the left, and so on. The recovery options should be appropriate for the recovery suggestion returned by localizedRecoverySuggestion.\nNSRecoveryAttempterErrorKey\nThe corresponding value is an object that conforms to the NSErrorRecoveryAttempting informal protocol. The recovery attempter must be an object that can correctly interpret an index into the array returned by recoveryAttempter.\nNSHelpAnchorErrorKey\nThe corresponding value is an NSString containing the localized help corresponding to the Help button. See helpAnchor for more information.\nNSURLErrorFailingURLErrorKey\nThe corresponding value is an NSURL containing the URL which caused a load to fail. This key is only present in the NSURLErrorDomain.\nNSURLErrorFailingURLStringErrorKey\nThe corresponding value is an NSString object for the URL which caused a load to fail. This key is only present in the NSURLErrorDomain.\nNSURLErrorFailingURLPeerTrustErrorKey\nThe corresponding value is the SecTrust object representing the state of a failed SSL handshake. This key is only present in the NSURLErrorDomain."
+  },
+  {
+    "title": "DataItem",
+    "url": "https://developer.apple.com/documentation/tvmljs/dataitem/2897826-dataitem",
+    "html": "Parameters\ntype\n\nThe group identifier that associates the data item to a prototype attribute.\n\nidentifier\n\nA unique identifier for the data item.\n\nDiscussion\n\nEach data item in the same type group must have a unique identifier. Assign any other JSON object keys to the data item after it has been created. Listing 1 shows JSON objects being mapped to data items. The url and title keys and values are added to each data item after creation.\n\nListing 1 Mapping JSON objects to data items\nlet newItems = results.map((result) => {\n    let objectItem = new DataItem(result.type, result.ID);\n    objectItem.url = result.url;\n    objectItem.title = result.title;\n    return objectItem;\n});\n"
+  },
+  {
+    "title": "Error Domains",
+    "url": "https://developer.apple.com/documentation/tvmljs/tverror/error_domains",
+    "html": "Topics\nConstants\nNSPOSIXErrorDomain\nPOSIX/BSD errors.\nNSOSStatusErrorDomain\nmacOS/Carbon errors.\nNSMachErrorDomain\nMach errors."
+  },
+  {
+    "title": "touchPropertyPath",
+    "url": "https://developer.apple.com/documentation/tvmljs/dataitem/2897830-touchpropertypath",
+    "html": "Parameters\npath\n\nThe dot-separated sequence of properties from the receiver. The path can contain array indexers. For example, items[0].title refers to the title property stored in index location 0 in the items array.\n\nDiscussion\n\nThe property path is explicitly updated, and all bound objects are notified.\n\nSee Also\nWorking with Property Paths\nsetPropertyPath\nSets the value associated with a property path.\ngetPropertyPath\nRetrieves the value associated with a property path."
+  },
+  {
+    "title": "setSelectedItem",
+    "url": "https://developer.apple.com/documentation/tvmljs/menubardocument/1627427-setselecteditem",
+    "html": "Parameters\nmenuItem\n\nThe menu item to be in focus.\n\nSee Also\nSetting and Retrieving Menu Item Documents\ngetDocument\nRetrieves the document associated with the specified menu item.\ngetSelectedItem\nRetrieves the menu item in the menu bar that is currently in focus.\nsetDocument\nAssociates a document with a menu item."
+  },
+  {
+    "title": "getDocument",
+    "url": "https://developer.apple.com/documentation/tvmljs/menubardocument/1627405-getdocument",
+    "html": "Parameters\nmenuItem\n\nThe menu item currently in focus.\n\nReturn Value\n\nThe TVML page associated with the selected menu item.\n\nSee Also\nSetting and Retrieving Menu Item Documents\ngetSelectedItem\nRetrieves the menu item in the menu bar that is currently in focus.\nsetDocument\nAssociates a document with a menu item.\nsetSelectedItem\nSets the focus in a menu bar to the specified menu item."
+  },
+  {
+    "title": "getSelectedItem",
+    "url": "https://developer.apple.com/documentation/tvmljs/menubardocument/1657224-getselecteditem",
+    "html": "Return Value\n\nThe currently selected element.\n\nSee Also\nSetting and Retrieving Menu Item Documents\ngetDocument\nRetrieves the document associated with the specified menu item.\nsetDocument\nAssociates a document with a menu item.\nsetSelectedItem\nSets the focus in a menu bar to the specified menu item."
+  },
+  {
+    "title": "evaluateScripts",
+    "url": "https://developer.apple.com/documentation/tvmljs/1627369-evaluatescripts",
+    "html": "Parameters\nscripts\n\nAn array of URLs pointing to TVMLKit JS files.\n\ncallback\n\nA function that is executed after attempting to open the TVMLKit JS files. A boolean argument is passed into the function that signals whether all scripts loaded successfully.\n\nDiscussion\n\nThis method first verifies that the locations contained in the scripts parameter contain TVMLKit JS files. The code in the files is then executed. The callback function contains a boolean argument that signals whether the TVMLKit JS files loaded successfully. Use this method to keep the size of your initial TVMLKit JS file small, while being able to incorporate other TVMLKit JS files. Listing 1 shows an example incorporating this method into your app. The example creates an array containing the location of the ResourceLoader and Presenter TVMLKit JS files. On a successful load, the success parameter is set to TRUE and the app continues. Otherwise, an alert is presented onscreen stating that an error occurred.\n\nListing 1 evaluateScripts example\nApp.onLaunch = function(options) {\n    var javascriptFiles = [\n        `${options.BASEURL}js/ResourceLoader.js`,\n        `${options.BASEURL}js/Presenter.js`\n    ];\n \n    evaluateScripts(javascriptFiles, function(success) {\n        if (success) {\n            resourceLoader = new ResourceLoader(options.BASEURL);\n \n            var index = resourceLoader.loadResource(`${options.BASEURL}templates/Index.xml.js`,\n                function(resource) {\n                    var doc = Presenter.makeDocument(resource);\n                    doc.addEventListener(\"select\", Presenter.load.bind(Presenter));\n                    navigationDocument.pushDocument(doc);\n                });\n        } else {\n \n            var alert = createAlert(\"Evaluate Scripts Error\", \"There was an error attempting to evaluate the external JavaScript files.\\n\\n Please check your network connection and try again later.\");\n            navigationDocument.presentModal(alert);\n \n            throw (\"Playback Example: unable to evaluate scripts.\");\n        }\n    });\n}\n"
+  },
+  {
+    "title": "formatNumber",
+    "url": "https://developer.apple.com/documentation/tvmljs/1627348-formatnumber",
+    "html": "Parameters\nnumber\n\nAn integer that is the number to be formatted.\n\nstyleValue\n\nA string that designates the style the number is formatted in to. Valid values are noStyle, currency, decimal, percent, scientific, spellOut. If no value is given for this parameter, it defaults to noStyle.\n\npositiveNumberFormat\n\nThe formatting used for a positive number value input.\n\nnegativeNumberFormat\n\nThe formatting used for a negative number value input.\n\nReturn Value\n\nA string containing the formatted number.\n\nDiscussion\n\nThis function changes an integer into a string, based on the formatting styles specified. For example, formatNumber(-60, “”, “+”, “-”) returns “-60”.\n\nSee Also\nFormatting Information\nformatDate\nFormats the given date into the given format.\nformatDuration\nFormats the given duration into the standard tvOS format."
+  },
+  {
+    "title": "clearInterval",
+    "url": "https://developer.apple.com/documentation/tvmljs/1627411-clearinterval",
+    "html": "Parameters\nintervalID\n\nA string identifying the interval to clear.\n\nDiscussion\n\nThis function stops the function associated with the identifier created by the setInterval function from executing.\n\nSee Also\nAutomating Function Timing\nsetInterval\nRepeatedly executes a given function at the given time interval.\nsetTimeout\nExecutes a given function after a set amount of time.\nclearTimeout\nStops the function associated with the identifier from executing."
+  },
+  {
+    "title": "setInterval",
+    "url": "https://developer.apple.com/documentation/tvmljs/1627337-setinterval",
+    "html": "Parameters\nfunc\n\nThe function to be executed.\n\ntime\n\nAn integer value that defines, in milliseconds, how often the function is to repeat.\n\nReturn Value\n\nReturns a string containing an identifier for the interval just set.\n\nDiscussion\n\nPass the identifier created by this function to the clearInterval function to stop the designated function from executing.\n\nSee Also\nAutomating Function Timing\nclearInterval\nStops the function associated with the identifier from repeating.\nsetTimeout\nExecutes a given function after a set amount of time.\nclearTimeout\nStops the function associated with the identifier from executing."
+  },
+  {
+    "title": "onabort",
+    "url": "https://developer.apple.com/documentation/tvmljs/xmlhttprequest/1627410-onabort",
+    "html": "Discussion\n\nThis attribute must be set to a function; for example, XMLHttpRequest.onabort = function () {}.\n\nSee Also\nImplementing Callback Functions\nonerror\nA callback function that is called if the request fails due to an error.\nonload\nA callback function that is called when the request is successfully completed.\nonloadend\nA callback function that is called when the request is completed for any reason.\nonloadstart\nA callback function that is called when the request begins.\nonreadystatechange\nA callback function that is called when the readyState attribute changes.\nontimeout\nA callback function that is called when a request times out."
+  },
+  {
+    "title": "abort",
+    "url": "https://developer.apple.com/documentation/tvmljs/xmlhttprequest/1627402-abort",
+    "html": "See Also\nResponding to Events\nerror\nAn event signifying an error occurred during the request.\nload\nAn event signifying the request was successfully loaded.\nloadend\nAn event signifying the request has been completed.\nloadstart\nAn event signifying the request has begun.\nreadystatechange\nAn event signifying that a state change has occurred."
+  },
+  {
+    "title": "playbackDidStall",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/1682114-playbackdidstall",
+    "html": "Discussion\n\nThe listener is passed an event object with the following attributes:\n\nelapsedTime—The elapsed time, in seconds, of the asset being played.\n\nSee Also\nResponding to Events\nmediaItemDidChange\nAn event notifying the listener that the player changed a media item.\nmediaItemWillChange\nAn event notifying the listener that the player is about to changed a media item.\nplaybackError\nAn event that indicates an error has occurred during playback.\nrequestSeekToTime\nAn event that indicates whether a seek-to-time request was accomplished.\nshouldChangeToMediaAtIndex\nAn event that indicates a request to play a media item in a different index is received.\nshouldHandleStateChange\nAn event that indicates a state change request has occurred.\nstateDidChange\nAn event that indicates the state of the player has changed.\nstateWillChange\nAn event that indicates the state of the player is about to change.\ntimeBoundaryDidCross\nAn event that indicates a specific playback time in the media item has been crossed.\ntimeDidChange\nAn event that happens at a specified interval.\ntimedMetadata\nAn event that is triggered whenever a specified piece of metadata is encountered.\ntransportBarVisibilityDidChange\nAn event that indicates the state of the transport bar has changed."
+  },
+  {
+    "title": "statusText",
+    "url": "https://developer.apple.com/documentation/tvmljs/xmlhttprequest/1627375-statustext",
+    "html": "See Also\nRetrieving Request Information\nmetrics\nA dictionary of keys used to request start and response start and end times.\nreadyState\nThe current state of the request.\nresponse\nThe response entity body.\nresponseCacheIsValid\nresponseText\nThe response to the request.\nresponseType\nThe type of response.\nresponseURL\nresponseXML\nThe document response entity body.\nstatus\nThe HTTP status code."
+  },
+  {
+    "title": "onerror",
+    "url": "https://developer.apple.com/documentation/tvmljs/xmlhttprequest/1627328-onerror",
+    "html": "Discussion\n\nThis attribute must be set to a function; for example, XMLHttpRequest.onerror = function () {}.\n\nSee Also\nImplementing Callback Functions\nonabort\nA callback function called when a request is cancelled by the user.\nonload\nA callback function that is called when the request is successfully completed.\nonloadend\nA callback function that is called when the request is completed for any reason.\nonloadstart\nA callback function that is called when the request begins.\nonreadystatechange\nA callback function that is called when the readyState attribute changes.\nontimeout\nA callback function that is called when a request times out."
+  },
+  {
+    "title": "responseXML",
+    "url": "https://developer.apple.com/documentation/tvmljs/xmlhttprequest/1627307-responsexml",
+    "html": "See Also\nRetrieving Request Information\nmetrics\nA dictionary of keys used to request start and response start and end times.\nreadyState\nThe current state of the request.\nresponse\nThe response entity body.\nresponseCacheIsValid\nresponseText\nThe response to the request.\nresponseType\nThe type of response.\nresponseURL\nstatus\nThe HTTP status code.\nstatusText\nThe HTTP status text."
+  },
+  {
+    "title": "append",
+    "url": "https://developer.apple.com/documentation/tvmljs/slideshow/1657228-append",
+    "html": "Parameters\nimageRequests\n\nAn array of image request objects.\n\nDiscussion\n\nThe imageRequests parameter contains an array of image request objects that can have the following formatting:\n\nAn array of URLs.\n\nA dictionary with two key-value pairs, headers and urls. headers provides a dictionary of headers that is included with all image requests. urls contains an array of URLs.\n\nSee Also\nCreating and Modifying a Slideshow\ndismiss\nDismisses a currently running slideshow.\nstart\nStarts a slideshow with the given set of images."
+  },
+  {
+    "title": "Document",
+    "url": "https://developer.apple.com/documentation/tvmljs/document",
+    "html": "Topics\nDisplaying Content Fullscreen\nwebkitCancelFullScreen\nCancels full-screen mode.\nwebkitCurrentFullScreenElement\nThe element that is fullscreen.\nwebkitFullScreenKeyboardInputAllowed\nA Boolean that indicates whether keyboard input is allowed in fullscreen mode.\nwebkitIsFullScreen\nA Boolean that indicates whether the document is in full-screen mode.\nonwebkitfullscreenchange\nAn event listener that is called when entering or exiting full-screen mode.\nInstance Properties\nURL\nanchors\nappear\napplets\nbody\ncharacterSet\ncharset\ncompatMode\ncontentType\ncookie\ncurrentScript\ndefaultView\ndesignMode\ndidupdate\ndir\ndisappear\ndoctype\ndocumentElement\ndocumentURI\ndomain\nembeds\nfonts\nforms\nhead\nhidden\nimages\nimplementation\ninputEncoding\nlastModified\nlinks\nload\nlocation\nnavigationDocument\nonbeforecopy\nonbeforecut\nonbeforeinput\nonbeforepaste\noncopy\noncut\nonpaste\nonpointerlockchange\nonpointerlockerror\nonreadystatechange\nonsecuritypolicyviolation\nonselectionchange\nonselectstart\nonvisibilitychange\nonwebkitfullscreenerror\norigin\nplugins\npreferredStylesheetSet\nreadyState\nreferrer\nrootElement\nscripts\nscrollingElement\nselectedStylesheetSet\nstrictErrorChecking\nstyleSheets\ntimeline\ntitle\nunload\nupdate\nvisibilityState\nwebkitFullscreenElement\nwebkitFullscreenEnabled\nxmlEncoding\nxmlStandalone\nxmlVersion\nInstance Methods\nadoptNode\ncaretRangeFromPoint\ncreateAttribute\ncreateAttributeNS\ncreateCDATASection\ncreateComment\ncreateDocumentFragment\ncreateElement\ncreateElementNS\ncreateEvent\ncreateExpression\ncreateNSResolver\ncreateNodeIterator\ncreateProcessingInstruction\ncreateRange\ncreateTextNode\ncreateTreeWalker\nevaluate\nexecCommand\nexitPointerLock\ngetAnimations\ngetElementById\ngetElementsByClassName\ngetElementsByName\ngetElementsByTagName\ngetElementsByTagNameNS\ngetOverrideStyle\ngetSelection\nhasFocus\nimportNode\nqueryCommandEnabled\nqueryCommandIndeterm\nqueryCommandState\nqueryCommandSupported\nqueryCommandValue\nwebkitExitFullscreen\nwebkitGetNamedFlows\nRelationships\nInherits From\nNode"
+  },
+  {
+    "title": "insert",
+    "url": "https://developer.apple.com/documentation/tvmljs/datasource/datasource/3192116-insert",
+    "html": "See Also\nModifying the Data Source\ndelete\nDeletes an item from the data source array.\nmove\nMoves an item in the data source array.\nreplace\nReplaces an item in the data source array.\nupdate\nUpdates an item in the data source array."
+  },
+  {
+    "title": "setItem",
+    "url": "https://developer.apple.com/documentation/tvmljs/storage/1627302-setitem",
+    "html": "Parameters\nkey\n\nA String object containing the key associated with the data to be saved.\n\ndata\n\nA String object containing the data to be stored.\n\nDiscussion\n\nThe setItem function first checks whether the given key already exists in the storage. If it does not, then the key and associated value are stored. If the key already exists and the data in storage is different than the data being passed, the new data is saved to storage.\n\nSee Also\nAccessing Key-Value Pair Information\nclear\nRemoves all instances of key-value pairs from the storage list.\ngetItem\nRetrieves the data associated with the specified key.\nkey\nReturns the key located in the specified location.\nlength\nThe number of key-value pairs currently in the storage list.\nremoveItem\nDeletes a key and all associated data from storage."
+  },
+  {
+    "title": "removeItem",
+    "url": "https://developer.apple.com/documentation/tvmljs/storage/1627332-removeitem",
+    "html": "Parameters\nkey\n\nA String object containing the key being searched for.\n\nSee Also\nAccessing Key-Value Pair Information\nclear\nRemoves all instances of key-value pairs from the storage list.\ngetItem\nRetrieves the data associated with the specified key.\nkey\nReturns the key located in the specified location.\nlength\nThe number of key-value pairs currently in the storage list.\nsetItem\nAssociates the given data with the given key."
+  },
+  {
+    "title": "maxTVShowRatingForCountry",
+    "url": "https://developer.apple.com/documentation/tvmljs/restrictions/1627442-maxtvshowratingforcountry",
+    "html": "Parameters\ncountryCode\n\nAn object containing the valid country code. If the code is invalid, the current country or region based on location is used.\n\nReturn Value\n\nA string representing the maximum allowed rating for a television show in the specified country or region; for example, PG-13.\n\nSee Also\nRetrieving Restriction Information\nallowsExplicit\nA boolean value that indicates whether any explicit media is allowed.\nmaxMovieRank\nThe maximum allowed ranking for a movie.\nmaxMovieRatingForCountry\nThe maximum movie rating allowed for the specified country or region.\nmaxTVShowRank\nThe maximum allowed ranking for a television show."
+  },
+  {
+    "title": "length",
+    "url": "https://developer.apple.com/documentation/tvmljs/storage/1627448-length",
+    "html": "See Also\nAccessing Key-Value Pair Information\nclear\nRemoves all instances of key-value pairs from the storage list.\ngetItem\nRetrieves the data associated with the specified key.\nkey\nReturns the key located in the specified location.\nremoveItem\nDeletes a key and all associated data from storage.\nsetItem\nAssociates the given data with the given key."
+  },
+  {
+    "title": "key",
+    "url": "https://developer.apple.com/documentation/tvmljs/storage/1627380-key",
+    "html": "Parameters\nindex\n\nThe location of the key to be retrieved.\n\nReturn Value\n\nThe found key.\n\nDiscussion\n\nIf the value in the index parameter is greater than the number of key-value pairs currently in the storage list, this function returns null.\n\nSee Also\nAccessing Key-Value Pair Information\nclear\nRemoves all instances of key-value pairs from the storage list.\ngetItem\nRetrieves the data associated with the specified key.\nlength\nThe number of key-value pairs currently in the storage list.\nremoveItem\nDeletes a key and all associated data from storage.\nsetItem\nAssociates the given data with the given key."
+  },
+  {
+    "title": "failureReason",
+    "url": "https://developer.apple.com/documentation/tvmljs/nserror/2897833-failurereason",
+    "html": "See Also\nGetting a Localized Error Description\ndescription\nA string containing the localized description of the error.\nrecoverySuggestion\nA string containing the localized recovery suggestion for the error."
+  },
+  {
+    "title": "recoverySuggestion",
+    "url": "https://developer.apple.com/documentation/tvmljs/nserror/2897824-recoverysuggestion",
+    "html": "See Also\nGetting a Localized Error Description\ndescription\nA string containing the localized description of the error.\nfailureReason\nA string containing the localized explanation of the reason for the error."
+  },
+  {
+    "title": "description",
+    "url": "https://developer.apple.com/documentation/tvmljs/tverror/1627424-description",
+    "html": "See Also\nGetting Error Properties\ncode\nThe error code.\ndomain\nA string containing the error domain.\nuserInfo\nThe user info dictionary."
+  },
+  {
+    "title": "userInfo",
+    "url": "https://developer.apple.com/documentation/tvmljs/nserror/2897822-userinfo",
+    "html": "Discussion\n\nIf the user info dictionary has not been set, this property is nil.\n\nSee Also\nGetting Error Properties\ncode\nThe error code.\ndomain\nA string containing the error domain.\nunderlyingError\nThe error that was encountered in an underlying implementation and caused the error that the receiver represents to occur."
+  },
+  {
+    "title": "domain",
+    "url": "https://developer.apple.com/documentation/tvmljs/nserror/2897831-domain",
+    "html": "See Also\nGetting Error Properties\ncode\nThe error code.\nuserInfo\nThe user info dictionary.\nunderlyingError\nThe error that was encountered in an underlying implementation and caused the error that the receiver represents to occur."
+  },
+  {
+    "title": "code",
+    "url": "https://developer.apple.com/documentation/tvmljs/nserror/2897820-code",
+    "html": "Discussion\n\nErrors are domain specific.\n\nSee Also\nGetting Error Properties\ndomain\nA string containing the error domain.\nuserInfo\nThe user info dictionary.\nunderlyingError\nThe error that was encountered in an underlying implementation and caused the error that the receiver represents to occur."
+  },
+  {
+    "title": "domain",
+    "url": "https://developer.apple.com/documentation/tvmljs/tverror/1627426-domain",
+    "html": "Discussion\n\nSee Error Domains for a list of domains.\n\nSee Also\nGetting Error Properties\ncode\nThe error code.\ndescription\nA string containing the description of the error.\nuserInfo\nThe user info dictionary."
+  },
+  {
+    "title": "userInfo",
+    "url": "https://developer.apple.com/documentation/tvmljs/tverror/1627388-userinfo",
+    "html": "Discussion\n\nIf no user info dictionary has been set, this property is null. See User Info Dictionary Keys for a list of keys.\n\nSee Also\nGetting Error Properties\ncode\nThe error code.\ndescription\nA string containing the description of the error.\ndomain\nA string containing the error domain."
+  },
+  {
+    "title": "formatDate",
+    "url": "https://developer.apple.com/documentation/tvmljs/1627445-formatdate",
+    "html": "Parameters\ndate\n\nThe date value to format.\n\nformat\n\nA string that specifies the desired format. For a list of possible formats, see DateFormatter.\n\nReturn Value\n\nA string containing the formatted date.\n\nSee Also\nFormatting Information\nformatDuration\nFormats the given duration into the standard tvOS format.\nformatNumber\nFormats the specified number into the given format."
+  },
+  {
+    "title": "UUID",
+    "url": "https://developer.apple.com/documentation/tvmljs/1627409-uuid",
+    "html": "Return Value\n\nReturns a unique UUID.\n\nSee Also\nManipulating the Document\ngetActiveDocument\nRetrieves the currently active document.\ncanOpenURL\nDetermines if a deep-link to another app can be opened.\nopenURL\nOpens a deep link into another app."
+  },
+  {
+    "title": "maskInset",
+    "url": "https://developer.apple.com/documentation/tvmljs/browser/3192099-maskinset",
+    "html": "See Also\nModifying a Browser\ninteritemSpacing\nThe spacing between full screen browser items.\ncornerRadius\nThe corner radius of each full screen browser item."
+  },
+  {
+    "title": "suggestions",
+    "url": "https://developer.apple.com/documentation/tvmljs/keyboard/3589336-suggestions",
+    "html": "Discussion\n\nProvide search suggestions to help the user complete their query quickly. Update the suggestions as the user types. This property is only available if the Keyboard is associated with a searchField.\n\nEach suggestion in this array should have the following properties:\n\ntext\n\nA label for the suggestion, usually the search term the suggestion represents.\n\nbadge\n\nThe name of an image for display alongside the suggestion’s text. This property is optional.\n\nsearchTerm\n\nA string containing search criteria. This property is optional.\n\nSee Also\nProviding and Handling Search Suggestions\nonSuggestionSelected\nA function the system calls when the user selects a suggestion on a search field."
+  },
+  {
+    "title": "openURL",
+    "url": "https://developer.apple.com/documentation/tvmljs/1627399-openurl",
+    "html": "Parameters\nurl\n\nThe URL of the app that is to be opened.\n\nDiscussion\n\nInvoking this method with a valid URL launches the handling application.\n\nSee Also\nManipulating the Document\nUUID\nGenerates a unique UUID.\ngetActiveDocument\nRetrieves the currently active document.\ncanOpenURL\nDetermines if a deep-link to another app can be opened."
+  },
+  {
+    "title": "setTimeout",
+    "url": "https://developer.apple.com/documentation/tvmljs/1627349-settimeout",
+    "html": "Parameters\nfunc\n\nThe function to be executed.\n\ntime\n\nAn integer value that defines, in milliseconds, how long until the function is executed.\n\nReturn Value\n\nReturns a string containing an identifier for the timeout just set.\n\nDiscussion\n\nPass the identifier created by this function to the clearTimeout function to stop the designated function from executing.\n\nSee Also\nAutomating Function Timing\nsetInterval\nRepeatedly executes a given function at the given time interval.\nclearInterval\nStops the function associated with the identifier from repeating.\nclearTimeout\nStops the function associated with the identifier from executing."
+  },
+  {
+    "title": "clearTimeout",
+    "url": "https://developer.apple.com/documentation/tvmljs/1627416-cleartimeout",
+    "html": "Parameters\ntimeoutID\n\nA string identifying the timeout to clear.\n\nDiscussion\n\nThis function stops the function associated with the identifier created by the setTimeout function from executing.\n\nSee Also\nAutomating Function Timing\nsetInterval\nRepeatedly executes a given function at the given time interval.\nclearInterval\nStops the function associated with the identifier from repeating.\nsetTimeout\nExecutes a given function after a set amount of time."
+  },
+  {
+    "title": "onTextChange",
+    "url": "https://developer.apple.com/documentation/tvmljs/keyboard/1627355-ontextchange",
+    "html": "Discussion\n\nProvide a callback function for the onTextChange attribute to respond to changes in the searchField or textField elements. You can respond to user inputs as the changes happen. This attribute must be set to a function; for example, Keyboard.onTextChange = function () {}.\n\nSee Also\nSetting and Retrieving Text\ntext\nThe text inside a search or text field."
+  },
+  {
+    "title": "getActiveDocument",
+    "url": "https://developer.apple.com/documentation/tvmljs/1627314-getactivedocument",
+    "html": "Return Value\n\nThe currently active document.\n\nDiscussion\n\nThe currently active document is the document that the user is interacting with. It can be the document on top of the navigation stack or a modally presented document. If the a menu bar document is the top most document, this function returns the document that is selected in the Menu Bar.\n\nSee Also\nManipulating the Document\nUUID\nGenerates a unique UUID.\ncanOpenURL\nDetermines if a deep-link to another app can be opened.\nopenURL\nOpens a deep link into another app."
+  },
+  {
+    "title": "interstitials",
+    "url": "https://developer.apple.com/documentation/tvmljs/mediaitem/1627341-interstitials",
+    "html": "Discussion\n\nAn interstitial object defines a point within a MediaItem object where you can insert another media item; for example, a short ad. Each interstitial object in the array contains two keys: starttime and duration. The starttime is the length of time from the beginning of a media item, in seconds. The duration is the length of the interstitial, in seconds. Both keys are required. A common use for these objects is to define when and where ads are to be played during a stream. Listing 1 shows a complete TVMLKit JS example for incorporating interstitials. A single interstitial is defined. In addition, an event listener is created that prevents users from fast-forwarding or rewinding during the duration of the interstitial.\n\nListing 1 interstitials.js example\nvar baseURL;\n \nApp.onLaunch = function(options) {\n    baseURL = options.BASEURL;\n    var documentPath = \"path to file on server/baseball.m3u8\";\n    var videourl = baseURL + documentPath;\n \n    var singleVideo = new MediaItem('video', videourl);\n    var videoInterstitials = [];\n    videoInterstitials.push({\n        starttime: 30,\n        duration: 20\n    });\n    singleVideo.interstitials = videoInterstitials;\n    var videoList = new Playlist();\n    videoList.push(singleVideo);\n    var myPlayer = new Player();\n    myPlayer.playlist = videoList;\n    myPlayer.addEventListener(\"requestSeekToTime\", function(event) {\n        if (event.currentTime > 30 && event.currentTime <50) {return false;} else {return true;}\n        });\n    myPlayer.play();\n}\n \nApp.onExit = function() {\n    console.log(\"exited\");\n}\n\nSee Also\nSetting Timing Options\nhighlightGroups\nAn array of highlight groups, with each group containing a list of highlights.\nresumeTime\nThe number of seconds from the beginning of the item at which the item begins playing."
+  },
+  {
+    "title": "text",
+    "url": "https://developer.apple.com/documentation/tvmljs/keyboard/1627359-text",
+    "html": "Discussion\n\nUse this attribute to set or get the text in a searchField or textField element.\n\nSee Also\nSetting and Retrieving Text\nonTextChange\nA function the system calls when the text in a search or text field changes."
+  },
+  {
+    "title": "resumeTime",
+    "url": "https://developer.apple.com/documentation/tvmljs/mediaitem/1627400-resumetime",
+    "html": "Discussion\n\nUse this property to begin playing a media item at a time other than at the beginning of the item. If this property contains anything other than 0, the player displays “Resume” instead of “Play from beginning” on playback.\n\nSee Also\nSetting Timing Options\nhighlightGroups\nAn array of highlight groups, with each group containing a list of highlights.\ninterstitials\nAn array of interstitial objects."
+  },
+  {
+    "title": "title",
+    "url": "https://developer.apple.com/documentation/tvmljs/mediaitem/1627381-title",
+    "html": "See Also\nIdentifying Media Items\nartworkImageURL\nThe URL path to the artwork that accompanies the media item.\ndescription\nThe description for a media item.\nsubtitle\nThe subtitle for a the media item.\ntype\nThe type of media item.\nurl\nThe URL path to the media item."
+  },
+  {
+    "title": "Playlist",
+    "url": "https://developer.apple.com/documentation/tvmljs/playlist/1627336-playlist",
+    "html": "Return Value\n\nAn empty playlist array.\n\nDiscussion\n\nAfter creating a new playlist, use the push method to add new media items to the end of the playlist.\n\nSee Also\nModifying the Playlist\nitem\nReturns the media item located in the indicated array index.\nlength\nThe number of items in the playlist.\npop\nRemoves a media item from the end of a playlist.\npush\nAdds a media item to the end of a playlist.\nsplice\nDeletes the indicated array elements and replaces them with the specified elements."
+  },
+  {
+    "title": "transportBarVisibilityDidChange",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/1682120-transportbarvisibilitydidchange",
+    "html": "Discussion\n\nThe listener is passed an event object with the following attributes:\n\nhidden—The new state of the transport bar.\n\nSee Also\nResponding to Events\nmediaItemDidChange\nAn event notifying the listener that the player changed a media item.\nmediaItemWillChange\nAn event notifying the listener that the player is about to changed a media item.\nplaybackDidStall\nAn event that indicates that playback has stalled.\nplaybackError\nAn event that indicates an error has occurred during playback.\nrequestSeekToTime\nAn event that indicates whether a seek-to-time request was accomplished.\nshouldChangeToMediaAtIndex\nAn event that indicates a request to play a media item in a different index is received.\nshouldHandleStateChange\nAn event that indicates a state change request has occurred.\nstateDidChange\nAn event that indicates the state of the player has changed.\nstateWillChange\nAn event that indicates the state of the player is about to change.\ntimeBoundaryDidCross\nAn event that indicates a specific playback time in the media item has been crossed.\ntimeDidChange\nAn event that happens at a specified interval.\ntimedMetadata\nAn event that is triggered whenever a specified piece of metadata is encountered."
+  },
+  {
+    "title": "shouldChangeToMediaAtIndex",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/1682117-shouldchangetomediaatindex",
+    "html": "Discussion\n\nThe listener is passed an event object with the following attributes:\n\nrequestedIndex—The index the player is switching to.\n\nSee Also\nResponding to Events\nmediaItemDidChange\nAn event notifying the listener that the player changed a media item.\nmediaItemWillChange\nAn event notifying the listener that the player is about to changed a media item.\nplaybackDidStall\nAn event that indicates that playback has stalled.\nplaybackError\nAn event that indicates an error has occurred during playback.\nrequestSeekToTime\nAn event that indicates whether a seek-to-time request was accomplished.\nshouldHandleStateChange\nAn event that indicates a state change request has occurred.\nstateDidChange\nAn event that indicates the state of the player has changed.\nstateWillChange\nAn event that indicates the state of the player is about to change.\ntimeBoundaryDidCross\nAn event that indicates a specific playback time in the media item has been crossed.\ntimeDidChange\nAn event that happens at a specified interval.\ntimedMetadata\nAn event that is triggered whenever a specified piece of metadata is encountered.\ntransportBarVisibilityDidChange\nAn event that indicates the state of the transport bar has changed."
+  },
+  {
+    "title": "playbackError",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/1682115-playbackerror",
+    "html": "Discussion\n\nThe listener is passed an event object with the following attributes:\n\nreason—The localized string describing why the error occurred.\n\nshouldStopDueToError—A boolean that provides a hint as to whether the player should be stopped due to this error.\n\nSee Also\nResponding to Events\nmediaItemDidChange\nAn event notifying the listener that the player changed a media item.\nmediaItemWillChange\nAn event notifying the listener that the player is about to changed a media item.\nplaybackDidStall\nAn event that indicates that playback has stalled.\nrequestSeekToTime\nAn event that indicates whether a seek-to-time request was accomplished.\nshouldChangeToMediaAtIndex\nAn event that indicates a request to play a media item in a different index is received.\nshouldHandleStateChange\nAn event that indicates a state change request has occurred.\nstateDidChange\nAn event that indicates the state of the player has changed.\nstateWillChange\nAn event that indicates the state of the player is about to change.\ntimeBoundaryDidCross\nAn event that indicates a specific playback time in the media item has been crossed.\ntimeDidChange\nAn event that happens at a specified interval.\ntimedMetadata\nAn event that is triggered whenever a specified piece of metadata is encountered.\ntransportBarVisibilityDidChange\nAn event that indicates the state of the transport bar has changed."
+  },
+  {
+    "title": "mediaItemWillChange",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/1627345-mediaitemwillchange",
+    "html": "Discussion\n\nThis attribute contains the reason the media item is about to change. Valid values are: errorDidOccur, fastForwardedToEndOfMediaItem, manuallyChanged, newPlaylist, playerInvalidated, and playedToEndOfMediaItem. The listener is passed an event object with the following attributes:\n\nreason—An integer that represents the reason for why the media changed. Valid values are 0:Unknown, 1:Played to the end, 2:Forwarded to the end, 3:Error occurred, 4:Playlist changed, and 5:User initiated.\n\ntarget—The event object, which is the Player object.\n\ntimeStamp—The time that the event occurred.\n\ntype—The name of the event.\n\nSee Also\nResponding to Events\nmediaItemDidChange\nAn event notifying the listener that the player changed a media item.\nplaybackDidStall\nAn event that indicates that playback has stalled.\nplaybackError\nAn event that indicates an error has occurred during playback.\nrequestSeekToTime\nAn event that indicates whether a seek-to-time request was accomplished.\nshouldChangeToMediaAtIndex\nAn event that indicates a request to play a media item in a different index is received.\nshouldHandleStateChange\nAn event that indicates a state change request has occurred.\nstateDidChange\nAn event that indicates the state of the player has changed.\nstateWillChange\nAn event that indicates the state of the player is about to change.\ntimeBoundaryDidCross\nAn event that indicates a specific playback time in the media item has been crossed.\ntimeDidChange\nAn event that happens at a specified interval.\ntimedMetadata\nAn event that is triggered whenever a specified piece of metadata is encountered.\ntransportBarVisibilityDidChange\nAn event that indicates the state of the transport bar has changed."
+  },
+  {
+    "title": "mediaItemDidChange",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/1627385-mediaitemdidchange",
+    "html": "Discussion\n\nThis attribute contains the reason that the media item changed. Valid values are: errorDidOccur, fastForwardedToEndOfMediaItem, manuallyChanged, newPlaylist, playerInvalidated, and playedToEndOfMediaItem. The listener is passed an event object with the following attributes:\n\nreason—An integer that represents the reason for why the media changed. Valid values are 0:Unknown, 1:Played to the end, 2:Forwarded to the end, 3:Error occurred, 4:Playlist changed, and 5:User initiated.\n\ntarget—The event object, which is the Player object.\n\ntimeStamp—The time that the event occurred.\n\ntype—The name of the event.\n\nSee Also\nResponding to Events\nmediaItemWillChange\nAn event notifying the listener that the player is about to changed a media item.\nplaybackDidStall\nAn event that indicates that playback has stalled.\nplaybackError\nAn event that indicates an error has occurred during playback.\nrequestSeekToTime\nAn event that indicates whether a seek-to-time request was accomplished.\nshouldChangeToMediaAtIndex\nAn event that indicates a request to play a media item in a different index is received.\nshouldHandleStateChange\nAn event that indicates a state change request has occurred.\nstateDidChange\nAn event that indicates the state of the player has changed.\nstateWillChange\nAn event that indicates the state of the player is about to change.\ntimeBoundaryDidCross\nAn event that indicates a specific playback time in the media item has been crossed.\ntimeDidChange\nAn event that happens at a specified interval.\ntimedMetadata\nAn event that is triggered whenever a specified piece of metadata is encountered.\ntransportBarVisibilityDidChange\nAn event that indicates the state of the transport bar has changed."
+  },
+  {
+    "title": "previousMediaItem",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/1627373-previousmediaitem",
+    "html": "Discussion\n\nThis property returns null if there are no items in the playlist previous to the currently playing item.\n\nSee Also\nInspecting Media Items\ncurrentMediaItem\nThe currently selected media item in the playlist.\ncurrentMediaItemDate\nContains the current time of the media item as a Date object.\ncurrentMediaItemDuration\nThe length, in seconds, of the current media item.\nnextMediaItem\nThe next media item in the playlist after the currently selected item."
+  },
+  {
+    "title": "onreadystatechange",
+    "url": "https://developer.apple.com/documentation/tvmljs/xmlhttprequest/1627414-onreadystatechange",
+    "html": "Discussion\n\nDo not use this attribute in conjunction with synchronous requests. This attribute must be set to a function; for example, XMLHttpRequest.onreadystatechange = function () {}.\n\nSee Also\nImplementing Callback Functions\nonabort\nA callback function called when a request is cancelled by the user.\nonerror\nA callback function that is called if the request fails due to an error.\nonload\nA callback function that is called when the request is successfully completed.\nonloadend\nA callback function that is called when the request is completed for any reason.\nonloadstart\nA callback function that is called when the request begins.\nontimeout\nA callback function that is called when a request times out."
+  },
+  {
+    "title": "loadend",
+    "url": "https://developer.apple.com/documentation/tvmljs/xmlhttprequest/1627393-loadend",
+    "html": "See Also\nResponding to Events\nabort\nAn event signifying the request has aborted.\nerror\nAn event signifying an error occurred during the request.\nload\nAn event signifying the request was successfully loaded.\nloadstart\nAn event signifying the request has begun.\nreadystatechange\nAn event signifying that a state change has occurred."
+  },
+  {
+    "title": "status",
+    "url": "https://developer.apple.com/documentation/tvmljs/xmlhttprequest/1627403-status",
+    "html": "Discussion\n\nIf the current state of the request is unsent or opened, then this attribute’s value is 0.\n\nSee Also\nRetrieving Request Information\nmetrics\nA dictionary of keys used to request start and response start and end times.\nreadyState\nThe current state of the request.\nresponse\nThe response entity body.\nresponseCacheIsValid\nresponseText\nThe response to the request.\nresponseType\nThe type of response.\nresponseURL\nresponseXML\nThe document response entity body.\nstatusText\nThe HTTP status text."
+  },
+  {
+    "title": "onSuggestionSelected",
+    "url": "https://developer.apple.com/documentation/tvmljs/keyboard/3678707-onsuggestionselected",
+    "html": "Discussion\n\nProvide a callback function for the onSuggestionSelected attribute to respond to the user selecting one of a searchField’s suggestions. This value of this attribute must be a function; for example, keyboard.onSuggestionSelected = function (searchTerm) {}.\n\nSee Also\nProviding and Handling Search Suggestions\nsuggestions\nSearch parameters to offer as shortcuts."
+  },
+  {
+    "title": "setDocument",
+    "url": "https://developer.apple.com/documentation/tvmljs/menubardocument/1627374-setdocument",
+    "html": "Parameters\ndocument\n\nThe TVML file to be associated with the menu item.\n\nmenuItem\n\nThe selected menu item.\n\nSee Also\nSetting and Retrieving Menu Item Documents\ngetDocument\nRetrieves the document associated with the specified menu item.\ngetSelectedItem\nRetrieves the menu item in the menu bar that is currently in focus.\nsetSelectedItem\nSets the focus in a menu bar to the specified menu item."
+  },
+  {
+    "title": "overlayDocument",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/1627320-overlaydocument",
+    "html": "Discussion\n\nCreate a DOM document using the divTemplate and assign it to the overlayDocument property. Set this attribute to null to remove the current overlay document.\n\nSee Also\nSetting Up the Player\ninteractiveOverlayDismissable\nDetermines if an interactive overlay can be dismissed using the Menu button.\ninteractiveOverlayDocument\nA DOM document that is presented over the entire video player, including the transport bar.\nPlayer\nCreates a new player object.\nplaylist\nThe playlist for a player.\npresent\nShows the player UI if it is not currently visible."
+  },
+  {
+    "title": "interactiveOverlayDismissable",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/2123044-interactiveoverlaydismissable",
+    "html": "See Also\nSetting Up the Player\ninteractiveOverlayDocument\nA DOM document that is presented over the entire video player, including the transport bar.\noverlayDocument\nThe annotations for a video created by placing a DOM document over the video.\nPlayer\nCreates a new player object.\nplaylist\nThe playlist for a player.\npresent\nShows the player UI if it is not currently visible."
+  },
+  {
+    "title": "interactiveOverlayDocument",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/2123043-interactiveoverlaydocument",
+    "html": "Discussion\n\nThe interactive overlay document can contain focusable elements and can be any template document. Set this attribute to null to remove the current overlay document.\n\nSee Also\nSetting Up the Player\ninteractiveOverlayDismissable\nDetermines if an interactive overlay can be dismissed using the Menu button.\noverlayDocument\nThe annotations for a video created by placing a DOM document over the video.\nPlayer\nCreates a new player object.\nplaylist\nThe playlist for a player.\npresent\nShows the player UI if it is not currently visible."
+  },
+  {
+    "title": "systemVersion",
+    "url": "https://developer.apple.com/documentation/tvmljs/device/1627323-systemversion",
+    "html": "See Also\nRetrieving Device Information\nappIdentifier\nThe unique identifier for the app.\nappVersion\nThe current app version.\nmodel\nA string that identifies the device model.\nproductType\nThe version of the product installed on the Apple TV.\nvendorIdentifier\nThe universally unique identifier (UUID) of the device."
+  },
+  {
+    "title": "vendorIdentifier",
+    "url": "https://developer.apple.com/documentation/tvmljs/device/1627383-vendoridentifier",
+    "html": "Discussion\n\nThe UUID for a device stays the same across all apps from a vendor.\n\nSee Also\nRetrieving Device Information\nappIdentifier\nThe unique identifier for the app.\nappVersion\nThe current app version.\nmodel\nA string that identifies the device model.\nproductType\nThe version of the product installed on the Apple TV.\nsystemVersion\nThe tvOS version."
+  },
+  {
+    "title": "language",
+    "url": "https://developer.apple.com/documentation/tvmljs/settings/1627439-language",
+    "html": "See Also\nRetrieving Setting Information\nrestrictions\nRestriction information on the device.\nonRestrictionsChange\nA callback function that is called when changes to a device’s restriction information changes.\nstorefrontCountryCode\nThe country code used by the store on this device."
+  },
+  {
+    "title": "addEventListener",
+    "url": "https://developer.apple.com/documentation/tvmljs/eventlistenerobject/1627408-addeventlistener",
+    "html": "Parameters\ntype\n\nThe developer-defined name of the event type to add.\n\nlistener\n\nThe listener object to be added. This object is typically a function.\n\nextraInfo\n\nOptional parameter that is used to handle specific types of events. Different events have different formats.\n\nDiscussion\n\nUse the extraInfo parameter to handle information for different types of events; for example, specifying the type of metadata a metadata listener is listening for.\n\nSee Also\nAdding and Removing Event Listeners\nremoveEventListener\nRemoves the designated event listener."
+  },
+  {
+    "title": "storefrontCountryCode",
+    "url": "https://developer.apple.com/documentation/tvmljs/settings/1627376-storefrontcountrycode",
+    "html": "See Also\nRetrieving Setting Information\nrestrictions\nRestriction information on the device.\nlanguage\nThe language used to display information by the device.\nonRestrictionsChange\nA callback function that is called when changes to a device’s restriction information changes."
+  },
+  {
+    "title": "onRestrictionsChange",
+    "url": "https://developer.apple.com/documentation/tvmljs/settings/1627370-onrestrictionschange",
+    "html": "Discussion\n\nThe onRestrictionsChange attribute is used to update any activities that use a device’s restriction information. The attribute must be set to a function; for example, Settings.onRestrictionsChange = function () {}.\n\nSee Also\nRetrieving Setting Information\nrestrictions\nRestriction information on the device.\nlanguage\nThe language used to display information by the device.\nstorefrontCountryCode\nThe country code used by the store on this device."
+  },
+  {
+    "title": "restrictions",
+    "url": "https://developer.apple.com/documentation/tvmljs/settings/1627378-restrictions",
+    "html": "Discussion\n\nThe restriction information for a device determines the type of media items that can be played on the device. For more information, see Restrictions.\n\nSee Also\nRetrieving Setting Information\nlanguage\nThe language used to display information by the device.\nonRestrictionsChange\nA callback function that is called when changes to a device’s restriction information changes.\nstorefrontCountryCode\nThe country code used by the store on this device."
+  },
+  {
+    "title": "appIdentifier",
+    "url": "https://developer.apple.com/documentation/tvmljs/device/1627339-appidentifier",
+    "html": "See Also\nRetrieving Device Information\nappVersion\nThe current app version.\nmodel\nA string that identifies the device model.\nproductType\nThe version of the product installed on the Apple TV.\nsystemVersion\nThe tvOS version.\nvendorIdentifier\nThe universally unique identifier (UUID) of the device."
+  },
+  {
+    "title": "segmentSize",
+    "url": "https://developer.apple.com/documentation/tvmljs/datasource/datasource/3192122-segmentsize",
+    "html": "Discussion\n\nThis property allows you to adjust the number of indexes to be loaded according to the capabilities of your server endpoints.\n\nThe segmentSize attribute defaults to 20 indexes.\n\nSee Also\nLoading Elements\nloadindexes\nAn event type that tells the data source to load its indexes."
+  },
+  {
+    "title": "maxMovieRatingForCountry",
+    "url": "https://developer.apple.com/documentation/tvmljs/restrictions/1627362-maxmovieratingforcountry",
+    "html": "Parameters\ncountryCode\n\nAn object containing the valid country code. If the code is invalid, the current country or region based on location is used.\n\nReturn Value\n\nA string representing the maximum allowed rating for a movie in the specified country or region; for example, PG-13.\n\nSee Also\nRetrieving Restriction Information\nallowsExplicit\nA boolean value that indicates whether any explicit media is allowed.\nmaxMovieRank\nThe maximum allowed ranking for a movie.\nmaxTVShowRank\nThe maximum allowed ranking for a television show.\nmaxTVShowRatingForCountry\nThe maximum television show rating allowed for the specified country or region."
+  },
+  {
+    "title": "maxMovieRank",
+    "url": "https://developer.apple.com/documentation/tvmljs/restrictions/1627305-maxmovierank",
+    "html": "Discussion\n\nThe rank for a movie is an integer ranging from 0 to 1000.\n\nSee Also\nRetrieving Restriction Information\nallowsExplicit\nA boolean value that indicates whether any explicit media is allowed.\nmaxMovieRatingForCountry\nThe maximum movie rating allowed for the specified country or region.\nmaxTVShowRank\nThe maximum allowed ranking for a television show.\nmaxTVShowRatingForCountry\nThe maximum television show rating allowed for the specified country or region."
+  },
+  {
+    "title": "item",
+    "url": "https://developer.apple.com/documentation/tvmljs/datasource/datasource/3192117-item",
+    "html": "See Also\nAccessing Elements\nlength\nThe number of items in the data source."
+  },
+  {
+    "title": "allowsExplicit",
+    "url": "https://developer.apple.com/documentation/tvmljs/restrictions/1627425-allowsexplicit",
+    "html": "Discussion\n\nWhen this property is true, explicit media items are allowed.\n\nSee Also\nRetrieving Restriction Information\nmaxMovieRank\nThe maximum allowed ranking for a movie.\nmaxMovieRatingForCountry\nThe maximum movie rating allowed for the specified country or region.\nmaxTVShowRank\nThe maximum allowed ranking for a television show.\nmaxTVShowRatingForCountry\nThe maximum television show rating allowed for the specified country or region."
+  },
+  {
+    "title": "update",
+    "url": "https://developer.apple.com/documentation/tvmljs/datasource/datasource/3192123-update",
+    "html": "Discussion\n\nThe update API allows the existing data source to reuse already loaded items. This reduces any flashes that might traditionally occur in the UI because of these updates.\n\nSee Also\nModifying the Data Source\ninsert\nInserts a new item into the array.\ndelete\nDeletes an item from the data source array.\nmove\nMoves an item in the data source array.\nreplace\nReplaces an item in the data source array."
+  },
+  {
+    "title": "length",
+    "url": "https://developer.apple.com/documentation/tvmljs/datasource/datasource/3192118-length",
+    "html": "See Also\nAccessing Elements\nitem\nReturns the array item at the specified index."
+  },
+  {
+    "title": "move",
+    "url": "https://developer.apple.com/documentation/tvmljs/datasource/datasource/3192120-move",
+    "html": "See Also\nModifying the Data Source\ninsert\nInserts a new item into the array.\ndelete\nDeletes an item from the data source array.\nreplace\nReplaces an item in the data source array.\nupdate\nUpdates an item in the data source array."
+  },
+  {
+    "title": "delete",
+    "url": "https://developer.apple.com/documentation/tvmljs/datasource/datasource/3192115-delete",
+    "html": "See Also\nModifying the Data Source\ninsert\nInserts a new item into the array.\nmove\nMoves an item in the data source array.\nreplace\nReplaces an item in the data source array.\nupdate\nUpdates an item in the data source array."
+  },
+  {
+    "title": "maxTVShowRank",
+    "url": "https://developer.apple.com/documentation/tvmljs/restrictions/1627434-maxtvshowrank",
+    "html": "Discussion\n\nThe rank for a television show is an integer ranging from 0 to 1000.\n\nSee Also\nRetrieving Restriction Information\nallowsExplicit\nA boolean value that indicates whether any explicit media is allowed.\nmaxMovieRank\nThe maximum allowed ranking for a movie.\nmaxMovieRatingForCountry\nThe maximum movie rating allowed for the specified country or region.\nmaxTVShowRatingForCountry\nThe maximum television show rating allowed for the specified country or region."
+  },
+  {
+    "title": "replace",
+    "url": "https://developer.apple.com/documentation/tvmljs/datasource/datasource/3192121-replace",
+    "html": "See Also\nModifying the Data Source\ninsert\nInserts a new item into the array.\ndelete\nDeletes an item from the data source array.\nmove\nMoves an item in the data source array.\nupdate\nUpdates an item in the data source array."
+  },
+  {
+    "title": "underlyingError",
+    "url": "https://developer.apple.com/documentation/tvmljs/nserror/2897821-underlyingerror",
+    "html": "See Also\nGetting Error Properties\ncode\nThe error code.\ndomain\nA string containing the error domain.\nuserInfo\nThe user info dictionary."
+  },
+  {
+    "title": "code",
+    "url": "https://developer.apple.com/documentation/tvmljs/tverror/1627334-code",
+    "html": "Discussion\n\nAll errors are domain-specific.\n\nSee Also\nGetting Error Properties\ndescription\nA string containing the description of the error.\ndomain\nA string containing the error domain.\nuserInfo\nThe user info dictionary."
+  },
+  {
+    "title": "description",
+    "url": "https://developer.apple.com/documentation/tvmljs/nserror/2897823-description",
+    "html": "See Also\nGetting a Localized Error Description\nfailureReason\nA string containing the localized explanation of the reason for the error.\nrecoverySuggestion\nA string containing the localized recovery suggestion for the error."
+  },
+  {
+    "title": "DataSource.DataSource",
+    "url": "https://developer.apple.com/documentation/tvmljs/datasource/datasource",
+    "html": "Topics\nCreating the Data Source\nDataSource\nCreates a new data source object.\nModifying the Data Source\ninsert\nInserts a new item into the array.\ndelete\nDeletes an item from the data source array.\nmove\nMoves an item in the data source array.\nreplace\nReplaces an item in the data source array.\nupdate\nUpdates an item in the data source array.\nAccessing Elements\nitem\nReturns the array item at the specified index.\nlength\nThe number of items in the data source.\nLoading Elements\nloadindexes\nAn event type that tells the data source to load its indexes.\nsegmentSize\nThe maximum number of indexes that are loaded each time the loadindexes event is triggered.\nRelationships\nInherits From\nEventListenerObject"
+  },
+  {
+    "title": "Storage",
+    "url": "https://developer.apple.com/documentation/tvmljs/storage",
+    "html": "Overview\n\nYou cannot create a new instance of the Storage class. The available instances in TVMLKit JS are localStorage and sessionStorage. Local storage writes the data to the disk, while session storage writes the data to the memory only. Any data written to the session storage is purged when your app exits.\n\nTopics\nAccessing Key-Value Pair Information\nclear\nRemoves all instances of key-value pairs from the storage list.\ngetItem\nRetrieves the data associated with the specified key.\nkey\nReturns the key located in the specified location.\nlength\nThe number of key-value pairs currently in the storage list.\nremoveItem\nDeletes a key and all associated data from storage.\nsetItem\nAssociates the given data with the given key.\nSee Also\nData Storage and Retrieval\nBinding JSON data to TVML documents\nCreate full-fledged TVML documents by using data binding and queries on simplified TVML files.\nXMLHttpRequest\nAn object used to retrieve data from a URL.\nDataItem\nAn object used to create observable objects from JSON objects for data binding.\nDataSource\nAn interface that allows the system to detect and respond to changes in your data.\nLoadIndexesRequest\nA request created when the loadindexes event is triggered."
+  },
+  {
+    "title": "DataItem",
+    "url": "https://developer.apple.com/documentation/tvmljs/dataitem",
+    "html": "Topics\nCreating the Data Item\nDataItem\nCreates a new data item.\nRetrieving Data Item Information\nidentifier\nA unique identifier for a data item provided by the associated JSON object.\ntype\nThe type for a data item provided by the associated JSON object.\nWorking with Property Paths\nsetPropertyPath\nSets the value associated with a property path.\ngetPropertyPath\nRetrieves the value associated with a property path.\ntouchPropertyPath\nUpdates the property path.\nRelationships\nInherits From\nEventListenerObject\nSee Also\nData Storage and Retrieval\nBinding JSON data to TVML documents\nCreate full-fledged TVML documents by using data binding and queries on simplified TVML files.\nXMLHttpRequest\nAn object used to retrieve data from a URL.\nStorage\nAn object used to store key-value-pair information.\nDataSource\nAn interface that allows the system to detect and respond to changes in your data.\nLoadIndexesRequest\nA request created when the loadindexes event is triggered."
+  },
+  {
+    "title": "LSException",
+    "url": "https://developer.apple.com/documentation/tvmljs/lsexception",
+    "html": "Topics\nInstance Properties\ncode"
+  },
+  {
+    "title": "onError",
+    "url": "https://developer.apple.com/documentation/tvmljs/app/1627353-onerror",
+    "html": "Discussion\n\nUse the onError attribute to handle any errors sent from the Apple TV. This attribute must be set to the following function: App.onError = function (message, sourceURL, line) {}.\n\nmessage—The error message.\n\nsourceURL—The URL for the TVMLKit JS file where the error occurred. Defaults to nil if the information is not available.\n\nline—The line in the TVMLKit JS file where the error occurred. Defaults to nil if the information is not available.\n\nSee Also\nResponding to App Life Cycle Events\nonExit\nA callback function that is automatically called when the app has been exited.\nonLaunch\nA callback function that is automatically called when the app has been launched.\nonResume\nA callback function that is automatically called when the app moves to the foreground.\nonSuspend\nA callback function that is automatically called when the app is sent to the background."
+  },
+  {
+    "title": "replaceDocument",
+    "url": "https://developer.apple.com/documentation/tvmljs/navigationdocument/1627430-replacedocument",
+    "html": "Parameters\ndocument\n\nThe DOM document that is to be added onto the stack.\n\noldDocument\n\nThe DOM document that is being replaced.\n\nDiscussion\n\nThis function searches the stack for the first instance of the document to be replaced and replaces it with the new document.\n\nSee Also\nAdding Documents to the Stack\ninsertBeforeDocument\nInserts a new document directly before a document currently on the stack.\npushDocument\nPushes the specified document onto the stack."
+  },
+  {
+    "title": "onExit",
+    "url": "https://developer.apple.com/documentation/tvmljs/app/1627419-onexit",
+    "html": "Discussion\n\nUse the onExit attribute to complete any actions that need to be cleaned up (for example, releasing any system resources) when the app has been exited. This attribute must be set to a function that accepts an options argument; for example App.onExit = function (options) {}. The options argument can contain the following keys:\n\nreloading—Set to true if the app is exiting as a result of App.reload() and is to be relaunched later.\n\nSee Also\nResponding to App Life Cycle Events\nonError\nA callback function that is automatically called when an error is sent from the Apple TV.\nonLaunch\nA callback function that is automatically called when the app has been launched.\nonResume\nA callback function that is automatically called when the app moves to the foreground.\nonSuspend\nA callback function that is automatically called when the app is sent to the background."
+  },
+  {
+    "title": "MenuBarDocument",
+    "url": "https://developer.apple.com/documentation/tvmljs/menubardocument",
+    "html": "Overview\n\nUse the getFeature function with the feature name MenuBarDocument to retrieve an instance of this class from the menuBar element; for example, getFeature('MenuBarDocument').\n\nTopics\nSetting and Retrieving Menu Item Documents\ngetDocument\nRetrieves the document associated with the specified menu item.\ngetSelectedItem\nRetrieves the menu item in the menu bar that is currently in focus.\nsetDocument\nAssociates a document with a menu item.\nsetSelectedItem\nSets the focus in a menu bar to the specified menu item.\nSee Also\nElement Access\nKeyboard\nAn object used to retrieve user input from search fields and text fields."
+  },
+  {
+    "title": "Browser",
+    "url": "https://developer.apple.com/documentation/tvmljs/browser",
+    "html": "Overview\n\nThere is no constructor for this object. Configure the Browser by modifying its properties. When appropriately configured, use the present method to display a new Browser.\n\nTopics\nCreating a Browser\npresent\nShows the Browser UI if it is not currently visible.\nModifying a Browser\nmaskInset\nThe insets from the edges of the full screen layout.\ninteritemSpacing\nThe spacing between full screen browser items.\ncornerRadius\nThe corner radius of each full screen browser item.\nSee Also\nMedia Playback\nPlaying Media in a Client-Server App\nPlay media items in a client-server app using the built-in media player for TVMLKit JS.\nPlayer\nA media player that displays the UI for playing video and audio in an Apple TV client-server app.\nPlaylist\nAn array of media items to be played in an Apple TV client-server app.\nMediaItem\nA single audio or video item.\nSlideshow\nAn object used to display images on Apple TV in a slideshow format."
+  },
+  {
+    "title": "type",
+    "url": "https://developer.apple.com/documentation/tvmljs/mediaitem/1627315-type",
+    "html": "Discussion\n\nThe valid values for this attribute are audio and video.\n\nSee Also\nIdentifying Media Items\nartworkImageURL\nThe URL path to the artwork that accompanies the media item.\ndescription\nThe description for a media item.\nsubtitle\nThe subtitle for a the media item.\ntitle\nThe title of the media item.\nurl\nThe URL path to the media item."
+  },
+  {
+    "title": "artworkImageURL",
+    "url": "https://developer.apple.com/documentation/tvmljs/mediaitem/1627319-artworkimageurl",
+    "html": "See Also\nIdentifying Media Items\ndescription\nThe description for a media item.\nsubtitle\nThe subtitle for a the media item.\ntitle\nThe title of the media item.\ntype\nThe type of media item.\nurl\nThe URL path to the media item."
+  },
+  {
+    "title": "url",
+    "url": "https://developer.apple.com/documentation/tvmljs/mediaitem/1627401-url",
+    "html": "See Also\nIdentifying Media Items\nartworkImageURL\nThe URL path to the artwork that accompanies the media item.\ndescription\nThe description for a media item.\nsubtitle\nThe subtitle for a the media item.\ntitle\nThe title of the media item.\ntype\nThe type of media item."
+  },
+  {
+    "title": "timeDidChange",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/1627344-timedidchange",
+    "html": "Discussion\n\nThis event fires every time a set number of seconds, starting from the beginning of the media item or 0 seconds, as specified in the extraInfo parameter for the listener, occurs. The listener is passed the following attributes:\n\ninterval—The desired time interval. This value should be an integer. Floating point values are transformed into integers. The default value is 1.\n\ntarget—The event object, which is the Player object.\n\ntime—The current playback time, in seconds.\n\ntimeStamp—The time that the event occurred.\n\ntype—The name of the event.\n\nSee Also\nResponding to Events\nmediaItemDidChange\nAn event notifying the listener that the player changed a media item.\nmediaItemWillChange\nAn event notifying the listener that the player is about to changed a media item.\nplaybackDidStall\nAn event that indicates that playback has stalled.\nplaybackError\nAn event that indicates an error has occurred during playback.\nrequestSeekToTime\nAn event that indicates whether a seek-to-time request was accomplished.\nshouldChangeToMediaAtIndex\nAn event that indicates a request to play a media item in a different index is received.\nshouldHandleStateChange\nAn event that indicates a state change request has occurred.\nstateDidChange\nAn event that indicates the state of the player has changed.\nstateWillChange\nAn event that indicates the state of the player is about to change.\ntimeBoundaryDidCross\nAn event that indicates a specific playback time in the media item has been crossed.\ntimedMetadata\nAn event that is triggered whenever a specified piece of metadata is encountered.\ntransportBarVisibilityDidChange\nAn event that indicates the state of the transport bar has changed."
+  },
+  {
+    "title": "stateWillChange",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/1627331-statewillchange",
+    "html": "Discussion\n\nThe listener is passed an event object with the following attributes:\n\noldState—The previous state of the player. Valid values are playing, paused, and scanning.\n\nstate—The state that the player is has switched to. Valid values are playing, paused, and scanning.\n\ntarget—The event object, which is the Player object.\n\ntimeStamp—The time that the event occurred.\n\ntype—The name of the event.\n\nSee Also\nResponding to Events\nmediaItemDidChange\nAn event notifying the listener that the player changed a media item.\nmediaItemWillChange\nAn event notifying the listener that the player is about to changed a media item.\nplaybackDidStall\nAn event that indicates that playback has stalled.\nplaybackError\nAn event that indicates an error has occurred during playback.\nrequestSeekToTime\nAn event that indicates whether a seek-to-time request was accomplished.\nshouldChangeToMediaAtIndex\nAn event that indicates a request to play a media item in a different index is received.\nshouldHandleStateChange\nAn event that indicates a state change request has occurred.\nstateDidChange\nAn event that indicates the state of the player has changed.\ntimeBoundaryDidCross\nAn event that indicates a specific playback time in the media item has been crossed.\ntimeDidChange\nAn event that happens at a specified interval.\ntimedMetadata\nAn event that is triggered whenever a specified piece of metadata is encountered.\ntransportBarVisibilityDidChange\nAn event that indicates the state of the transport bar has changed."
+  },
+  {
+    "title": "subtitle",
+    "url": "https://developer.apple.com/documentation/tvmljs/mediaitem/1627329-subtitle",
+    "html": "See Also\nIdentifying Media Items\nartworkImageURL\nThe URL path to the artwork that accompanies the media item.\ndescription\nThe description for a media item.\ntitle\nThe title of the media item.\ntype\nThe type of media item.\nurl\nThe URL path to the media item."
+  },
+  {
+    "title": "description",
+    "url": "https://developer.apple.com/documentation/tvmljs/mediaitem/1627441-description",
+    "html": "See Also\nIdentifying Media Items\nartworkImageURL\nThe URL path to the artwork that accompanies the media item.\nsubtitle\nThe subtitle for a the media item.\ntitle\nThe title of the media item.\ntype\nThe type of media item.\nurl\nThe URL path to the media item."
+  },
+  {
+    "title": "timeBoundaryDidCross",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/1627443-timeboundarydidcross",
+    "html": "Discussion\n\nThis event fires every time the specified playback time is crossed. This can happen multiple times if the user is moving the timing bar back and forth across the boundary. The listener is passed an event object with the following attributes:\n\nboundary—The boundary value that triggered the event when it was crossed.\n\ntarget—The event object, which is the Player object.\n\ntimeStamp—The time that the event occurred.\n\ntype—The name of the event.\n\nYou must provide an array of numbers, in seconds, as a third parameter to the listener. Each value in the array represents a time boundary as an offset from the beginning of the asset.\n\nSee Also\nResponding to Events\nmediaItemDidChange\nAn event notifying the listener that the player changed a media item.\nmediaItemWillChange\nAn event notifying the listener that the player is about to changed a media item.\nplaybackDidStall\nAn event that indicates that playback has stalled.\nplaybackError\nAn event that indicates an error has occurred during playback.\nrequestSeekToTime\nAn event that indicates whether a seek-to-time request was accomplished.\nshouldChangeToMediaAtIndex\nAn event that indicates a request to play a media item in a different index is received.\nshouldHandleStateChange\nAn event that indicates a state change request has occurred.\nstateDidChange\nAn event that indicates the state of the player has changed.\nstateWillChange\nAn event that indicates the state of the player is about to change.\ntimeDidChange\nAn event that happens at a specified interval.\ntimedMetadata\nAn event that is triggered whenever a specified piece of metadata is encountered.\ntransportBarVisibilityDidChange\nAn event that indicates the state of the transport bar has changed."
+  },
+  {
+    "title": "timedMetadata",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/1627384-timedmetadata",
+    "html": "Discussion\n\nSpecify the metadata this event fires on in the extraInfo parameter for the listener. The parameter is an array of keys. Valid key values are: identifier, key, stringValue, and time. Passing an empty array or nil to observe all timed metadata for HLS streams.\n\nSee Also\nResponding to Events\nmediaItemDidChange\nAn event notifying the listener that the player changed a media item.\nmediaItemWillChange\nAn event notifying the listener that the player is about to changed a media item.\nplaybackDidStall\nAn event that indicates that playback has stalled.\nplaybackError\nAn event that indicates an error has occurred during playback.\nrequestSeekToTime\nAn event that indicates whether a seek-to-time request was accomplished.\nshouldChangeToMediaAtIndex\nAn event that indicates a request to play a media item in a different index is received.\nshouldHandleStateChange\nAn event that indicates a state change request has occurred.\nstateDidChange\nAn event that indicates the state of the player has changed.\nstateWillChange\nAn event that indicates the state of the player is about to change.\ntimeBoundaryDidCross\nAn event that indicates a specific playback time in the media item has been crossed.\ntimeDidChange\nAn event that happens at a specified interval.\ntransportBarVisibilityDidChange\nAn event that indicates the state of the transport bar has changed."
+  },
+  {
+    "title": "shouldHandleStateChange",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/1627428-shouldhandlestatechange",
+    "html": "Discussion\n\nThis event is called when the user requests a change, but before the change occurs. Only a single shouldHandleStateChange listener can be active at a time. If multiple listeners are set to listen for shouldHandleStateChange, only the last one will be updated. The listener is passed an event object with the following attributes:\n\nduration—The duration, in seconds, of the asset being played.\n\nelapsedTime—The elapsed time, in seconds, of the asset being played.\n\noldState—The previous state of the player. Valid values are playing, paused, and scanning.\n\nstate—The state that the player is about to switch to. Valid values are playing, paused, and scanning.\n\ntarget—The event object, which is the Player object.\n\ntimeStamp—The time that the event occurred.\n\ntype—The name of the event.\n\nThe listener must return one of the following values:\n\ntrue. The state is allowed.\n\nfalse. The state change is not allowed.\n\nNote\n\nThis event occurs after a user has performed an action and needs to be handled as quickly as possible.\n\nSee Also\nResponding to Events\nmediaItemDidChange\nAn event notifying the listener that the player changed a media item.\nmediaItemWillChange\nAn event notifying the listener that the player is about to changed a media item.\nplaybackDidStall\nAn event that indicates that playback has stalled.\nplaybackError\nAn event that indicates an error has occurred during playback.\nrequestSeekToTime\nAn event that indicates whether a seek-to-time request was accomplished.\nshouldChangeToMediaAtIndex\nAn event that indicates a request to play a media item in a different index is received.\nstateDidChange\nAn event that indicates the state of the player has changed.\nstateWillChange\nAn event that indicates the state of the player is about to change.\ntimeBoundaryDidCross\nAn event that indicates a specific playback time in the media item has been crossed.\ntimeDidChange\nAn event that happens at a specified interval.\ntimedMetadata\nAn event that is triggered whenever a specified piece of metadata is encountered.\ntransportBarVisibilityDidChange\nAn event that indicates the state of the transport bar has changed."
+  },
+  {
+    "title": "contentRatingRanking",
+    "url": "https://developer.apple.com/documentation/tvmljs/mediaitem/1627366-contentratingranking",
+    "html": "Discussion\n\nThe rating is a value from 0-1000. This value corresponds to a specific rating used by different countries. For example, a rating value can represent a PG-13 rating in the United States and an MA15+ in Australia.\n\nSee Also\nRating Media Content\ncontentRatingDomain\nThe domain that the rating applies to.\nisExplicit\nA Boolean value indicating whether the item has explicit lyrics."
+  },
+  {
+    "title": "isExplicit",
+    "url": "https://developer.apple.com/documentation/tvmljs/mediaitem/1627358-isexplicit",
+    "html": "Discussion\n\nThis property is ignored if the MediaItem object type is video.\n\nSee Also\nRating Media Content\ncontentRatingDomain\nThe domain that the rating applies to.\ncontentRatingRanking\nThe rating for a video item."
+  },
+  {
+    "title": "MediaItem",
+    "url": "https://developer.apple.com/documentation/tvmljs/mediaitem/1627412-mediaitem",
+    "html": "Parameters\ntype\n\nThe type of media item to be created. Valid values are audio and video. The default is video.\n\nurl\n\nThe URL pointing to the media item information.\n\nReturn Value\n\nReturns the MediaItem object found in the location specified by the URL."
+  },
+  {
+    "title": "contentRatingDomain",
+    "url": "https://developer.apple.com/documentation/tvmljs/mediaitem/1627422-contentratingdomain",
+    "html": "Discussion\n\nThere are three valid values for this property: movie, music, and tvshow.\n\nSee Also\nRating Media Content\ncontentRatingRanking\nThe rating for a video item.\nisExplicit\nA Boolean value indicating whether the item has explicit lyrics."
+  },
+  {
+    "title": "stateDidChange",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/1627390-statedidchange",
+    "html": "Discussion\n\nThe listener is passed an event object with the following attributes:\n\nduration—The duration, in seconds, of the asset being played.\n\nelapsedTime—The elapsed time, in seconds, of the asset being played.\n\noldState—The previous state of the player. Valid values are playing, paused, and scanning.\n\nstate—The state that the player is has switched to. Valid values are playing, paused, and scanning.\n\ntarget—The event object, which is the Player object.\n\ntimeStamp—The time that the event occurred.\n\ntype—The name of the event.\n\nSee Also\nResponding to Events\nmediaItemDidChange\nAn event notifying the listener that the player changed a media item.\nmediaItemWillChange\nAn event notifying the listener that the player is about to changed a media item.\nplaybackDidStall\nAn event that indicates that playback has stalled.\nplaybackError\nAn event that indicates an error has occurred during playback.\nrequestSeekToTime\nAn event that indicates whether a seek-to-time request was accomplished.\nshouldChangeToMediaAtIndex\nAn event that indicates a request to play a media item in a different index is received.\nshouldHandleStateChange\nAn event that indicates a state change request has occurred.\nstateWillChange\nAn event that indicates the state of the player is about to change.\ntimeBoundaryDidCross\nAn event that indicates a specific playback time in the media item has been crossed.\ntimeDidChange\nAn event that happens at a specified interval.\ntimedMetadata\nAn event that is triggered whenever a specified piece of metadata is encountered.\ntransportBarVisibilityDidChange\nAn event that indicates the state of the transport bar has changed."
+  },
+  {
+    "title": "requestSeekToTime",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/1627354-requestseektotime",
+    "html": "Discussion\n\nThis event is called after the left or right edge of the Siri Remote is pressed and released. Use shouldHandleStateChange for press and hold events.\n\nOnly a single requestSeekToTime listener can be active at a time. If multiple listeners are set to listen for requestSeekToTime, only the last one will be updated. The listener is passed an event object with the following attributes:\n\ncurrentTime—The current playback time in seconds.\n\nrequestedTime—The requested playback time in seconds.\n\ntarget—The event object, which is the Player object.\n\ntimeStamp—The time that the event occurred.\n\ntype—The name of the event.\n\nThe listener must return one of the following values:\n\ntrue. The seek performed as requested.\n\nfalse or null. The seek was not performed.\n\nAn integer value. The seek will be performed to the stated value and not the initial requested value.\n\nSee Also\nResponding to Events\nmediaItemDidChange\nAn event notifying the listener that the player changed a media item.\nmediaItemWillChange\nAn event notifying the listener that the player is about to changed a media item.\nplaybackDidStall\nAn event that indicates that playback has stalled.\nplaybackError\nAn event that indicates an error has occurred during playback.\nshouldChangeToMediaAtIndex\nAn event that indicates a request to play a media item in a different index is received.\nshouldHandleStateChange\nAn event that indicates a state change request has occurred.\nstateDidChange\nAn event that indicates the state of the player has changed.\nstateWillChange\nAn event that indicates the state of the player is about to change.\ntimeBoundaryDidCross\nAn event that indicates a specific playback time in the media item has been crossed.\ntimeDidChange\nAn event that happens at a specified interval.\ntimedMetadata\nAn event that is triggered whenever a specified piece of metadata is encountered.\ntransportBarVisibilityDidChange\nAn event that indicates the state of the transport bar has changed."
+  },
+  {
+    "title": "playbackState",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/1627387-playbackstate",
+    "html": "Discussion\n\nThis property can contain the following valid values: begin, end, loading, playing, paused, and scanning.\n\nSee Also\nControlling Playback\nchangeToMediaAtIndex\nImmediately begins playing the media item at the specified index in the playlist.\npause\nPauses the currently playing media item.\nnext\nImmediately begins playing the next media item in the playlist.\nplay\nPlays the currently selected media item.\nplaybackRate\nThe playback speed.\nprevious\nImmediately begins playing the previous media item in the playlist.\nseekToTime\nSets the playback point to a specified time.\nstop\nStops the currently playing item and dismisses the player UI."
+  },
+  {
+    "title": "currentMediaItemDate",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/1837542-currentmediaitemdate",
+    "html": "See Also\nInspecting Media Items\ncurrentMediaItem\nThe currently selected media item in the playlist.\ncurrentMediaItemDuration\nThe length, in seconds, of the current media item.\nnextMediaItem\nThe next media item in the playlist after the currently selected item.\npreviousMediaItem\nThe item in the playlist previous to the currently selected item."
+  },
+  {
+    "title": "playbackRate",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/1682104-playbackrate",
+    "html": "Discussion\n\nThe default playback speed is 1.0. Speeds with values smaller than 1.0 play in slow motion. Values higher than 1.0 are time-lapsed. Setting the playback rate to 0 or 1 is not supported, use stop and play respectively.\n\nSee Also\nControlling Playback\nchangeToMediaAtIndex\nImmediately begins playing the media item at the specified index in the playlist.\npause\nPauses the currently playing media item.\nnext\nImmediately begins playing the next media item in the playlist.\nplay\nPlays the currently selected media item.\nplaybackState\nThe current state of the player.\nprevious\nImmediately begins playing the previous media item in the playlist.\nseekToTime\nSets the playback point to a specified time.\nstop\nStops the currently playing item and dismisses the player UI."
+  },
+  {
+    "title": "changeToMediaAtIndex",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/1682100-changetomediaatindex",
+    "html": "Parameters\nindex\n\nAn integer indicating a position in the playlist.\n\nSee Also\nControlling Playback\npause\nPauses the currently playing media item.\nnext\nImmediately begins playing the next media item in the playlist.\nplay\nPlays the currently selected media item.\nplaybackState\nThe current state of the player.\nplaybackRate\nThe playback speed.\nprevious\nImmediately begins playing the previous media item in the playlist.\nseekToTime\nSets the playback point to a specified time.\nstop\nStops the currently playing item and dismisses the player UI."
+  },
+  {
+    "title": "next",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/1682103-next",
+    "html": "See Also\nControlling Playback\nchangeToMediaAtIndex\nImmediately begins playing the media item at the specified index in the playlist.\npause\nPauses the currently playing media item.\nplay\nPlays the currently selected media item.\nplaybackState\nThe current state of the player.\nplaybackRate\nThe playback speed.\nprevious\nImmediately begins playing the previous media item in the playlist.\nseekToTime\nSets the playback point to a specified time.\nstop\nStops the currently playing item and dismisses the player UI."
+  },
+  {
+    "title": "pause",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/1627417-pause",
+    "html": "Discussion\n\nThe player UI remains onscreen while the media item is paused.\n\nSee Also\nControlling Playback\nchangeToMediaAtIndex\nImmediately begins playing the media item at the specified index in the playlist.\nnext\nImmediately begins playing the next media item in the playlist.\nplay\nPlays the currently selected media item.\nplaybackState\nThe current state of the player.\nplaybackRate\nThe playback speed.\nprevious\nImmediately begins playing the previous media item in the playlist.\nseekToTime\nSets the playback point to a specified time.\nstop\nStops the currently playing item and dismisses the player UI."
+  },
+  {
+    "title": "currentMediaItemDuration",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/1682110-currentmediaitemduration",
+    "html": "See Also\nInspecting Media Items\ncurrentMediaItem\nThe currently selected media item in the playlist.\ncurrentMediaItemDate\nContains the current time of the media item as a Date object.\nnextMediaItem\nThe next media item in the playlist after the currently selected item.\npreviousMediaItem\nThe item in the playlist previous to the currently selected item."
+  },
+  {
+    "title": "play",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/1627432-play",
+    "html": "Discussion\n\nThis function displays the player onscreen if the player is not currently displayed and a video is played. For audio, this function will display the player only the first time audio is played. To display the player for audio after the first time, use the present function. Only a single player can be active at a time. Calling the play function on a Player object will stop any players currently playing.\n\nSee Also\nControlling Playback\nchangeToMediaAtIndex\nImmediately begins playing the media item at the specified index in the playlist.\npause\nPauses the currently playing media item.\nnext\nImmediately begins playing the next media item in the playlist.\nplaybackState\nThe current state of the player.\nplaybackRate\nThe playback speed.\nprevious\nImmediately begins playing the previous media item in the playlist.\nseekToTime\nSets the playback point to a specified time.\nstop\nStops the currently playing item and dismisses the player UI."
+  },
+  {
+    "title": "onloadend",
+    "url": "https://developer.apple.com/documentation/tvmljs/xmlhttprequest/1627365-onloadend",
+    "html": "Discussion\n\nThis attribute must be set to a function; for example, XMLHttpRequest.onloadend = function () {}.\n\nSee Also\nImplementing Callback Functions\nonabort\nA callback function called when a request is cancelled by the user.\nonerror\nA callback function that is called if the request fails due to an error.\nonload\nA callback function that is called when the request is successfully completed.\nonloadstart\nA callback function that is called when the request begins.\nonreadystatechange\nA callback function that is called when the readyState attribute changes.\nontimeout\nA callback function that is called when a request times out."
+  },
+  {
+    "title": "onloadstart",
+    "url": "https://developer.apple.com/documentation/tvmljs/xmlhttprequest/1627440-onloadstart",
+    "html": "Discussion\n\nThis attribute must be set to a function; for example, XMLHttpRequest.onloadstart = function () {}.\n\nSee Also\nImplementing Callback Functions\nonabort\nA callback function called when a request is cancelled by the user.\nonerror\nA callback function that is called if the request fails due to an error.\nonload\nA callback function that is called when the request is successfully completed.\nonloadend\nA callback function that is called when the request is completed for any reason.\nonreadystatechange\nA callback function that is called when the readyState attribute changes.\nontimeout\nA callback function that is called when a request times out."
+  },
+  {
+    "title": "error",
+    "url": "https://developer.apple.com/documentation/tvmljs/xmlhttprequest/1627326-error",
+    "html": "See Also\nResponding to Events\nabort\nAn event signifying the request has aborted.\nload\nAn event signifying the request was successfully loaded.\nloadend\nAn event signifying the request has been completed.\nloadstart\nAn event signifying the request has begun.\nreadystatechange\nAn event signifying that a state change has occurred."
+  },
+  {
+    "title": "load",
+    "url": "https://developer.apple.com/documentation/tvmljs/xmlhttprequest/1627352-load",
+    "html": "See Also\nResponding to Events\nabort\nAn event signifying the request has aborted.\nerror\nAn event signifying an error occurred during the request.\nloadend\nAn event signifying the request has been completed.\nloadstart\nAn event signifying the request has begun.\nreadystatechange\nAn event signifying that a state change has occurred."
+  },
+  {
+    "title": "ontimeout",
+    "url": "https://developer.apple.com/documentation/tvmljs/xmlhttprequest/1627321-ontimeout",
+    "html": "Discussion\n\nThis attribute must be set to a function; for example, XMLHttpRequest.ontimeout = function () {}.\n\nSee Also\nImplementing Callback Functions\nonabort\nA callback function called when a request is cancelled by the user.\nonerror\nA callback function that is called if the request fails due to an error.\nonload\nA callback function that is called when the request is successfully completed.\nonloadend\nA callback function that is called when the request is completed for any reason.\nonloadstart\nA callback function that is called when the request begins.\nonreadystatechange\nA callback function that is called when the readyState attribute changes."
+  },
+  {
+    "title": "loadstart",
+    "url": "https://developer.apple.com/documentation/tvmljs/xmlhttprequest/1627371-loadstart",
+    "html": "See Also\nResponding to Events\nabort\nAn event signifying the request has aborted.\nerror\nAn event signifying an error occurred during the request.\nload\nAn event signifying the request was successfully loaded.\nloadend\nAn event signifying the request has been completed.\nreadystatechange\nAn event signifying that a state change has occurred."
+  },
+  {
+    "title": "readystatechange",
+    "url": "https://developer.apple.com/documentation/tvmljs/xmlhttprequest/1627304-readystatechange",
+    "html": "See Also\nResponding to Events\nabort\nAn event signifying the request has aborted.\nerror\nAn event signifying an error occurred during the request.\nload\nAn event signifying the request was successfully loaded.\nloadend\nAn event signifying the request has been completed.\nloadstart\nAn event signifying the request has begun."
+  },
+  {
+    "title": "Player",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/1627447-player",
+    "html": "Return Value\n\nReturns a new player object.\n\nDiscussion\n\nAfter the player object is created, you must associate a Playlist object with the player before media items can be played.\n\nSee Also\nSetting Up the Player\ninteractiveOverlayDismissable\nDetermines if an interactive overlay can be dismissed using the Menu button.\ninteractiveOverlayDocument\nA DOM document that is presented over the entire video player, including the transport bar.\noverlayDocument\nThe annotations for a video created by placing a DOM document over the video.\nplaylist\nThe playlist for a player.\npresent\nShows the player UI if it is not currently visible."
+  },
+  {
+    "title": "present",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/1627418-present",
+    "html": "See Also\nSetting Up the Player\ninteractiveOverlayDismissable\nDetermines if an interactive overlay can be dismissed using the Menu button.\ninteractiveOverlayDocument\nA DOM document that is presented over the entire video player, including the transport bar.\noverlayDocument\nThe annotations for a video created by placing a DOM document over the video.\nPlayer\nCreates a new player object.\nplaylist\nThe playlist for a player."
+  },
+  {
+    "title": "playlist",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/1627389-playlist",
+    "html": "Discussion\n\nSetting this attribute changes the Playlist object associated with the player. Inspect this attribute to get the Playlist object currently associated with the player.\n\nSee Also\nSetting Up the Player\ninteractiveOverlayDismissable\nDetermines if an interactive overlay can be dismissed using the Menu button.\ninteractiveOverlayDocument\nA DOM document that is presented over the entire video player, including the transport bar.\noverlayDocument\nThe annotations for a video created by placing a DOM document over the video.\nPlayer\nCreates a new player object.\npresent\nShows the player UI if it is not currently visible."
+  },
+  {
+    "title": "readyState",
+    "url": "https://developer.apple.com/documentation/tvmljs/xmlhttprequest/1627324-readystate",
+    "html": "Discussion\n\nThis attribute can have the following values:\n\n0 - UNSENT\n\n1 - OPENED\n\n2 - HEADERS_RECEIVED\n\n3 - LOADING\n\n4 - DONE\n\nSee Also\nRetrieving Request Information\nmetrics\nA dictionary of keys used to request start and response start and end times.\nresponse\nThe response entity body.\nresponseCacheIsValid\nresponseText\nThe response to the request.\nresponseType\nThe type of response.\nresponseURL\nresponseXML\nThe document response entity body.\nstatus\nThe HTTP status code.\nstatusText\nThe HTTP status text."
+  },
+  {
+    "title": "setRequestHeader",
+    "url": "https://developer.apple.com/documentation/tvmljs/xmlhttprequest/1627317-setrequestheader",
+    "html": "Parameters\nheader\n\nThe header name.\n\nvalue\n\nThe header value.\n\nDiscussion\n\nIf the header already exists in the list of request headers, the specified value is combined with the value currently in the list to create a single request header.\n\nSee Also\nManipulating the Header List\ngetAllResponseHeaders\nReturns all of the response headers.\ngetResponseHeader\nRetrieves the field value from the response that is contained in the specified header."
+  },
+  {
+    "title": "XMLHttpRequest",
+    "url": "https://developer.apple.com/documentation/tvmljs/xmlhttprequest/1627350-xmlhttprequest",
+    "html": "Return Value\n\nA new instance of an XMLHttpRequest.\n\nDiscussion\n\nYou create a new XMLHttpRequest instance to send and receive data between your app and a server.\n\nSee Also\nInitializing and Sending a Request\nabort\nCancels any network activity.\nopen\nSets the method, URL, and synchronous flag for a request.\nsend\nSends the request.\ntimeout\nThe amount of time, in milliseconds, before causing a request to time out."
+  },
+  {
+    "title": "timeout",
+    "url": "https://developer.apple.com/documentation/tvmljs/xmlhttprequest/1627335-timeout",
+    "html": "Discussion\n\nThis attribute only takes effect if the request is asynchronous. When set to 0, the request will not automatically time out.\n\nSee Also\nInitializing and Sending a Request\nabort\nCancels any network activity.\nopen\nSets the method, URL, and synchronous flag for a request.\nsend\nSends the request.\nXMLHttpRequest\nCreates a new XMLHttpRequest."
+  },
+  {
+    "title": "metrics",
+    "url": "https://developer.apple.com/documentation/tvmljs/xmlhttprequest/1627436-metrics",
+    "html": "See Also\nRetrieving Request Information\nreadyState\nThe current state of the request.\nresponse\nThe response entity body.\nresponseCacheIsValid\nresponseText\nThe response to the request.\nresponseType\nThe type of response.\nresponseURL\nresponseXML\nThe document response entity body.\nstatus\nThe HTTP status code.\nstatusText\nThe HTTP status text."
+  },
+  {
+    "title": "getAllResponseHeaders",
+    "url": "https://developer.apple.com/documentation/tvmljs/xmlhttprequest/1627343-getallresponseheaders",
+    "html": "Return Value\n\nA string representation of the response headers.\n\nDiscussion\n\nReturns null if no responses have been received.\n\nSee Also\nManipulating the Header List\ngetResponseHeader\nRetrieves the field value from the response that is contained in the specified header.\nsetRequestHeader\nAppends a header to the list of request headers."
+  },
+  {
+    "title": "getResponseHeader",
+    "url": "https://developer.apple.com/documentation/tvmljs/xmlhttprequest/1627438-getresponseheader",
+    "html": "Parameters\nheader\n\nThe header field name. An exception is raised if this value is not null or String.\n\nReturn Value\n\nThe header field value.\n\nDiscussion\n\nIf the header value is Set-Cookie or Set-Cookie2, the value inside the header will not be returned. This method returns null if no response has been received or if the specified header doesn’t exist.\n\nSee Also\nManipulating the Header List\ngetAllResponseHeaders\nReturns all of the response headers.\nsetRequestHeader\nAppends a header to the list of request headers."
+  },
+  {
+    "title": "response",
+    "url": "https://developer.apple.com/documentation/tvmljs/xmlhttprequest/1627364-response",
+    "html": "See Also\nRetrieving Request Information\nmetrics\nA dictionary of keys used to request start and response start and end times.\nreadyState\nThe current state of the request.\nresponseCacheIsValid\nresponseText\nThe response to the request.\nresponseType\nThe type of response.\nresponseURL\nresponseXML\nThe document response entity body.\nstatus\nThe HTTP status code.\nstatusText\nThe HTTP status text."
+  },
+  {
+    "title": "responseText",
+    "url": "https://developer.apple.com/documentation/tvmljs/xmlhttprequest/1627363-responsetext",
+    "html": "Discussion\n\nIf the request was unsuccessful or has not been sent, the value of this attribute is null. Otherwise, this attribute contains a string containing the response.\n\nSee Also\nRetrieving Request Information\nmetrics\nA dictionary of keys used to request start and response start and end times.\nreadyState\nThe current state of the request.\nresponse\nThe response entity body.\nresponseCacheIsValid\nresponseType\nThe type of response.\nresponseURL\nresponseXML\nThe document response entity body.\nstatus\nThe HTTP status code.\nstatusText\nThe HTTP status text."
+  },
+  {
+    "title": "send",
+    "url": "https://developer.apple.com/documentation/tvmljs/xmlhttprequest/1627309-send",
+    "html": "Parameters\ndataToSend\n\nThe data sent.\n\nDiscussion\n\nFor asynchronous requests, this function immediately returns control back to the app. Synchronous requests don’t return control back to the app until the response has arrived.\n\nSee Also\nInitializing and Sending a Request\nabort\nCancels any network activity.\nopen\nSets the method, URL, and synchronous flag for a request.\ntimeout\nThe amount of time, in milliseconds, before causing a request to time out.\nXMLHttpRequest\nCreates a new XMLHttpRequest."
+  },
+  {
+    "title": "responseType",
+    "url": "https://developer.apple.com/documentation/tvmljs/xmlhttprequest/1627342-responsetype",
+    "html": "Discussion\n\nValid values for this attribute are the empty string, blob, document, json, and text.\n\nSee Also\nRetrieving Request Information\nmetrics\nA dictionary of keys used to request start and response start and end times.\nreadyState\nThe current state of the request.\nresponse\nThe response entity body.\nresponseCacheIsValid\nresponseText\nThe response to the request.\nresponseURL\nresponseXML\nThe document response entity body.\nstatus\nThe HTTP status code.\nstatusText\nThe HTTP status text."
+  },
+  {
+    "title": "abort",
+    "url": "https://developer.apple.com/documentation/tvmljs/xmlhttprequest/1627356-abort",
+    "html": "Discussion\n\nThis method raises a DOMException if any arguments are passed into this function.\n\nSee Also\nInitializing and Sending a Request\nopen\nSets the method, URL, and synchronous flag for a request.\nsend\nSends the request.\ntimeout\nThe amount of time, in milliseconds, before causing a request to time out.\nXMLHttpRequest\nCreates a new XMLHttpRequest."
+  },
+  {
+    "title": "open",
+    "url": "https://developer.apple.com/documentation/tvmljs/xmlhttprequest/1627318-open",
+    "html": "Parameters\nmethod\n\nThe HTTP method for the request. connect, trace, and track are invalid values.\n\nurlStr\n\nThe URL for the request.\n\nasyncNum\n\nAn integer value indicating if the request is asynchronous. 0 is a synchronous request. Any positive integer is an asynchronous request. The default value is 1.\n\nuser\n\nNot supported by Apple TV. This value must be set to null.\n\npassword\n\nNot supported by Apple TV. This value must be set to null.\n\nDiscussion\n\nThis method initializes a request.\n\nSee Also\nInitializing and Sending a Request\nabort\nCancels any network activity.\nsend\nSends the request.\ntimeout\nThe amount of time, in milliseconds, before causing a request to time out.\nXMLHttpRequest\nCreates a new XMLHttpRequest."
+  },
+  {
+    "title": "removeEventListener",
+    "url": "https://developer.apple.com/documentation/tvmljs/eventlistenerobject/1627423-removeeventlistener",
+    "html": "Parameters\ntype\n\nThe developer defined name of the event type to remove.\n\nlistener\n\nThe listener object to be removed. This object is typically a function.\n\nSee Also\nAdding and Removing Event Listeners\naddEventListener\nCreates an event listener."
+  },
+  {
+    "title": "onResume",
+    "url": "https://developer.apple.com/documentation/tvmljs/app/1627415-onresume",
+    "html": "Discussion\n\nUse the onResume attribute to start any required actions when the app moves from the background to the foreground. This attribute must be set to a function that accepts an options argument; for example App.onResume = function (options) {}. The options argument is always set to null.\n\nSee Also\nResponding to App Life Cycle Events\nonError\nA callback function that is automatically called when an error is sent from the Apple TV.\nonExit\nA callback function that is automatically called when the app has been exited.\nonLaunch\nA callback function that is automatically called when the app has been launched.\nonSuspend\nA callback function that is automatically called when the app is sent to the background."
+  },
+  {
+    "title": "popToRootDocument",
+    "url": "https://developer.apple.com/documentation/tvmljs/navigationdocument/1627382-poptorootdocument",
+    "html": "Discussion\n\nUse this function to quickly return to the root document from any other document in the stack.\n\nSee Also\nRemoving Documents from the Stack\nclear\nRemoves all documents currently on the stack.\npopDocument\nRemoves the top most document from the stack.\npopToDocument\nRemoves all of the documents on the stack that are above the passed document.\nremoveDocument\nRemoves the specified document from the stack."
+  },
+  {
+    "title": "onSuspend",
+    "url": "https://developer.apple.com/documentation/tvmljs/app/1627431-onsuspend",
+    "html": "Discussion\n\nUse the onSuspend attribute to stop any actions when the app moves from the foreground to the background. This attribute must be set to a function that accepts an options argument; for example App.onSuspend = function (options) {}. The options argument is always set to null.\n\nSee Also\nResponding to App Life Cycle Events\nonError\nA callback function that is automatically called when an error is sent from the Apple TV.\nonExit\nA callback function that is automatically called when the app has been exited.\nonLaunch\nA callback function that is automatically called when the app has been launched.\nonResume\nA callback function that is automatically called when the app moves to the foreground."
+  },
+  {
+    "title": "removeDocument",
+    "url": "https://developer.apple.com/documentation/tvmljs/navigationdocument/1627394-removedocument",
+    "html": "Parameters\ndocument\n\nA DOM document created by parsing a TVML file.\n\nSee Also\nRemoving Documents from the Stack\nclear\nRemoves all documents currently on the stack.\npopDocument\nRemoves the top most document from the stack.\npopToDocument\nRemoves all of the documents on the stack that are above the passed document.\npopToRootDocument\nRemoves all documents from the stack except for the bottom-most document, which is the root document."
+  },
+  {
+    "title": "onLaunch",
+    "url": "https://developer.apple.com/documentation/tvmljs/app/1627407-onlaunch",
+    "html": "Discussion\n\nUse the onLaunch attribute to start any required actions (for example, loading the first TVML page) when the app launches. This attribute must be set to a function that accepts an options argument; for example App.onLaunch = function (options) {}. The options argument can contain the following keys:\n\nlaunchContext—Determines how the app is launched. Set to background to launch the app in the background.\n\nlocation—Contains the boot TVMLKit JS URL location.\n\nreloadData—The object passed in to App.reload() when the app is relaunched.\n\nUser defined keys—Any custom keys that were passed to launchOptions.\n\nSee Also\nResponding to App Life Cycle Events\nonError\nA callback function that is automatically called when an error is sent from the Apple TV.\nonExit\nA callback function that is automatically called when the app has been exited.\nonResume\nA callback function that is automatically called when the app moves to the foreground.\nonSuspend\nA callback function that is automatically called when the app is sent to the background."
+  },
+  {
+    "title": "dismissModal",
+    "url": "https://developer.apple.com/documentation/tvmljs/navigationdocument/1627446-dismissmodal",
+    "html": "Discussion\n\nWhen the document is dismissed, the previous document is brought into focus.\n\nSee Also\nOverlaying Document\npresentModal\nDisplays the passed document on top of the current document."
+  },
+  {
+    "title": "pushDocument",
+    "url": "https://developer.apple.com/documentation/tvmljs/navigationdocument/1627361-pushdocument",
+    "html": "Parameters\ndocument\n\nThe DOM document that is to be added onto the stack.\n\nDiscussion\n\nThe document being pushed onto the stack must be a valid parsed DOM object.\n\nSee Also\nAdding Documents to the Stack\ninsertBeforeDocument\nInserts a new document directly before a document currently on the stack.\nreplaceDocument\nReplaces a document on the stack with a new document."
+  },
+  {
+    "title": "insertBeforeDocument",
+    "url": "https://developer.apple.com/documentation/tvmljs/navigationdocument/1627340-insertbeforedocument",
+    "html": "Parameters\ndocument\n\nThe DOM document that is to be added onto the stack.\n\nbeforeDocument\n\nA DOM document currently on the stack. The new document is placed on the stack directly after this document.\n\nDiscussion\n\nThis function searches the stack for the first instance of the document contained in the beforeDocument parameter and inserts the document contained in the document parameter on top of it.\n\nSee Also\nAdding Documents to the Stack\npushDocument\nPushes the specified document onto the stack.\nreplaceDocument\nReplaces a document on the stack with a new document."
+  },
+  {
+    "title": "popDocument",
+    "url": "https://developer.apple.com/documentation/tvmljs/navigationdocument/1627397-popdocument",
+    "html": "See Also\nRemoving Documents from the Stack\nclear\nRemoves all documents currently on the stack.\npopToDocument\nRemoves all of the documents on the stack that are above the passed document.\npopToRootDocument\nRemoves all documents from the stack except for the bottom-most document, which is the root document.\nremoveDocument\nRemoves the specified document from the stack."
+  },
+  {
+    "title": "presentModal",
+    "url": "https://developer.apple.com/documentation/tvmljs/navigationdocument/1627311-presentmodal",
+    "html": "Parameters\ndocument\n\nA DOM document created by parsing a TVML file.\n\nDiscussion\n\nThe passed document is presented on top of the current document. The current document is blurred and is used as the background for the modal document.\n\nSee Also\nOverlaying Document\ndismissModal\nDismisses the document displayed in modal view."
+  },
+  {
+    "title": "TVMLKit JS Functions",
+    "url": "https://developer.apple.com/documentation/tvmljs/tvmlkit_js_functions",
+    "html": "Topics\nEvaluating TVMLKit JS Files\nevaluateScripts\nVerifies and executes TVMLKit JS files.\nAutomating Function Timing\nsetInterval\nRepeatedly executes a given function at the given time interval.\nclearInterval\nStops the function associated with the identifier from repeating.\nsetTimeout\nExecutes a given function after a set amount of time.\nclearTimeout\nStops the function associated with the identifier from executing.\nFormatting Information\nformatDate\nFormats the given date into the given format.\nformatDuration\nFormats the given duration into the standard tvOS format.\nformatNumber\nFormats the specified number into the given format.\nManipulating the Document\nUUID\nGenerates a unique UUID.\ngetActiveDocument\nRetrieves the currently active document.\ncanOpenURL\nDetermines if a deep-link to another app can be opened.\nopenURL\nOpens a deep link into another app."
+  },
+  {
+    "title": "DOMException",
+    "url": "https://developer.apple.com/documentation/tvmljs/domexception",
+    "html": "Topics\nInstance Properties\ncode"
+  },
+  {
+    "title": "LoadIndexesRequest",
+    "url": "https://developer.apple.com/documentation/tvmljs/loadindexesrequest",
+    "html": "Topics\nAccessing Request Properties\ndataSource\nA reference to the data source object that originated the request.\nrange\nThe index range to load.\nCanceling Requests\ncancel\nCancels the load request.\nCompleting the Request\nclose\nSignals whether or not the data fetch is successful.\nRelationships\nInherits From\nEventListenerObject\nSee Also\nData Storage and Retrieval\nBinding JSON data to TVML documents\nCreate full-fledged TVML documents by using data binding and queries on simplified TVML files.\nXMLHttpRequest\nAn object used to retrieve data from a URL.\nDataItem\nAn object used to create observable objects from JSON objects for data binding.\nStorage\nAn object used to store key-value-pair information.\nDataSource\nAn interface that allows the system to detect and respond to changes in your data."
+  },
+  {
+    "title": "highlightGroups",
+    "url": "https://developer.apple.com/documentation/tvmljs/mediaitem/1627413-highlightgroups",
+    "html": "Discussion\n\nThe highlightGroups property enables you to show several groups of highlights from a stream. Each highlight group in the array contains a list of highlights. Each highlight is an object with the following properties: description, duration, imageURL, name, and starttime. Highlight objects are ad-hoc JSON objects and there are no explicit classes for these types.\n\nA good way to envision how the highlightGroups property works is to think of a video of a baseball game. During the game, several home runs are hit. You can create a highlight group containing the video for each of these highlights and put the highlight group into the highlightGroups property. Listing 1 shows a complete example of how to set up a highlight group.\n\nListing 1 highlightGroups.js example\nvar baseURL;\n \nApp.onLaunch = function(options) {\n    baseURL = options.BASEURL;\n    var documentPath = \"path to file on server/baseball.m3u8\";\n    var videourl = baseURL + documentPath;\n \n    var singleVideo = new MediaItem('video', videourl);\n    var highlights = [{\n        name: \"Home Runs\",\n        highlights: [{\n            name: \"Johnny Appleseed 1st inning\",\n            description: \"Johnny's 1st Homerun\",\n            starttime: 10,\n            duration: 10,\n            imageURL: \"path to server/images/Car_Movie_90x90_A.png\"\n            },\n        {\n            name: \"Johnny Appleseed 5th inning\",\n            description: \"Johnny's 2nd Homerun\",\n            starttime: 60,\n            duration: 10,\n            imageURL: \"path to server/images/Car_Movie_90x90_B.png\"\n            }\n        ]\n    }];\n    singleVideo.highlightGroups = highlights;\n    var videoList = new Playlist();\n    videoList.push(singleVideo);\n    var myPlayer = new Player();\n    myPlayer.playlist = videoList;\n    myPlayer.play();\n}\n \nApp.onExit = function() {\n    console.log(\"exited\");\n}\n\n\nNote\n\nYou can only have one set of highlights associated with a media item.\n\nSee Also\nSetting Timing Options\ninterstitials\nAn array of interstitial objects.\nresumeTime\nThe number of seconds from the beginning of the item at which the item begins playing."
+  },
+  {
+    "title": "loadAssetID",
+    "url": "https://developer.apple.com/documentation/tvmljs/mediaitem/1627392-loadassetid",
+    "html": "Discussion\n\nThis attribute must be set if FairPlay Streaming is supported. This attribute must be assigned to a function that takes two parameters, url and callback; for example, item.loadAssetID = function assetID(url, callback) {}. The callback function must be called with the asset identifier that was retrieved, or with null as the first parameter. The second parameter is error. For more information, see the FairPlay Streaming page.\n\nSee Also\nSupporting FairPlay Streaming\nloadCertificate\nA callback function used to load the security certificate for an item.\nloadKey\nA callback function used to load the security key for an item."
+  },
+  {
+    "title": "loadKey",
+    "url": "https://developer.apple.com/documentation/tvmljs/mediaitem/1627379-loadkey",
+    "html": "Discussion\n\nThis attribute must be set if FairPlay Streaming is supported. The callback function must return either the asset identifier that was retrieved or null. This attribute must be assigned to a function that takes three parameters, url, requestData, and callback. For example, item.loadKey = function getKey(url, requestData, callback) {}.\n\nThe callback function must be called with the following three parameters:\n\nThe key value.\n\nA renewal date, if any. If you don’t specify a renewal date, the key will not expire until the playback ends.\n\nAn error parameter.\n\nSee Also\nSupporting FairPlay Streaming\nloadAssetID\nA callback function used to load the asset identifier for an item.\nloadCertificate\nA callback function used to load the security certificate for an item."
+  },
+  {
+    "title": "loadCertificate",
+    "url": "https://developer.apple.com/documentation/tvmljs/mediaitem/1627435-loadcertificate",
+    "html": "Discussion\n\nThis attribute must be set if FairPlay Streaming is supported. The callback function must return either the asset identifier that was retrieved or null. This attribute must be assigned to a function that takes two parameters, url and callback; for example, item.loadCertificate = function certificate(url, callback) {}. The callback function must be called with the certificate that was retrieved, or with null as the first parameter. The second parameter is error. For more information, see the FairPlay Streaming page.\n\nSee Also\nSupporting FairPlay Streaming\nloadAssetID\nA callback function used to load the asset identifier for an item.\nloadKey\nA callback function used to load the security key for an item."
+  },
+  {
+    "title": "splice",
+    "url": "https://developer.apple.com/documentation/tvmljs/playlist/1627367-splice",
+    "html": "Parameters\nindex\n\nThe array index indicating the beginning of the splice to be deleted.\n\nhowMany\n\nThe length of the splice, in number of elements.\n\nelements\n\nAn array of new elements that are replacing the deleted elements.\n\nReturn Value\n\nAn array of the deleted elements.\n\nDiscussion\n\nUse this method to modify the contents of the playlist.\n\nSee Also\nModifying the Playlist\nitem\nReturns the media item located in the indicated array index.\nlength\nThe number of items in the playlist.\nPlaylist\nCreates a new playlist object.\npop\nRemoves a media item from the end of a playlist.\npush\nAdds a media item to the end of a playlist."
+  },
+  {
+    "title": "pop",
+    "url": "https://developer.apple.com/documentation/tvmljs/playlist/1627310-pop",
+    "html": "Return Value\n\nThe MediaItem object located at the end of the playlist. This method returns null if the playlist is empty.\n\nSee Also\nModifying the Playlist\nitem\nReturns the media item located in the indicated array index.\nlength\nThe number of items in the playlist.\nPlaylist\nCreates a new playlist object.\npush\nAdds a media item to the end of a playlist.\nsplice\nDeletes the indicated array elements and replaces them with the specified elements."
+  },
+  {
+    "title": "push",
+    "url": "https://developer.apple.com/documentation/tvmljs/playlist/1627433-push",
+    "html": "Parameters\nobject\n\nThe MediaItem object to be placed at the end of the playlist.\n\nSee Also\nModifying the Playlist\nitem\nReturns the media item located in the indicated array index.\nlength\nThe number of items in the playlist.\nPlaylist\nCreates a new playlist object.\npop\nRemoves a media item from the end of a playlist.\nsplice\nDeletes the indicated array elements and replaces them with the specified elements."
+  },
+  {
+    "title": "item",
+    "url": "https://developer.apple.com/documentation/tvmljs/playlist/1627377-item",
+    "html": "Parameters\nindex\n\nThe array index for the MediaItem.\n\nReturn Value\n\nThe MediaItem object located in the designated index location. This method returns null if the index is out of range.\n\nSee Also\nModifying the Playlist\nlength\nThe number of items in the playlist.\nPlaylist\nCreates a new playlist object.\npop\nRemoves a media item from the end of a playlist.\npush\nAdds a media item to the end of a playlist.\nsplice\nDeletes the indicated array elements and replaces them with the specified elements."
+  },
+  {
+    "title": "length",
+    "url": "https://developer.apple.com/documentation/tvmljs/playlist/1627327-length",
+    "html": "See Also\nModifying the Playlist\nitem\nReturns the media item located in the indicated array index.\nPlaylist\nCreates a new playlist object.\npop\nRemoves a media item from the end of a playlist.\npush\nAdds a media item to the end of a playlist.\nsplice\nDeletes the indicated array elements and replaces them with the specified elements."
+  },
+  {
+    "title": "Slideshow",
+    "url": "https://developer.apple.com/documentation/tvmljs/slideshow",
+    "html": "Overview\n\nThere is no constructor for the Slideshow class. Use the start method to create and begin a new slideshow.\n\nTopics\nCreating and Modifying a Slideshow\nappend\nAdd additional images to a currently running slideshow.\ndismiss\nDismisses a currently running slideshow.\nstart\nStarts a slideshow with the given set of images.\nSee Also\nMedia Playback\nPlaying Media in a Client-Server App\nPlay media items in a client-server app using the built-in media player for TVMLKit JS.\nPlayer\nA media player that displays the UI for playing video and audio in an Apple TV client-server app.\nPlaylist\nAn array of media items to be played in an Apple TV client-server app.\nMediaItem\nA single audio or video item.\nBrowser\nAn object used to configure and present a browsable full screen view."
+  },
+  {
+    "title": "Restrictions",
+    "url": "https://developer.apple.com/documentation/tvmljs/restrictions",
+    "html": "Overview\n\nDifferent countries often allow different levels of content to be shown. This class also allows you to specify the maximum and minimum rankings for content.\n\nYou cannot create an instance of the Restrictions class. An instance of this class is available from Settings.\n\nTopics\nRetrieving Restriction Information\nallowsExplicit\nA boolean value that indicates whether any explicit media is allowed.\nmaxMovieRank\nThe maximum allowed ranking for a movie.\nmaxMovieRatingForCountry\nThe maximum movie rating allowed for the specified country or region.\nmaxTVShowRank\nThe maximum allowed ranking for a television show.\nmaxTVShowRatingForCountry\nThe maximum television show rating allowed for the specified country or region.\nSee Also\nDevice Settings\nDevice\nAn object that provides information about an Apple TV and the host app installed on the device.\nSettings\nAn object that provides access to setting information for a device."
+  },
+  {
+    "title": "nextMediaItem",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/1627338-nextmediaitem",
+    "html": "Discussion\n\nThis property returns null if the current item is the last item in the playlist.\n\nSee Also\nInspecting Media Items\ncurrentMediaItem\nThe currently selected media item in the playlist.\ncurrentMediaItemDate\nContains the current time of the media item as a Date object.\ncurrentMediaItemDuration\nThe length, in seconds, of the current media item.\npreviousMediaItem\nThe item in the playlist previous to the currently selected item."
+  },
+  {
+    "title": "currentMediaItem",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/1627325-currentmediaitem",
+    "html": "See Also\nInspecting Media Items\ncurrentMediaItemDate\nContains the current time of the media item as a Date object.\ncurrentMediaItemDuration\nThe length, in seconds, of the current media item.\nnextMediaItem\nThe next media item in the playlist after the currently selected item.\npreviousMediaItem\nThe item in the playlist previous to the currently selected item."
+  },
+  {
+    "title": "previous",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/1682106-previous",
+    "html": "See Also\nControlling Playback\nchangeToMediaAtIndex\nImmediately begins playing the media item at the specified index in the playlist.\npause\nPauses the currently playing media item.\nnext\nImmediately begins playing the next media item in the playlist.\nplay\nPlays the currently selected media item.\nplaybackState\nThe current state of the player.\nplaybackRate\nThe playback speed.\nseekToTime\nSets the playback point to a specified time.\nstop\nStops the currently playing item and dismisses the player UI."
+  },
+  {
+    "title": "stop",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/1627406-stop",
+    "html": "See Also\nControlling Playback\nchangeToMediaAtIndex\nImmediately begins playing the media item at the specified index in the playlist.\npause\nPauses the currently playing media item.\nnext\nImmediately begins playing the next media item in the playlist.\nplay\nPlays the currently selected media item.\nplaybackState\nThe current state of the player.\nplaybackRate\nThe playback speed.\nprevious\nImmediately begins playing the previous media item in the playlist.\nseekToTime\nSets the playback point to a specified time."
+  },
+  {
+    "title": "seekToTime",
+    "url": "https://developer.apple.com/documentation/tvmljs/player/1627368-seektotime",
+    "html": "Parameters\ntime\n\nThe time, in seconds from the beginning of media item, that play begins.\n\nDiscussion\n\nUse this function to change where playback for a media item begins. The time where playback begins is passed, in seconds, by the time parameter. For example, to start a media item 5 minutes into playback, set the time parameter to 300.\n\nSee Also\nControlling Playback\nchangeToMediaAtIndex\nImmediately begins playing the media item at the specified index in the playlist.\npause\nPauses the currently playing media item.\nnext\nImmediately begins playing the next media item in the playlist.\nplay\nPlays the currently selected media item.\nplaybackState\nThe current state of the player.\nplaybackRate\nThe playback speed.\nprevious\nImmediately begins playing the previous media item in the playlist.\nstop\nStops the currently playing item and dismisses the player UI."
+  },
+  {
+    "title": "productType",
+    "url": "https://developer.apple.com/documentation/tvmljs/device/1627386-producttype",
+    "html": "Discussion\n\nThis property contains an identifier for the device, for example, AppleTV 3,1.\n\nSee Also\nRetrieving Device Information\nappIdentifier\nThe unique identifier for the app.\nappVersion\nThe current app version.\nmodel\nA string that identifies the device model.\nsystemVersion\nThe tvOS version.\nvendorIdentifier\nThe universally unique identifier (UUID) of the device."
+  },
+  {
+    "title": "appVersion",
+    "url": "https://developer.apple.com/documentation/tvmljs/device/1627395-appversion",
+    "html": "See Also\nRetrieving Device Information\nappIdentifier\nThe unique identifier for the app.\nmodel\nA string that identifies the device model.\nproductType\nThe version of the product installed on the Apple TV.\nsystemVersion\nThe tvOS version.\nvendorIdentifier\nThe universally unique identifier (UUID) of the device."
+  },
+  {
+    "title": "model",
+    "url": "https://developer.apple.com/documentation/tvmljs/device/1627347-model",
+    "html": "Discussion\n\nThe property contains a human readable string identifying the device, for example, AppleTV.\n\nSee Also\nRetrieving Device Information\nappIdentifier\nThe unique identifier for the app.\nappVersion\nThe current app version.\nproductType\nThe version of the product installed on the Apple TV.\nsystemVersion\nThe tvOS version.\nvendorIdentifier\nThe universally unique identifier (UUID) of the device."
+  },
+  {
+    "title": "loadindexes",
+    "url": "https://developer.apple.com/documentation/tvmljs/datasource/datasource/3192119-loadindexes",
+    "html": "Discussion\n\nThis event gets triggered when TVMLKit recognizes that the DataSource needs to load more indexes. TVMLKit invokes the event when there are visible cells onscreen consisting of incomplete data segments. For example, when the DataSource is set up to support lazy loading of data and it begins to request uninitialized objects, this event is triggered.\n\nThe loadIndexes event contains its DataSource objectas the target, as well as a request property, which is a LoadIndexesRequest object.\n\nSee Also\nLoading Elements\nsegmentSize\nThe maximum number of indexes that are loaded each time the loadindexes event is triggered."
+  },
+  {
+    "title": "XPathException",
+    "url": "https://developer.apple.com/documentation/tvmljs/xpathexception",
+    "html": "Topics\nInstance Properties\ncode"
+  },
+  {
+    "title": "popToDocument",
+    "url": "https://developer.apple.com/documentation/tvmljs/navigationdocument/1627420-poptodocument",
+    "html": "Parameters\ndocument\n\nA DOM document created by parsing a TVML file.\n\nSee Also\nRemoving Documents from the Stack\nclear\nRemoves all documents currently on the stack.\npopDocument\nRemoves the top most document from the stack.\npopToRootDocument\nRemoves all documents from the stack except for the bottom-most document, which is the root document.\nremoveDocument\nRemoves the specified document from the stack."
+  },
+  {
+    "title": "documents",
+    "url": "https://developer.apple.com/documentation/tvmljs/navigationdocument/1627303-documents",
+    "html": "Discussion\n\nContains an array consisting of all of the documents currently on the stack."
+  },
+  {
+    "title": "clear",
+    "url": "https://developer.apple.com/documentation/tvmljs/navigationdocument/1627312-clear",
+    "html": "Discussion\n\nNo animations are performed when this function is called. All documents currently on the stack are immediately removed.\n\nSee Also\nRemoving Documents from the Stack\npopDocument\nRemoves the top most document from the stack.\npopToDocument\nRemoves all of the documents on the stack that are above the passed document.\npopToRootDocument\nRemoves all documents from the stack except for the bottom-most document, which is the root document.\nremoveDocument\nRemoves the specified document from the stack."
+  },
+  {
+    "title": "ParsingElement",
+    "url": "https://developer.apple.com/documentation/tvmljs/parsingelement",
+    "html": "Topics\nInstance Properties\ninnerHTML\nouterHTML\nInstance Methods\ninsertAdjacentHTML"
+  },
+  {
+    "title": "reload",
+    "url": "https://developer.apple.com/documentation/tvmljs/app/1627357-reload",
+    "html": "Parameters\noptions\n\nThe options used to determine when the app is reloaded. This parameter is a dictionary with a key-value pair. The key can have the value when. The value can have the values onResume or now.\n\nreloadData\n\nAn optional, developer-defined object that contains information about the current app state.\n\nDiscussion\n\nThis function reloads the initial TVMLKit JS file without quitting the app. The optional reloadData parameter enables you to capture and restart the app in its current state. If the reloadData parameter is not present, the app is restarted in its initial state."
+  },
+  {
+    "title": "LSParser",
+    "url": "https://developer.apple.com/documentation/tvmljs/lsparser",
+    "html": "Topics\nInstance Properties\nACTION_APPEND_AS_CHILDREN\nACTION_INSERT_AFTER\nACTION_INSERT_BEFORE\nACTION_REPLACE\nACTION_REPLACE_CHILDREN\nInstance Methods\nparse\nparseWithContext"
+  },
+  {
+    "title": "LSInput",
+    "url": "https://developer.apple.com/documentation/tvmljs/lsinput",
+    "html": "Topics\nInstance Properties\nstringData"
+  },
+  {
+    "title": "ViewModelLink",
+    "url": "https://developer.apple.com/documentation/tvmljs/viewmodellink",
+    "html": "Topics\nInstance Properties\ncancel\ndocument\nInstance Methods\nclose\nRelationships\nInherits From\nEventListenerObject"
+  },
+  {
+    "title": "LSSerializer",
+    "url": "https://developer.apple.com/documentation/tvmljs/lsserializer",
+    "html": "Topics\nInstance Methods\nwriteToString"
+  },
+  {
+    "title": "EventException",
+    "url": "https://developer.apple.com/documentation/tvmljs/eventexception",
+    "html": "Topics\nInstance Properties\ncode"
+  },
+  {
+    "title": "NSError",
+    "url": "https://developer.apple.com/documentation/tvmljs/nserror",
+    "html": "Topics\nGetting Error Properties\ncode\nThe error code.\ndomain\nA string containing the error domain.\nuserInfo\nThe user info dictionary.\nunderlyingError\nThe error that was encountered in an underlying implementation and caused the error that the receiver represents to occur.\nGetting a Localized Error Description\ndescription\nA string containing the localized description of the error.\nfailureReason\nA string containing the localized explanation of the reason for the error.\nrecoverySuggestion\nA string containing the localized recovery suggestion for the error.\nSee Also\nErrors\nTVError\nError codes for the TVError domain."
+  },
+  {
+    "title": "TVError",
+    "url": "https://developer.apple.com/documentation/tvmljs/tverror",
+    "html": "Overview\n\nA TVError object encapsulates richer and more extensible error information than is possible when you use only an error code or error string. The core attributes of a TVError object are an error domain (represented by a string), a domain-specific error code, and a user info dictionary containing app-specific information. See User Info Dictionary Keys and Error Domains.\n\nTopics\nGetting Error Properties\ncode\nThe error code.\ndescription\nA string containing the description of the error.\ndomain\nA string containing the error domain.\nuserInfo\nThe user info dictionary.\nConstants\nUser Info Dictionary Keys\nKeys that exist in the user info dictionary.\nError Domains\nThe predefined error domains.\nSee Also\nErrors\nNSError\nInformation about an error condition, including a domain, a domain-specific error code, and application-specific information."
+  },
+  {
+    "title": "DataSource",
+    "url": "https://developer.apple.com/documentation/tvmljs/datasource",
+    "html": "Overview\n\nUse the DataSource interface to manage data represented as an array. You can modify your array and consequently generate a notification that makes the app aware of any data changes. Thus user interfaces can respond to changes in the array, without needing to repopulate the entire interface for every change.\n\nFor example, the DataSource interface makes it easy to lazily load objects. When you want to load an element into the UI, append it to the DataSource. TVMLKit will trigger the loadindexes event when it recognizes the need to fill in certain indexes.\n\nDataSource is also useful when you implement an infinite scrolling feature using the needsmore event to request more data. When the needsmore event is triggered, you can make modifications to the DataSource to suit your needs.\n\nTopics\nAccessing and Modifying Data\nDataSource.DataSource\nMethods and attributes that you use to create, modify, and access data in the data source.\nRelationships\nInherits From\nEventListenerObject\nSee Also\nData Storage and Retrieval\nBinding JSON data to TVML documents\nCreate full-fledged TVML documents by using data binding and queries on simplified TVML files.\nXMLHttpRequest\nAn object used to retrieve data from a URL.\nDataItem\nAn object used to create observable objects from JSON objects for data binding.\nStorage\nAn object used to store key-value-pair information.\nLoadIndexesRequest\nA request created when the loadindexes event is triggered."
+  },
+  {
+    "title": "XMLHttpRequest",
+    "url": "https://developer.apple.com/documentation/tvmljs/xmlhttprequest",
+    "html": "Topics\nInitializing and Sending a Request\nabort\nCancels any network activity.\nopen\nSets the method, URL, and synchronous flag for a request.\nsend\nSends the request.\ntimeout\nThe amount of time, in milliseconds, before causing a request to time out.\nXMLHttpRequest\nCreates a new XMLHttpRequest.\nManipulating the Header List\ngetAllResponseHeaders\nReturns all of the response headers.\ngetResponseHeader\nRetrieves the field value from the response that is contained in the specified header.\nsetRequestHeader\nAppends a header to the list of request headers.\nRetrieving Request Information\nmetrics\nA dictionary of keys used to request start and response start and end times.\nreadyState\nThe current state of the request.\nresponse\nThe response entity body.\nresponseCacheIsValid\nresponseText\nThe response to the request.\nresponseType\nThe type of response.\nresponseURL\nresponseXML\nThe document response entity body.\nstatus\nThe HTTP status code.\nstatusText\nThe HTTP status text.\nImplementing Callback Functions\nonabort\nA callback function called when a request is cancelled by the user.\nonerror\nA callback function that is called if the request fails due to an error.\nonload\nA callback function that is called when the request is successfully completed.\nonloadend\nA callback function that is called when the request is completed for any reason.\nonloadstart\nA callback function that is called when the request begins.\nonreadystatechange\nA callback function that is called when the readyState attribute changes.\nontimeout\nA callback function that is called when a request times out.\nResponding to Events\nabort\nAn event signifying the request has aborted.\nerror\nAn event signifying an error occurred during the request.\nload\nAn event signifying the request was successfully loaded.\nloadend\nAn event signifying the request has been completed.\nloadstart\nAn event signifying the request has begun.\nreadystatechange\nAn event signifying that a state change has occurred.\nWebKit JS Only\nupload\nwithCredentials\noverrideMimeType\nretrieveResponse\nUNSENT\nOPENED\nHEADERS_RECEIVED\nLOADING\nDONE\nRelationships\nInherits From\nEventListenerObject\nXMLHttpRequestEventTarget\nSee Also\nData Storage and Retrieval\nBinding JSON data to TVML documents\nCreate full-fledged TVML documents by using data binding and queries on simplified TVML files.\nDataItem\nAn object used to create observable objects from JSON objects for data binding.\nStorage\nAn object used to store key-value-pair information.\nDataSource\nAn interface that allows the system to detect and respond to changes in your data.\nLoadIndexesRequest\nA request created when the loadindexes event is triggered."
+  },
+  {
+    "title": "Keyboard",
+    "url": "https://developer.apple.com/documentation/tvmljs/keyboard",
+    "html": "Overview\n\nUse the getFeature function with the feature name Keyboard to retrieve an instance of this class from the searchField and textField elements, as in, for example, getFeature('Keyboard').\n\nTopics\nSetting and Retrieving Text\ntext\nThe text inside a search or text field.\nonTextChange\nA function the system calls when the text in a search or text field changes.\nProviding and Handling Search Suggestions\nsuggestions\nSearch parameters to offer as shortcuts.\nonSuggestionSelected\nA function the system calls when the user selects a suggestion on a search field.\nSee Also\nElement Access\nMenuBarDocument\nAn object used for setting and retrieving documents associated with a menu item."
+  },
+  {
+    "title": "MediaItem",
+    "url": "https://developer.apple.com/documentation/tvmljs/mediaitem",
+    "html": "Overview\n\nIn order to play audio or video, at a minimum, there must be a Player object that contains a single Playlist object which contains a single MediaItem object.\n\nTopics\nCreating Media Items\nMediaItem\nCreates a new MediaItem object from the information stored in the URL location.\nRating Media Content\ncontentRatingDomain\nThe domain that the rating applies to.\ncontentRatingRanking\nThe rating for a video item.\nisExplicit\nA Boolean value indicating whether the item has explicit lyrics.\nIdentifying Media Items\nartworkImageURL\nThe URL path to the artwork that accompanies the media item.\ndescription\nThe description for a media item.\nsubtitle\nThe subtitle for a the media item.\ntitle\nThe title of the media item.\ntype\nThe type of media item.\nurl\nThe URL path to the media item.\nSetting Timing Options\nhighlightGroups\nAn array of highlight groups, with each group containing a list of highlights.\ninterstitials\nAn array of interstitial objects.\nresumeTime\nThe number of seconds from the beginning of the item at which the item begins playing.\nSupporting FairPlay Streaming\nloadAssetID\nA callback function used to load the asset identifier for an item.\nloadCertificate\nA callback function used to load the security certificate for an item.\nloadKey\nA callback function used to load the security key for an item.\nSee Also\nMedia Playback\nPlaying Media in a Client-Server App\nPlay media items in a client-server app using the built-in media player for TVMLKit JS.\nPlayer\nA media player that displays the UI for playing video and audio in an Apple TV client-server app.\nPlaylist\nAn array of media items to be played in an Apple TV client-server app.\nSlideshow\nAn object used to display images on Apple TV in a slideshow format.\nBrowser\nAn object used to configure and present a browsable full screen view."
+  },
+  {
+    "title": "Playlist",
+    "url": "https://developer.apple.com/documentation/tvmljs/playlist",
+    "html": "Overview\n\nIn order to play audio or video, at a minimum, there must be a Player object that contains a single Playlist object, which contains a single MediaItem object.\n\nTopics\nModifying the Playlist\nitem\nReturns the media item located in the indicated array index.\nlength\nThe number of items in the playlist.\nPlaylist\nCreates a new playlist object.\npop\nRemoves a media item from the end of a playlist.\npush\nAdds a media item to the end of a playlist.\nsplice\nDeletes the indicated array elements and replaces them with the specified elements.\nSee Also\nMedia Playback\nPlaying Media in a Client-Server App\nPlay media items in a client-server app using the built-in media player for TVMLKit JS.\nPlayer\nA media player that displays the UI for playing video and audio in an Apple TV client-server app.\nMediaItem\nA single audio or video item.\nSlideshow\nAn object used to display images on Apple TV in a slideshow format.\nBrowser\nAn object used to configure and present a browsable full screen view."
+  },
+  {
+    "title": "Player",
+    "url": "https://developer.apple.com/documentation/tvmljs/player",
+    "html": "Overview\n\nAfter you create a new player, associate the player with a playlist that contains media items. In order to play audio or video, at a minimum, there must be a Player object that contains a single Playlist object, which contains a single MediaItem object.\n\nTopics\nSetting Up the Player\ninteractiveOverlayDismissable\nDetermines if an interactive overlay can be dismissed using the Menu button.\ninteractiveOverlayDocument\nA DOM document that is presented over the entire video player, including the transport bar.\noverlayDocument\nThe annotations for a video created by placing a DOM document over the video.\nPlayer\nCreates a new player object.\nplaylist\nThe playlist for a player.\npresent\nShows the player UI if it is not currently visible.\nControlling Playback\nchangeToMediaAtIndex\nImmediately begins playing the media item at the specified index in the playlist.\npause\nPauses the currently playing media item.\nnext\nImmediately begins playing the next media item in the playlist.\nplay\nPlays the currently selected media item.\nplaybackState\nThe current state of the player.\nplaybackRate\nThe playback speed.\nprevious\nImmediately begins playing the previous media item in the playlist.\nseekToTime\nSets the playback point to a specified time.\nstop\nStops the currently playing item and dismisses the player UI.\nInspecting Media Items\ncurrentMediaItem\nThe currently selected media item in the playlist.\ncurrentMediaItemDate\nContains the current time of the media item as a Date object.\ncurrentMediaItemDuration\nThe length, in seconds, of the current media item.\nnextMediaItem\nThe next media item in the playlist after the currently selected item.\npreviousMediaItem\nThe item in the playlist previous to the currently selected item.\nResponding to Events\nmediaItemDidChange\nAn event notifying the listener that the player changed a media item.\nmediaItemWillChange\nAn event notifying the listener that the player is about to changed a media item.\nplaybackDidStall\nAn event that indicates that playback has stalled.\nplaybackError\nAn event that indicates an error has occurred during playback.\nrequestSeekToTime\nAn event that indicates whether a seek-to-time request was accomplished.\nshouldChangeToMediaAtIndex\nAn event that indicates a request to play a media item in a different index is received.\nshouldHandleStateChange\nAn event that indicates a state change request has occurred.\nstateDidChange\nAn event that indicates the state of the player has changed.\nstateWillChange\nAn event that indicates the state of the player is about to change.\ntimeBoundaryDidCross\nAn event that indicates a specific playback time in the media item has been crossed.\ntimeDidChange\nAn event that happens at a specified interval.\ntimedMetadata\nAn event that is triggered whenever a specified piece of metadata is encountered.\ntransportBarVisibilityDidChange\nAn event that indicates the state of the transport bar has changed.\nRelationships\nInherits From\nEventListenerObject\nSee Also\nMedia Playback\nPlaying Media in a Client-Server App\nPlay media items in a client-server app using the built-in media player for TVMLKit JS.\nPlaylist\nAn array of media items to be played in an Apple TV client-server app.\nMediaItem\nA single audio or video item.\nSlideshow\nAn object used to display images on Apple TV in a slideshow format.\nBrowser\nAn object used to configure and present a browsable full screen view."
+  },
+  {
+    "title": "Playing Media in a Client-Server App",
+    "url": "https://developer.apple.com/documentation/tvmljs/playing_media_in_a_client-server_app",
+    "html": "Overview\n\nThe TVML frameworks provide several built-in ways to play media items. After loading the initial page, the app automatically plays music in the background. The user navigates between two images and the app loads and plays a video or audio media item after the user selects an image. Both of these media items play using the built-in TVMLJKit JS media player.\n\nSee Also\nMedia Playback\nPlayer\nA media player that displays the UI for playing video and audio in an Apple TV client-server app.\nPlaylist\nAn array of media items to be played in an Apple TV client-server app.\nMediaItem\nA single audio or video item.\nSlideshow\nAn object used to display images on Apple TV in a slideshow format.\nBrowser\nAn object used to configure and present a browsable full screen view."
+  },
+  {
+    "title": "Device",
+    "url": "https://developer.apple.com/documentation/tvmljs/device",
+    "html": "Overview\n\nYou cannot create an instance of the Device class. An instance of this class is available in the global context as Device.\n\nTopics\nRetrieving Device Information\nappIdentifier\nThe unique identifier for the app.\nappVersion\nThe current app version.\nmodel\nA string that identifies the device model.\nproductType\nThe version of the product installed on the Apple TV.\nsystemVersion\nThe tvOS version.\nvendorIdentifier\nThe universally unique identifier (UUID) of the device.\nSee Also\nDevice Settings\nSettings\nAn object that provides access to setting information for a device.\nRestrictions\nAn object used to retrieve rating restriction information."
+  },
+  {
+    "title": "Settings",
+    "url": "https://developer.apple.com/documentation/tvmljs/settings",
+    "html": "Overview\n\nYou cannot create an instance of the Settings class. An instance of this class is available in the global context as Settings.\n\nTopics\nRetrieving Setting Information\nrestrictions\nRestriction information on the device.\nlanguage\nThe language used to display information by the device.\nonRestrictionsChange\nA callback function that is called when changes to a device’s restriction information changes.\nstorefrontCountryCode\nThe country code used by the store on this device.\nSee Also\nDevice Settings\nDevice\nAn object that provides information about an Apple TV and the host app installed on the device.\nRestrictions\nAn object used to retrieve rating restriction information."
+  },
+  {
+    "title": "Responding to User Interaction",
+    "url": "https://developer.apple.com/documentation/tvmljs/responding_to_user_interaction",
+    "html": "Overview\n\nAs the user navigates to a menu item along the top of the screen, the screen updates with information related to that menu item. This app shows you how to use events to update the screen when the user moves to a menu item, but doesn’t select the item.\n\nConfigure the Sample Code Project\n\nBefore running the app, set up a local server on your machine:\n\nIn Finder, navigate to the Incorporating Event Listeners directory inside of the Incorporating Event Listeners directory.\n\nIn Terminal, enter cd, followed by a space.\n\nDrag the Incorporating Event Listeners folder from the Finder window into the Terminal window, and press Return. The current directory changes to that folder.\n\nIn Terminal, enter ruby -run -ehttpd . -p9001 to run the server.\n\nBuild and run the app in Apple TV Simulator.\n\nAfter testing the sample app in Apple TV Simulator, you can quit the local server by pressing Control-C in Terminal or closing the Terminal window.\n\nAdd URL Information to the menuBar Template Code\n\nAdd the selectTargetURL attribute to each menuItem element inside of the menuBarTemplate. As the user moves between menu items, an event fires in order to update the onscreen information. The selectTargetURL attribute identifies the location of the TVML page associated with the highlighted menu item. An example of a formatted menu item follows:\n\n<menuItem selectTargetURL=\"Server/Templates/firstmenutabpage.xml\">\n    <title>Tab 1</title>\n</menuItem>\n\nSet Up the Event Listeners\n\nUse the XMLHttpRequest function to load the menuBar template and then add an event listener to the document using the JavaScript addEventListener function. The event listener notifies the app when the user moves to a new menu item. The app calls the user-defined handleSelectEvent function and automatically sends all of the the events to the function.\n\nif (request.status == 200) {\n    var document = request.responseXML;\n    document.addEventListener(\"select\", handleSelectEvent);\n    navigationDocument.replaceDocument(document, loadingDocument)\n\nRespond to an Event\n\nUse the handleSelectEvent function to verify that the event fired for the correct TVML element. The event’s target property contains the highlighted element. The function then verifies that the highlighted element contains the selectTargetURL attribute. If the highlighted element is also a menuItem element and not a different element with the selectTargetURL attribute, the function calls the updateMenuItem function, which will update the displayed document, that is, the information associated with the highlighted menu item.\n\nfunction handleSelectEvent(event) {\n    var selectedElement = event.target;\n    \n    var targetURL = selectedElement.getAttribute(\"selectTargetURL\");\n    if (!targetURL) {\n        return;\n    }\n    targetURL = baseURL + targetURL;\n    \n    if (selectedElement.tagName == \"menuItem\") {\n        updateMenuItem(selectedElement, targetURL);\n    }\n    else {\n        loadAndPushDocument(targetURL);\n    }\n}\n\nUpdate the Document\n\nUse the updateMenuItem function to load the new document from the server. After loading the new document, retrieve the menu item’s parent node and the MenuBarDocument object. Finally, associate the new document to the menuItem element using the setDocument. This displays the document associated with the menu item.\n\nfunction updateMenuItem(menuItem, url) {\n    var request = new XMLHttpRequest();\n    request.open(\"GET\", url, true);\n    \n    request.onreadystatechange = function() {\n        if (request.status == 200) {\n            var document = request.responseXML;\n            var menuItemDocument = menuItem.parentNode.getFeature(\"MenuBarDocument\");\n            menuItemDocument.setDocument(document, menuItem)\n        }\n    };\n    \n    request.send();\n}\n\nSee Also\nApp Initialization\nApp\nAn object that provides access to—and a means to respond to—app life-cycle events.\nUserDefaults\nAn object that contains the app's default preferences.\nNavigationDocument\nA document stack that holds the individual TVML documents for a client-server app.\nEventListenerObject\nAn object that communicates events and allows other objects to add themselves as listeners."
+  },
+  {
+    "title": "EventListenerObject",
+    "url": "https://developer.apple.com/documentation/tvmljs/eventlistenerobject",
+    "html": "Topics\nAdding and Removing Event Listeners\naddEventListener\nCreates an event listener.\nremoveEventListener\nRemoves the designated event listener.\nSee Also\nApp Initialization\nApp\nAn object that provides access to—and a means to respond to—app life-cycle events.\nUserDefaults\nAn object that contains the app's default preferences.\nNavigationDocument\nA document stack that holds the individual TVML documents for a client-server app.\nResponding to User Interaction\nUpdate onscreen information by adding event listeners to your Apple TV app."
+  },
+  {
+    "title": "NavigationDocument",
+    "url": "https://developer.apple.com/documentation/tvmljs/navigationdocument",
+    "html": "Overview\n\nYou cannot create an instance of the NavigationDocument class. An instance of this class is available in the global context as navigationDocument.\n\nTopics\nAdding Documents to the Stack\ninsertBeforeDocument\nInserts a new document directly before a document currently on the stack.\npushDocument\nPushes the specified document onto the stack.\nreplaceDocument\nReplaces a document on the stack with a new document.\nOverlaying Document\ndismissModal\nDismisses the document displayed in modal view.\npresentModal\nDisplays the passed document on top of the current document.\nViewing the Stack\ndocuments\nThe documents currently on the stack.\nRemoving Documents from the Stack\nclear\nRemoves all documents currently on the stack.\npopDocument\nRemoves the top most document from the stack.\npopToDocument\nRemoves all of the documents on the stack that are above the passed document.\npopToRootDocument\nRemoves all documents from the stack except for the bottom-most document, which is the root document.\nremoveDocument\nRemoves the specified document from the stack.\nSee Also\nApp Initialization\nApp\nAn object that provides access to—and a means to respond to—app life-cycle events.\nUserDefaults\nAn object that contains the app's default preferences.\nResponding to User Interaction\nUpdate onscreen information by adding event listeners to your Apple TV app.\nEventListenerObject\nAn object that communicates events and allows other objects to add themselves as listeners."
+  },
+  {
+    "title": "Creating a Client-Server TVML App",
+    "url": "https://developer.apple.com/documentation/tvmljs/creating_a_client-server_tvml_app",
+    "html": "Overview\n\nA TVML app creates a client-server connection to retrieve information stored on a server. The retrieved information is parsed into a document and displayed on a TV screen. Use this sample code project to create your first client-server app. The app uses JavaScript to load an initial TVML document from a local server. The user navigates between two images and the app loads a new document after the user selects one of the images. For detailed information about the TVML framework, see TVML.\n\nConfigure the Sample Code Project\n\nBefore running the app, you need to set up a local server on your machine:\n\nIn Finder, navigate to the CreateTVMLApp directory inside of the CreateTVMLApp project directory.\n\nIn Terminal, enter at the prompt, cd followed by a space.\n\nDrag the CreateTVMLApp folder from the Finder window into the Terminal window, and press Return. This changes the directory to that folder.\n\nIn Terminal, enter ruby -run -ehttpd . -p9001 to run the server.\n\nBuild and run the app.\n\nAfter testing the sample app in Apple TV Simulator, you can close the local server by pressing Control-C in Terminal. Closing the Terminal window also kills the server.\n\nDisplay the Initial Document\n\nThe application.js file controls the app. The app creates two global variables that contain URL information. When the app launches, the app populates the variables with information contained in the AppDelegate.swift file and retrieves the first document from the server.\n\nvar baseURL;\nvar serverURL;\n\n\nApp.onLaunch = function(options) {\n    baseURL = options.BASEURL;\n    serverURL = options.BASEURL + \"/Server\";\n    var extension = \"/Templates/InitialPage.xml\";\n    getDocument(extension);\n}\n\nRetrieve a TVML Document From the Server\n\nWhile you can’t control a user’s internet access, you can control what they see on the screen. To avoid showing a blank screen, create and display a loading document to provide users with a visual cue that your app is working, despite not having a connection to the server.\n\nCreate and display the loading document from inside your main JavaScript file. This ensures that you can always display the loading document, even if access to the server is down. The following code creates a loading document and pushes it onto the navigation stack for display.\n\nfunction loadingTemplate() {\n    var template = '<document><loadingTemplate><activityIndicator><text>Loading</text></activityIndicator></loadingTemplate></document>';\n    var templateParser = new DOMParser();\n    var parsedTemplate = templateParser.parseFromString(template, \"application/xml\");\n    navigationDocument.pushDocument(parsedTemplate);\n    return parsedTemplate;\n}\n\n\nCreate a new XMLHttpRequest to retrieve information from the server. After successfully loading a new document, push the document onto the navigation stack to display it.\n\nfunction getDocument(extension) {\n    var templateXHR = new XMLHttpRequest();\n    var url = serverURL + extension;\n    var loadingScreen = loadingTemplate();\n    \n    templateXHR.responseType = \"document\";\n    templateXHR.addEventListener(\"load\", function() {pushPage(templateXHR.responseXML, loadingScreen);}, false);\n    templateXHR.open(\"GET\", url, true);\n    templateXHR.send();\n}\n\nReplace the Previous Document\n\nAfter the user selects a new document, push that document onto the navigation stack. This places the new document at the top of the current document stack and displays it. When the user presses the Menu button on the Siri Remote, the system removes the current document from the stack and displays the previous document. Doing this causes the previous loading document to display when you want the user to see the selection document.\n\nTo fix this, replace the loading document with the new document using the replaceDocument method. The following function takes the new document and the loading document as parameters and replaces the loading document with the new document.\n\nfunction pushPage(page, loading) {\n    var currentDoc = getActiveDocument();\n    navigationDocument.replaceDocument(page, loading);\n}\n\nSelect a New TVML Document\n\nEach file on your server contains the information to display a single document onscreen. In this app, the initial document contains information that displays two images, each with their own title. Each image is a Lockup Elements element. When the user selects a lockup, the app uses the onselect attribute to call the getDocument method. The lockup passes the URL for the next document to the getDocument method.\n\n<lockup onselect=\"getDocument('/Templates/PageOne.xml')\">\n\nThe image element contains the URL and size specifications for the displayed image.\n\n<img width=\"182\" height=\"274\" src=\"http://localhost:9001/Server/Images/Car_Movie_250x375_A.png\"/>"
+  },
+  {
+    "title": "App",
+    "url": "https://developer.apple.com/documentation/tvmljs/app",
+    "html": "Overview\n\nYou cannot create an instance of the App class. An instance of this class is available in the global context as App.\n\nTopics\nResponding to App Life Cycle Events\nonError\nA callback function that is automatically called when an error is sent from the Apple TV.\nonExit\nA callback function that is automatically called when the app has been exited.\nonLaunch\nA callback function that is automatically called when the app has been launched.\nonResume\nA callback function that is automatically called when the app moves to the foreground.\nonSuspend\nA callback function that is automatically called when the app is sent to the background.\nReloading the App\nreload\nReloads the app.\nInstance Properties\nonDocumentRequest\nSee Also\nApp Initialization\nUserDefaults\nAn object that contains the app's default preferences.\nNavigationDocument\nA document stack that holds the individual TVML documents for a client-server app.\nResponding to User Interaction\nUpdate onscreen information by adding event listeners to your Apple TV app.\nEventListenerObject\nAn object that communicates events and allows other objects to add themselves as listeners."
+  },
+  {
+    "title": "DOMImplementationRegistry",
+    "url": "https://developer.apple.com/documentation/tvmljs/domimplementationregistry",
+    "html": "Topics\nInstance Methods\ngetDOMImplementation"
+  },
+  {
+    "title": "DOMImplementationLS",
+    "url": "https://developer.apple.com/documentation/tvmljs/domimplementationls",
+    "html": "Topics\nInstance Properties\nMODE_ASYNCHRONOUS\nMODE_SYNCHRONOUS\nInstance Methods\ncreateLSInput\ncreateLSParser\ncreateLSSerializer"
+  },
+  {
+    "title": "TVMLKit JS",
+    "url": "https://developer.apple.com/documentation/tvmljs",
+    "html": "Overview\n\nThe TVMLKit JS framework provides you with the means to display client-server apps created with the Apple TV Markup Language (TVML) on tvOS. You use other classes in the framework to stream media and respond to events.\n\nThe TVMLKit JS framework incorporates the following standard Document Object Module classes, which are not documented here. For information on these classes, see World Wide Web Consortium.\n\nCharacterData\n\nComment\n\nCustomEvent\n\nDocument\n\nDocumentFragment\n\nDOMException\n\nDOMImplementation\n\nDOMImplementationLS\n\nDOMImplementationRegistry\n\nDOMParser\n\nElement\n\nEvent\n\nEventException\n\nHTMLCollection\n\nLSException\n\nLSInput\n\nLSParser\n\nLSSerializer\n\nNamedNodeMap\n\nNode\n\nNodeList\n\nParentNode\n\nParsingElement\n\nText\n\nXMLSerializer\n\nXPathEvaluator\n\nXPathException\n\nXPathExpression\n\nXPathResult\n\nTopics\nEssentials\nCreating a Client-Server TVML App\nDisplay and navigate between TVML documents on Apple TV by retrieving and parsing information from a remote server.\nApp Initialization\nApp\nAn object that provides access to—and a means to respond to—app life-cycle events.\nUserDefaults\nAn object that contains the app's default preferences.\nNavigationDocument\nA document stack that holds the individual TVML documents for a client-server app.\nResponding to User Interaction\nUpdate onscreen information by adding event listeners to your Apple TV app.\nEventListenerObject\nAn object that communicates events and allows other objects to add themselves as listeners.\nDevice Settings\nDevice\nAn object that provides information about an Apple TV and the host app installed on the device.\nSettings\nAn object that provides access to setting information for a device.\nRestrictions\nAn object used to retrieve rating restriction information.\nMedia Playback\nPlaying Media in a Client-Server App\nPlay media items in a client-server app using the built-in media player for TVMLKit JS.\nPlayer\nA media player that displays the UI for playing video and audio in an Apple TV client-server app.\nPlaylist\nAn array of media items to be played in an Apple TV client-server app.\nMediaItem\nA single audio or video item.\nSlideshow\nAn object used to display images on Apple TV in a slideshow format.\nBrowser\nAn object used to configure and present a browsable full screen view.\nElement Access\nKeyboard\nAn object used to retrieve user input from search fields and text fields.\nMenuBarDocument\nAn object used for setting and retrieving documents associated with a menu item.\nData Storage and Retrieval\nBinding JSON data to TVML documents\nCreate full-fledged TVML documents by using data binding and queries on simplified TVML files.\nXMLHttpRequest\nAn object used to retrieve data from a URL.\nDataItem\nAn object used to create observable objects from JSON objects for data binding.\nStorage\nAn object used to store key-value-pair information.\nDataSource\nAn interface that allows the system to detect and respond to changes in your data.\nLoadIndexesRequest\nA request created when the loadindexes event is triggered.\nErrors\nTVError\nError codes for the TVError domain.\nNSError\nInformation about an error condition, including a domain, a domain-specific error code, and application-specific information.\nReference\nTVMLKit JS Functions\nThe functions contained in this reference can be used globally in your app. They are not associated with a particular class.\nClasses\nDOMException\nDOMImplementationLS\nDOMImplementationRegistry\nEventException\nLSException\nLSInput\nLSParser\nLSSerializer\nParsingElement\nViewModelLink\nXPathException"
+  }
+]

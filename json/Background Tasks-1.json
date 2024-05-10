@@ -1,0 +1,217 @@
+[
+  {
+    "title": "RawRepresentable Implementations",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgtaskscheduler/error/code/rawrepresentable-implementations",
+    "html": "Topics\nInstance Properties\nvar hashValue: Int\nAvailable when Self conforms to Hashable and RawValue conforms to Hashable.\nInstance Methods\nfunc hash(into: inout Hasher)\nAvailable when Self conforms to Hashable and RawValue conforms to Hashable."
+  },
+  {
+    "title": "!=(_:_:)",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgtaskscheduler/error/!=(_:_:)",
+    "html": "Parameters\nlhs\n\nA value to compare.\n\nrhs\n\nAnother value to compare.\n\nDiscussion\n\nInequality is the inverse of equality. For any values a and b, a != b implies that a == b is false.\n\nThis is the default implementation of the not-equal-to operator (!=) for any type that conforms to Equatable."
+  },
+  {
+    "title": "!=(_:_:)",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgtaskscheduler/error/code/!=(_:_:)",
+    "html": "Parameters\nlhs\n\nA value to compare.\n\nrhs\n\nAnother value to compare.\n\nDiscussion\n\nInequality is the inverse of equality. For any values a and b, a != b implies that a == b is false.\n\nThis is the default implementation of the not-equal-to operator (!=) for any type that conforms to Equatable."
+  },
+  {
+    "title": "Error Implementations",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgtaskscheduler/error/error-implementations",
+    "html": "Topics\nInstance Properties\nvar localizedDescription: String\nRetrieve the localized description for this error."
+  },
+  {
+    "title": "Equatable Implementations",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgtaskscheduler/error/code/equatable-implementations",
+    "html": "Topics\nOperators\nstatic func != (Self, Self) -> Bool\nReturns a Boolean value indicating whether two values are not equal."
+  },
+  {
+    "title": "BGTaskScheduler.Error.Code.unavailable",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgtaskscheduler/error/code/unavailable",
+    "html": "Discussion\n\nThis error usually occurs for one of following reasons:\n\nThe user has disabled background refresh in settings.\n\nThe app is running on Simulator which doesn’t support background processing.\n\nThe keyboard extension either hasn’t set RequestsOpenAccess to YES in The Info.plist File, or the user hasn’t granted open access.\n\nThe extension type isn’t able to schedule background tasks.\n\nSee Also\nEnumeration cases\ncase notPermitted\nA task scheduling error indicating the app isn’t permitted to schedule the task.\ncase tooManyPendingTaskRequests\nA task scheduling error indicating that there are too many pending tasks of the type requested."
+  },
+  {
+    "title": "BGTaskScheduler.Error.Code.notPermitted",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgtaskscheduler/error/code/notpermitted",
+    "html": "Discussion\n\nThere are two causes for this error:\n\nThe app doesn’t set the appropriate mode in the UIBackgroundModes array.\n\nThe task identifier of the submitted task wasn’t in the BGTaskSchedulerPermittedIdentifiers array in the Info.plist File.\n\nSee Also\nEnumeration cases\ncase tooManyPendingTaskRequests\nA task scheduling error indicating that there are too many pending tasks of the type requested.\ncase unavailable\nA task scheduling error indicating that the app or extension can’t schedule background work."
+  },
+  {
+    "title": "Equatable Implementations",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgtaskscheduler/error/equatable-implementations",
+    "html": "Topics\nOperators\nstatic func != (Self, Self) -> Bool\nReturns a Boolean value indicating whether two values are not equal."
+  },
+  {
+    "title": "CustomNSError Implementations",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgtaskscheduler/error/customnserror-implementations",
+    "html": "Topics\nType Properties\nstatic var errorDomain: String\nDefault domain of the error."
+  },
+  {
+    "title": "unavailable",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgtaskscheduler/error/unavailable",
+    "html": "Discussion\n\nThis error usually occurs for one of three reasons:\n\nThe user has disabled background refresh in settings.\n\nThe app is running on Simulator which doesn’t support background processing.\n\nThe extension either hasn’t set RequestsOpenAccess to YES in The Info.plist File, or the user hasn’t granted open access.\n\nSee Also\nGetting the error codes\nenum Code\nAn enumeration of the task scheduling errors.\nstatic var notPermitted: BGTaskScheduler.Error.Code\nA task scheduling error indicating the app isn’t permitted to launch the task.\nstatic var tooManyPendingTaskRequests: BGTaskScheduler.Error.Code\nA task scheduling error indicating that there are too many pending tasks of the type requested."
+  },
+  {
+    "title": "notPermitted",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgtaskscheduler/error/notpermitted",
+    "html": "Discussion\n\nThere are two causes for this error:\n\nThe app doesn’t set the appropriate mode in the UIBackgroundModes array.\n\nThe task identifier of the submitted task wasn’t in the BGTaskSchedulerPermittedIdentifiers array in The Info.plist File.\n\nSee Also\nGetting the error codes\nenum Code\nAn enumeration of the task scheduling errors.\nstatic var tooManyPendingTaskRequests: BGTaskScheduler.Error.Code\nA task scheduling error indicating that there are too many pending tasks of the type requested.\nstatic var unavailable: BGTaskScheduler.Error.Code\nA task scheduling error indicating that the app or extension can’t schedule background work."
+  },
+  {
+    "title": "tooManyPendingTaskRequests",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgtaskscheduler/error/toomanypendingtaskrequests",
+    "html": "Discussion\n\nTry canceling some existing task requests and then resubmit the request that failed.\n\nSee Also\nGetting the error codes\nenum Code\nAn enumeration of the task scheduling errors.\nstatic var notPermitted: BGTaskScheduler.Error.Code\nA task scheduling error indicating the app isn’t permitted to launch the task.\nstatic var unavailable: BGTaskScheduler.Error.Code\nA task scheduling error indicating that the app or extension can’t schedule background work."
+  },
+  {
+    "title": "BGTaskScheduler.Error.Code.tooManyPendingTaskRequests",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgtaskscheduler/error/code/toomanypendingtaskrequests",
+    "html": "Discussion\n\nTry canceling some existing task requests and then resubmit the request that failed.\n\nSee Also\nEnumeration cases\ncase notPermitted\nA task scheduling error indicating the app isn’t permitted to schedule the task.\ncase unavailable\nA task scheduling error indicating that the app or extension can’t schedule background work."
+  },
+  {
+    "title": "errorDomain",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgtaskscheduler/errordomain",
+    "html": "See Also\nHandling errors\nstruct Error\nThe Errors for the BGTaskSchedulerError domain.\nenum Code\nAn enumeration of the task scheduling errors."
+  },
+  {
+    "title": "getPendingTaskRequests(completionHandler:)",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgtaskscheduler/getpendingtaskrequests(completionhandler:)",
+    "html": "Parameters\ncompletionHandler\n\nThe completion handler called with the pending tasks. The handler may execute on a background thread.\n\nThe handler takes a single parameter tasksRequests, an array of BGTaskRequest objects. The array is empty if there are no scheduled tasks.\n\nThe objects passed in the array are copies of the existing requests. Changing the attributes of a request has no effect. To change the attributes submit a new task request using submit(_:).\n\nDiscussion\n\nConcurrency note\n\nYou can call this method from synchronous code using a completion handler, as shown on this page, or you can call it as an asynchronous method that has the following declaration:\n\nfunc pendingTaskRequests() async -> [BGTaskRequest]\n\n\nFor information about concurrency and asynchronous code in Swift, see Calling Objective-C APIs Asynchronously."
+  },
+  {
+    "title": "BGTaskScheduler.Error.Code",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgtaskscheduler/error/code",
+    "html": "Topics\nEnumeration cases\ncase notPermitted\nA task scheduling error indicating the app isn’t permitted to schedule the task.\ncase tooManyPendingTaskRequests\nA task scheduling error indicating that there are too many pending tasks of the type requested.\ncase unavailable\nA task scheduling error indicating that the app or extension can’t schedule background work.\nInitializers\ninit?(rawValue: Int)\nDefault Implementations\nEquatable Implementations\nRawRepresentable Implementations\nRelationships\nConforms To\nEquatable\nHashable\nRawRepresentable\nSendable\nSee Also\nHandling errors\nstruct Error\nThe Errors for the BGTaskSchedulerError domain.\nclass let errorDomain: String\nThe background tasks error domain as a string."
+  },
+  {
+    "title": "BGTaskScheduler.Error",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgtaskscheduler/error",
+    "html": "Topics\nGetting the error codes\nenum Code\nAn enumeration of the task scheduling errors.\nstatic var notPermitted: BGTaskScheduler.Error.Code\nA task scheduling error indicating the app isn’t permitted to launch the task.\nstatic var tooManyPendingTaskRequests: BGTaskScheduler.Error.Code\nA task scheduling error indicating that there are too many pending tasks of the type requested.\nstatic var unavailable: BGTaskScheduler.Error.Code\nA task scheduling error indicating that the app or extension can’t schedule background work.\nGetting the error domain\nstatic var errorDomain: String\nThe background tasks error domain as a string.\nDefault Implementations\nCustomNSError Implementations\nEquatable Implementations\nError Implementations\nRelationships\nConforms To\nCustomNSError\nEquatable\nError\nHashable\nSendable\nSee Also\nHandling errors\nenum Code\nAn enumeration of the task scheduling errors.\nclass let errorDomain: String\nThe background tasks error domain as a string."
+  },
+  {
+    "title": "cancelAllTaskRequests()",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgtaskscheduler/cancelalltaskrequests()",
+    "html": "See Also\nCanceling a task\nfunc cancel(taskRequestWithIdentifier: String)\nCancel a previously scheduled task request."
+  },
+  {
+    "title": "cancel(taskRequestWithIdentifier:)",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgtaskscheduler/cancel(taskrequestwithidentifier:)",
+    "html": "Parameters\nidentifier\n\nThe string identifier of the task request to cancel.\n\nSee Also\nCanceling a task\nfunc cancelAllTaskRequests()\nCancel all scheduled task requests."
+  },
+  {
+    "title": "register(forTaskWithIdentifier:using:launchHandler:)",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgtaskscheduler/register(fortaskwithidentifier:using:launchhandler:)",
+    "html": "Parameters\nidentifier\n\nA string containing the identifier of the task.\n\nqueue\n\nA queue for executing the task. Pass nil to use a default background queue.\n\nlaunchHandler\n\nThe system runs the block of code for the launch handler when it launches the app in the background. The block takes a single parameter, a BGTask object used for assigning an expiration handler and for setting a completion status. The block has no return value.\n\nReturn value\n\nReturns true if the launch handler was registered. Returns false if the identifier isn’t included in the BGTaskSchedulerPermittedIdentifiers Info.plist.\n\nDiscussion\n\nEvery identifier in the BGTaskSchedulerPermittedIdentifiers requires a handler. Registration of all launch handlers must be complete before the end of applicationDidFinishLaunching(_:).\n\nImportant\n\nRegister each task identifier only once. The system kills the app on the second registration of the same task identifier.\n\nSee Also\nScheduling a task\nfunc submit(BGTaskRequest) throws\nSubmit a previously registered background task for execution."
+  },
+  {
+    "title": "requiresNetworkConnectivity",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgprocessingtaskrequest/requiresnetworkconnectivity",
+    "html": "See Also\nSetting Task Request Options\nvar requiresExternalPower: Bool\nA Boolean specifying if the processing task requires a device connected to power."
+  },
+  {
+    "title": "requiresExternalPower",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgprocessingtaskrequest/requiresexternalpower",
+    "html": "See Also\nSetting Task Request Options\nvar requiresNetworkConnectivity: Bool\nA Boolean specifying if the processing task requires network connectivity."
+  },
+  {
+    "title": "init(identifier:)",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgprocessingtaskrequest/init(identifier:)",
+    "html": "Parameters\nidentifier\n\nThe string identifier of the processing task associated with the request."
+  },
+  {
+    "title": "init(identifier:)",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgapprefreshtaskrequest/init(identifier:)",
+    "html": "Parameters\nidentifier\n\nThe string identifier of the refresh task associated with the request."
+  },
+  {
+    "title": "earliestBeginDate",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgtaskrequest/earliestbegindate",
+    "html": "Discussion\n\nSpecify nil for no start delay.\n\nSetting the property indicates that the background task shouldn’t start any earlier than this date. However, the system doesn’t guarantee launching the task at the specified date, but only that it won’t begin sooner.\n\nSee Also\nConfiguring a Task Request\nvar identifier: String\nThe identifier of the task associated with the request."
+  },
+  {
+    "title": "BGTaskScheduler",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgtaskscheduler",
+    "html": "Overview\n\nBackground tasks give your app a way to run code while the app is suspended. To learn how to register, schedule, and run a background task, see Using background tasks to update your app.\n\nTopics\nGetting the shared task scheduler\nclass var shared: BGTaskScheduler\nThe shared background task scheduler instance.\nScheduling a task\nfunc register(forTaskWithIdentifier: String, using: dispatch_queue_t?, launchHandler: (BGTask) -> Void) -> Bool\nRegister a launch handler for the task with the associated identifier that’s executed on the specified queue.\nfunc submit(BGTaskRequest) throws\nSubmit a previously registered background task for execution.\nCanceling a task\nfunc cancel(taskRequestWithIdentifier: String)\nCancel a previously scheduled task request.\nfunc cancelAllTaskRequests()\nCancel all scheduled task requests.\nGetting all scheduled tasks\nfunc getPendingTaskRequests(completionHandler: ([BGTaskRequest]) -> Void)\nRequest a list of unexecuted scheduled task requests.\nHandling errors\nstruct Error\nThe Errors for the BGTaskSchedulerError domain.\nenum Code\nAn enumeration of the task scheduling errors.\nclass let errorDomain: String\nThe background tasks error domain as a string.\nRelationships\nInherits From\nNSObject\nConforms To\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSObjectProtocol\nSee Also\nEssentials\nStarting and Terminating Tasks During Development\nUse the debugger during development to start tasks and to terminate them before completion.\nRefreshing and Maintaining Your App Using Background Tasks\nUse scheduled background tasks for refreshing your app content and for performing maintenance.\nChoosing Background Strategies for Your App\nSelect the best method of scheduling background runtime for your app."
+  },
+  {
+    "title": "submit(_:)",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgtaskscheduler/submit(_:)",
+    "html": "Parameters\ntaskRequest\n\nA background task request object specifying the task identifier and optional configuration information.\n\nerror\n\nOn input, a pointer to an error object. If an error occurs, this pointer is set to an error object containing the error information. Specify nil for this parameter to ignore the error information.\n\nDiscussion\n\nSubmitting a task request for an unexecuted task that’s already in the queue replaces the previous task request.\n\nThere can be a total of 1 refresh task and 10 processing tasks scheduled at any time. Trying to schedule more tasks returns BGTaskScheduler.Error.Code.tooManyPendingTaskRequests.\n\nSee Also\nScheduling a task\nfunc register(forTaskWithIdentifier: String, using: dispatch_queue_t?, launchHandler: (BGTask) -> Void) -> Bool\nRegister a launch handler for the task with the associated identifier that’s executed on the specified queue."
+  },
+  {
+    "title": "setTaskCompleted(success:)",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgtask/settaskcompleted(success:)",
+    "html": "Parameters\nsuccess\n\nA Boolean indicating if the task completed successfully or not.\n\nDiscussion\n\nNot calling setTaskCompleted(success:) before the time for the task expires may result in the system killing your app.\n\nYou can reschedule an unsuccessful required task.\n\nImportant\n\nIf you don’t set an expiration handler, the system will mark your task as complete and unsuccessful instead of sending a warning.\n\nSee Also\nConfiguring a Task\nvar expirationHandler: (() -> Void)?\nA handler called shortly before the task’s background time expires."
+  },
+  {
+    "title": "identifier",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgtask/identifier",
+    "html": "Discussion\n\nThe identifier is the same as the one used to register the launch handler in register(forTaskWithIdentifier:using:launchHandler:)."
+  },
+  {
+    "title": "expirationHandler",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgtask/expirationhandler",
+    "html": "Parameters\nexpirationHandler\n\nThe expiration handler takes no arguments and has no return value. Use the handler to cancel any ongoing work and to do any required cleanup in as short a time as possible.\n\nThe handler may be called before the background process uses the full amount of its allocated time.\n\nDiscussion\n\nThe time allocated by the system for expiration handlers doesn’t vary with the number of background tasks. All expiration handlers must complete before the allocated time.\n\nNot setting an expiration handler results in the system marking your task as complete and unsuccessful instead of sending a warning.\n\nThe manager sets the value expirationHandler to nil after the handler completes.\n\nSee Also\nConfiguring a Task\nfunc setTaskCompleted(success: Bool)\nInforms the background task scheduler that the task is complete."
+  },
+  {
+    "title": "identifier",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgtaskrequest/identifier",
+    "html": "See Also\nConfiguring a Task Request\nvar earliestBeginDate: Date?\nThe earliest date and time at which to run the task."
+  },
+  {
+    "title": "BGProcessingTask",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgprocessingtask",
+    "html": "Overview\n\nUse processing tasks for long data updates, processing data, and app maintenance. Although processing tasks can run for minutes, the system can interrupt the process. Add an expiration handler by setting expirationHandler for any required cleanup.\n\nExecuting processing tasks requires setting the processing UIBackgroundModes capability. For information on setting this capability, see BGTaskScheduler.\n\nProcessing tasks run only when the device is idle. The system terminates any background processing tasks running when the user starts using the device. Background refresh tasks aren’t affected.\n\nRelationships\nInherits From\nBGTask\nInherited By\nBGHealthResearchTask\nConforms To\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSObjectProtocol\nSee Also\nTask management\nclass BGAppRefreshTask\nAn object representing a short task typically used to refresh content that’s run while the app is in the background.\nclass BGTask\nAn abstract class representing a task that’s run while the app is in the background.\nclass BGHealthResearchTask\nA time-consuming, necessary processing task that runs while the app is in the background to prepare data essential to a health research study."
+  },
+  {
+    "title": "BGAppRefreshTask",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgapprefreshtask",
+    "html": "Overview\n\nUse app refresh tasks for updating your app with small bits of information, such as the latest stock values.\n\nExecuting app refresh tasks requires setting the fetch UIBackgroundModes capability. For information on setting this capability, see BGTaskScheduler.\n\nRelationships\nInherits From\nBGTask\nConforms To\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSObjectProtocol\nSee Also\nTask management\nclass BGProcessingTask\nA time-consuming processing task that runs while the app is in the background.\nclass BGTask\nAn abstract class representing a task that’s run while the app is in the background.\nclass BGHealthResearchTask\nA time-consuming, necessary processing task that runs while the app is in the background to prepare data essential to a health research study."
+  },
+  {
+    "title": "Starting and Terminating Tasks During Development",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/starting-and-terminating-tasks-during-development",
+    "html": "Overview\n\nThe delay between the time you schedule a background task and when the system launches your app to run the task can be many hours. While developing your app, you can use two private functions to start a task and to force early termination of the task according to your selected timeline. The debug functions work only on devices.\n\nImportant\n\nUse private functions only during development. Including a reference to these functions in apps submitted to the App Store is cause for rejection.\n\nLaunch a Task\n\nTo launch a task:\n\nSet a breakpoint in the code that executes after a successful call to submit(_:).\n\nRun your app on a device until the breakpoint pauses your app.\n\nIn the debugger, execute the line shown below, substituting the identifier of the desired task for TASK_IDENTIFIER.\n\nResume your app. The system calls the launch handler for the desired task.\n\ne -l objc -- (void)[[BGTaskScheduler sharedScheduler] _simulateLaunchForTaskWithIdentifier:@\"TASK_IDENTIFIER\"]\n\nForce Early Termination of a Task\n\nTo force termination of a task:\n\nSet a breakpoint in the desired task.\n\nLaunch the task using the debugger as described in the previous section.\n\nWait for your app to pause at the breakpoint.\n\nIn the debugger, execute the line shown below, substituting the identifier of the desired task for TASK_IDENTIFIER.\n\nResume your app. The system calls the expiration handler for the desired task.\n\ne -l objc -- (void)[[BGTaskScheduler sharedScheduler] _simulateExpirationForTaskWithIdentifier:@\"TASK_IDENTIFIER\"]\n\nSee Also\nEssentials\nclass BGTaskScheduler\nA class for scheduling task requests that launch your app in the background.\nRefreshing and Maintaining Your App Using Background Tasks\nUse scheduled background tasks for refreshing your app content and for performing maintenance.\nChoosing Background Strategies for Your App\nSelect the best method of scheduling background runtime for your app."
+  },
+  {
+    "title": "Refreshing and Maintaining Your App Using Background Tasks",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/refreshing-and-maintaining-your-app-using-background-tasks",
+    "html": "Overview\n\nNote\n\nThis sample code project is associated with WWDC 2019 session 707: Advances in App Background Execution.\n\nThis sample code project must be run on a physical device.\n\nSee Also\nEssentials\nclass BGTaskScheduler\nA class for scheduling task requests that launch your app in the background.\nStarting and Terminating Tasks During Development\nUse the debugger during development to start tasks and to terminate them before completion.\nChoosing Background Strategies for Your App\nSelect the best method of scheduling background runtime for your app."
+  },
+  {
+    "title": "BGProcessingTaskRequest",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgprocessingtaskrequest",
+    "html": "Topics\nInitializing a Processing Task Request\ninit(identifier: String)\nReturn a new processing task request for the specified identifier.\nSetting Task Request Options\nvar requiresExternalPower: Bool\nA Boolean specifying if the processing task requires a device connected to power.\nvar requiresNetworkConnectivity: Bool\nA Boolean specifying if the processing task requires network connectivity.\nRelationships\nInherits From\nBGTaskRequest\nInherited By\nBGHealthResearchTaskRequest\nConforms To\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSCopying\nNSObjectProtocol\nSee Also\nRequests\nclass BGAppRefreshTaskRequest\nA request to launch your app in the background to execute a short refresh task.\nclass BGTaskRequest\nAn abstract class for representing task requests.\nclass BGHealthResearchTaskRequest\nA request to launch your app in the background to execute processing for a health research study in which a user participates."
+  },
+  {
+    "title": "BGAppRefreshTaskRequest",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgapprefreshtaskrequest",
+    "html": "Topics\nInitializing a refresh task request\ninit(identifier: String)\nReturn a new refresh task request for the specified identifier.\nRelationships\nInherits From\nBGTaskRequest\nConforms To\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSCopying\nNSObjectProtocol\nSee Also\nRequests\nclass BGProcessingTaskRequest\nA request to launch your app in the background to execute a processing task that can take minutes to complete.\nclass BGTaskRequest\nAn abstract class for representing task requests.\nclass BGHealthResearchTaskRequest\nA request to launch your app in the background to execute processing for a health research study in which a user participates."
+  },
+  {
+    "title": "Choosing Background Strategies for Your App",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/choosing-background-strategies-for-your-app",
+    "html": "Overview\n\nIf your app needs computing resources to complete tasks when it’s not running in the foreground, you can select from many strategies to obtain background runtime. Selecting the right strategies for your app depends on how it functions in the background.\n\nSome apps perform work for a short time while in the foreground and must continue uninterrupted if they go to the background. Other apps defer that work to perform in the background at a later time or even at night while the device charges. Some apps need background processing time at varied and unpredictable times, such as when an external event or message arrives.\n\nApps involved in health research studies can obtain background runtime to process data essential for the study. Apps can also request to launch in the background for studies in which the user participates.\n\nSelect one or more methods for your app based on how you schedule activity in the background.\n\nContinue Foreground Work in the Background\n\nThe system may place apps in the background at any time. If your app performs critical work that must continue while it runs in the background, use beginBackgroundTask(withName:expirationHandler:) to alert the system. Consider this approach if your app needs to finish sending a message or complete saving a file.\n\nThe system grants your app a limited amount of time to perform its work once it enters the background. Don’t exceed this time, and use the expiration handler to cover the case where the time has depleted to cancel or defer the work.\n\nOnce your work completes, call endBackgroundTask(_:) before the time limit expires so that your app suspends properly. The system terminates your app if you fail to call this method.\n\nIf the task is one that takes some time, such as downloading or uploading files, use URLSession (Swift) or URLSession (Objective-C) . See Downloading files in the background for more information.\n\nDefer Intensive Work\n\nTo preserve battery life and performance, you can schedule backgrounds tasks for periods of low activity, such as overnight when the device charges. Use this approach when your app manages heavy workloads, such as training machine learning models or performing database maintenance.\n\nSchedule these types of background tasks using BGProcessingTask, and the system decides the best time to launch your background task.\n\nApps involved in health research studies can have time-consuming tasks essential for the study and might need to complete processing the background. Schedule these types of background tasks using BGHealthResearchTask.\n\nUpdate Your App’s Content\n\nYour app may require short bursts of background time to perform content refresh or other work; for example, your app may fetch content from the server periodically, or regularly update its internal state. In this situation, use BGAppRefreshTask by requesting BGAppRefreshTaskRequest.\n\nYour app can use BGHealthResearchTaskRequest to launch in the background and process data for a health research study in which the user participates.\n\nThe system decides the best time to launch your background task, and provides your app up to 30 seconds of background runtime. Complete your work within this time period and call setTaskCompleted(success:), or the system terminates your app. See Background Tasks for more information.\n\nWake Your App with a Background Push\n\nBackground pushes silently wake your app in the background. They don’t display an alert, play a sound, or badge your app’s icon. If your app obtains content from a server infrequently or at irregular intervals, use background pushes to notify your app when new content becomes available. A messaging app with a muted conversation might use a background push solution, and so might an email app that processes incoming mail without alerting the user.\n\nWhen sending a background push, set content-available: to 1 without alert, sound, or badge. The system decides when to launch the app to download the content. To ensure your app launches, set apns-priority to 5, and apns-push-type to background.\n\nOnce the system delivers the remote notification with application(_:didReceiveRemoteNotification:fetchCompletionHandler:), your app has up to 30 seconds to complete its work. One your app performs the work, call the passed completion handler as soon as possible to conserve power. If you send background pushes more frequently than three times per hour, the system imposes rate limitations. See Pushing background updates to your App for more information.\n\nRequest Background Time and Notify the User\n\nIf your app needs to perform a task in the background and show a notification to the user, use a Notification Service Extension. For example, an email app might need to notify a user after downloading a new email. Subclass UNNotificationServiceExtension and bundle the system extension with your app. Upon receiving a push notification, your service extension wakes up and obtains background runtime through didReceive(_:withContentHandler:).\n\nWhen your extension completes its work, it must call the content handler with the content you want to deliver to the user. Your extension has a limited amount of time to modify the content and execute the contentHandler block.\n\nSee Also\nEssentials\nclass BGTaskScheduler\nA class for scheduling task requests that launch your app in the background.\nStarting and Terminating Tasks During Development\nUse the debugger during development to start tasks and to terminate them before completion.\nRefreshing and Maintaining Your App Using Background Tasks\nUse scheduled background tasks for refreshing your app content and for performing maintenance."
+  },
+  {
+    "title": "BGHealthResearchTaskRequest",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bghealthresearchtaskrequest",
+    "html": "Topics\nSetting file permissions\nvar protectionTypeOfRequiredData: NSString\nThe file protection required to access health research data relevant to complete the task.\nRelationships\nInherits From\nBGProcessingTaskRequest\nConforms To\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSCopying\nNSObjectProtocol\nSee Also\nRequests\nclass BGProcessingTaskRequest\nA request to launch your app in the background to execute a processing task that can take minutes to complete.\nclass BGAppRefreshTaskRequest\nA request to launch your app in the background to execute a short refresh task.\nclass BGTaskRequest\nAn abstract class for representing task requests."
+  },
+  {
+    "title": "BGHealthResearchTask",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bghealthresearchtask",
+    "html": "Relationships\nInherits From\nBGProcessingTask\nConforms To\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSObjectProtocol\nSee Also\nTask management\nclass BGProcessingTask\nA time-consuming processing task that runs while the app is in the background.\nclass BGAppRefreshTask\nAn object representing a short task typically used to refresh content that’s run while the app is in the background.\nclass BGTask\nAn abstract class representing a task that’s run while the app is in the background."
+  },
+  {
+    "title": "BGTask",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgtask",
+    "html": "Topics\nReading Task Information\nvar identifier: String\nThe string identifier of the task.\nConfiguring a Task\nvar expirationHandler: (() -> Void)?\nA handler called shortly before the task’s background time expires.\nfunc setTaskCompleted(success: Bool)\nInforms the background task scheduler that the task is complete.\nRelationships\nInherits From\nNSObject\nInherited By\nBGAppRefreshTask\nBGProcessingTask\nConforms To\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSObjectProtocol\nSee Also\nTask management\nclass BGProcessingTask\nA time-consuming processing task that runs while the app is in the background.\nclass BGAppRefreshTask\nAn object representing a short task typically used to refresh content that’s run while the app is in the background.\nclass BGHealthResearchTask\nA time-consuming, necessary processing task that runs while the app is in the background to prepare data essential to a health research study."
+  },
+  {
+    "title": "BGTaskRequest",
+    "url": "https://developer.apple.com/documentation/backgroundtasks/bgtaskrequest",
+    "html": "Topics\nConfiguring a Task Request\nvar earliestBeginDate: Date?\nThe earliest date and time at which to run the task.\nvar identifier: String\nThe identifier of the task associated with the request.\nRelationships\nInherits From\nNSObject\nInherited By\nBGAppRefreshTaskRequest\nBGProcessingTaskRequest\nConforms To\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSCopying\nNSObjectProtocol\nSee Also\nRequests\nclass BGProcessingTaskRequest\nA request to launch your app in the background to execute a processing task that can take minutes to complete.\nclass BGAppRefreshTaskRequest\nA request to launch your app in the background to execute a short refresh task.\nclass BGHealthResearchTaskRequest\nA request to launch your app in the background to execute processing for a health research study in which a user participates."
+  },
+  {
+    "title": "Background Tasks",
+    "url": "https://developer.apple.com/documentation/backgroundtasks",
+    "html": "Overview\n\nUse the BackgroundTasks framework to keep your app content up to date and run tasks requiring minutes to complete while your app is in the background. Longer tasks can optionally require external power and network connectivity.\n\nRegister launch handlers for tasks when the app launches and schedule them as required. The system launches your app in the background and executes the tasks.\n\nTopics\nEssentials\nclass BGTaskScheduler\nA class for scheduling task requests that launch your app in the background.\nStarting and Terminating Tasks During Development\nUse the debugger during development to start tasks and to terminate them before completion.\nRefreshing and Maintaining Your App Using Background Tasks\nUse scheduled background tasks for refreshing your app content and for performing maintenance.\nChoosing Background Strategies for Your App\nSelect the best method of scheduling background runtime for your app.\nRequests\nclass BGProcessingTaskRequest\nA request to launch your app in the background to execute a processing task that can take minutes to complete.\nclass BGAppRefreshTaskRequest\nA request to launch your app in the background to execute a short refresh task.\nclass BGTaskRequest\nAn abstract class for representing task requests.\nclass BGHealthResearchTaskRequest\nA request to launch your app in the background to execute processing for a health research study in which a user participates.\nTask management\nclass BGProcessingTask\nA time-consuming processing task that runs while the app is in the background.\nclass BGAppRefreshTask\nAn object representing a short task typically used to refresh content that’s run while the app is in the background.\nclass BGTask\nAn abstract class representing a task that’s run while the app is in the background.\nclass BGHealthResearchTask\nA time-consuming, necessary processing task that runs while the app is in the background to prepare data essential to a health research study."
+  }
+]
