@@ -1,0 +1,1072 @@
+[
+  {
+    "title": "formIntersection(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimagetrait/formintersection(_:)",
+    "html": "Parameters\nother\n\nAn option set.\n\nDiscussion\n\nThis method is implemented as a & (bitwise AND) operation on the two sets’ raw values."
+  },
+  {
+    "title": "formUnion(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimagetrait/formunion(_:)",
+    "html": "Parameters\nother\n\nAn option set.\n\nDiscussion\n\nThis method is implemented as a | (bitwise OR) operation on the two sets’ raw values."
+  },
+  {
+    "title": "init(arrayLiteral:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimagetrait/init(arrayliteral:)",
+    "html": "Parameters\narrayLiteral\n\nA list of elements of the new set.\n\nDiscussion\n\nDo not call this initializer directly. It is used by the compiler when you use an array literal. Instead, create a new set using an array literal as its value by enclosing a comma-separated list of values in square brackets. You can use an array literal anywhere a set is expected by the type context.\n\nHere, a set of strings is created from an array literal holding only strings:\n\nlet ingredients: Set = [\"cocoa beans\", \"sugar\", \"cocoa butter\", \"salt\"]\nif ingredients.isSuperset(of: [\"sugar\", \"salt\"]) {\n    print(\"Whatever it is, it's bound to be delicious!\")\n}\n// Prints \"Whatever it is, it's bound to be delicious!\"\n"
+  },
+  {
+    "title": "isDisjoint(with:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimagetrait/isdisjoint(with:)",
+    "html": "Parameters\nother\n\nA set of the same type as the current set.\n\nReturn Value\n\ntrue if the set has no elements in common with other; otherwise, false.\n\nDiscussion\n\nIn the following example, the employees set is disjoint with the visitors set because no name appears in both sets.\n\nlet employees: Set = [\"Alicia\", \"Bethany\", \"Chris\", \"Diana\", \"Eric\"]\nlet visitors: Set = [\"Marcia\", \"Nathaniel\", \"Olivia\"]\nprint(employees.isDisjoint(with: visitors))\n// Prints \"true\"\n"
+  },
+  {
+    "title": "subtracting(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimagetrait/subtracting(_:)",
+    "html": "Parameters\nother\n\nA set of the same type as the current set.\n\nReturn Value\n\nA new set.\n\nDiscussion\n\nIn the following example, the nonNeighbors set is made up of the elements of the employees set that are not elements of neighbors:\n\nlet employees: Set = [\"Alicia\", \"Bethany\", \"Chris\", \"Diana\", \"Eric\"]\nlet neighbors: Set = [\"Bethany\", \"Eric\", \"Forlani\", \"Greta\"]\nlet nonNeighbors = employees.subtracting(neighbors)\nprint(nonNeighbors)\n// Prints \"[\"Diana\", \"Chris\", \"Alicia\"]\"\n"
+  },
+  {
+    "title": "init()",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimagetrait/init()",
+    "html": "Discussion\n\nThis initializer creates an option set with a raw value of zero."
+  },
+  {
+    "title": "contains(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimagetrait/contains(_:)",
+    "html": "Parameters\nmember\n\nThe element to look for in the option set.\n\nReturn Value\n\ntrue if the option set contains member; otherwise, false.\n\nDiscussion\n\nThis example uses the contains(_:) method to check whether next-day shipping is in the availableOptions instance.\n\nlet availableOptions = ShippingOptions.express\nif availableOptions.contains(.nextDay) {\n    print(\"Next day shipping available\")\n}\n// Prints \"Next day shipping available\"\n"
+  },
+  {
+    "title": "insert(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimagetrait/insert(_:)",
+    "html": "Parameters\nnewMember\n\nThe element to insert.\n\nReturn Value\n\n(true, newMember) if newMember was not contained in self. Otherwise, returns (false, oldMember), where oldMember is the member of the set equal to newMember.\n\nDiscussion\n\nIn the following example, the .secondDay shipping option is added to the freeOptions option set if purchasePrice is greater than 50.0. For the ShippingOptions declaration, see the OptionSet protocol discussion.\n\nlet purchasePrice = 87.55\n\n\nvar freeOptions: ShippingOptions = [.standard, .priority]\nif purchasePrice > 50 {\n    freeOptions.insert(.secondDay)\n}\nprint(freeOptions.contains(.secondDay))\n// Prints \"true\"\n"
+  },
+  {
+    "title": "formSymmetricDifference(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimagetrait/formsymmetricdifference(_:)",
+    "html": "Parameters\nother\n\nAn option set.\n\nDiscussion\n\nThis method is implemented as a ^ (bitwise XOR) operation on the two sets’ raw values."
+  },
+  {
+    "title": "intersection(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimagetrait/intersection(_:)",
+    "html": "Parameters\nother\n\nAn option set.\n\nReturn Value\n\nA new option set with only the elements contained in both this set and other.\n\nDiscussion\n\nThis example uses the intersection(_:) method to limit the available shipping options to what can be used with a PO Box destination.\n\n// Can only ship standard or priority to PO Boxes\nlet poboxShipping: ShippingOptions = [.standard, .priority]\nlet memberShipping: ShippingOptions =\n        [.standard, .priority, .secondDay]\n\n\nlet availableOptions = memberShipping.intersection(poboxShipping)\nprint(availableOptions.contains(.priority))\n// Prints \"true\"\nprint(availableOptions.contains(.secondDay))\n// Prints \"false\"\n"
+  },
+  {
+    "title": "remove(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimagetrait/remove(_:)",
+    "html": "Parameters\nmember\n\nThe element of the set to remove.\n\nReturn Value\n\nThe intersection of [member] and the set, if the intersection was nonempty; otherwise, nil.\n\nDiscussion\n\nIn the following example, the .priority shipping option is removed from the options option set. Attempting to remove the same shipping option a second time results in nil, because options no longer contains .priority as a member.\n\nvar options: ShippingOptions = [.secondDay, .priority]\nlet priorityOption = options.remove(.priority)\nprint(priorityOption == .priority)\n// Prints \"true\"\n\n\nprint(options.remove(.priority))\n// Prints \"nil\"\n\n\nIn the next example, the .express element is passed to remove(_:). Although .express is not a member of options, .express subsumes the remaining .secondDay element of the option set. Therefore, options is emptied and the intersection between .express and options is returned.\n\nlet expressOption = options.remove(.express)\nprint(expressOption == .express)\n// Prints \"false\"\nprint(expressOption == .secondDay)\n// Prints \"true\"\n"
+  },
+  {
+    "title": "symmetricDifference(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimagetrait/symmetricdifference(_:)",
+    "html": "Parameters\nother\n\nAn option set.\n\nReturn Value\n\nA new option set with only the elements contained in either this set or other, but not in both."
+  },
+  {
+    "title": "union(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimagetrait/union(_:)",
+    "html": "Parameters\nother\n\nAn option set.\n\nReturn Value\n\nA new option set made up of the elements contained in this set, in other, or in both.\n\nDiscussion\n\nThis example uses the union(_:) method to add two more shipping options to the default set.\n\nlet defaultShipping = ShippingOptions.standard\nlet memberShipping = defaultShipping.union([.secondDay, .priority])\nprint(memberShipping.contains(.priority))\n// Prints \"true\"\n"
+  },
+  {
+    "title": "update(with:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimagetrait/update(with:)",
+    "html": "Return Value\n\nThe intersection of [newMember] and the set if the intersection was nonempty; otherwise, nil.\n\nDiscussion\n\nIf newMember is not contained in the set but subsumes current members of the set, the subsumed members are returned.\n\nvar options: ShippingOptions = [.secondDay, .priority]\nlet replaced = options.update(with: .express)\nprint(replaced == .secondDay)\n// Prints \"true\"\n"
+  },
+  {
+    "title": "!=(_:_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimagetrait/!=(_:_:)",
+    "html": "Parameters\nlhs\n\nA value to compare.\n\nrhs\n\nAnother value to compare.\n\nDiscussion\n\nInequality is the inverse of equality. For any values a and b, a != b implies that a == b is false.\n\nThis is the default implementation of the not-equal-to operator (!=) for any type that conforms to Equatable."
+  },
+  {
+    "title": "init(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimagetrait/init(_:)",
+    "html": "Parameters\nsequence\n\nThe elements to use as members of the new set.\n\nDiscussion\n\nUse this initializer to create a new set from an existing sequence, like an array or a range:\n\nlet validIndices = Set(0..<7).subtracting([2, 4, 5])\nprint(validIndices)\n// Prints \"[6, 0, 1, 3]\"\n"
+  },
+  {
+    "title": "isSuperset(of:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimagetrait/issuperset(of:)",
+    "html": "Parameters\nother\n\nA set of the same type as the current set.\n\nReturn Value\n\ntrue if the set is a superset of other; otherwise, false.\n\nDiscussion\n\nSet A is a superset of another set B if every member of B is also a member of A.\n\nlet employees: Set = [\"Alicia\", \"Bethany\", \"Chris\", \"Diana\", \"Eric\"]\nlet attendees: Set = [\"Alicia\", \"Bethany\", \"Diana\"]\nprint(employees.isSuperset(of: attendees))\n// Prints \"true\"\n"
+  },
+  {
+    "title": "subtract(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimagetrait/subtract(_:)",
+    "html": "Parameters\nother\n\nA set of the same type as the current set.\n\nDiscussion\n\nIn the following example, the elements of the employees set that are also members of the neighbors set are removed. In particular, the names \"Bethany\" and \"Eric\" are removed from employees.\n\nvar employees: Set = [\"Alicia\", \"Bethany\", \"Chris\", \"Diana\", \"Eric\"]\nlet neighbors: Set = [\"Bethany\", \"Eric\", \"Forlani\", \"Greta\"]\nemployees.subtract(neighbors)\nprint(employees)\n// Prints \"[\"Diana\", \"Chris\", \"Alicia\"]\"\n"
+  },
+  {
+    "title": "isStrictSuperset(of:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimagetrait/isstrictsuperset(of:)",
+    "html": "Parameters\nother\n\nA set of the same type as the current set.\n\nReturn Value\n\ntrue if the set is a strict superset of other; otherwise, false.\n\nDiscussion\n\nSet A is a strict superset of another set B if every member of B is also a member of A and A contains at least one element that is not a member of B.\n\nlet employees: Set = [\"Alicia\", \"Bethany\", \"Chris\", \"Diana\", \"Eric\"]\nlet attendees: Set = [\"Alicia\", \"Bethany\", \"Diana\"]\nprint(employees.isStrictSuperset(of: attendees))\n// Prints \"true\"\n\n\n// A set is never a strict superset of itself:\nprint(employees.isStrictSuperset(of: employees))\n// Prints \"false\"\n"
+  },
+  {
+    "title": "isSubset(of:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimagetrait/issubset(of:)",
+    "html": "Parameters\nother\n\nA set of the same type as the current set.\n\nReturn Value\n\ntrue if the set is a subset of other; otherwise, false.\n\nDiscussion\n\nSet A is a subset of another set B if every member of A is also a member of B.\n\nlet employees: Set = [\"Alicia\", \"Bethany\", \"Chris\", \"Diana\", \"Eric\"]\nlet attendees: Set = [\"Alicia\", \"Bethany\", \"Diana\"]\nprint(attendees.isSubset(of: employees))\n// Prints \"true\"\n"
+  },
+  {
+    "title": "isStrictSubset(of:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimagetrait/isstrictsubset(of:)",
+    "html": "Parameters\nother\n\nA set of the same type as the current set.\n\nReturn Value\n\ntrue if the set is a strict subset of other; otherwise, false.\n\nDiscussion\n\nSet A is a strict subset of another set B if every member of A is also a member of B and B contains at least one element that is not a member of A.\n\nlet employees: Set = [\"Alicia\", \"Bethany\", \"Chris\", \"Diana\", \"Eric\"]\nlet attendees: Set = [\"Alicia\", \"Bethany\", \"Diana\"]\nprint(attendees.isStrictSubset(of: employees))\n// Prints \"true\"\n\n\n// A set is never a strict subset of itself:\nprint(attendees.isStrictSubset(of: attendees))\n// Prints \"false\"\n"
+  },
+  {
+    "title": "!=(_:_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcontentstyle/!=(_:_:)",
+    "html": "Parameters\nlhs\n\nA value to compare.\n\nrhs\n\nAnother value to compare.\n\nDiscussion\n\nInequality is the inverse of equality. For any values a and b, a != b implies that a == b is false.\n\nThis is the default implementation of the not-equal-to operator (!=) for any type that conforms to Equatable."
+  },
+  {
+    "title": "screenScale1x",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimagetrait/screenscale1x",
+    "html": "Discussion\n\nSpecify this constant, or the screenScale2x constant, but not both.\n\nSee Also\nTraits\nstatic var screenScale2x: TVContentItemImageTrait\nAn image meant for a Retina display.\nstatic var userInterfaceStyleDark: TVContentItemImageTrait\nAn image meant for a dark user interface.\nstatic var userInterfaceStyleLight: TVContentItemImageTrait\nAn image meant for a light user interface."
+  },
+  {
+    "title": "!=(_:_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimageshape/!=(_:_:)",
+    "html": "Parameters\nlhs\n\nA value to compare.\n\nrhs\n\nAnother value to compare.\n\nDiscussion\n\nInequality is the inverse of equality. For any values a and b, a != b implies that a == b is false.\n\nThis is the default implementation of the not-equal-to operator (!=) for any type that conforms to Equatable."
+  },
+  {
+    "title": "!=(_:_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct/!=(_:_:)",
+    "html": "Parameters\nlhs\n\nA value to compare.\n\nrhs\n\nAnother value to compare.\n\nDiscussion\n\nInequality is the inverse of equality. For any values a and b, a != b implies that a == b is false.\n\nThis is the default implementation of the not-equal-to operator (!=) for any type that conforms to Equatable."
+  },
+  {
+    "title": "TVContentItemImageShape.none",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimageshape/none",
+    "html": "See Also\nConstants\ncase poster\nThe content has a width:height ratio of 2:3.\ncase square\nThe content has a width:height ratio of 1:1.\ncase SDTV\nThe content is standard-definition television content with a width:height ratio of 4:3.\ncase HDTV\nThe content is high-definition television content with a width:height ratio of 16:9.\ncase wide\nThe content has a width:height ratio of 8:3.\ncase extraWide\nThe content has a width:height ratio of 80:27."
+  },
+  {
+    "title": "formIntersection(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/imagetraits/formintersection(_:)",
+    "html": "Parameters\nother\n\nAn option set.\n\nDiscussion\n\nThis method is implemented as a & (bitwise AND) operation on the two sets’ raw values."
+  },
+  {
+    "title": "TVContentItemImageShape.SDTV",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimageshape/sdtv",
+    "html": "See Also\nConstants\ncase none\nThe content has no particular shape.\ncase poster\nThe content has a width:height ratio of 2:3.\ncase square\nThe content has a width:height ratio of 1:1.\ncase HDTV\nThe content is high-definition television content with a width:height ratio of 16:9.\ncase wide\nThe content has a width:height ratio of 8:3.\ncase extraWide\nThe content has a width:height ratio of 80:27."
+  },
+  {
+    "title": "TVTopShelfContentStyle.sectioned",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcontentstyle/sectioned",
+    "html": "Deprecated\n\nTVTopShelfProvider has been replaced by TVTopShelfContent\n\nSee Also\nConstants\ncase inset\nWhen the using the inset style, your extension should return a flat array of TV content items. The images of the content items will take up most of the area of the Top Shelf, which will slowly rotate through the items.\nDeprecated"
+  },
+  {
+    "title": "isSubset(of:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/imagetraits/issubset(of:)",
+    "html": "Parameters\nother\n\nA set of the same type as the current set.\n\nReturn Value\n\ntrue if the set is a subset of other; otherwise, false.\n\nDiscussion\n\nSet A is a subset of another set B if every member of A is also a member of B.\n\nlet employees: Set = [\"Alicia\", \"Bethany\", \"Chris\", \"Diana\", \"Eric\"]\nlet attendees: Set = [\"Alicia\", \"Bethany\", \"Diana\"]\nprint(attendees.isSubset(of: employees))\n// Prints \"true\"\n"
+  },
+  {
+    "title": "TVContentItemImageShape.wide",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimageshape/wide",
+    "html": "See Also\nConstants\ncase none\nThe content has no particular shape.\ncase poster\nThe content has a width:height ratio of 2:3.\ncase square\nThe content has a width:height ratio of 1:1.\ncase SDTV\nThe content is standard-definition television content with a width:height ratio of 4:3.\ncase HDTV\nThe content is high-definition television content with a width:height ratio of 16:9.\ncase extraWide\nThe content has a width:height ratio of 80:27."
+  },
+  {
+    "title": "TVContentItemImageShape.extraWide",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimageshape/extrawide",
+    "html": "See Also\nConstants\ncase none\nThe content has no particular shape.\ncase poster\nThe content has a width:height ratio of 2:3.\ncase square\nThe content has a width:height ratio of 1:1.\ncase SDTV\nThe content is standard-definition television content with a width:height ratio of 4:3.\ncase HDTV\nThe content is high-definition television content with a width:height ratio of 16:9.\ncase wide\nThe content has a width:height ratio of 8:3."
+  },
+  {
+    "title": "SetAlgebra Implementations",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimagetrait/setalgebra-implementations",
+    "html": "Topics\nInitializers\ninit<S>(S)\nCreates a new set from a finite sequence of items.\ninit(arrayLiteral: Self.Element...)\nCreates a set containing the elements of the given array literal.\nAvailable when ArrayLiteralElement is Self.Element.\nInstance Properties\nvar isEmpty: Bool\nA Boolean value that indicates whether the set has no elements.\nInstance Methods\nfunc isDisjoint(with: Self) -> Bool\nReturns a Boolean value that indicates whether the set has no members in common with the given set.\nfunc isStrictSubset(of: Self) -> Bool\nReturns a Boolean value that indicates whether this set is a strict subset of the given set.\nfunc isStrictSuperset(of: Self) -> Bool\nReturns a Boolean value that indicates whether this set is a strict superset of the given set.\nfunc isSubset(of: Self) -> Bool\nReturns a Boolean value that indicates whether the set is a subset of another set.\nfunc isSuperset(of: Self) -> Bool\nReturns a Boolean value that indicates whether the set is a superset of the given set.\nfunc subtract(Self)\nRemoves the elements of the given set from this set.\nfunc subtracting(Self) -> Self\nReturns a new set containing the elements of this set that do not occur in the given set."
+  },
+  {
+    "title": "OptionSet Implementations",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimagetrait/optionset-implementations",
+    "html": "Topics\nInitializers\ninit()\nCreates an empty option set.\nAvailable when RawValue conforms to FixedWidthInteger.\nInstance Methods\nfunc contains(Self) -> Bool\nReturns a Boolean value that indicates whether a given element is a member of the option set.\nAvailable when Self is Self.Element.\nfunc formIntersection(Self)\nRemoves all elements of this option set that are not also present in the given set.\nAvailable when RawValue conforms to FixedWidthInteger.\nfunc formSymmetricDifference(Self)\nReplaces this set with a new set containing all elements contained in either this set or the given set, but not in both.\nAvailable when RawValue conforms to FixedWidthInteger.\nfunc formUnion(Self)\nInserts the elements of another set into this option set.\nAvailable when RawValue conforms to FixedWidthInteger.\nfunc insert(Self.Element) -> (inserted: Bool, memberAfterInsert: Self.Element)\nAdds the given element to the option set if it is not already a member.\nAvailable when Self is Self.Element.\nfunc intersection(Self) -> Self\nReturns a new option set with only the elements contained in both this set and the given set.\nfunc remove(Self.Element) -> Self.Element?\nRemoves the given element and all elements subsumed by it.\nAvailable when Self is Self.Element.\nfunc symmetricDifference(Self) -> Self\nReturns a new option set with the elements contained in this set or in the given set, but not in both.\nfunc union(Self) -> Self\nReturns a new option set of the elements contained in this set, in the given set, or in both.\nfunc update(with: Self.Element) -> Self.Element?\nInserts the given element into the set.\nAvailable when Self is Self.Element."
+  },
+  {
+    "title": "Equatable Implementations",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimagetrait/equatable-implementations",
+    "html": "Topics\nOperators\nstatic func != (Self, Self) -> Bool\nReturns a Boolean value indicating whether two values are not equal."
+  },
+  {
+    "title": "userInterfaceStyleLight",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimagetrait/userinterfacestylelight",
+    "html": "Discussion\n\nSpecify this constant, or the userInterfaceStyleDark constant, but not both.\n\nSee Also\nTraits\nstatic var screenScale1x: TVContentItemImageTrait\nAn image meant for a regular display.\nstatic var screenScale2x: TVContentItemImageTrait\nAn image meant for a Retina display.\nstatic var userInterfaceStyleDark: TVContentItemImageTrait\nAn image meant for a dark user interface."
+  },
+  {
+    "title": "formUnion(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct/formunion(_:)",
+    "html": "Parameters\nother\n\nAn option set.\n\nDiscussion\n\nThis method is implemented as a | (bitwise OR) operation on the two sets’ raw values."
+  },
+  {
+    "title": "isStrictSuperset(of:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct/isstrictsuperset(of:)",
+    "html": "Parameters\nother\n\nA set of the same type as the current set.\n\nReturn Value\n\ntrue if the set is a strict superset of other; otherwise, false.\n\nDiscussion\n\nSet A is a strict superset of another set B if every member of B is also a member of A and A contains at least one element that is not a member of B.\n\nlet employees: Set = [\"Alicia\", \"Bethany\", \"Chris\", \"Diana\", \"Eric\"]\nlet attendees: Set = [\"Alicia\", \"Bethany\", \"Diana\"]\nprint(employees.isStrictSuperset(of: attendees))\n// Prints \"true\"\n\n\n// A set is never a strict superset of itself:\nprint(employees.isStrictSuperset(of: employees))\n// Prints \"false\"\n"
+  },
+  {
+    "title": "userInterfaceStyleDark",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimagetrait/userinterfacestyledark",
+    "html": "Discussion\n\nSpecify this constant, or the userInterfaceStyleLight constant, but not both.\n\nSee Also\nTraits\nstatic var screenScale1x: TVContentItemImageTrait\nAn image meant for a regular display.\nstatic var screenScale2x: TVContentItemImageTrait\nAn image meant for a Retina display.\nstatic var userInterfaceStyleLight: TVContentItemImageTrait\nAn image meant for a light user interface."
+  },
+  {
+    "title": "screenScale2x",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimagetrait/screenscale2x",
+    "html": "Discussion\n\nSpecify this constant, or the screenScale1x constant, but not both.\n\nSee Also\nTraits\nstatic var screenScale1x: TVContentItemImageTrait\nAn image meant for a regular display.\nstatic var userInterfaceStyleDark: TVContentItemImageTrait\nAn image meant for a dark user interface.\nstatic var userInterfaceStyleLight: TVContentItemImageTrait\nAn image meant for a light user interface."
+  },
+  {
+    "title": "RawRepresentable Implementations",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcontentstyle/rawrepresentable-implementations",
+    "html": "Topics\nInstance Properties\nvar hashValue: Int\nAvailable when Self conforms to Hashable and RawValue conforms to Hashable.\nInstance Methods\nfunc hash(into: inout Hasher)\nAvailable when Self conforms to Hashable and RawValue conforms to Hashable."
+  },
+  {
+    "title": "init(rawValue:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcontentstyle/init(rawvalue:)",
+    "html": "Deprecated\n\nTVTopShelfProvider has been replaced by TVTopShelfContent"
+  },
+  {
+    "title": "Equatable Implementations",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcontentstyle/equatable-implementations",
+    "html": "Topics\nOperators\nstatic func != (Self, Self) -> Bool\nReturns a Boolean value indicating whether two values are not equal."
+  },
+  {
+    "title": "TVTopShelfContentStyle.inset",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcontentstyle/inset",
+    "html": "Deprecated\n\nTVTopShelfProvider has been replaced by TVTopShelfContent\n\nSee Also\nConstants\ncase sectioned\nWhen using the sectioned style, your extension should return an array that contains content items that represent sections. Each section object should have an array of content items that represent the available media in that section.\nDeprecated"
+  },
+  {
+    "title": "intersection(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/imagetraits/intersection(_:)",
+    "html": "Parameters\nother\n\nAn option set.\n\nReturn Value\n\nA new option set with only the elements contained in both this set and other.\n\nDiscussion\n\nThis example uses the intersection(_:) method to limit the available shipping options to what can be used with a PO Box destination.\n\n// Can only ship standard or priority to PO Boxes\nlet poboxShipping: ShippingOptions = [.standard, .priority]\nlet memberShipping: ShippingOptions =\n        [.standard, .priority, .secondDay]\n\n\nlet availableOptions = memberShipping.intersection(poboxShipping)\nprint(availableOptions.contains(.priority))\n// Prints \"true\"\nprint(availableOptions.contains(.secondDay))\n// Prints \"false\"\n"
+  },
+  {
+    "title": "contains(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/imagetraits/contains(_:)",
+    "html": "Parameters\nmember\n\nThe element to look for in the option set.\n\nReturn Value\n\ntrue if the option set contains member; otherwise, false.\n\nDiscussion\n\nThis example uses the contains(_:) method to check whether next-day shipping is in the availableOptions instance.\n\nlet availableOptions = ShippingOptions.express\nif availableOptions.contains(.nextDay) {\n    print(\"Next day shipping available\")\n}\n// Prints \"Next day shipping available\"\n"
+  },
+  {
+    "title": "insert(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/imagetraits/insert(_:)",
+    "html": "Parameters\nnewMember\n\nThe element to insert.\n\nReturn Value\n\n(true, newMember) if newMember was not contained in self. Otherwise, returns (false, oldMember), where oldMember is the member of the set equal to newMember.\n\nDiscussion\n\nIn the following example, the .secondDay shipping option is added to the freeOptions option set if purchasePrice is greater than 50.0. For the ShippingOptions declaration, see the OptionSet protocol discussion.\n\nlet purchasePrice = 87.55\n\n\nvar freeOptions: ShippingOptions = [.standard, .priority]\nif purchasePrice > 50 {\n    freeOptions.insert(.secondDay)\n}\nprint(freeOptions.contains(.secondDay))\n// Prints \"true\"\n"
+  },
+  {
+    "title": "!=(_:_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselcontent/style-swift.enum/!=(_:_:)",
+    "html": "Parameters\nlhs\n\nA value to compare.\n\nrhs\n\nAnother value to compare.\n\nDiscussion\n\nInequality is the inverse of equality. For any values a and b, a != b implies that a == b is false.\n\nThis is the default implementation of the not-equal-to operator (!=) for any type that conforms to Equatable."
+  },
+  {
+    "title": "remove(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/imagetraits/remove(_:)",
+    "html": "Parameters\nmember\n\nThe element of the set to remove.\n\nReturn Value\n\nThe intersection of [member] and the set, if the intersection was nonempty; otherwise, nil.\n\nDiscussion\n\nIn the following example, the .priority shipping option is removed from the options option set. Attempting to remove the same shipping option a second time results in nil, because options no longer contains .priority as a member.\n\nvar options: ShippingOptions = [.secondDay, .priority]\nlet priorityOption = options.remove(.priority)\nprint(priorityOption == .priority)\n// Prints \"true\"\n\n\nprint(options.remove(.priority))\n// Prints \"nil\"\n\n\nIn the next example, the .express element is passed to remove(_:). Although .express is not a member of options, .express subsumes the remaining .secondDay element of the option set. Therefore, options is emptied and the intersection between .express and options is returned.\n\nlet expressOption = options.remove(.express)\nprint(expressOption == .express)\n// Prints \"false\"\nprint(expressOption == .secondDay)\n// Prints \"true\"\n"
+  },
+  {
+    "title": "update(with:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/imagetraits/update(with:)",
+    "html": "Return Value\n\nThe intersection of [newMember] and the set if the intersection was nonempty; otherwise, nil.\n\nDiscussion\n\nIf newMember is not contained in the set but subsumes current members of the set, the subsumed members are returned.\n\nvar options: ShippingOptions = [.secondDay, .priority]\nlet replaced = options.update(with: .express)\nprint(replaced == .secondDay)\n// Prints \"true\"\n"
+  },
+  {
+    "title": "symmetricDifference(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/imagetraits/symmetricdifference(_:)",
+    "html": "Parameters\nother\n\nAn option set.\n\nReturn Value\n\nA new option set with only the elements contained in either this set or other, but not in both."
+  },
+  {
+    "title": "init(arrayLiteral:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/imagetraits/init(arrayliteral:)",
+    "html": "Parameters\narrayLiteral\n\nA list of elements of the new set.\n\nDiscussion\n\nDo not call this initializer directly. It is used by the compiler when you use an array literal. Instead, create a new set using an array literal as its value by enclosing a comma-separated list of values in square brackets. You can use an array literal anywhere a set is expected by the type context.\n\nHere, a set of strings is created from an array literal holding only strings:\n\nlet ingredients: Set = [\"cocoa beans\", \"sugar\", \"cocoa butter\", \"salt\"]\nif ingredients.isSuperset(of: [\"sugar\", \"salt\"]) {\n    print(\"Whatever it is, it's bound to be delicious!\")\n}\n// Prints \"Whatever it is, it's bound to be delicious!\"\n"
+  },
+  {
+    "title": "init(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/imagetraits/init(_:)",
+    "html": "Parameters\nsequence\n\nThe elements to use as members of the new set.\n\nDiscussion\n\nUse this initializer to create a new set from an existing sequence, like an array or a range:\n\nlet validIndices = Set(0..<7).subtracting([2, 4, 5])\nprint(validIndices)\n// Prints \"[6, 0, 1, 3]\"\n"
+  },
+  {
+    "title": "isSuperset(of:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/imagetraits/issuperset(of:)",
+    "html": "Parameters\nother\n\nA set of the same type as the current set.\n\nReturn Value\n\ntrue if the set is a superset of other; otherwise, false.\n\nDiscussion\n\nSet A is a superset of another set B if every member of B is also a member of A.\n\nlet employees: Set = [\"Alicia\", \"Bethany\", \"Chris\", \"Diana\", \"Eric\"]\nlet attendees: Set = [\"Alicia\", \"Bethany\", \"Diana\"]\nprint(employees.isSuperset(of: attendees))\n// Prints \"true\"\n"
+  },
+  {
+    "title": "subtract(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/imagetraits/subtract(_:)",
+    "html": "Parameters\nother\n\nA set of the same type as the current set.\n\nDiscussion\n\nIn the following example, the elements of the employees set that are also members of the neighbors set are removed. In particular, the names \"Bethany\" and \"Eric\" are removed from employees.\n\nvar employees: Set = [\"Alicia\", \"Bethany\", \"Chris\", \"Diana\", \"Eric\"]\nlet neighbors: Set = [\"Bethany\", \"Eric\", \"Forlani\", \"Greta\"]\nemployees.subtract(neighbors)\nprint(employees)\n// Prints \"[\"Diana\", \"Chris\", \"Alicia\"]\"\n"
+  },
+  {
+    "title": "isDisjoint(with:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/imagetraits/isdisjoint(with:)",
+    "html": "Parameters\nother\n\nA set of the same type as the current set.\n\nReturn Value\n\ntrue if the set has no elements in common with other; otherwise, false.\n\nDiscussion\n\nIn the following example, the employees set is disjoint with the visitors set because no name appears in both sets.\n\nlet employees: Set = [\"Alicia\", \"Bethany\", \"Chris\", \"Diana\", \"Eric\"]\nlet visitors: Set = [\"Marcia\", \"Nathaniel\", \"Olivia\"]\nprint(employees.isDisjoint(with: visitors))\n// Prints \"true\"\n"
+  },
+  {
+    "title": "isStrictSubset(of:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/imagetraits/isstrictsubset(of:)",
+    "html": "Parameters\nother\n\nA set of the same type as the current set.\n\nReturn Value\n\ntrue if the set is a strict subset of other; otherwise, false.\n\nDiscussion\n\nSet A is a strict subset of another set B if every member of A is also a member of B and B contains at least one element that is not a member of A.\n\nlet employees: Set = [\"Alicia\", \"Bethany\", \"Chris\", \"Diana\", \"Eric\"]\nlet attendees: Set = [\"Alicia\", \"Bethany\", \"Diana\"]\nprint(attendees.isStrictSubset(of: employees))\n// Prints \"true\"\n\n\n// A set is never a strict subset of itself:\nprint(attendees.isStrictSubset(of: attendees))\n// Prints \"false\"\n"
+  },
+  {
+    "title": "isStrictSuperset(of:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/imagetraits/isstrictsuperset(of:)",
+    "html": "Parameters\nother\n\nA set of the same type as the current set.\n\nReturn Value\n\ntrue if the set is a strict superset of other; otherwise, false.\n\nDiscussion\n\nSet A is a strict superset of another set B if every member of B is also a member of A and A contains at least one element that is not a member of B.\n\nlet employees: Set = [\"Alicia\", \"Bethany\", \"Chris\", \"Diana\", \"Eric\"]\nlet attendees: Set = [\"Alicia\", \"Bethany\", \"Diana\"]\nprint(employees.isStrictSuperset(of: attendees))\n// Prints \"true\"\n\n\n// A set is never a strict superset of itself:\nprint(employees.isStrictSuperset(of: employees))\n// Prints \"false\"\n"
+  },
+  {
+    "title": "subtracting(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/imagetraits/subtracting(_:)",
+    "html": "Parameters\nother\n\nA set of the same type as the current set.\n\nReturn Value\n\nA new set.\n\nDiscussion\n\nIn the following example, the nonNeighbors set is made up of the elements of the employees set that are not elements of neighbors:\n\nlet employees: Set = [\"Alicia\", \"Bethany\", \"Chris\", \"Diana\", \"Eric\"]\nlet neighbors: Set = [\"Bethany\", \"Eric\", \"Forlani\", \"Greta\"]\nlet nonNeighbors = employees.subtracting(neighbors)\nprint(nonNeighbors)\n// Prints \"[\"Diana\", \"Chris\", \"Alicia\"]\"\n"
+  },
+  {
+    "title": "TVContentItemImageShape.poster",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimageshape/poster",
+    "html": "See Also\nConstants\ncase none\nThe content has no particular shape.\ncase square\nThe content has a width:height ratio of 1:1.\ncase SDTV\nThe content is standard-definition television content with a width:height ratio of 4:3.\ncase HDTV\nThe content is high-definition television content with a width:height ratio of 16:9.\ncase wide\nThe content has a width:height ratio of 8:3.\ncase extraWide\nThe content has a width:height ratio of 80:27."
+  },
+  {
+    "title": "TVContentItemImageShape.square",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimageshape/square",
+    "html": "See Also\nConstants\ncase none\nThe content has no particular shape.\ncase poster\nThe content has a width:height ratio of 2:3.\ncase SDTV\nThe content is standard-definition television content with a width:height ratio of 4:3.\ncase HDTV\nThe content is high-definition television content with a width:height ratio of 16:9.\ncase wide\nThe content has a width:height ratio of 8:3.\ncase extraWide\nThe content has a width:height ratio of 80:27."
+  },
+  {
+    "title": "TVContentItemImageShape.HDTV",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimageshape/hdtv",
+    "html": "See Also\nConstants\ncase none\nThe content has no particular shape.\ncase poster\nThe content has a width:height ratio of 2:3.\ncase square\nThe content has a width:height ratio of 1:1.\ncase SDTV\nThe content is standard-definition television content with a width:height ratio of 4:3.\ncase wide\nThe content has a width:height ratio of 8:3.\ncase extraWide\nThe content has a width:height ratio of 80:27."
+  },
+  {
+    "title": "Equatable Implementations",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimageshape/equatable-implementations",
+    "html": "Topics\nOperators\nstatic func != (Self, Self) -> Bool\nReturns a Boolean value indicating whether two values are not equal."
+  },
+  {
+    "title": "RawRepresentable Implementations",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimageshape/rawrepresentable-implementations",
+    "html": "Topics\nInstance Properties\nvar hashValue: Int\nAvailable when Self conforms to Hashable and RawValue conforms to Hashable.\nInstance Methods\nfunc hash(into: inout Hasher)\nAvailable when Self conforms to Hashable and RawValue conforms to Hashable."
+  },
+  {
+    "title": "playURL",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitem/playurl",
+    "html": "Deprecated\n\nTVContentItem has been replaced by TVTopShelfItem\n\nDiscussion\n\nWhen the user presses play on the remote, opened, your application is launched if it wasn’t already running and then your UIApplication delegate is called. If at all possible, your application should immediately begin playing the content without any prompting for other information or displaying any other UI. Your app should start playback at the user’s current position within the content.\n\nSee Also\nInspecting the Application Launch Properties\nvar displayURL: URL?\nA URL that causes the app which created this content item to display a description screen for the item.\nDeprecated"
+  },
+  {
+    "title": "currentPosition",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitem/currentposition",
+    "html": "Deprecated\n\nTVContentItem has been replaced by TVTopShelfItem\n\nDiscussion\n\nThe number is interpreted as a double number of seconds.\n\nSee Also\nInspecting the Playback Properties\nvar hasPlayedToEnd: NSNumber?\nA Boolean value indicating whether the user can be considered to have finished this item.\nDeprecated\nvar lastAccessedDate: Date?\nThe date when the user last accessed this item.\nDeprecated"
+  },
+  {
+    "title": "hasPlayedToEnd",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitem/hasplayedtoend",
+    "html": "Deprecated\n\nTVContentItem has been replaced by TVTopShelfItem\n\nDiscussion\n\nThe number of this property is interpreted as a Boolean value.\n\nSee Also\nInspecting the Playback Properties\nvar currentPosition: NSNumber?\nThe index location, measured in seconds, at which the user last played this item.\nDeprecated\nvar lastAccessedDate: Date?\nThe date when the user last accessed this item.\nDeprecated"
+  },
+  {
+    "title": "init(identifier:container:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentidentifier/init(identifier:container:)",
+    "html": "Deprecated\n\nTVContentIdentifier has been replaced by TVTopShelfContentProvider\n\nParameters\nidentifier\n\nThe string to be used as the identifier.\n\ncontainer\n\nThe container (if any) that contains the content.\n\nReturn Value\n\nA newly initialized content identifier object.\n\nSee Also\nInitializing a Content Identifier\ninit?(coder: NSCoder)\nReturns an object initialized from data in a given unarchiver.\nDeprecated"
+  },
+  {
+    "title": "duration",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitem/duration",
+    "html": "Deprecated\n\nTVContentItem has been replaced by TVTopShelfItem\n\nDiscussion\n\nThe duration number is interpreted as a double number of seconds.\n\nSee Also\nInspecting the Content Properties\nvar creationDate: Date?\nThe date when the content item was created, or the date when it was first broadcast, or some other kind of origination date.\nDeprecated\nvar expirationDate: Date?\nThe date when the user will no longer be able to access the item.\nDeprecated\nvar imageShape: TVContentItemImageShape\nThe intended aspect ratio or shape of the content image.\nDeprecated\nenum TVContentItemImageShape\nAn enumerated type that identifies the shape in which the content item should be displayed."
+  },
+  {
+    "title": "init(arrayLiteral:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct/init(arrayliteral:)",
+    "html": "Parameters\narrayLiteral\n\nA list of elements of the new set.\n\nDiscussion\n\nDo not call this initializer directly. It is used by the compiler when you use an array literal. Instead, create a new set using an array literal as its value by enclosing a comma-separated list of values in square brackets. You can use an array literal anywhere a set is expected by the type context.\n\nHere, a set of strings is created from an array literal holding only strings:\n\nlet ingredients: Set = [\"cocoa beans\", \"sugar\", \"cocoa butter\", \"salt\"]\nif ingredients.isSuperset(of: [\"sugar\", \"salt\"]) {\n    print(\"Whatever it is, it's bound to be delicious!\")\n}\n// Prints \"Whatever it is, it's bound to be delicious!\"\n"
+  },
+  {
+    "title": "init(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct/init(_:)",
+    "html": "Parameters\nsequence\n\nThe elements to use as members of the new set.\n\nDiscussion\n\nUse this initializer to create a new set from an existing sequence, like an array or a range:\n\nlet validIndices = Set(0..<7).subtracting([2, 4, 5])\nprint(validIndices)\n// Prints \"[6, 0, 1, 3]\"\n"
+  },
+  {
+    "title": "creationDate",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitem/creationdate",
+    "html": "Deprecated\n\nTVContentItem has been replaced by TVTopShelfItem\n\nSee Also\nInspecting the Content Properties\nvar duration: NSNumber?\nThe amount of time required to play the media to completion.\nDeprecated\nvar expirationDate: Date?\nThe date when the user will no longer be able to access the item.\nDeprecated\nvar imageShape: TVContentItemImageShape\nThe intended aspect ratio or shape of the content image.\nDeprecated\nenum TVContentItemImageShape\nAn enumerated type that identifies the shape in which the content item should be displayed."
+  },
+  {
+    "title": "isDisjoint(with:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct/isdisjoint(with:)",
+    "html": "Parameters\nother\n\nA set of the same type as the current set.\n\nReturn Value\n\ntrue if the set has no elements in common with other; otherwise, false.\n\nDiscussion\n\nIn the following example, the employees set is disjoint with the visitors set because no name appears in both sets.\n\nlet employees: Set = [\"Alicia\", \"Bethany\", \"Chris\", \"Diana\", \"Eric\"]\nlet visitors: Set = [\"Marcia\", \"Nathaniel\", \"Olivia\"]\nprint(employees.isDisjoint(with: visitors))\n// Prints \"true\"\n"
+  },
+  {
+    "title": "isStrictSubset(of:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct/isstrictsubset(of:)",
+    "html": "Parameters\nother\n\nA set of the same type as the current set.\n\nReturn Value\n\ntrue if the set is a strict subset of other; otherwise, false.\n\nDiscussion\n\nSet A is a strict subset of another set B if every member of A is also a member of B and B contains at least one element that is not a member of A.\n\nlet employees: Set = [\"Alicia\", \"Bethany\", \"Chris\", \"Diana\", \"Eric\"]\nlet attendees: Set = [\"Alicia\", \"Bethany\", \"Diana\"]\nprint(attendees.isStrictSubset(of: employees))\n// Prints \"true\"\n\n\n// A set is never a strict subset of itself:\nprint(attendees.isStrictSubset(of: attendees))\n// Prints \"false\"\n"
+  },
+  {
+    "title": "isSuperset(of:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct/issuperset(of:)",
+    "html": "Parameters\nother\n\nA set of the same type as the current set.\n\nReturn Value\n\ntrue if the set is a superset of other; otherwise, false.\n\nDiscussion\n\nSet A is a superset of another set B if every member of B is also a member of A.\n\nlet employees: Set = [\"Alicia\", \"Bethany\", \"Chris\", \"Diana\", \"Eric\"]\nlet attendees: Set = [\"Alicia\", \"Bethany\", \"Diana\"]\nprint(employees.isSuperset(of: attendees))\n// Prints \"true\"\n"
+  },
+  {
+    "title": "subtract(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct/subtract(_:)",
+    "html": "Parameters\nother\n\nA set of the same type as the current set.\n\nDiscussion\n\nIn the following example, the elements of the employees set that are also members of the neighbors set are removed. In particular, the names \"Bethany\" and \"Eric\" are removed from employees.\n\nvar employees: Set = [\"Alicia\", \"Bethany\", \"Chris\", \"Diana\", \"Eric\"]\nlet neighbors: Set = [\"Bethany\", \"Eric\", \"Forlani\", \"Greta\"]\nemployees.subtract(neighbors)\nprint(employees)\n// Prints \"[\"Diana\", \"Chris\", \"Alicia\"]\"\n"
+  },
+  {
+    "title": "subtracting(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct/subtracting(_:)",
+    "html": "Parameters\nother\n\nA set of the same type as the current set.\n\nReturn Value\n\nA new set.\n\nDiscussion\n\nIn the following example, the nonNeighbors set is made up of the elements of the employees set that are not elements of neighbors:\n\nlet employees: Set = [\"Alicia\", \"Bethany\", \"Chris\", \"Diana\", \"Eric\"]\nlet neighbors: Set = [\"Bethany\", \"Eric\", \"Forlani\", \"Greta\"]\nlet nonNeighbors = employees.subtracting(neighbors)\nprint(nonNeighbors)\n// Prints \"[\"Diana\", \"Chris\", \"Alicia\"]\"\n"
+  },
+  {
+    "title": "intersection(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct/intersection(_:)",
+    "html": "Parameters\nother\n\nAn option set.\n\nReturn Value\n\nA new option set with only the elements contained in both this set and other.\n\nDiscussion\n\nThis example uses the intersection(_:) method to limit the available shipping options to what can be used with a PO Box destination.\n\n// Can only ship standard or priority to PO Boxes\nlet poboxShipping: ShippingOptions = [.standard, .priority]\nlet memberShipping: ShippingOptions =\n        [.standard, .priority, .secondDay]\n\n\nlet availableOptions = memberShipping.intersection(poboxShipping)\nprint(availableOptions.contains(.priority))\n// Prints \"true\"\nprint(availableOptions.contains(.secondDay))\n// Prints \"false\"\n"
+  },
+  {
+    "title": "insert(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct/insert(_:)",
+    "html": "Parameters\nnewMember\n\nThe element to insert.\n\nReturn Value\n\n(true, newMember) if newMember was not contained in self. Otherwise, returns (false, oldMember), where oldMember is the member of the set equal to newMember.\n\nDiscussion\n\nIn the following example, the .secondDay shipping option is added to the freeOptions option set if purchasePrice is greater than 50.0. For the ShippingOptions declaration, see the OptionSet protocol discussion.\n\nlet purchasePrice = 87.55\n\n\nvar freeOptions: ShippingOptions = [.standard, .priority]\nif purchasePrice > 50 {\n    freeOptions.insert(.secondDay)\n}\nprint(freeOptions.contains(.secondDay))\n// Prints \"true\"\n"
+  },
+  {
+    "title": "remove(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct/remove(_:)",
+    "html": "Parameters\nmember\n\nThe element of the set to remove.\n\nReturn Value\n\nThe intersection of [member] and the set, if the intersection was nonempty; otherwise, nil.\n\nDiscussion\n\nIn the following example, the .priority shipping option is removed from the options option set. Attempting to remove the same shipping option a second time results in nil, because options no longer contains .priority as a member.\n\nvar options: ShippingOptions = [.secondDay, .priority]\nlet priorityOption = options.remove(.priority)\nprint(priorityOption == .priority)\n// Prints \"true\"\n\n\nprint(options.remove(.priority))\n// Prints \"nil\"\n\n\nIn the next example, the .express element is passed to remove(_:). Although .express is not a member of options, .express subsumes the remaining .secondDay element of the option set. Therefore, options is emptied and the intersection between .express and options is returned.\n\nlet expressOption = options.remove(.express)\nprint(expressOption == .express)\n// Prints \"false\"\nprint(expressOption == .secondDay)\n// Prints \"true\"\n"
+  },
+  {
+    "title": "symmetricDifference(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct/symmetricdifference(_:)",
+    "html": "Parameters\nother\n\nAn option set.\n\nReturn Value\n\nA new option set with only the elements contained in either this set or other, but not in both."
+  },
+  {
+    "title": "union(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct/union(_:)",
+    "html": "Parameters\nother\n\nAn option set.\n\nReturn Value\n\nA new option set made up of the elements contained in this set, in other, or in both.\n\nDiscussion\n\nThis example uses the union(_:) method to add two more shipping options to the default set.\n\nlet defaultShipping = ShippingOptions.standard\nlet memberShipping = defaultShipping.union([.secondDay, .priority])\nprint(memberShipping.contains(.priority))\n// Prints \"true\"\n"
+  },
+  {
+    "title": "update(with:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct/update(with:)",
+    "html": "Return Value\n\nThe intersection of [newMember] and the set if the intersection was nonempty; otherwise, nil.\n\nDiscussion\n\nIf newMember is not contained in the set but subsumes current members of the set, the subsumed members are returned.\n\nvar options: ShippingOptions = [.secondDay, .priority]\nlet replaced = options.update(with: .express)\nprint(replaced == .secondDay)\n// Prints \"true\"\n"
+  },
+  {
+    "title": "!=(_:_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfsectioneditem/imageshape-swift.enum/!=(_:_:)",
+    "html": "Parameters\nlhs\n\nA value to compare.\n\nrhs\n\nAnother value to compare.\n\nDiscussion\n\nInequality is the inverse of equality. For any values a and b, a != b implies that a == b is false.\n\nThis is the default implementation of the not-equal-to operator (!=) for any type that conforms to Equatable."
+  },
+  {
+    "title": "formUnion(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/imagetraits/formunion(_:)",
+    "html": "Parameters\nother\n\nAn option set.\n\nDiscussion\n\nThis method is implemented as a | (bitwise OR) operation on the two sets’ raw values."
+  },
+  {
+    "title": "formSymmetricDifference(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/imagetraits/formsymmetricdifference(_:)",
+    "html": "Parameters\nother\n\nAn option set.\n\nDiscussion\n\nThis method is implemented as a ^ (bitwise XOR) operation on the two sets’ raw values."
+  },
+  {
+    "title": "init()",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/imagetraits/init()",
+    "html": "Discussion\n\nThis initializer creates an option set with a raw value of zero."
+  },
+  {
+    "title": "!=(_:_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/imagetraits/!=(_:_:)",
+    "html": "Parameters\nlhs\n\nA value to compare.\n\nrhs\n\nAnother value to compare.\n\nDiscussion\n\nInequality is the inverse of equality. For any values a and b, a != b implies that a == b is false.\n\nThis is the default implementation of the not-equal-to operator (!=) for any type that conforms to Equatable."
+  },
+  {
+    "title": "union(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/imagetraits/union(_:)",
+    "html": "Parameters\nother\n\nAn option set.\n\nReturn Value\n\nA new option set made up of the elements contained in this set, in other, or in both.\n\nDiscussion\n\nThis example uses the union(_:) method to add two more shipping options to the default set.\n\nlet defaultShipping = ShippingOptions.standard\nlet memberShipping = defaultShipping.union([.secondDay, .priority])\nprint(memberShipping.contains(.priority))\n// Prints \"true\"\n"
+  },
+  {
+    "title": "videoResolutionHD",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct/videoresolutionhd",
+    "html": "Discussion\n\nSpecify this constant, or the videoResolution4K constant, but not both.\n\nSee Also\nMedia Options\nstatic var videoResolution4K: TVTopShelfCarouselItem.MediaOptions\nUltra-high-definition 4K video resolution.\nstatic var videoColorSpaceHDR: TVTopShelfCarouselItem.MediaOptions\nHigh-dynamic-range video.\nstatic var videoColorSpaceDolbyVision: TVTopShelfCarouselItem.MediaOptions\nDolby Vision video.\nstatic var audioDolbyAtmos: TVTopShelfCarouselItem.MediaOptions\nAudio content with Dolby Atmos.\nstatic var audioTranscriptionClosedCaptioning: TVTopShelfCarouselItem.MediaOptions\nAudio content with closed captioning.\nstatic var audioTranscriptionSDH: TVTopShelfCarouselItem.MediaOptions\nAudio content with subtitles for people who are deaf or hard of hearing.\nstatic var audioDescription: TVTopShelfCarouselItem.MediaOptions\nAudio content with audio descriptions."
+  },
+  {
+    "title": "container",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentidentifier/container",
+    "html": "Deprecated\n\nTVContentIdentifier has been replaced by TVTopShelfContentProvider\n\nDiscussion\n\nTypically, this is the content identifier for the next larger grouping that this item is part of. For example, a podcast episode could be part of a larger podcast season, which could in turn be part of an entire podcast series. In this case, all three layers—episodes, seasons, and the series—would need their own unique identifiers.\n\nThe container value may be nil, in which case this item represents a top-level content item.\n\nSee Also\nInspecting an Identifier’s Contents\nvar identifier: String\nThe string that identifies this content item.\nDeprecated"
+  },
+  {
+    "title": "identifier",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentidentifier/identifier",
+    "html": "Deprecated\n\nTVContentIdentifier has been replaced by TVTopShelfContentProvider\n\nDiscussion\n\nThe contents of this string are defined by you when you design your application.\n\nSee Also\nInspecting an Identifier’s Contents\nvar container: TVContentIdentifier?\nThe container that this content item is contained in.\nDeprecated"
+  },
+  {
+    "title": "init(coder:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentidentifier/init(coder:)",
+    "html": "Deprecated\n\nTVContentIdentifier has been replaced by TVTopShelfContentProvider\n\nParameters\ncoder\n\nAn unarchiver object.\n\nReturn Value\n\nA newly initialized content identifier object.\n\nSee Also\nInitializing a Content Identifier\ninit(identifier: String, container: TVContentIdentifier?)\nCreates a new content identifier.\nDeprecated"
+  },
+  {
+    "title": "lastAccessedDate",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitem/lastaccesseddate",
+    "html": "Deprecated\n\nTVContentItem has been replaced by TVTopShelfItem\n\nDiscussion\n\nA typical use is for content types in which “playing” represents the date when the user last played the item or played a subitem within the group. When the user simply looks at an item, the access date should not change.\n\nSee Also\nInspecting the Playback Properties\nvar currentPosition: NSNumber?\nThe index location, measured in seconds, at which the user last played this item.\nDeprecated\nvar hasPlayedToEnd: NSNumber?\nA Boolean value indicating whether the user can be considered to have finished this item.\nDeprecated"
+  },
+  {
+    "title": "displayURL",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitem/displayurl",
+    "html": "Deprecated\n\nTVContentItem has been replaced by TVTopShelfItem\n\nDiscussion\n\nWhen the user selects the item, your application is launched if it wasn’t already running and then your UIApplication delegate is called. If at all possible, your application should immediately display the description of the item without any prompting for other information or displaying any other UI.\n\nSee Also\nInspecting the Application Launch Properties\nvar playURL: URL?\nA URL that causes the app which created this content item to begin playing the item at the user’s current position.\nDeprecated"
+  },
+  {
+    "title": "imageShape",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitem/imageshape",
+    "html": "Deprecated\n\nTVContentItem has been replaced by TVTopShelfItem\n\nDiscussion\n\nWhen the TV Content object is being used to represent Top Shelf items, then the allowed values for this property depend on the topShelfStyle property of the object that implements the TV TopShelf extension. For more information, see TVTopShelfProvider.\n\nIf the topShelfStyle value is TVTopShelfContentStyle.inset, the valid values of this property are:\n\nTVContentItemImageShape.extraWide\n\nIf the topShelfStyle value is TVTopShelfContentStyle.sectioned, the valid values are:\n\nTVContentItemImageShape.poster\n\nTVContentItemImageShape.square\n\nTVContentItemImageShape.HDTV\n\nIf the value of this property is not valid for the current Top Shelf style, the system reserves the right to scale the image in any way.\n\nSee Also\nInspecting the Content Properties\nvar creationDate: Date?\nThe date when the content item was created, or the date when it was first broadcast, or some other kind of origination date.\nDeprecated\nvar duration: NSNumber?\nThe amount of time required to play the media to completion.\nDeprecated\nvar expirationDate: Date?\nThe date when the user will no longer be able to access the item.\nDeprecated\nenum TVContentItemImageShape\nAn enumerated type that identifies the shape in which the content item should be displayed."
+  },
+  {
+    "title": "setImageURL(_:forTraits:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitem/setimageurl(_:fortraits:)",
+    "html": "Parameters\naURL\n\nThe URL corresponding to the image location. This parameter can be an absolute path on the local device or an HTTP path. Specify nil to remove the image associated with the given traits.\n\ntraits\n\nThe traits to associate with the image. For example, you might specify that the image applies only to dark interfaces.\n\nDiscussion\n\nThe preferred file format for this image is a layered image file that provides the proper 3d effects. For more information, see App Programming Guide for tvOS.\n\nSee Also\nAccessing Image Resources\nvar imageURL: URL?\nA URL giving the location of the image to be displayed for this content item.\nDeprecated\nfunc imageURL(forTraits: TVContentItemImageTrait) -> URL?\nRetrieve the URL for the image that best matches the specified traits.\nDeprecated\nstruct TVContentItemImageTrait\nTraits describing the type of image you want."
+  },
+  {
+    "title": "expirationDate",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitem/expirationdate",
+    "html": "Deprecated\n\nTVContentItem has been replaced by TVTopShelfItem\n\nSee Also\nInspecting the Content Properties\nvar creationDate: Date?\nThe date when the content item was created, or the date when it was first broadcast, or some other kind of origination date.\nDeprecated\nvar duration: NSNumber?\nThe amount of time required to play the media to completion.\nDeprecated\nvar imageShape: TVContentItemImageShape\nThe intended aspect ratio or shape of the content image.\nDeprecated\nenum TVContentItemImageShape\nAn enumerated type that identifies the shape in which the content item should be displayed."
+  },
+  {
+    "title": "TVContentItemImageTrait",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimagetrait",
+    "html": "Topics\nTraits\nstatic var screenScale1x: TVContentItemImageTrait\nAn image meant for a regular display.\nstatic var screenScale2x: TVContentItemImageTrait\nAn image meant for a Retina display.\nstatic var userInterfaceStyleDark: TVContentItemImageTrait\nAn image meant for a dark user interface.\nstatic var userInterfaceStyleLight: TVContentItemImageTrait\nAn image meant for a light user interface.\nInitializers\ninit(rawValue: UInt)\nDefault Implementations\nEquatable Implementations\nOptionSet Implementations\nSetAlgebra Implementations\nRelationships\nConforms To\nEquatable\nExpressibleByArrayLiteral\nOptionSet\nRawRepresentable\nSendable\nSetAlgebra\nSee Also\nAccessing Image Resources\nvar imageURL: URL?\nA URL giving the location of the image to be displayed for this content item.\nDeprecated\nfunc imageURL(forTraits: TVContentItemImageTrait) -> URL?\nRetrieve the URL for the image that best matches the specified traits.\nDeprecated\nfunc setImageURL(URL?, forTraits: TVContentItemImageTrait)\nDeprecated"
+  },
+  {
+    "title": "imageURL",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitem/imageurl",
+    "html": "Deprecated\n\nUse setImageURL:forTraits: to set image URLs into TVContentItem.\n\nDiscussion\n\nThe image URL can be an absolute path on the local device or an HTTP path. The preferred file format for this image is a layered image file that provides the proper 3d effects. For more information, see App Programming Guide for tvOS.\n\nSee Also\nAccessing Image Resources\nfunc imageURL(forTraits: TVContentItemImageTrait) -> URL?\nRetrieve the URL for the image that best matches the specified traits.\nDeprecated\nfunc setImageURL(URL?, forTraits: TVContentItemImageTrait)\nDeprecated\nstruct TVContentItemImageTrait\nTraits describing the type of image you want."
+  },
+  {
+    "title": "imageURL(forTraits:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitem/imageurl(fortraits:)",
+    "html": "Parameters\ntraits\n\nThe traits for the image you want. For example, you might ask specifically for the variant of the image that supports a dark interface.\n\nReturn Value\n\nThe URL for the image asset, or nil if an image with the specified traits was not found.\n\nDiscussion\n\nThe image URL can be an absolute path on the local device or an HTTP path. The preferred file format for this image is a layered image file that provides the proper 3d effects. For more information, see App Programming Guide for tvOS.\n\nSee Also\nAccessing Image Resources\nvar imageURL: URL?\nA URL giving the location of the image to be displayed for this content item.\nDeprecated\nfunc setImageURL(URL?, forTraits: TVContentItemImageTrait)\nDeprecated\nstruct TVContentItemImageTrait\nTraits describing the type of image you want."
+  },
+  {
+    "title": "badgeCount",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitem/badgecount",
+    "html": "Deprecated\n\nTVContentItem has been replaced by TVTopShelfItem\n\nDiscussion\n\nThe display-badge number is interpreted as a positive integer. Not all UI elements that use content items display badges.\n\nSee Also\nInspecting the General Display Properties\nvar title: String?\nThe localized string title of the item.\nDeprecated\nvar topShelfItems: [TVContentItem]?\nAn array of content items that are the items of a section.\nDeprecated"
+  },
+  {
+    "title": "topShelfItems",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitem/topshelfitems",
+    "html": "Deprecated\n\nTVContentItem has been replaced by TVTopShelfItem\n\nDiscussion\n\nIf this property is non-nil, the content item represents a section item in a sectioned Top Shelf style. For more information, see TVTopShelfContentStyle. The title property must also be set to a non-nil string.\n\nSee Also\nInspecting the General Display Properties\nvar badgeCount: NSNumber?\nA badging integer for this item.\nDeprecated\nvar title: String?\nThe localized string title of the item.\nDeprecated"
+  },
+  {
+    "title": "contentIdentifier",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitem/contentidentifier",
+    "html": "Deprecated\n\nTVContentItem has been replaced by TVTopShelfItem"
+  },
+  {
+    "title": "isSubset(of:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct/issubset(of:)",
+    "html": "Parameters\nother\n\nA set of the same type as the current set.\n\nReturn Value\n\ntrue if the set is a subset of other; otherwise, false.\n\nDiscussion\n\nSet A is a subset of another set B if every member of A is also a member of B.\n\nlet employees: Set = [\"Alicia\", \"Bethany\", \"Chris\", \"Diana\", \"Eric\"]\nlet attendees: Set = [\"Alicia\", \"Bethany\", \"Diana\"]\nprint(attendees.isSubset(of: employees))\n// Prints \"true\"\n"
+  },
+  {
+    "title": "contains(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct/contains(_:)",
+    "html": "Parameters\nmember\n\nThe element to look for in the option set.\n\nReturn Value\n\ntrue if the option set contains member; otherwise, false.\n\nDiscussion\n\nThis example uses the contains(_:) method to check whether next-day shipping is in the availableOptions instance.\n\nlet availableOptions = ShippingOptions.express\nif availableOptions.contains(.nextDay) {\n    print(\"Next day shipping available\")\n}\n// Prints \"Next day shipping available\"\n"
+  },
+  {
+    "title": "formIntersection(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct/formintersection(_:)",
+    "html": "Parameters\nother\n\nAn option set.\n\nDiscussion\n\nThis method is implemented as a & (bitwise AND) operation on the two sets’ raw values."
+  },
+  {
+    "title": "formSymmetricDifference(_:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct/formsymmetricdifference(_:)",
+    "html": "Parameters\nother\n\nAn option set.\n\nDiscussion\n\nThis method is implemented as a ^ (bitwise XOR) operation on the two sets’ raw values."
+  },
+  {
+    "title": "init()",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct/init()",
+    "html": "Discussion\n\nThis initializer creates an option set with a raw value of zero."
+  },
+  {
+    "title": "init(coder:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitem/init(coder:)",
+    "html": "Deprecated\n\nTVContentItem has been replaced by TVTopShelfItem\n\nParameters\ncoder\n\nAn unarchiver object.\n\nReturn Value\n\nA newly initialized content object.\n\nSee Also\nInitializing a Content Item\ninit(contentIdentifier: TVContentIdentifier)\nInitializes a new content item.\nDeprecated"
+  },
+  {
+    "title": "init(contentIdentifier:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitem/init(contentidentifier:)",
+    "html": "Deprecated\n\nTVContentItem has been replaced by TVTopShelfItem\n\nParameters\nident\n\nThe identifier for the new content item.\n\nReturn Value\n\nA new content item.\n\nSee Also\nInitializing a Content Item\ninit?(coder: NSCoder)\nReturns an object initialized from data in a given unarchiver.\nDeprecated"
+  },
+  {
+    "title": "TVTopShelfContentStyle",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcontentstyle",
+    "html": "Deprecated\n\nTVTopShelfProvider has been replaced by TVTopShelfContent\n\nTopics\nConstants\ncase inset\nWhen the using the inset style, your extension should return a flat array of TV content items. The images of the content items will take up most of the area of the Top Shelf, which will slowly rotate through the items.\ncase sectioned\nWhen using the sectioned style, your extension should return an array that contains content items that represent sections. Each section object should have an array of content items that represent the available media in that section.\nInitializers\ninit?(rawValue: Int)\nDefault Implementations\nEquatable Implementations\nRawRepresentable Implementations\nRelationships\nConforms To\nEquatable\nHashable\nRawRepresentable\nSendable\nSee Also\nImplementing TV Services Extension Properties\nvar topShelfItems: [TVContentItem]\nReturns an array of content items to be displayed.\n\nRequired\n\nDeprecated\nvar topShelfStyle: TVTopShelfContentStyle\nThe user interface style that should be used to display the content items.\n\nRequired\n\nDeprecated"
+  },
+  {
+    "title": "RawRepresentable Implementations",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfsectioneditem/imageshape-swift.enum/rawrepresentable-implementations",
+    "html": "Topics\nInstance Properties\nvar hashValue: Int\nAvailable when Self conforms to Hashable and RawValue conforms to Hashable.\nInstance Methods\nfunc hash(into: inout Hasher)\nAvailable when Self conforms to Hashable and RawValue conforms to Hashable."
+  },
+  {
+    "title": "TVTopShelfItemsDidChangeNotification",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitemsdidchangenotification",
+    "html": "Discussion\n\nWhen the content has changed, post a new notification using the default notification center ([NSNotificationCenter defaultCenter]). At some point in the future, the system will fetch the new data from your extension. The notification’s parameters are ignored and should be nil.\n\nSee Also\nNotifying the System of Changes\nstatic let TVTopShelfItemsDidChange: NSNotification.Name\nA notification to post when your app’s Top Shelf content has changed.\nDeprecated"
+  },
+  {
+    "title": "topShelfStyle",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfprovider/topshelfstyle",
+    "html": "Required\n\nDeprecated\n\nTVTopShelfProvider has been replaced by TVTopShelfContentProvider\n\nSee Also\nImplementing TV Services Extension Properties\nvar topShelfItems: [TVContentItem]\nReturns an array of content items to be displayed.\n\nRequired\n\nDeprecated\nenum TVTopShelfContentStyle\nAn enumerated type used to specify the style in which you want your content to be displayed.\nDeprecated"
+  },
+  {
+    "title": "audioDescription",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct/audiodescription",
+    "html": "See Also\nMedia Options\nstatic var videoResolutionHD: TVTopShelfCarouselItem.MediaOptions\nHigh-definition video resolution.\nstatic var videoResolution4K: TVTopShelfCarouselItem.MediaOptions\nUltra-high-definition 4K video resolution.\nstatic var videoColorSpaceHDR: TVTopShelfCarouselItem.MediaOptions\nHigh-dynamic-range video.\nstatic var videoColorSpaceDolbyVision: TVTopShelfCarouselItem.MediaOptions\nDolby Vision video.\nstatic var audioDolbyAtmos: TVTopShelfCarouselItem.MediaOptions\nAudio content with Dolby Atmos.\nstatic var audioTranscriptionClosedCaptioning: TVTopShelfCarouselItem.MediaOptions\nAudio content with closed captioning.\nstatic var audioTranscriptionSDH: TVTopShelfCarouselItem.MediaOptions\nAudio content with subtitles for people who are deaf or hard of hearing."
+  },
+  {
+    "title": "audioTranscriptionClosedCaptioning",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct/audiotranscriptionclosedcaptioning",
+    "html": "See Also\nMedia Options\nstatic var videoResolutionHD: TVTopShelfCarouselItem.MediaOptions\nHigh-definition video resolution.\nstatic var videoResolution4K: TVTopShelfCarouselItem.MediaOptions\nUltra-high-definition 4K video resolution.\nstatic var videoColorSpaceHDR: TVTopShelfCarouselItem.MediaOptions\nHigh-dynamic-range video.\nstatic var videoColorSpaceDolbyVision: TVTopShelfCarouselItem.MediaOptions\nDolby Vision video.\nstatic var audioDolbyAtmos: TVTopShelfCarouselItem.MediaOptions\nAudio content with Dolby Atmos.\nstatic var audioTranscriptionSDH: TVTopShelfCarouselItem.MediaOptions\nAudio content with subtitles for people who are deaf or hard of hearing.\nstatic var audioDescription: TVTopShelfCarouselItem.MediaOptions\nAudio content with audio descriptions."
+  },
+  {
+    "title": "audioTranscriptionSDH",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct/audiotranscriptionsdh",
+    "html": "See Also\nMedia Options\nstatic var videoResolutionHD: TVTopShelfCarouselItem.MediaOptions\nHigh-definition video resolution.\nstatic var videoResolution4K: TVTopShelfCarouselItem.MediaOptions\nUltra-high-definition 4K video resolution.\nstatic var videoColorSpaceHDR: TVTopShelfCarouselItem.MediaOptions\nHigh-dynamic-range video.\nstatic var videoColorSpaceDolbyVision: TVTopShelfCarouselItem.MediaOptions\nDolby Vision video.\nstatic var audioDolbyAtmos: TVTopShelfCarouselItem.MediaOptions\nAudio content with Dolby Atmos.\nstatic var audioTranscriptionClosedCaptioning: TVTopShelfCarouselItem.MediaOptions\nAudio content with closed captioning.\nstatic var audioDescription: TVTopShelfCarouselItem.MediaOptions\nAudio content with audio descriptions."
+  },
+  {
+    "title": "videoColorSpaceDolbyVision",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct/videocolorspacedolbyvision",
+    "html": "Discussion\n\nSpecify this constant, or the videoColorSpaceHDR constant, but not both.\n\nSee Also\nMedia Options\nstatic var videoResolutionHD: TVTopShelfCarouselItem.MediaOptions\nHigh-definition video resolution.\nstatic var videoResolution4K: TVTopShelfCarouselItem.MediaOptions\nUltra-high-definition 4K video resolution.\nstatic var videoColorSpaceHDR: TVTopShelfCarouselItem.MediaOptions\nHigh-dynamic-range video.\nstatic var audioDolbyAtmos: TVTopShelfCarouselItem.MediaOptions\nAudio content with Dolby Atmos.\nstatic var audioTranscriptionClosedCaptioning: TVTopShelfCarouselItem.MediaOptions\nAudio content with closed captioning.\nstatic var audioTranscriptionSDH: TVTopShelfCarouselItem.MediaOptions\nAudio content with subtitles for people who are deaf or hard of hearing.\nstatic var audioDescription: TVTopShelfCarouselItem.MediaOptions\nAudio content with audio descriptions."
+  },
+  {
+    "title": "audioDolbyAtmos",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct/audiodolbyatmos",
+    "html": "See Also\nMedia Options\nstatic var videoResolutionHD: TVTopShelfCarouselItem.MediaOptions\nHigh-definition video resolution.\nstatic var videoResolution4K: TVTopShelfCarouselItem.MediaOptions\nUltra-high-definition 4K video resolution.\nstatic var videoColorSpaceHDR: TVTopShelfCarouselItem.MediaOptions\nHigh-dynamic-range video.\nstatic var videoColorSpaceDolbyVision: TVTopShelfCarouselItem.MediaOptions\nDolby Vision video.\nstatic var audioTranscriptionClosedCaptioning: TVTopShelfCarouselItem.MediaOptions\nAudio content with closed captioning.\nstatic var audioTranscriptionSDH: TVTopShelfCarouselItem.MediaOptions\nAudio content with subtitles for people who are deaf or hard of hearing.\nstatic var audioDescription: TVTopShelfCarouselItem.MediaOptions\nAudio content with audio descriptions."
+  },
+  {
+    "title": "videoColorSpaceHDR",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct/videocolorspacehdr",
+    "html": "Discussion\n\nSpecify this constant, or the videoColorSpaceDolbyVision constant, but not both.\n\nSee Also\nMedia Options\nstatic var videoResolutionHD: TVTopShelfCarouselItem.MediaOptions\nHigh-definition video resolution.\nstatic var videoResolution4K: TVTopShelfCarouselItem.MediaOptions\nUltra-high-definition 4K video resolution.\nstatic var videoColorSpaceDolbyVision: TVTopShelfCarouselItem.MediaOptions\nDolby Vision video.\nstatic var audioDolbyAtmos: TVTopShelfCarouselItem.MediaOptions\nAudio content with Dolby Atmos.\nstatic var audioTranscriptionClosedCaptioning: TVTopShelfCarouselItem.MediaOptions\nAudio content with closed captioning.\nstatic var audioTranscriptionSDH: TVTopShelfCarouselItem.MediaOptions\nAudio content with subtitles for people who are deaf or hard of hearing.\nstatic var audioDescription: TVTopShelfCarouselItem.MediaOptions\nAudio content with audio descriptions."
+  },
+  {
+    "title": "Equatable Implementations",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselcontent/style-swift.enum/equatable-implementations",
+    "html": "Topics\nOperators\nstatic func != (Self, Self) -> Bool\nReturns a Boolean value indicating whether two values are not equal."
+  },
+  {
+    "title": "screenScale2x",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/imagetraits/screenscale2x",
+    "html": "See Also\nImage Traits\nstatic var screenScale1x: TVTopShelfItem.ImageTraits\nAn image to display on devices running in a 1x resolution mode."
+  },
+  {
+    "title": "screenScale1x",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/imagetraits/screenscale1x",
+    "html": "See Also\nImage Traits\nstatic var screenScale2x: TVTopShelfItem.ImageTraits\nA high-resolution image to display on devices running in a 2x resolution mode."
+  },
+  {
+    "title": "Equatable Implementations",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/imagetraits/equatable-implementations",
+    "html": "Topics\nOperators\nstatic func != (Self, Self) -> Bool\nReturns a Boolean value indicating whether two values are not equal."
+  },
+  {
+    "title": "OptionSet Implementations",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/imagetraits/optionset-implementations",
+    "html": "Topics\nInitializers\ninit()\nCreates an empty option set.\nAvailable when RawValue conforms to FixedWidthInteger.\nInstance Methods\nfunc contains(Self) -> Bool\nReturns a Boolean value that indicates whether a given element is a member of the option set.\nAvailable when Self is Self.Element.\nfunc formIntersection(Self)\nRemoves all elements of this option set that are not also present in the given set.\nAvailable when RawValue conforms to FixedWidthInteger.\nfunc formSymmetricDifference(Self)\nReplaces this set with a new set containing all elements contained in either this set or the given set, but not in both.\nAvailable when RawValue conforms to FixedWidthInteger.\nfunc formUnion(Self)\nInserts the elements of another set into this option set.\nAvailable when RawValue conforms to FixedWidthInteger.\nfunc insert(Self.Element) -> (inserted: Bool, memberAfterInsert: Self.Element)\nAdds the given element to the option set if it is not already a member.\nAvailable when Self is Self.Element.\nfunc intersection(Self) -> Self\nReturns a new option set with only the elements contained in both this set and the given set.\nfunc remove(Self.Element) -> Self.Element?\nRemoves the given element and all elements subsumed by it.\nAvailable when Self is Self.Element.\nfunc symmetricDifference(Self) -> Self\nReturns a new option set with the elements contained in this set or in the given set, but not in both.\nfunc union(Self) -> Self\nReturns a new option set of the elements contained in this set, in the given set, or in both.\nfunc update(with: Self.Element) -> Self.Element?\nInserts the given element into the set.\nAvailable when Self is Self.Element."
+  },
+  {
+    "title": "SetAlgebra Implementations",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/imagetraits/setalgebra-implementations",
+    "html": "Topics\nInitializers\ninit<S>(S)\nCreates a new set from a finite sequence of items.\ninit(arrayLiteral: Self.Element...)\nCreates a set containing the elements of the given array literal.\nAvailable when ArrayLiteralElement is Self.Element.\nInstance Properties\nvar isEmpty: Bool\nA Boolean value that indicates whether the set has no elements.\nInstance Methods\nfunc isDisjoint(with: Self) -> Bool\nReturns a Boolean value that indicates whether the set has no members in common with the given set.\nfunc isStrictSubset(of: Self) -> Bool\nReturns a Boolean value that indicates whether this set is a strict subset of the given set.\nfunc isStrictSuperset(of: Self) -> Bool\nReturns a Boolean value that indicates whether this set is a strict superset of the given set.\nfunc isSubset(of: Self) -> Bool\nReturns a Boolean value that indicates whether the set is a subset of another set.\nfunc isSuperset(of: Self) -> Bool\nReturns a Boolean value that indicates whether the set is a superset of the given set.\nfunc subtract(Self)\nRemoves the elements of the given set from this set.\nfunc subtracting(Self) -> Self\nReturns a new set containing the elements of this set that do not occur in the given set."
+  },
+  {
+    "title": "name",
+    "url": "https://developer.apple.com/documentation/tvservices/tvappprofiledescriptor/name",
+    "html": "Deprecated\n\nUser Management capability get-current-user is no longer supported. Please use runs-as-current-user-with-user-independent-keychain and kSecUseUserIndependentKeychain for sharing keychain items across users.\n\nDiscussion\n\nUse this property to store the user-readable name for the user profile. When prompting the user to select a preferred profile, the TVUserManager displays the names from your TVAppProfileDescriptor objects in the selection dialog.\n\nYou must specify a nonempty string in this property."
+  },
+  {
+    "title": "init(name:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvappprofiledescriptor/init(name:)",
+    "html": "Deprecated\n\nUser Management capability get-current-user is no longer supported. Please use runs-as-current-user-with-user-independent-keychain and kSecUseUserIndependentKeychain for sharing keychain items across users.\n\nParameters\nname\n\nThe user-visible string to display for the profile.\n\nReturn Value\n\nAn initialized app profile descriptor object."
+  },
+  {
+    "title": "init(coder:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvappprofiledescriptor/init(coder:)",
+    "html": "Deprecated\n\nUser Management capability get-current-user is no longer supported. Please use runs-as-current-user-with-user-independent-keychain and kSecUseUserIndependentKeychain for sharing keychain items across users."
+  },
+  {
+    "title": "TVContentItemImageShape",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitemimageshape",
+    "html": "Topics\nConstants\ncase none\nThe content has no particular shape.\ncase poster\nThe content has a width:height ratio of 2:3.\ncase square\nThe content has a width:height ratio of 1:1.\ncase SDTV\nThe content is standard-definition television content with a width:height ratio of 4:3.\ncase HDTV\nThe content is high-definition television content with a width:height ratio of 16:9.\ncase wide\nThe content has a width:height ratio of 8:3.\ncase extraWide\nThe content has a width:height ratio of 80:27.\nInitializers\ninit?(rawValue: Int)\nDefault Implementations\nEquatable Implementations\nRawRepresentable Implementations\nRelationships\nConforms To\nEquatable\nHashable\nRawRepresentable\nSendable\nSee Also\nInspecting the Content Properties\nvar creationDate: Date?\nThe date when the content item was created, or the date when it was first broadcast, or some other kind of origination date.\nDeprecated\nvar duration: NSNumber?\nThe amount of time required to play the media to completion.\nDeprecated\nvar expirationDate: Date?\nThe date when the user will no longer be able to access the item.\nDeprecated\nvar imageShape: TVContentItemImageShape\nThe intended aspect ratio or shape of the content image.\nDeprecated"
+  },
+  {
+    "title": "init(items:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitemcollection/init(items:)",
+    "html": "Parameters\nitems\n\nThe array of TVTopShelfItem objects to put in the collection.\n\nReturn Value\n\nA new item collection object containing the specified items."
+  },
+  {
+    "title": "title",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitem/title",
+    "html": "Deprecated\n\nTVContentItem has been replaced by TVTopShelfItem\n\nDiscussion\n\nThe title should be localized into the current user’s locale.\n\nSee Also\nInspecting the General Display Properties\nvar badgeCount: NSNumber?\nA badging integer for this item.\nDeprecated\nvar topShelfItems: [TVContentItem]?\nAn array of content items that are the items of a section.\nDeprecated"
+  },
+  {
+    "title": "SetAlgebra Implementations",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct/setalgebra-implementations",
+    "html": "Topics\nInitializers\ninit<S>(S)\nCreates a new set from a finite sequence of items.\ninit(arrayLiteral: Self.Element...)\nCreates a set containing the elements of the given array literal.\nAvailable when ArrayLiteralElement is Self.Element.\nInstance Properties\nvar isEmpty: Bool\nA Boolean value that indicates whether the set has no elements.\nInstance Methods\nfunc isDisjoint(with: Self) -> Bool\nReturns a Boolean value that indicates whether the set has no members in common with the given set.\nfunc isStrictSubset(of: Self) -> Bool\nReturns a Boolean value that indicates whether this set is a strict subset of the given set.\nfunc isStrictSuperset(of: Self) -> Bool\nReturns a Boolean value that indicates whether this set is a strict superset of the given set.\nfunc isSubset(of: Self) -> Bool\nReturns a Boolean value that indicates whether the set is a subset of another set.\nfunc isSuperset(of: Self) -> Bool\nReturns a Boolean value that indicates whether the set is a superset of the given set.\nfunc subtract(Self)\nRemoves the elements of the given set from this set.\nfunc subtracting(Self) -> Self\nReturns a new set containing the elements of this set that do not occur in the given set."
+  },
+  {
+    "title": "OptionSet Implementations",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct/optionset-implementations",
+    "html": "Topics\nInitializers\ninit()\nCreates an empty option set.\nAvailable when RawValue conforms to FixedWidthInteger.\nInstance Methods\nfunc contains(Self) -> Bool\nReturns a Boolean value that indicates whether a given element is a member of the option set.\nAvailable when Self is Self.Element.\nfunc formIntersection(Self)\nRemoves all elements of this option set that are not also present in the given set.\nAvailable when RawValue conforms to FixedWidthInteger.\nfunc formSymmetricDifference(Self)\nReplaces this set with a new set containing all elements contained in either this set or the given set, but not in both.\nAvailable when RawValue conforms to FixedWidthInteger.\nfunc formUnion(Self)\nInserts the elements of another set into this option set.\nAvailable when RawValue conforms to FixedWidthInteger.\nfunc insert(Self.Element) -> (inserted: Bool, memberAfterInsert: Self.Element)\nAdds the given element to the option set if it is not already a member.\nAvailable when Self is Self.Element.\nfunc intersection(Self) -> Self\nReturns a new option set with only the elements contained in both this set and the given set.\nfunc remove(Self.Element) -> Self.Element?\nRemoves the given element and all elements subsumed by it.\nAvailable when Self is Self.Element.\nfunc symmetricDifference(Self) -> Self\nReturns a new option set with the elements contained in this set or in the given set, but not in both.\nfunc union(Self) -> Self\nReturns a new option set of the elements contained in this set, in the given set, or in both.\nfunc update(with: Self.Element) -> Self.Element?\nInserts the given element into the set.\nAvailable when Self is Self.Element."
+  },
+  {
+    "title": "Equatable Implementations",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct/equatable-implementations",
+    "html": "Topics\nOperators\nstatic func != (Self, Self) -> Bool\nReturns a Boolean value indicating whether two values are not equal."
+  },
+  {
+    "title": "Equatable Implementations",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfsectioneditem/imageshape-swift.enum/equatable-implementations",
+    "html": "Topics\nOperators\nstatic func != (Self, Self) -> Bool\nReturns a Boolean value indicating whether two values are not equal."
+  },
+  {
+    "title": "TVTopShelfSectionedItem.ImageShape.poster",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfsectioneditem/imageshape-swift.enum/poster",
+    "html": "See Also\nImage Shapes\ncase square\nAn image with a 1:1 aspect ratio.\ncase hdtv\nAn image with a 16:9 aspect ratio."
+  },
+  {
+    "title": "TVTopShelfSectionedItem.ImageShape.hdtv",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfsectioneditem/imageshape-swift.enum/hdtv",
+    "html": "See Also\nImage Shapes\ncase square\nAn image with a 1:1 aspect ratio.\ncase poster\nA poster-shaped image with a 2:3 aspect ratio."
+  },
+  {
+    "title": "topShelfItems",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfprovider/topshelfitems",
+    "html": "Required\n\nDeprecated\n\nTVTopShelfProvider has been replaced by TVTopShelfContentProvider\n\nDiscussion\n\nIf the value is an empty array, the system falls back to the static image provided with the app.\n\nSee Also\nImplementing TV Services Extension Properties\nvar topShelfStyle: TVTopShelfContentStyle\nThe user interface style that should be used to display the content items.\n\nRequired\n\nDeprecated\nenum TVTopShelfContentStyle\nAn enumerated type used to specify the style in which you want your content to be displayed.\nDeprecated"
+  },
+  {
+    "title": "values",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfnamedattribute/values",
+    "html": "See Also\nGetting the Name and Value\nvar name: String\nThe localized name of the attribute."
+  },
+  {
+    "title": "RawRepresentable Implementations",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselcontent/style-swift.enum/rawrepresentable-implementations",
+    "html": "Topics\nInstance Properties\nvar hashValue: Int\nAvailable when Self conforms to Hashable and RawValue conforms to Hashable.\nInstance Methods\nfunc hash(into: inout Hasher)\nAvailable when Self conforms to Hashable and RawValue conforms to Hashable."
+  },
+  {
+    "title": "init(name:values:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfnamedattribute/init(name:values:)",
+    "html": "Parameters\nname\n\nThe localized name of the attribute.\n\nvalues\n\nAn array of strings containing the attribute values.\n\nReturn Value\n\nA new named attribute object."
+  },
+  {
+    "title": "name",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfnamedattribute/name",
+    "html": "See Also\nGetting the Name and Value\nvar values: [String]\nThe array of values for the attribute."
+  },
+  {
+    "title": "TVTopShelfSectionedItem.ImageShape.square",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfsectioneditem/imageshape-swift.enum/square",
+    "html": "See Also\nImage Shapes\ncase poster\nA poster-shaped image with a 2:3 aspect ratio.\ncase hdtv\nAn image with a 16:9 aspect ratio."
+  },
+  {
+    "title": "videoResolution4K",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct/videoresolution4k",
+    "html": "Discussion\n\nSpecify this constant, or the videoResolutionHD constant, but not both.\n\nSee Also\nMedia Options\nstatic var videoResolutionHD: TVTopShelfCarouselItem.MediaOptions\nHigh-definition video resolution.\nstatic var videoColorSpaceHDR: TVTopShelfCarouselItem.MediaOptions\nHigh-dynamic-range video.\nstatic var videoColorSpaceDolbyVision: TVTopShelfCarouselItem.MediaOptions\nDolby Vision video.\nstatic var audioDolbyAtmos: TVTopShelfCarouselItem.MediaOptions\nAudio content with Dolby Atmos.\nstatic var audioTranscriptionClosedCaptioning: TVTopShelfCarouselItem.MediaOptions\nAudio content with closed captioning.\nstatic var audioTranscriptionSDH: TVTopShelfCarouselItem.MediaOptions\nAudio content with subtitles for people who are deaf or hard of hearing.\nstatic var audioDescription: TVTopShelfCarouselItem.MediaOptions\nAudio content with audio descriptions."
+  },
+  {
+    "title": "loadTopShelfContent(completionHandler:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcontentprovider/loadtopshelfcontent(completionhandler:)",
+    "html": "Parameters\ncompletionHandler\n\nThe handler block to execute with your content. This block has no return value and takes the following parameter:\n\ncontent\n\nThe object that describes the content you want to display in the top shelf interface. For example, to display your content in a carousel format, specify a TVTopShelfCarouselContent object with the items you want to display. Specify nil if you have no content to display or encounter an error.\n\nDiscussion\n\nImportant\n\nYou can call this method from synchronous code using a completion handler, as shown on this page, or you can call it as an asynchronous method that has the following declaration:\n\nfunc loadTopShelfContent() async -> (any TVTopShelfContent)?\n\n\nFor information about concurrency and asynchronous code in Swift, see Calling Objective-C APIs Asynchronously.\n\nThe system calls this method when it needs your app’s top shelf content. In your implementation, create the TVTopShelfItem objects you want to display and wrap them in a matching TVTopShelfContent object. The specific objects you create depends on how you want to display your content. You can display items using one of the following interface styles:\n\nA carousel interface displays TVTopShelfCarouselItem objects in a horizontal line. The user swipes left and right to navigate from item to item.\n\nA sectioned interface groups TVTopShelfSectionedItem objects together and presents them in a scrolling list.\n\nAn inset interface organizes either carousel or sectioned items and insets them by a specified amount.\n\nIf you call the completionHandler with a nil value, the system displays a static image provided by your app."
+  },
+  {
+    "title": "init(identifier:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/init(identifier:)",
+    "html": "Parameters\nidentifier\n\nThe string you use to identify this item. This string must be unique among all of the items you ever return from your app. Never recycle identifiers.\n\nReturn Value\n\nAn empty item object.\n\nDiscussion\n\nAfter creating the item object, call the setImageURL(_:for:) method to assign an image and one or more actions to the item. Include the item object in the TVTopShelfContent object you return from your extension."
+  },
+  {
+    "title": "shouldStorePreferencesForCurrentUser",
+    "url": "https://developer.apple.com/documentation/TVServices/TVUserManager/shouldStorePreferencesForCurrentUser",
+    "html": "Discussion\n\nImportant\n\nTo create a TVUserManager object, add the User Management Entitlement to your app or app extension, and select the Runs as Current User, Only When User-Independent Keychain is Available option.\n\nSome apps rely on profiles to maintain separate information for each person who uses a shared device, such as a video content app that retains which shows they watch. To avoid interrupting people with a profile picker each time they launch your app, you can save the current user’s selection on a shared device. After someone selects a profile, use shouldStorePreferencesForCurrentUser to determine whether to retain the profile selection or to prompt each time your app launches. This property might be false if people share a device, but don’t configure multiple users on that device.\n\nIf the property’s value is false, display the profile picker to determine which profile to use for the current session, but don’t save the selected profile. If the value is true, and there isn’t a saved profile in UserDefaults, display the profile picker and save the selected profile for future use. If the value is true and there’s already a saved profile, skip the prompt and use the saved profile.\n\nTip\n\nWhen your app runs in tvOS 15 or earlier, where shouldStorePreferencesForCurrentUser isn’t available, display the profile picker at the beginning of each session."
+  },
+  {
+    "title": "TVContentIdentifier",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentidentifier",
+    "html": "Deprecated\n\nTVContentIdentifier has been replaced by TVTopShelfContentProvider\n\nOverview\n\nEvery content identifier is represented by two parts: a string identifier (identifier) and a container identifier (container). The container identifier may be nil, which indicates that the content lives at the top level of the container hierarchy. You are responsible for organizing your content into a hierarchy and creating identifiers that uniquely identify each piece of content.\n\nWhen designing your content identifiers, follow this guidance:\n\nA given content identifier must be unique for a particular content item, across all past, current, and future content items, even if the user no longer has access to that item.\n\nThe uniqueness of a content identifier comes from the uniqueness of its two parts. The identifier property of a content identifier need not be universally unique across all of the app’s content identifiers, as long as items that share the same identifier string are contained in different containers.\n\nTopics\nInitializing a Content Identifier\ninit(identifier: String, container: TVContentIdentifier?)\nCreates a new content identifier.\ninit?(coder: NSCoder)\nReturns an object initialized from data in a given unarchiver.\nInspecting an Identifier’s Contents\nvar identifier: String\nThe string that identifies this content item.\nvar container: TVContentIdentifier?\nThe container that this content item is contained in.\nRelationships\nInherits From\nNSObject\nConforms To\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSCoding\nNSCopying\nNSObjectProtocol\nNSSecureCoding\nSee Also\nContent\nclass TVContentItem\nAn object that describes either a piece of content or a container for other content items.\nDeprecated\nfunc TVTopShelfImageSize(shape: TVContentItemImageShape, style: TVTopShelfContentStyle) -> CGSize\nReturns the ideal size for an image, according to its particular shape and style.\nDeprecated"
+  },
+  {
+    "title": "TVTopShelfImageSize(shape:style:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfimagesize(shape:style:)",
+    "html": "Deprecated\n\nTVTopShelfImageSizeForShape has been replaced by [TVTopShelfSectionedContent imageSizeForImageShape:] and [TVTopShelfInsetContent imageSize]\n\nParameters\nshape\n\nThe shape of the content item.\n\nstyle\n\nThe style of the TV Top Shelf user interface.\n\nDiscussion\n\nCall this function to determine the ideal image size to use to avoid image scaling. Typically, if your app has access to multiple images for a given piece of content, you use this function to choose which image most closely matches the ideal size for the version of the operating system that your app is running on. An image provided in that size does not require any image scaling. If you request the size of a shape that is not allowed in the given style, the function returns CGSizeZero.\n\nSee Also\nContent\nclass TVContentItem\nAn object that describes either a piece of content or a container for other content items.\nDeprecated\nclass TVContentIdentifier\nAn object that uniquely identifies media content in either a single piece or a collection.\nDeprecated"
+  },
+  {
+    "title": "init(sections:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfsectionedcontent/init(sections:)",
+    "html": "Parameters\nsections\n\nAn array of TVTopShelfItemCollection objects, representing the sections of your interface.\n\nReturn Value\n\nA new sectioned content object containing the specified sections."
+  },
+  {
+    "title": "TVContentItem",
+    "url": "https://developer.apple.com/documentation/tvservices/tvcontentitem",
+    "html": "Deprecated\n\nTVContentItem has been replaced by TVTopShelfItem\n\nOverview\n\nThe exact details of what a content item is are dependent on your app. For example, a content item might be a piece of media or it might provide access to news or other content available to your app.\n\nTo create a description of a piece of content, create a content identifier object and then use this object to initialize a new TVContentItem object. Then, set any other properties that are appropriate for the object you are creating. Most of the properties are optional, and many properties apply only to certain kinds of content. Inspect an existing TVContentItem object to retrieve the media and playback properties, such as the duration of the content or when the content was last played.\n\nTopics\nInitializing a Content Item\ninit(contentIdentifier: TVContentIdentifier)\nInitializes a new content item.\ninit?(coder: NSCoder)\nReturns an object initialized from data in a given unarchiver.\nReading a Content Item’s Identifier\nvar contentIdentifier: TVContentIdentifier\nThe content identifier that uniquely identifies this item.\nInspecting the General Display Properties\nThese properties describe the item to be displayed..\nvar badgeCount: NSNumber?\nA badging integer for this item.\nvar title: String?\nThe localized string title of the item.\nvar topShelfItems: [TVContentItem]?\nAn array of content items that are the items of a section.\nAccessing Image Resources\nvar imageURL: URL?\nA URL giving the location of the image to be displayed for this content item.\nfunc imageURL(forTraits: TVContentItemImageTrait) -> URL?\nRetrieve the URL for the image that best matches the specified traits.\nfunc setImageURL(URL?, forTraits: TVContentItemImageTrait)\nstruct TVContentItemImageTrait\nTraits describing the type of image you want.\nInspecting the Content Properties\nThese properties are used to describe the underlying content item.\nvar creationDate: Date?\nThe date when the content item was created, or the date when it was first broadcast, or some other kind of origination date.\nvar duration: NSNumber?\nThe amount of time required to play the media to completion.\nvar expirationDate: Date?\nThe date when the user will no longer be able to access the item.\nvar imageShape: TVContentItemImageShape\nThe intended aspect ratio or shape of the content image.\nenum TVContentItemImageShape\nAn enumerated type that identifies the shape in which the content item should be displayed.\nInspecting the Playback Properties\nvar currentPosition: NSNumber?\nThe index location, measured in seconds, at which the user last played this item.\nvar hasPlayedToEnd: NSNumber?\nA Boolean value indicating whether the user can be considered to have finished this item.\nvar lastAccessedDate: Date?\nThe date when the user last accessed this item.\nInspecting the Application Launch Properties\nThe application launch properties are URLs that the system can use to launch your app. Each URL specifies the content item to be launched and the action to be taken. You are responsible for creating a URL scheme and adding code to your app so that it can respond when these URLs are invoked.\nvar displayURL: URL?\nA URL that causes the app which created this content item to display a description screen for the item.\nvar playURL: URL?\nA URL that causes the app which created this content item to begin playing the item at the user’s current position.\nRelationships\nInherits From\nNSObject\nConforms To\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSCoding\nNSCopying\nNSObjectProtocol\nNSSecureCoding\nSee Also\nContent\nclass TVContentIdentifier\nAn object that uniquely identifies media content in either a single piece or a collection.\nDeprecated\nfunc TVTopShelfImageSize(shape: TVContentItemImageShape, style: TVTopShelfContentStyle) -> CGSize\nReturns the ideal size for an image, according to its particular shape and style.\nDeprecated"
+  },
+  {
+    "title": "TVTopShelfProvider",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfprovider",
+    "html": "Deprecated\n\nTVTopShelfProvider has been replaced by TVTopShelfContentProvider\n\nOverview\n\nYou adopt this protocol in the principal class of your app’s TV Services extension. Apps that implement this extension can provide dynamic content to the Top Shelf element rather than having the system use the static image submitted with the app. The topShelfStyle property specifies the interface style you want, and the topShelfItems property specifies the content items to display. Whenever you change the content provided by the extension, post a TVTopShelfItemsDidChangeNotification notification to prompt the system to reload your content.\n\nTopics\nImplementing TV Services Extension Properties\nvar topShelfItems: [TVContentItem]\nReturns an array of content items to be displayed.\n\nRequired\n\nvar topShelfStyle: TVTopShelfContentStyle\nThe user interface style that should be used to display the content items.\n\nRequired\n\nenum TVTopShelfContentStyle\nAn enumerated type used to specify the style in which you want your content to be displayed.\nNotifying the System of Changes\nstatic let TVTopShelfItemsDidChange: NSNotification.Name\nA notification to post when your app’s Top Shelf content has changed."
+  },
+  {
+    "title": "TVTopShelfCarouselItem.MediaOptions",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-swift.struct",
+    "html": "Topics\nMedia Options\nstatic var videoResolutionHD: TVTopShelfCarouselItem.MediaOptions\nHigh-definition video resolution.\nstatic var videoResolution4K: TVTopShelfCarouselItem.MediaOptions\nUltra-high-definition 4K video resolution.\nstatic var videoColorSpaceHDR: TVTopShelfCarouselItem.MediaOptions\nHigh-dynamic-range video.\nstatic var videoColorSpaceDolbyVision: TVTopShelfCarouselItem.MediaOptions\nDolby Vision video.\nstatic var audioDolbyAtmos: TVTopShelfCarouselItem.MediaOptions\nAudio content with Dolby Atmos.\nstatic var audioTranscriptionClosedCaptioning: TVTopShelfCarouselItem.MediaOptions\nAudio content with closed captioning.\nstatic var audioTranscriptionSDH: TVTopShelfCarouselItem.MediaOptions\nAudio content with subtitles for people who are deaf or hard of hearing.\nstatic var audioDescription: TVTopShelfCarouselItem.MediaOptions\nAudio content with audio descriptions.\nInitializers\ninit(rawValue: UInt)\nDefault Implementations\nEquatable Implementations\nOptionSet Implementations\nSetAlgebra Implementations\nRelationships\nConforms To\nEquatable\nExpressibleByArrayLiteral\nOptionSet\nRawRepresentable\nSendable\nSetAlgebra\nSee Also\nAdding Media Badges\nvar mediaOptions: TVTopShelfCarouselItem.MediaOptions\nInformation about the media format and presentation options."
+  },
+  {
+    "title": "identifier",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/identifier",
+    "html": "See Also\nGetting the Item Attributes\nvar expirationDate: Date?\nThe date on which the item becomes unavailable."
+  },
+  {
+    "title": "expirationDate",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/expirationdate",
+    "html": "Discussion\n\nSpecify an expiration date when the content associated with the item has a limited lifespan. For example, use it to specify the date on which a rented movie expires. The system uses this property to remove items that have expired since you last provided data.\n\nSee Also\nGetting the Item Attributes\nvar identifier: String\nThe unique identifier for the item."
+  },
+  {
+    "title": "TVTopShelfItem.ImageTraits",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/imagetraits",
+    "html": "Topics\nImage Traits\nstatic var screenScale1x: TVTopShelfItem.ImageTraits\nAn image to display on devices running in a 1x resolution mode.\nstatic var screenScale2x: TVTopShelfItem.ImageTraits\nA high-resolution image to display on devices running in a 2x resolution mode.\nInitializers\ninit(rawValue: UInt)\nDefault Implementations\nEquatable Implementations\nOptionSet Implementations\nSetAlgebra Implementations\nRelationships\nConforms To\nEquatable\nExpressibleByArrayLiteral\nOptionSet\nRawRepresentable\nSendable\nSetAlgebra\nSee Also\nProviding an Image for the Item\nfunc imageURL(for: TVTopShelfItem.ImageTraits) -> URL?\nReturns an image associated with the current item.\nfunc setImageURL(URL?, for: TVTopShelfItem.ImageTraits)\nAssociates an image with the current item."
+  },
+  {
+    "title": "topShelfContentDidChange()",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcontentprovider/topshelfcontentdidchange()",
+    "html": "Discussion\n\nCall this method when your top shelf content changes. This method notifies the system asynchronously and returns. You may call this method either from your app or from your Top Shelf app extension."
+  },
+  {
+    "title": "imageURL(for:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/imageurl(for:)",
+    "html": "Parameters\ntraits\n\nThe traits that describe the image.\n\nReturn Value\n\nThe image associated with the specified traits; otherwise, nil if you did not previously assign an image with the specified traits.\n\nSee Also\nProviding an Image for the Item\nfunc setImageURL(URL?, for: TVTopShelfItem.ImageTraits)\nAssociates an image with the current item.\nstruct ImageTraits\nConstants describing the image format."
+  },
+  {
+    "title": "userIdentifiersForCurrentProfile",
+    "url": "https://developer.apple.com/documentation/tvservices/tvusermanager/useridentifiersforcurrentprofile",
+    "html": "Deprecated\n\nManually mapping profiles is deprecated. To opt-in to the system’s automatic user-data management, add the User Management Entitlement to your target, with a value of runs-as-current-user-with-user-independent-keychain. For more information, see Mapping Apple TV users to app profiles.\n\nDiscussion\n\nIf your app remembers which app-specific profile each Apple TV user prefers, use this property to provide that information to the system. Fill this property with zero or more user identifiers that you previously retrieved from the currentUserIdentifier property. Doing so creates a mapping between your app profiles and the Apple TV accounts that prefer them. The system uses the information in this property to provide better information in user dialogs and doesn’t change the property’s value.\n\nUpdate this property whenever the user selects a different app profile. The system doesn’t change the value in this property, so it contains the last value that you assigned to it since app launch. However, the property supports key-value observing if you want to track the changes that you make from other parts of your app.\n\nSee Also\nDeprecated symbols\nvar currentUserIdentifier: TVUserIdentifier?\nA unique identifier representing the currently active Apple TV user.\nDeprecated\nclass let currentUserIdentifierDidChangeNotification: NSNotification.Name\nThe notification the system sends when a different user becomes current.\nDeprecated\nfunc presentProfilePreferencePanel(currentSettings: [TVUserIdentifier : TVAppProfileDescriptor], availableProfiles: [TVAppProfileDescriptor], completion: ([TVUserIdentifier : TVAppProfileDescriptor]) -> Void)\nPresents a user-to-profile configuration panel, which lets the user specify their preferred profile.\nDeprecated\nfunc shouldStorePreferenceForCurrentUser(to: TVAppProfileDescriptor, completion: (Bool) -> Void)\nPrompts the user to save the specified profile as the preferred profile for the current user.\nDeprecated\nclass TVAppProfileDescriptor\nA model object that you use to represent an app-specific profile.\nDeprecated\ntypealias TVUserIdentifier\nA unique string for differentiating between accounts on Apple TV.\nDeprecated"
+  },
+  {
+    "title": "TVUserIdentifier",
+    "url": "https://developer.apple.com/documentation/tvservices/tvuseridentifier",
+    "html": "Deprecated\n\nManually mapping profiles is deprecated. To opt-in to the system’s automatic user-data management, add the User Management Entitlement to your target, with a value of runs-as-current-user-with-user-independent-keychain. For more information, see Mapping Apple TV users to app profiles.\n\nDiscussion\n\nThis type stores an ASCII string containing no more than 64 characters. The string isn’t the same as the user’s Apple ID, and you should never display it in your app’s interface. It’s a random string generated by the TVUserManager object and shared among the Apple TV devices on the user’s HomeKit network. You use it to differentiate between different accounts on the same Apple TV.\n\nSee Also\nDeprecated symbols\nvar currentUserIdentifier: TVUserIdentifier?\nA unique identifier representing the currently active Apple TV user.\nDeprecated\nclass let currentUserIdentifierDidChangeNotification: NSNotification.Name\nThe notification the system sends when a different user becomes current.\nDeprecated\nfunc presentProfilePreferencePanel(currentSettings: [TVUserIdentifier : TVAppProfileDescriptor], availableProfiles: [TVAppProfileDescriptor], completion: ([TVUserIdentifier : TVAppProfileDescriptor]) -> Void)\nPresents a user-to-profile configuration panel, which lets the user specify their preferred profile.\nDeprecated\nfunc shouldStorePreferenceForCurrentUser(to: TVAppProfileDescriptor, completion: (Bool) -> Void)\nPrompts the user to save the specified profile as the preferred profile for the current user.\nDeprecated\nclass TVAppProfileDescriptor\nA model object that you use to represent an app-specific profile.\nDeprecated\nvar userIdentifiersForCurrentProfile: [TVUserIdentifier]\nAn array of system user identifiers that you associated with the current app-specific profile.\nDeprecated"
+  },
+  {
+    "title": "TVAppProfileDescriptor",
+    "url": "https://developer.apple.com/documentation/tvservices/tvappprofiledescriptor",
+    "html": "Deprecated\n\nManually mapping profiles is deprecated. To opt-in to the system’s automatic user-data management, add the User Management Entitlement to your target, with a value of runs-as-current-user-with-user-independent-keychain. For more information, see Mapping Apple TV users to app profiles.\n\nOverview\n\nA TVAppProfileDescriptor object represents a single user profile in your app. You create app profile descriptor objects yourself and manage them in your app’s data structures. The default object contains only the user-visible name for the profile, which must be a nonempty string. You can also subclass to add app-specific properties. For example, you might add an app-specific identifier for the profile. You might also store the identifiers for all Apple TV users that are configured to use this profile.\n\nFor more information about mapping your app profiles to Apple TV accounts, see TVUserManager.\n\nTopics\nCreating a Profile Descriptor\ninit(name: String)\nCreates a new app profile descriptor object with the specified name.\nGetting the Profile Name\nvar name: String\nThe user-visible label associated with the app profile.\nInitializers\ninit?(coder: NSCoder)\nRelationships\nInherits From\nNSObject\nConforms To\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSCoding\nNSCopying\nNSObjectProtocol\nNSSecureCoding\nSee Also\nDeprecated symbols\nvar currentUserIdentifier: TVUserIdentifier?\nA unique identifier representing the currently active Apple TV user.\nDeprecated\nclass let currentUserIdentifierDidChangeNotification: NSNotification.Name\nThe notification the system sends when a different user becomes current.\nDeprecated\nfunc presentProfilePreferencePanel(currentSettings: [TVUserIdentifier : TVAppProfileDescriptor], availableProfiles: [TVAppProfileDescriptor], completion: ([TVUserIdentifier : TVAppProfileDescriptor]) -> Void)\nPresents a user-to-profile configuration panel, which lets the user specify their preferred profile.\nDeprecated\nfunc shouldStorePreferenceForCurrentUser(to: TVAppProfileDescriptor, completion: (Bool) -> Void)\nPrompts the user to save the specified profile as the preferred profile for the current user.\nDeprecated\ntypealias TVUserIdentifier\nA unique string for differentiating between accounts on Apple TV.\nDeprecated\nvar userIdentifiersForCurrentProfile: [TVUserIdentifier]\nAn array of system user identifiers that you associated with the current app-specific profile.\nDeprecated"
+  },
+  {
+    "title": "shouldStorePreferenceForCurrentUser(to:completion:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvusermanager/shouldstorepreferenceforcurrentuser(to:completion:)",
+    "html": "Deprecated\n\nManually mapping profiles is deprecated. To opt-in to the system’s automatic user-data management, add the User Management Entitlement to your target, with a value of runs-as-current-user-with-user-independent-keychain. For more information, see Mapping Apple TV users to app profiles.\n\nParameters\nprofile\n\nThe profile to associate with the current user.\n\ncompletion\n\nThe completion handler to call with the results. This handler has no return value and takes the following parameter:\n\nshouldCreateMapping\n\nA Boolean value indicating whether your app should associate the specified profile with the current user. If this parameter is true, save the association in your app’s data structures.\n\nDiscussion\n\nImportant\n\nYou can call this method from synchronous code using a completion handler, as shown on this page, or you can call it as an asynchronous method that has the following declaration:\n\nfunc shouldStorePreferenceForCurrentUser(to profile: TVAppProfileDescriptor) async -> Bool\n\n\nFor information about concurrency and asynchronous code in Swift, see Calling Objective-C APIs Asynchronously.\n\nUse this method to confirm that the profile chosen by the user should become their new preferred profile. The method prompts the user to confirm the profile change and calls the completion handler with the results. Call this method only once for each user.\n\nSee Also\nDeprecated symbols\nvar currentUserIdentifier: TVUserIdentifier?\nA unique identifier representing the currently active Apple TV user.\nDeprecated\nclass let currentUserIdentifierDidChangeNotification: NSNotification.Name\nThe notification the system sends when a different user becomes current.\nDeprecated\nfunc presentProfilePreferencePanel(currentSettings: [TVUserIdentifier : TVAppProfileDescriptor], availableProfiles: [TVAppProfileDescriptor], completion: ([TVUserIdentifier : TVAppProfileDescriptor]) -> Void)\nPresents a user-to-profile configuration panel, which lets the user specify their preferred profile.\nDeprecated\nclass TVAppProfileDescriptor\nA model object that you use to represent an app-specific profile.\nDeprecated\ntypealias TVUserIdentifier\nA unique string for differentiating between accounts on Apple TV.\nDeprecated\nvar userIdentifiersForCurrentProfile: [TVUserIdentifier]\nAn array of system user identifiers that you associated with the current app-specific profile.\nDeprecated"
+  },
+  {
+    "title": "presentProfilePreferencePanel(currentSettings:availableProfiles:completion:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvusermanager/presentprofilepreferencepanel(currentsettings:availableprofiles:completion:)",
+    "html": "Deprecated\n\nManually mapping profiles is deprecated. To opt-in to the system’s automatic user-data management, add the User Management Entitlement to your target, with a value of runs-as-current-user-with-user-independent-keychain. For more information, see Mapping Apple TV users to app profiles.\n\nParameters\nexistingSettings\n\nA dictionary that maps each Apple TV user to their preferred app profile object in your app. Each key is a string representing a system user that you previously obtained from the currentUserIdentifier property. The value is a TVAppProfileDescriptor object that you use to represent one of your app-specific profiles. The method uses this information to identify the preferred profile for each user.\n\navailableProfiles\n\nThe complete list of app-specific profiles available in your app. The configuration panel displays this set of profiles to the user.\n\ncompletion\n\nThe completion handler to call when the user dismisses the configuration panel. This handler has no return value and takes the following parameter:\n\nnewSettings\n\nA dictionary containing an updated map from system user to app profile. The information is similar to what you provide in the existingSettings parameter, but reflects the changes made by the user.\n\nDiscussion\n\nImportant\n\nYou can call this method from synchronous code using a completion handler, as shown on this page, or you can call it as an asynchronous method that has the following declaration:\n\nfunc presentProfilePreferencePanel(currentSettings: [TVUserIdentifier : TVAppProfileDescriptor], availableProfiles: [TVAppProfileDescriptor]) async -> [TVUserIdentifier : TVAppProfileDescriptor]\n\n\nFor information about concurrency and asynchronous code in Swift, see Calling Objective-C APIs Asynchronously.\n\nCalling this method displays a panel that lets the user configure which app-specific profile to associate with each Apple TV user account. The panel gives the user the option to select from any of the profiles in the availableProfiles parameter. It also uses the information in the existingSettings parameter to configure the initial mapping between users and profiles. After configuring the user accounts and dismissing the panel, the system calls your completion handler to deliver the updated mapping between user accounts and profiles.\n\nSee Also\nDeprecated symbols\nvar currentUserIdentifier: TVUserIdentifier?\nA unique identifier representing the currently active Apple TV user.\nDeprecated\nclass let currentUserIdentifierDidChangeNotification: NSNotification.Name\nThe notification the system sends when a different user becomes current.\nDeprecated\nfunc shouldStorePreferenceForCurrentUser(to: TVAppProfileDescriptor, completion: (Bool) -> Void)\nPrompts the user to save the specified profile as the preferred profile for the current user.\nDeprecated\nclass TVAppProfileDescriptor\nA model object that you use to represent an app-specific profile.\nDeprecated\ntypealias TVUserIdentifier\nA unique string for differentiating between accounts on Apple TV.\nDeprecated\nvar userIdentifiersForCurrentProfile: [TVUserIdentifier]\nAn array of system user identifiers that you associated with the current app-specific profile.\nDeprecated"
+  },
+  {
+    "title": "currentUserIdentifierDidChangeNotification",
+    "url": "https://developer.apple.com/documentation/tvservices/tvusermanager/currentuseridentifierdidchangenotification",
+    "html": "Deprecated\n\nManually mapping profiles is deprecated. To opt-in to the system’s automatic user-data management, add the User Management Entitlement to your target, with a value of runs-as-current-user-with-user-independent-keychain. For more information, see Mapping Apple TV users to app profiles.\n\nDiscussion\n\nThe object of the notification is nil. The notification doesn’t add any keys to the userInfo dictionary.\n\nSee Also\nDeprecated symbols\nvar currentUserIdentifier: TVUserIdentifier?\nA unique identifier representing the currently active Apple TV user.\nDeprecated\nfunc presentProfilePreferencePanel(currentSettings: [TVUserIdentifier : TVAppProfileDescriptor], availableProfiles: [TVAppProfileDescriptor], completion: ([TVUserIdentifier : TVAppProfileDescriptor]) -> Void)\nPresents a user-to-profile configuration panel, which lets the user specify their preferred profile.\nDeprecated\nfunc shouldStorePreferenceForCurrentUser(to: TVAppProfileDescriptor, completion: (Bool) -> Void)\nPrompts the user to save the specified profile as the preferred profile for the current user.\nDeprecated\nclass TVAppProfileDescriptor\nA model object that you use to represent an app-specific profile.\nDeprecated\ntypealias TVUserIdentifier\nA unique string for differentiating between accounts on Apple TV.\nDeprecated\nvar userIdentifiersForCurrentProfile: [TVUserIdentifier]\nAn array of system user identifiers that you associated with the current app-specific profile.\nDeprecated"
+  },
+  {
+    "title": "currentUserIdentifier",
+    "url": "https://developer.apple.com/documentation/tvservices/tvusermanager/currentuseridentifier",
+    "html": "Deprecated\n\nManually mapping profiles is deprecated. To opt-in to the system’s automatic user-data management, add the User Management Entitlement to your target, with a value of runs-as-current-user-with-user-independent-keychain. For more information, see Mapping Apple TV users to app profiles.\n\nDiscussion\n\nUse this property to identify which Apple TV user is currently active. On Apple TV, users may provide credentials for multiple Apple accounts and switch quickly between them. This property uniquely identifies the user for the active account. You might use this information to select an appropriate user profile for your app.\n\nThe string in this property is randomly generated, and isn’t the same as the user’s Apple ID. Don’t display the string to your users. All Apple TVs on the user’s HomeKit network return the same string for the same account.\n\nYou can track changes to this property using key-value observing. You may access this property from an app extension.\n\nSee Also\nDeprecated symbols\nclass let currentUserIdentifierDidChangeNotification: NSNotification.Name\nThe notification the system sends when a different user becomes current.\nDeprecated\nfunc presentProfilePreferencePanel(currentSettings: [TVUserIdentifier : TVAppProfileDescriptor], availableProfiles: [TVAppProfileDescriptor], completion: ([TVUserIdentifier : TVAppProfileDescriptor]) -> Void)\nPresents a user-to-profile configuration panel, which lets the user specify their preferred profile.\nDeprecated\nfunc shouldStorePreferenceForCurrentUser(to: TVAppProfileDescriptor, completion: (Bool) -> Void)\nPrompts the user to save the specified profile as the preferred profile for the current user.\nDeprecated\nclass TVAppProfileDescriptor\nA model object that you use to represent an app-specific profile.\nDeprecated\ntypealias TVUserIdentifier\nA unique string for differentiating between accounts on Apple TV.\nDeprecated\nvar userIdentifiersForCurrentProfile: [TVUserIdentifier]\nAn array of system user identifiers that you associated with the current app-specific profile.\nDeprecated"
+  },
+  {
+    "title": "shouldStorePreferencesForCurrentUser",
+    "url": "https://developer.apple.com/documentation/tvservices/tvusermanager/shouldstorepreferencesforcurrentuser",
+    "html": "Discussion\n\nImportant\n\nTo create a TVUserManager object, add the User Management Entitlement to your app or app extension, and select the Runs as Current User, Only When User-Independent Keychain is Available option.\n\nSome apps rely on profiles to maintain separate information for each person who uses a shared device, such as a video content app that retains which shows they watch. To avoid interrupting people with a profile picker each time they launch your app, you can save the current user’s selection on a shared device. After someone selects a profile, use shouldStorePreferencesForCurrentUser to determine whether to retain the profile selection or to prompt each time your app launches. This property might be false if people share a device, but don’t configure multiple users on that device.\n\nIf the property’s value is false, display the profile picker to determine which profile to use for the current session, but don’t save the selected profile. If the value is true, and there isn’t a saved profile in UserDefaults, display the profile picker and save the selected profile for future use. If the value is true and there’s already a saved profile, skip the prompt and use the saved profile.\n\nTip\n\nWhen your app runs in tvOS 15 or earlier, where shouldStorePreferencesForCurrentUser isn’t available, display the profile picker at the beginning of each session."
+  },
+  {
+    "title": "imageSize",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfinsetcontent/imagesize",
+    "html": "Discussion\n\nThe standard image size for inset items is 1740 x 560 points. For more information about configuring the images for an inset interface, see Human Interface Guidelines."
+  },
+  {
+    "title": "url",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfaction/url",
+    "html": "Discussion\n\nURLs should specify the location of either the media item that you want to play or a page in your app."
+  },
+  {
+    "title": "init(url:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfaction/init(url:)-2zqfn",
+    "html": "Parameters\nURL\n\nThe URL of the content you want to display. Specify a deep link into your content. For example, specify the location of media items that you want to play, or specify the location of a page in your app that you want to display.\n\nReturn Value\n\nA new action object."
+  },
+  {
+    "title": "init(items:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfinsetcontent/init(items:)",
+    "html": "Parameters\nitems\n\nAn array of TVTopShelfItem objects representing the content that you want to display in the top shelf. This method stores a copy of the array.\n\nReturn Value\n\nA new inset content object containing the specified set of items."
+  },
+  {
+    "title": "imageSize(for:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfsectionedcontent/imagesize(for:)",
+    "html": "Parameters\nshape\n\nThe image shape whose dimensions you want.\n\nReturn Value\n\nThe recommended size of the image, in points.\n\nSee Also\nGetting the Image Size Information\nenum ImageShape\nConstants indicating the aspect ratio of an image."
+  },
+  {
+    "title": "setImageURL(_:for:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/setimageurl(_:for:)",
+    "html": "Parameters\nimageURL\n\nThe URL of the image. Specify nil to remove the image with the specified traits from the item.\n\ntraits\n\nThe traits that describe the image.\n\nDiscussion\n\nUse this method to assign images to a top shelf item. For most items, the system displays only an image. For carousel items, the system initially displays an image, but switches to the preview video when the navigation focus stops on the item.\n\nThe system always chooses the image whose traits match the target device.\n\nSee Also\nProviding an Image for the Item\nfunc imageURL(for: TVTopShelfItem.ImageTraits) -> URL?\nReturns an image associated with the current item.\nstruct ImageTraits\nConstants describing the image format."
+  },
+  {
+    "title": "TVTopShelfCarouselContent.Style",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselcontent/style-swift.enum",
+    "html": "Topics\nStyles\ncase actions\nAn interface that focuses on the actions you want the user to perform.\ncase details\nAn interface that displays detailed information about the item.\nInitializers\ninit?(rawValue: Int)\nDefault Implementations\nEquatable Implementations\nRawRepresentable Implementations\nRelationships\nConforms To\nEquatable\nHashable\nRawRepresentable\nSendable\nSee Also\nGetting the Item Style\nvar style: TVTopShelfCarouselContent.Style\nThe appearance to use when displaying items in the top shelf interface."
+  },
+  {
+    "title": "style",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselcontent/style-c.property",
+    "html": "See Also\nGetting the Item Style\nenum Style\nConstants indicating how you want items to appear in the top shelf interface."
+  },
+  {
+    "title": "TVTopShelfSectionedItem.ImageShape",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfsectioneditem/imageshape-swift.enum",
+    "html": "Topics\nImage Shapes\ncase square\nAn image with a 1:1 aspect ratio.\ncase poster\nA poster-shaped image with a 2:3 aspect ratio.\ncase hdtv\nAn image with a 16:9 aspect ratio.\nInitializers\ninit?(rawValue: Int)\nDefault Implementations\nEquatable Implementations\nRawRepresentable Implementations\nRelationships\nConforms To\nEquatable\nHashable\nRawRepresentable\nSendable\nSee Also\nGetting the Image Size Information\nclass func imageSize(for: TVTopShelfSectionedItem.ImageShape) -> CGSize\nReturns the dimensions to use for images of the specified shape."
+  },
+  {
+    "title": "TVTopShelfCarouselContent.Style.actions",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselcontent/style-swift.enum/actions",
+    "html": "Discussion\n\nUse this style when you want the user to focus on the play and display action buttons. This style minimizes other information or does not display it at all.\n\nSee Also\nStyles\ncase details\nAn interface that displays detailed information about the item."
+  },
+  {
+    "title": "init(style:items:)",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselcontent/init(style:items:)",
+    "html": "Parameters\nstyle\n\nThe appearance to use for individual items. For a list of possible values, see TVTopShelfCarouselContent.Style.\n\nitems\n\nThe items to display in the Top Shelf interface. All of the items in the array must have unique identifiers.\n\nReturn Value\n\nA new carousel content object containing the specified items."
+  },
+  {
+    "title": "playAction",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/playaction",
+    "html": "Discussion\n\nIn a carousel inteface, the first of two buttons invites the user to play the content associated with the current item. The action object you assign to this property provides the title and image to use for that button. When selected, the system loads the action’s URL.\n\nIn a sectioned interface, tvOS loads the URL for the specified action when the current item is focused and the user presses the play/pause button.\n\nSee Also\nAssigning Actions to the Item\nvar displayAction: TVTopShelfAction?\nThe action to perform when the user wants to see more information for the current item."
+  },
+  {
+    "title": "displayAction",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem/displayaction",
+    "html": "Discussion\n\nIn a carousel inteface, the second of two buttons invites the user to display additional details for the current item. The action object you assign to this property provides the title and image to use for that button. When selected, the system loads the action’s URL.\n\nIn a sectioned or inset interface, tvOS loads the URL for the specified action when the user selects the current item.\n\nSee Also\nAssigning Actions to the Item\nvar playAction: TVTopShelfAction?\nThe action to perform when the user wants to play the current item."
+  },
+  {
+    "title": "TVTopShelfNamedAttribute",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfnamedattribute",
+    "html": "Overview\n\nUse TVTopShelfNamedAttribute objects to specify additional information about your content, such as the names of cast or crew members associated with a movie or show. Each named attribute contains the type of information you want to include (the name) and a list of strings (the values) to display for that attribute. For example, you might set the name property to “Starring” and set the value strings to the names of the leading actors.\n\nCreate named attributes and assign them to the namedAttributes property of a TVTopShelfCarouselItem object.\n\nTopics\nCreating a Named Attribute\ninit(name: String, values: [String])\nCreates a new named attribute object with the specified values.\nGetting the Name and Value\nvar name: String\nThe localized name of the attribute.\nvar values: [String]\nThe array of values for the attribute.\nRelationships\nInherits From\nNSObject\nConforms To\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSObjectProtocol\nSee Also\nAdding Custom Attributes\nvar namedAttributes: [TVTopShelfNamedAttribute]\nAdditional information to display for your content, such as a list of leading actors."
+  },
+  {
+    "title": "TVTopShelfCarouselContent.Style.details",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselcontent/style-swift.enum/details",
+    "html": "Discussion\n\nUse this style to display a detailed interface that focuses on the item’s details. For example, this interface displays the item’s summary prominently. This interface also displays action buttons off to the side.\n\nSee Also\nStyles\ncase actions\nAn interface that focuses on the actions you want the user to perform."
+  },
+  {
+    "title": "namedAttributes",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/namedattributes",
+    "html": "Discussion\n\nUse this property to specify additional details about your content. In appropriate views, the system formats the provided information and displays it alongside the rest of your content. For information about how to create named attributes, see TVTopShelfNamedAttribute.\n\nSee Also\nAdding Custom Attributes\nclass TVTopShelfNamedAttribute\nAn object you use to display additional information."
+  },
+  {
+    "title": "mediaOptions",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/mediaoptions-c.property",
+    "html": "Discussion\n\nSpecify all of the options that apply to the underlying content. The system adds standard icons for the options you support. For example, if you specify the videoResolution4K option, the system adds an icon to the detail view indicating that playback in 4K resolution is possible.\n\nSee Also\nAdding Media Badges\nstruct MediaOptions\nConstants indicating the item’s audio and video capabilities."
+  },
+  {
+    "title": "creationDate",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/creationdate",
+    "html": "See Also\nSpecifying the Item Details\nvar contextTitle: String?\nA localized string describing why the item is shown in the top shelf.\nvar summary: String?\nA descriptive summary of a movie or show.\nvar genre: String?\nThe genre assigned to the movie or show.\nvar duration: TimeInterval\nThe length of the movie or show, in seconds."
+  },
+  {
+    "title": "previewVideoURL",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/previewvideourl",
+    "html": "Discussion\n\nWhen the navigation focus stops on the item, the system removes the item’s static image or cinemagraph video and plays the video at the specified URL.\n\nSee Also\nSpecifying the Content Previews\nvar cinemagraphURL: URL?\nThe URL of a looping video to play, without sound, while the preview loads."
+  },
+  {
+    "title": "genre",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/genre",
+    "html": "See Also\nSpecifying the Item Details\nvar contextTitle: String?\nA localized string describing why the item is shown in the top shelf.\nvar summary: String?\nA descriptive summary of a movie or show.\nvar duration: TimeInterval\nThe length of the movie or show, in seconds.\nvar creationDate: Date?\nThe original release date of the content."
+  },
+  {
+    "title": "duration",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/duration",
+    "html": "See Also\nSpecifying the Item Details\nvar contextTitle: String?\nA localized string describing why the item is shown in the top shelf.\nvar summary: String?\nA descriptive summary of a movie or show.\nvar genre: String?\nThe genre assigned to the movie or show.\nvar creationDate: Date?\nThe original release date of the content."
+  },
+  {
+    "title": "summary",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/summary",
+    "html": "Discussion\n\nThe system displays the summary only in the TVTopShelfCarouselContent.Style.details style.\n\nSee Also\nSpecifying the Item Details\nvar contextTitle: String?\nA localized string describing why the item is shown in the top shelf.\nvar genre: String?\nThe genre assigned to the movie or show.\nvar duration: TimeInterval\nThe length of the movie or show, in seconds.\nvar creationDate: Date?\nThe original release date of the content."
+  },
+  {
+    "title": "cinemagraphURL",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/cinemagraphurl",
+    "html": "Discussion\n\nIf you specify a value for this property, the system initially displays the corresponding video instead of a static image. The video plays in a loop until the preview video loads and is ready to play. If you do not specify a value for this property, the system displays the image you set using the setImageURL(_:for:) method.\n\nThe system does not play any sound content present in the video, so there is no need to include it when creating your assets.\n\nSee Also\nSpecifying the Content Previews\nvar previewVideoURL: URL?\nThe URL for the content’s trailer or preview."
+  },
+  {
+    "title": "contextTitle",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem/contexttitle",
+    "html": "See Also\nSpecifying the Item Details\nvar summary: String?\nA descriptive summary of a movie or show.\nvar genre: String?\nThe genre assigned to the movie or show.\nvar duration: TimeInterval\nThe length of the movie or show, in seconds.\nvar creationDate: Date?\nThe original release date of the content."
+  },
+  {
+    "title": "TVTopShelfItemCollection",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitemcollection",
+    "html": "Overview\n\nUse a TVTopShelfItemCollection object to organize related groups of items in a sectioned interface. The system presents the items in your collection together, displaying the title of the collection above those items. For example, you might create different collections for new movies, the user’s favorites, and recently watched movies.\n\nTopics\nCreating an Item Collection\ninit(items: [Item])\nCreates an item collection object from the specified set of top shelf items.\nGetting the Items\nvar items: [Item]\nThe items in the collection.\nRelationships\nInherits From\nTVTopShelfObject\nConforms To\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSObjectProtocol\nSee Also\nSectioned and inset content\nclass TVTopShelfSectionedItem\nAn item to display in a section-based interface.\nclass TVTopShelfSectionedContent\nThe set of items you want to present using a section-based interface in the top shelf.\nclass TVTopShelfInsetContent\nA set of items to present using an inset-style interface in the top shelf."
+  },
+  {
+    "title": "Legacy Extension",
+    "url": "https://developer.apple.com/documentation/tvservices/legacy-extension",
+    "html": "Overview\n\nIn iOS 12 and earlier, you provide Top Shelf information by adding a TVServices app extension to your app. Your extension returns an array describing available content for your app, and the system uses this information to update the Top Shelf. You describe your media to the operating system using TVContentItem objects. Each TVContentItem object represents either a piece of content or acts as a container for other TVContentItem objects. A content object typically includes an image and a title for tvOS to display, along with other metadata related to the content item.\n\nImportant\n\nThe memory limits for Top Shelf extensions are significantly lower than the memory limits imposed on tvOS apps. Performing memory-intensive operations in a Top Shelf extension, such as image editing or compositing, could push your extension beyond the high-water mark and force it to be terminated. If you must perform cpu-intensive or memory-intensive operations to generate Top Shelf content, perform those operations on a server and provide URLs to the generated resources. For more information on creating extensions, see App Extension Programming Guide.\n\nIn order for tvOS to track content items, you create a unique string for each content item. You can choose your own algorithm to create these identifiers. However, any string you create should identify its content item forever; never recycle identifiers for new content. You package an identifier in a TVContentIdentifier object, which includes the string and the parent container of the item.\n\nTo summarize, to provide descriptions of content to Apple TV, you must:\n\nOrganize your media and app content, either as a single list or in a hierarchical model\n\nDesign an algorithm or standard that supplies each content item with a unique content identifier string\n\nCreate a TVContentItem object for each container or content item\n\nAdd an app extension whose main class implements the TVTopShelfProvider protocol\n\nTopics\nExtension\nprotocol TVTopShelfProvider\nThe interface for providing items to display in the main menu’s Top Shelf user interface on an Apple TV.\nDeprecated\nContent\nclass TVContentItem\nAn object that describes either a piece of content or a container for other content items.\nDeprecated\nclass TVContentIdentifier\nAn object that uniquely identifies media content in either a single piece or a collection.\nDeprecated\nfunc TVTopShelfImageSize(shape: TVContentItemImageShape, style: TVTopShelfContentStyle) -> CGSize\nReturns the ideal size for an image, according to its particular shape and style.\nDeprecated\nSee Also\nTop shelf app extensions\nBuilding a Full Screen Top Shelf Extension\nHighlight content from your Apple TV application by building a full screen Top Shelf extension.\nclass TVTopShelfContentProvider\nThe main interface for your Top Shelf app extension, which you use to provide content for the top shelf area of the tvOS Home Screen."
+  },
+  {
+    "title": "playbackProgress",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfsectioneditem/playbackprogress",
+    "html": "Discussion\n\nUse this property to specify how much of the content the user has already played. The value you specify must be in the range 0.0 to 1.0. If you specify numbers outside of that range, the system clamps them to the minimum or maximum values."
+  },
+  {
+    "title": "imageShape",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfsectioneditem/imageshape-c.property",
+    "html": "Discussion\n\nUse this property to specify the shape of the image you use for the item. The image shape determines the dimensions to use when creating the image. For a list of possible values, see TVTopShelfSectionedItem.ImageShape.\n\nSee Also\nSetting the Image Shape\nenum ImageShape\nConstants indicating the aspect ratio of an image."
+  },
+  {
+    "title": "TVTopShelfObject",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfobject",
+    "html": "Overview\n\nThis class provides shared information for objects you use in your app extension. Do not create instances of this class directly.\n\nTopics\nGetting the Object Attributes\nvar title: String?\nThe localized title of the object.\nRelationships\nInherits From\nNSObject\nInherited By\nTVTopShelfItem\nTVTopShelfItemCollection\nConforms To\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSObjectProtocol\nSee Also\nCommon types\nclass TVTopShelfItem\nAn item that uses an image to represent a movie, show, or other content in the top shelf.\nclass TVTopShelfAction\nAn action to perform in response to user interactions with an item in the top shelf.\nprotocol TVTopShelfContent\nThe protocol that objects adopt to provide content for the top shelf."
+  },
+  {
+    "title": "TVTopShelfItem",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfitem",
+    "html": "Overview\n\nA TVTopShelfItem object manages basic traits for all items, including the images they display and the actions they trigger. Typically, you create TVTopShelfCarouselItem or TVTopShelfSectionedItem objects for your interface. For inset interfaces, you can also create TVTopShelfItem objects directly.\n\nAfter creating an item object, assign an image and one or more actions to it, and update any other relevant properties. Return the item object as part of the content for your interface.\n\nEach unique item in your app must have a correspondingly unique identifier, and the identifier for each item must remain stable throughout the life of your app. Do not assign a different unique identifier for the same underlying item each time you create a TVTopShelfItem object for it.\n\nTopics\nCreating a Top Shelf Item\ninit(identifier: String)\nCreates a top shelf item with the specified identifier.\nAssigning Actions to the Item\nvar playAction: TVTopShelfAction?\nThe action to perform when the user wants to play the current item.\nvar displayAction: TVTopShelfAction?\nThe action to perform when the user wants to see more information for the current item.\nProviding an Image for the Item\nfunc imageURL(for: TVTopShelfItem.ImageTraits) -> URL?\nReturns an image associated with the current item.\nfunc setImageURL(URL?, for: TVTopShelfItem.ImageTraits)\nAssociates an image with the current item.\nstruct ImageTraits\nConstants describing the image format.\nGetting the Item Attributes\nvar identifier: String\nThe unique identifier for the item.\nvar expirationDate: Date?\nThe date on which the item becomes unavailable.\nRelationships\nInherits From\nTVTopShelfObject\nInherited By\nTVTopShelfCarouselItem\nTVTopShelfSectionedItem\nConforms To\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSObjectProtocol\nSee Also\nCommon types\nclass TVTopShelfAction\nAn action to perform in response to user interactions with an item in the top shelf.\nprotocol TVTopShelfContent\nThe protocol that objects adopt to provide content for the top shelf.\nclass TVTopShelfObject\nAn abstract base class for describing top shelf items and item collections."
+  },
+  {
+    "title": "TVTopShelfContent",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcontent",
+    "html": "Overview\n\nDon’t adopt this protocol in your own classes. The TVServices framework adopts this protocol in classes that can contain top shelf content, such as the TVTopShelfCarouselContent class.\n\nRelationships\nInherits From\nNSObjectProtocol\nConforming Types\nTVTopShelfCarouselContent\nTVTopShelfInsetContent\nTVTopShelfSectionedContent\nSee Also\nCommon types\nclass TVTopShelfItem\nAn item that uses an image to represent a movie, show, or other content in the top shelf.\nclass TVTopShelfAction\nAn action to perform in response to user interactions with an item in the top shelf.\nclass TVTopShelfObject\nAn abstract base class for describing top shelf items and item collections."
+  },
+  {
+    "title": "TVUserManager",
+    "url": "https://developer.apple.com/documentation/tvservices/tvusermanager",
+    "html": "Overview\n\nSome apps rely on profiles to maintain separate information for each person who uses a shared device, such as a video content app that retains which shows they watch. To avoid interrupting people with a profile picker each time they launch your app, you can save and retrieve the current user’s selection on a shared device.\n\nImportant\n\nTo create a TVUserManager object, add the User Management Entitlement capability to your app or app extension in Xcode, and select the Runs as Current User, Only When User-Independent Keychain is Available option. This enables the system to take care of separating each user’s data for your app.\n\nTo determine the current user’s profile, first check shouldStorePreferencesForCurrentUser. If that value is false, display the profile picker to determine which profile to use for the current session, but don’t save the selected profile. If the value is true, and there isn’t a saved profile in UserDefaults, display the profile picker and save the selected profile for future use. If the value is true and there’s already a saved profile, skip the prompt and use the saved profile.\n\nTopics\nRetaining profile selection for the current Apple TV account\nvar shouldStorePreferencesForCurrentUser: Bool\nA Boolean value that indicates whether your app needs to retain a selected profile.\nDeprecated symbols\nvar currentUserIdentifier: TVUserIdentifier?\nA unique identifier representing the currently active Apple TV user.\nDeprecated\nclass let currentUserIdentifierDidChangeNotification: NSNotification.Name\nThe notification the system sends when a different user becomes current.\nDeprecated\nfunc presentProfilePreferencePanel(currentSettings: [TVUserIdentifier : TVAppProfileDescriptor], availableProfiles: [TVAppProfileDescriptor], completion: ([TVUserIdentifier : TVAppProfileDescriptor]) -> Void)\nPresents a user-to-profile configuration panel, which lets the user specify their preferred profile.\nDeprecated\nfunc shouldStorePreferenceForCurrentUser(to: TVAppProfileDescriptor, completion: (Bool) -> Void)\nPrompts the user to save the specified profile as the preferred profile for the current user.\nDeprecated\nclass TVAppProfileDescriptor\nA model object that you use to represent an app-specific profile.\nDeprecated\ntypealias TVUserIdentifier\nA unique string for differentiating between accounts on Apple TV.\nDeprecated\nvar userIdentifiersForCurrentProfile: [TVUserIdentifier]\nAn array of system user identifiers that you associated with the current app-specific profile.\nDeprecated\nRelationships\nInherits From\nNSObject\nConforms To\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSObjectProtocol\nSee Also\nMultiple users\nPersonalizing Your App for Each User on Apple TV\nUse account-specific storage to segregate data on a multiuser system.\nSupporting Multiple Users in Your tvOS App\nStore separate data for each user with the new Runs as Current User capability.\nMapping Apple TV users to app profiles\nAdapt the content of your app for the current viewer by using an entitlement and simplifying sign-in flows."
+  },
+  {
+    "title": "TVTopShelfAction",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfaction",
+    "html": "Overview\n\nA TVTopShelfAction object contains the URL that you want tvOS to open when the user selects an item in the top shelf. Use actions to specify the location of playable content or pages containing additional information.\n\nWhen configuring a TVTopShelfItem to display in a carousel interface, the system chooses a title and image for each button on the item based on whether you assigned the action object to the playAction or displayAction property of your item.\n\nTopics\nCreating an Action Object\ninit(url: URL)\nCreates a new action object that displays the content at the specified URL.\nGetting the URL\nvar url: URL\nThe URL of the content you want to display.\nInitializers\ninit(URL: URL)\nRelationships\nInherits From\nNSObject\nConforms To\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSObjectProtocol\nSee Also\nCommon types\nclass TVTopShelfItem\nAn item that uses an image to represent a movie, show, or other content in the top shelf.\nprotocol TVTopShelfContent\nThe protocol that objects adopt to provide content for the top shelf.\nclass TVTopShelfObject\nAn abstract base class for describing top shelf items and item collections."
+  },
+  {
+    "title": "Providing Channel Navigation",
+    "url": "https://developer.apple.com/documentation/tvservices/providing-channel-navigation",
+    "html": "Overview\n\nSome Apple TV-compatible remotes provide buttons specifically for browsing live TV or other multichannel content. Support these buttons in your app so users can access your electronic program guide (EPG) quickly.\n\nFor EPG design guidance, see the Human Interface Guidelines on Live-Viewing Apps. For guidance on designing remote interactions, see Remote.\n\nDisplay a Channel Guide\n\nSome remotes provide a dedicated button for displaying TV channel listings or a similar EPG. For example, if you have a function named activateChannelGuide() that displays your EPG, add logic to your app’s UIApplicationDelegate to call activateChannelGuide() when your app receives a TVUserActivityTypeBrowsingChannelGuide user activity:\n\nfunc application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {\n    if #available(tvOS 14.3, *) {\n        if (userActivity.activityType == TVUserActivityTypeBrowsingChannelGuide) {\n            activateChannelGuide()\n            return true\n        }\n    }\n    // Handle other NSUserActivity types if appropriate.\n    return false\n}\n\n\nAdd TVUserActivityTypeBrowsingChannelGuide to the NSUserActivityTypes key in your app’s Info.plist file to inform the system of your app’s ability to handle this type of user activity.\n\nWhen the user presses the Guide button while your app is active, the system sends the TVUserActivityTypeBrowsingChannelGuide to your app. When the user presses the Guide button while an app that doesn’t support the guide activity is active, the system sends the guide activity to the default guide app. The system also sends the user activity to the default guide app when the user long-presses the Guide button.\n\nNavigate an EPG\n\nFor an EPG that spans multiple screens, help users scan listings quickly, then navigate to the content they want. Respond to a UIPress.PressType.pageUp or UIPress.PressType.pageDown button press by moving to the previous or next screen of content, similar to a large swipe gesture.\n\nChange the Channel\n\nWhile your content plays, change the channel when your app receives UIPress.PressType.pageUp or UIPress.PressType.pageDown.\n\noverride func viewDidLoad() {    \n    super.viewDidLoad()\n\n\n    let pageUpRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.channelUp))\n    pageUpRecognizer.allowedPressTypes = [UIPress.PressType.pageUp.rawValue as NSNumber]\n    view.addGestureRecognizer(pageUpRecognizer)\n\n\n    let pageDownRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.channelDown))\n    pageDownRecognizer.allowedPressTypes = [UIPress.PressType.pageDown.rawValue as NSNumber]\n    view.addGestureRecognizer(pageDownRecognizer)\n}\n\n\n\nSee Also\nChannel guide\nlet TVUserActivityTypeBrowsingChannelGuide: String\nAn activity for viewing your app’s channel guide."
+  },
+  {
+    "title": "Mapping Apple TV users to app profiles",
+    "url": "https://developer.apple.com/documentation/tvservices/mapping-apple-tv-users-to-app-profiles",
+    "html": "Overview\n\nThis sample demonstrates how to reduce configuration dialogs for people who share an Apple TV and a service account, such as a family media subscription. To let people get to your content more directly, your app should save shared login information where it can access the credentials regardless of the current user, and your code should also remember which profile to load for each user.\n\nNote\n\nThis sample code project is associated with WWDC22 session 110384: Support multiple users in tvOS apps.\n\nConfigure the sample code project\n\nBefore you run the sample code project in Xcode:\n\nUpdate your Apple TV to tvOS 15 or later. This app runs in single-user mode on tvOS 15 and supports multiple users on tvOS 16 and later.\n\nAdd users by choosing Settings > Users and Accounts > Add New User.\n\nTo switch TV users, press and hold the TV button on your remote or choose Settings > Users and Accounts > Switch Current User.\n\nRun as the current user\n\nApple TV supports multiple users. To opt-in to keeping separate data for each user, add the User Management Entitlement to your app or app extension, with the value runs-as-current-user-with-user-independent-keychain.\n\n<key>com.apple.developer.user-management</key>\n<array>\n    <string>runs-as-current-user-with-user-independent-keychain</string>\n</array>\n\n\nNote\n\nThis entitlement value grants your app per-user data storage on tvOS 16 and higher but maintains single-user behavior on tvOS 15 or earlier.\n\nSave each user’s profile\n\nWhen your app or extension is running on tvOS 16 with multiple Apple TV users, you can store each person’s preferred profile directly with an API such as UserDefaults or CloudKit; the system separates the data for each Apple TV user. Your code doesn’t have to handle any data partitioning.\n\nHere’s an example using UserDefaults to save the profile.\n\nprivate var selectedProfileIdentifier: String? {\n    didSet {\n        guard oldValue != selectedProfileIdentifier else { return }\n\n\n        // If running on tvOS 16, check if the selected profile should be\n        // remembered before storing it.\n        if #available(tvOS 16.0, *), userManager.shouldStorePreferencesForCurrentUser {\n            UserDefaults.standard.set(selectedProfileIdentifier, forKey: \"PreferredProfileIdentifierKey\")\n        }\n\n\nThe sample only attempts to save the selected profile when running on tvOS 16 or later; it doesn’t run as the current user on tvOS 15 or earlier. It also checks shouldStorePreferencesForCurrentUser before saving to avoid remembering the selected profile in case there aren’t multiple users on the Apple TV.\n\nSkip the profile-picker dialog\n\nThis sample app can skip the interstitial profile-picker dialog whenever a person who already has a saved profile launches the app.\n\nprivate func presentProfilePickerIfNeeded() {\n    if #available(tvOS 16.0, *) {\n        // On tvOS 16, present the profile picker only if the Apple TV\n        // doesn't have multiple users, or the current user hasn't picked a\n        // profile yet.\n        if !userManager.shouldStorePreferencesForCurrentUser || profileData.selectedProfile == nil {\n            presentProfilePicker()\n        }\n    } else {\n        // Always present the profile picker on tvOS 15 and earlier.\n        presentProfilePicker()\n    }\n}\n\n\nThe sample still presents the profile picker if the Apple TV doesn’t have multiple users, the current user doesn’t have a saved profile, or the app is running on tvOS 15 or earlier.\n\nStore shared login credentials in the user-independent Keychain\n\nAnother interstitial dialog that can get in the way of the content is the sign-in screen. Keychain data is automatically separated for each Apple TV user. To avoid having each user sign in individually, tvOS 16 adds a new Keychain API: kSecUseUserIndependentKeychain.\n\nWith kSecUseUserIndependentKeychain, signing in only needs to happen once, even when running as the current user, because items stored using this property are accessible by all Apple TV users.\n\nvar baseQuery: [CFString: Any] = [\n    kSecAttrService: \"com.example.apple-samplecode.ProfilesSample\",\n    kSecClass: kSecClassGenericPassword\n]\nif #available(tvOS 16.0, *) {\n    baseQuery[kSecUseUserIndependentKeychain] = kCFBooleanTrue as AnyObject\n}\nself.baseQuery = baseQuery\n\n\nThe loadCredentials method in the KeychainController shows how to use the baseQuery above to read the username and password from the Keychain:\n\nprivate func loadCredentials() {\n    var attributesQuery = baseQuery\n    attributesQuery[kSecReturnAttributes] = kCFBooleanTrue\n\n\n    // Read all attributes. This is where the username comes from.\n    var outAttributes: AnyObject?\n    guard SecItemCopyMatching(attributesQuery as CFDictionary, &outAttributes) == errSecSuccess,\n          let attributes = outAttributes as? [CFString: Any] else {\n        return\n    }\n\n\n    // This is where the password comes from.\n    var passwordQuery = baseQuery\n    passwordQuery[kSecAttrAccount] = attributes[kSecAttrAccount]\n    passwordQuery[kSecReturnData] = kCFBooleanTrue\n\n\n    var outPassword: AnyObject?\n    guard SecItemCopyMatching(passwordQuery as CFDictionary, &outPassword) == errSecSuccess,\n          let passwordData = outPassword as? Data else {\n        return\n    }\n\n\n    if let username = attributes[kSecAttrAccount] as? String,\n        let password = String(data: passwordData, encoding: .utf8) {\n        credentials = (username: username, password: password)\n    }\n}\n\n\nYou can also use the same baseQuery to save a new item with username and password.\n\nfunc save(username: String, password: String) {\n    guard let passwordData = password.data(using: .utf8) else {\n        return\n    }\n\n\n    let attributes: [CFString: Any] = [\n        kSecAttrAccount: username,\n        kSecValueData: passwordData\n    ]\n\n\n    var status: OSStatus = errSecCoreFoundationUnknown\n    var itemExists = SecItemCopyMatching(baseQuery as CFDictionary, nil) == errSecSuccess\n\n\n    // Try to add the item to the keychain first.\n    if !itemExists {\n        let addAttributes = baseQuery.merging(attributes) { (current, _) in current }\n        status = SecItemAdd(addAttributes as CFDictionary, nil)\n        itemExists = status == errSecDuplicateItem\n    }\n\n\n    // Otherwise, update if it already exists.\n    if itemExists {\n        status = SecItemUpdate(baseQuery as CFDictionary, attributes as CFDictionary)\n    }\n\n\n    guard status == errSecSuccess else {\n        return\n    }\n\n\n    credentials = (username, password)\n}\n\n\nfunc removeCredentials() {\n    SecItemDelete(baseQuery as CFDictionary)\n    credentials = nil\n}\n\nSee Also\nMultiple users\nPersonalizing Your App for Each User on Apple TV\nUse account-specific storage to segregate data on a multiuser system.\nSupporting Multiple Users in Your tvOS App\nStore separate data for each user with the new Runs as Current User capability.\nclass TVUserManager\nAn object that indicates how to store preferences for multiple people on a shared device."
+  },
+  {
+    "title": "TVTopShelfInsetContent",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfinsetcontent",
+    "html": "Overview\n\nCreate a TVTopShelfInsetContent object when you want to display your top shelf content using an inset interface. The layout for an inset interface shows a series of large images, each of which spans almost the entire width of the screen. The focused image appears raised above the background.\n\nFor more information about how to configure images for an inset interface, see Human Interface Guidelines.\n\nTopics\nCreating an Inset Content Object\ninit(items: [TVTopShelfItem])\nCreates an inset content object and populates it with the specified set of items.\nGetting the Items\nvar items: [TVTopShelfItem]\nThe items to display from the inset interface.\nGetting the Image Size\nclass var imageSize: CGSize\nThe standard width and height for images in an inset interface.\nRelationships\nInherits From\nNSObject\nConforms To\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSObjectProtocol\nTVTopShelfContent\nSee Also\nSectioned and inset content\nclass TVTopShelfSectionedItem\nAn item to display in a section-based interface.\nclass TVTopShelfItemCollection\nA group of items that you display together in a sectioned interface in the top shelf.\nclass TVTopShelfSectionedContent\nThe set of items you want to present using a section-based interface in the top shelf."
+  },
+  {
+    "title": "Personalizing Your App for Each User on Apple TV",
+    "url": "https://developer.apple.com/documentation/tvservices/personalizing-your-app-for-each-user-on-apple-tv",
+    "html": "Overview\n\nMultiple people can log in to accounts on a single Apple TV, and you can set up your app so each member of a household can use it with their own Apple TV account. When a user logs in, your app can access their preferences and GameCenter and iCloud data. If your app is also available on iOS or iPadOS, a user can pick up where they left off on their personal device as well.\n\nIf your app doesn’t include the User Management capability, the system runs your app as the default user, instead of the current user. If you design your app with individual profiles in a single shared account, consider Mapping Apple TV users to app profiles instead.\n\nAccess the Current User’s Data\n\nIn most cases, managing each user’s data in their Apple account provides the best user experience, but it requires some support in your app. In order to provide a personalized experience in your app, enable the Runs as Current User privilege in the User Management Entitlement capability. This entitlement grants your app access to data for the current user in keychain, preferences, iCloud, and Game Center.\n\nImplement applicationWillTerminate(_:) to save data in case a user switch occurs while your app is in the foreground. Make sure you’re using applicationWillResignActive(_:) to save data whenever the user switches away from your app.\n\nOptimize Data Usage\n\nWhen your app receives a push notification from CloudKit, use subscriptionOwnerUserRecordID to check whether the update is for the current user. If the notification is for another user on this device, you may choose to ignore the push, and get the data the next time the other user accesses your app.\n\nSee Also\nMultiple users\nSupporting Multiple Users in Your tvOS App\nStore separate data for each user with the new Runs as Current User capability.\nMapping Apple TV users to app profiles\nAdapt the content of your app for the current viewer by using an entitlement and simplifying sign-in flows.\nclass TVUserManager\nAn object that indicates how to store preferences for multiple people on a shared device."
+  },
+  {
+    "title": "TVTopShelfSectionedContent",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfsectionedcontent",
+    "html": "Overview\n\nCreate a TVTopShelfSectionedContent object when you want to display your top shelf content using a sectioned interface. A sectioned interface displays a single labled row of items. Items are organized by section. As the row scrolls horizontally through the items, the system updates the label above the items to indicate the current section. You specify the title of each section and its items using TVTopShelfItemCollection objects.\n\nFor more information about how to configure images for a sectioned interface, see Human Interface Guidelines.\n\nTopics\nCreating a Sectioned Content Object\ninit(sections: [TVTopShelfItemCollection<TVTopShelfSectionedItem>])\nCreates a sectioned content object and populates it with the specified sections.\nGetting the Sections\nvar sections: [TVTopShelfItemCollection<TVTopShelfSectionedItem>]\nThe sections to display in the interface.\nGetting the Image Size Information\nclass func imageSize(for: TVTopShelfSectionedItem.ImageShape) -> CGSize\nReturns the dimensions to use for images of the specified shape.\nenum ImageShape\nConstants indicating the aspect ratio of an image.\nRelationships\nInherits From\nNSObject\nConforms To\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSObjectProtocol\nTVTopShelfContent\nSee Also\nSectioned and inset content\nclass TVTopShelfSectionedItem\nAn item to display in a section-based interface.\nclass TVTopShelfItemCollection\nA group of items that you display together in a sectioned interface in the top shelf.\nclass TVTopShelfInsetContent\nA set of items to present using an inset-style interface in the top shelf."
+  },
+  {
+    "title": "Supporting Multiple Users in Your tvOS App",
+    "url": "https://developer.apple.com/documentation/tvservices/supporting-multiple-users-in-your-tvos-app",
+    "html": "Overview\n\nNote\n\nThis sample code project is associated with WWDC20 session 10645: Support Multiple Users in Your tvOS App.\n\nNote\n\nYou must run this sample code project on a physical device.\n\nSee Also\nMultiple users\nPersonalizing Your App for Each User on Apple TV\nUse account-specific storage to segregate data on a multiuser system.\nMapping Apple TV users to app profiles\nAdapt the content of your app for the current viewer by using an entitlement and simplifying sign-in flows.\nclass TVUserManager\nAn object that indicates how to store preferences for multiple people on a shared device."
+  },
+  {
+    "title": "TVTopShelfSectionedItem",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfsectioneditem",
+    "html": "Overview\n\nCreate a TVTopShelfSectionedItem object for each item you want to display in the top shelf. Each sectioned item corresponds to one item of your app’s content. For example, a video playback app uses sectioned items to represent movies or shows. Specify the image for the item using the setImageURL(_:for:) method. Use the inherited playAction and displayAction properties to let the system know what to do when the user interacts with the item.\n\nTopics\nSetting the Image Shape\nvar imageShape: TVTopShelfSectionedItem.ImageShape\nThe aspect ratio of the item’s image.\nenum ImageShape\nConstants indicating the aspect ratio of an image.\nSetting the Playback Progress\nvar playbackProgress: Double\nThe percentage of the content that the user has already played, specified as a value between 0.0 and 1.0.\nRelationships\nInherits From\nTVTopShelfItem\nConforms To\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSObjectProtocol\nSee Also\nSectioned and inset content\nclass TVTopShelfItemCollection\nA group of items that you display together in a sectioned interface in the top shelf.\nclass TVTopShelfSectionedContent\nThe set of items you want to present using a section-based interface in the top shelf.\nclass TVTopShelfInsetContent\nA set of items to present using an inset-style interface in the top shelf."
+  },
+  {
+    "title": "TVTopShelfCarouselContent",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselcontent",
+    "html": "Topics\nCreating a Carousel Content Object\ninit(style: TVTopShelfCarouselContent.Style, items: [TVTopShelfCarouselItem])\nCreates a content object for displaying items in a carousel style in the top shelf interface.\nAccessing the Carousel Items\nvar items: [TVTopShelfCarouselItem]\nThe items to display in the top shelf interface.\nGetting the Item Style\nvar style: TVTopShelfCarouselContent.Style\nThe appearance to use when displaying items in the top shelf interface.\nenum Style\nConstants indicating how you want items to appear in the top shelf interface.\nRelationships\nInherits From\nNSObject\nConforms To\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSObjectProtocol\nTVTopShelfContent\nSee Also\nCarousel content\nclass TVTopShelfCarouselItem\nAn item containing images, video, and other information that you want to display using a carousel-based interface."
+  },
+  {
+    "title": "TVTopShelfCarouselItem",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcarouselitem",
+    "html": "Overview\n\nA TVTopShelfCarouselItem object offers a more dynamic way to present your content than section-based items. When a carousel item first appears, it displays either a static image or a short looping video as its background. When the navigation focus stops on the item, the system plays the video in the item’s previewVideoURL property.\n\nCreate one or more TVTopShelfCarouselItem objects and fill them with information about your content. The system determines which properties of the object to display based on the content style. For the TVTopShelfCarouselContent.Style.details style, the system displays all of the information in your carousel item. For the TVTopShelfCarouselContent.Style.actions style, the system focuses on the actions associated with your item. To specify the actions for both styles, use the inherited playAction and displayAction properties of the object.\n\nTopics\nSpecifying the Item Details\nvar contextTitle: String?\nA localized string describing why the item is shown in the top shelf.\nvar summary: String?\nA descriptive summary of a movie or show.\nvar genre: String?\nThe genre assigned to the movie or show.\nvar duration: TimeInterval\nThe length of the movie or show, in seconds.\nvar creationDate: Date?\nThe original release date of the content.\nSpecifying the Content Previews\nvar cinemagraphURL: URL?\nThe URL of a looping video to play, without sound, while the preview loads.\nvar previewVideoURL: URL?\nThe URL for the content’s trailer or preview.\nAdding Media Badges\nvar mediaOptions: TVTopShelfCarouselItem.MediaOptions\nInformation about the media format and presentation options.\nstruct MediaOptions\nConstants indicating the item’s audio and video capabilities.\nAdding Custom Attributes\nvar namedAttributes: [TVTopShelfNamedAttribute]\nAdditional information to display for your content, such as a list of leading actors.\nclass TVTopShelfNamedAttribute\nAn object you use to display additional information.\nRelationships\nInherits From\nTVTopShelfItem\nConforms To\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSObjectProtocol\nSee Also\nCarousel content\nclass TVTopShelfCarouselContent\nA set of items you present using a carousel-style interface in the top shelf."
+  },
+  {
+    "title": "TVTopShelfContentProvider",
+    "url": "https://developer.apple.com/documentation/tvservices/tvtopshelfcontentprovider",
+    "html": "Overview\n\nAdopt this protocol in the principal class of your Top Shelf app extension. Use its methods to create the items that you want to display in the top shelf interface. For each item, specify additional resources such as the image or video to display.\n\nFill the top shelf area with the user’s active content or with content you want to highlight or promote. For each distinct piece of content, create a TVTopShelfCarouselItem or TVTopShelfSectionedItem and fill the object with details about that content. For example, provide an identifier for the item and URLs for the pictures or videos you want to display for that item. After creating your items, add them to an appropriate content object and return them from your loadTopShelfContent(completionHandler:) method.\n\nTopics\nProviding the Top Shelf Content\nfunc loadTopShelfContent(completionHandler: ((any TVTopShelfContent)?) -> Void)\nProvides the content you want to display in the top shelf for your app.\nUpdating Your Content\nclass func topShelfContentDidChange()\nTells the system that your top shelf content changed and requires an update.\nRelationships\nInherits From\nNSObject\nConforms To\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSObjectProtocol\nSee Also\nTop shelf app extensions\nBuilding a Full Screen Top Shelf Extension\nHighlight content from your Apple TV application by building a full screen Top Shelf extension.\nLegacy Extension\nHelp users discover your app by providing top shelf content and a description of your tvOS app."
+  },
+  {
+    "title": "Building a Full Screen Top Shelf Extension",
+    "url": "https://developer.apple.com/documentation/tvservices/building-a-full-screen-top-shelf-extension",
+    "html": "Overview\n\nNote\n\nThis sample code project is associated with WWDC 2019 session 211: Mastering the Living Room With tvOS.\n\nSee Also\nTop shelf app extensions\nclass TVTopShelfContentProvider\nThe main interface for your Top Shelf app extension, which you use to provide content for the top shelf area of the tvOS Home Screen.\nLegacy Extension\nHelp users discover your app by providing top shelf content and a description of your tvOS app."
+  },
+  {
+    "title": "TVUserActivityTypeBrowsingChannelGuide",
+    "url": "https://developer.apple.com/documentation/tvservices/tvuseractivitytypebrowsingchannelguide",
+    "html": "Discussion\n\nSupport this NSUserActivity activity type in your app to display a channel guide or content browser when the user presses the Guide button on a remote. For more details on implementing a channel guide, see Providing Channel Navigation.\n\nSee Also\nChannel guide\nProviding Channel Navigation\nSupport browsing an electronic program guide (EPG) and changing channels with specialized remote buttons."
+  },
+  {
+    "title": "TV Services",
+    "url": "https://developer.apple.com/documentation/TVServices",
+    "html": "Overview\n\nUse the TVServices framework to display content prominently on the screen and to speed up user login. You can highlight media and other information from your app in the top shelf area. For example, a video playback app might show the user’s most recently viewed videos. The system displays your media items when the user selects your app on the tvOS Home Screen; your app doesn’t need to be running. You provide top shelf content using a Top Shelf app extension, which you include in the bundle of your tvOS app.\n\nApps that manage multiple user profiles can accelerate the login process by retaining the profile for each Apple TV user. Apple TV supports multiple user accounts, and these accounts are separate from the profiles your app manages. Mapping the system accounts to your own profiles lets users skip profile selection screens and go straight to their content, which provides a better user experience.\n\nImportant\n\nDon’t perform memory-intensive operations from your TVServices app extension. The memory limits for app extensions are significantly lower than for apps, and using too much memory might cause the system to terminate your extension. Instead, generate top shelf content and perform other memory-intensive operations on your server.\n\nTopics\nTop shelf app extensions\nBuilding a Full Screen Top Shelf Extension\nHighlight content from your Apple TV application by building a full screen Top Shelf extension.\nclass TVTopShelfContentProvider\nThe main interface for your Top Shelf app extension, which you use to provide content for the top shelf area of the tvOS Home Screen.\nLegacy Extension\nHelp users discover your app by providing top shelf content and a description of your tvOS app.\nCarousel content\nclass TVTopShelfCarouselItem\nAn item containing images, video, and other information that you want to display using a carousel-based interface.\nclass TVTopShelfCarouselContent\nA set of items you present using a carousel-style interface in the top shelf.\nSectioned and inset content\nclass TVTopShelfSectionedItem\nAn item to display in a section-based interface.\nclass TVTopShelfItemCollection\nA group of items that you display together in a sectioned interface in the top shelf.\nclass TVTopShelfSectionedContent\nThe set of items you want to present using a section-based interface in the top shelf.\nclass TVTopShelfInsetContent\nA set of items to present using an inset-style interface in the top shelf.\nMultiple users\nPersonalizing Your App for Each User on Apple TV\nUse account-specific storage to segregate data on a multiuser system.\nSupporting Multiple Users in Your tvOS App\nStore separate data for each user with the new Runs as Current User capability.\nMapping Apple TV users to app profiles\nAdapt the content of your app for the current viewer by using an entitlement and simplifying sign-in flows.\nclass TVUserManager\nAn object that indicates how to store preferences for multiple people on a shared device.\nChannel guide\nProviding Channel Navigation\nSupport browsing an electronic program guide (EPG) and changing channels with specialized remote buttons.\nlet TVUserActivityTypeBrowsingChannelGuide: String\nAn activity for viewing your app’s channel guide.\nCommon types\nclass TVTopShelfItem\nAn item that uses an image to represent a movie, show, or other content in the top shelf.\nclass TVTopShelfAction\nAn action to perform in response to user interactions with an item in the top shelf.\nprotocol TVTopShelfContent\nThe protocol that objects adopt to provide content for the top shelf.\nclass TVTopShelfObject\nAn abstract base class for describing top shelf items and item collections."
+  }
+]
