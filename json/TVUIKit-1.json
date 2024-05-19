@@ -1,0 +1,1027 @@
+[
+  {
+    "title": "==(_:_:)",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/textproperties-swift.struct/texttransform/==(_:_:)",
+    "html": "Parameters\na\n\nA value to compare.\n\nb\n\nAnother value to compare.\n\nSee Also\nComparing Text Transforms\nstatic func != (Self, Self) -> Bool\nReturns a Boolean value indicating whether two values are not equal."
+  },
+  {
+    "title": "TVMonogramContentConfiguration.TextProperties.TextTransform.capitalized",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/textproperties-swift.struct/texttransform/capitalized",
+    "html": "See Also\nText Transforms\ncase none\nAn option with no transform.\ncase lowercase\nA transform for displaying the text in all lowercase characters.\ncase uppercase\nA transform for displaying the text in all uppercase characters."
+  },
+  {
+    "title": "CustomStringConvertible Implementations",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/textproperties-swift.struct/customstringconvertible-implementations",
+    "html": "Topics\nInstance Properties\nvar description: String\nA textual representation of this instance."
+  },
+  {
+    "title": "TVMonogramContentConfiguration.TextProperties.TextTransform.none",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/textproperties-swift.struct/texttransform/none",
+    "html": "See Also\nText Transforms\ncase capitalized\nA transform for displaying the text with the first character capitalized.\ncase lowercase\nA transform for displaying the text in all lowercase characters.\ncase uppercase\nA transform for displaying the text in all uppercase characters."
+  },
+  {
+    "title": "Equatable Implementations",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/textproperties-swift.struct/texttransform/equatable-implementations",
+    "html": "Topics\nOperators\nstatic func != (Self, Self) -> Bool\nReturns a Boolean value indicating whether two values are not equal."
+  },
+  {
+    "title": "TVMonogramContentConfiguration.TextProperties.TextTransform.uppercase",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/textproperties-swift.struct/texttransform/uppercase",
+    "html": "See Also\nText Transforms\ncase none\nAn option with no transform.\ncase capitalized\nA transform for displaying the text with the first character capitalized.\ncase lowercase\nA transform for displaying the text in all lowercase characters."
+  },
+  {
+    "title": "hash(into:)",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/textproperties-swift.struct/texttransform/hash(into:)",
+    "html": "Parameters\nhasher\n\nThe hasher to use when combining the components of this instance.\n\nSee Also\nAccessing the Hash Value\nvar hashValue: Int\nThe hash value."
+  },
+  {
+    "title": "hashValue",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/textproperties-swift.struct/texttransform/hashvalue",
+    "html": "See Also\nAccessing the Hash Value\nfunc hash(into: inout Hasher)\nHashes the essential components of the value by passing them into the hasher."
+  },
+  {
+    "title": "!=(_:_:)",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/textproperties-swift.struct/texttransform/!=(_:_:)",
+    "html": "Parameters\nlhs\n\nA value to compare.\n\nrhs\n\nAnother value to compare.\n\nDiscussion\n\nInequality is the inverse of equality. For any values a and b, a != b implies that a == b is false.\n\nThis is the default implementation of the not-equal-to operator (!=) for any type that conforms to Equatable.\n\nSee Also\nComparing Text Transforms\nstatic func == (TVMonogramContentConfiguration.TextProperties.TextTransform, TVMonogramContentConfiguration.TextProperties.TextTransform) -> Bool\nReturns a Boolean value that indicates whether two values are equal."
+  },
+  {
+    "title": "TVMediaItemContentConfiguration.TextProperties.TextTransform.capitalized",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/textproperties-swift.struct/texttransform/capitalized",
+    "html": "See Also\nText Transforms\ncase none\nAn option with no transform.\ncase lowercase\nA transform for displaying the text in all lowercase characters.\ncase uppercase\nA transform for displaying the text in all uppercase characters."
+  },
+  {
+    "title": "TVMonogramContentConfiguration.TextProperties.TextTransform.lowercase",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/textproperties-swift.struct/texttransform/lowercase",
+    "html": "See Also\nText Transforms\ncase none\nAn option with no transform.\ncase capitalized\nA transform for displaying the text with the first character capitalized.\ncase uppercase\nA transform for displaying the text in all uppercase characters."
+  },
+  {
+    "title": "!=(_:_:)",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcaptionbuttonviewmotiondirection/!=(_:_:)",
+    "html": "Parameters\nlhs\n\nA value to compare.\n\nrhs\n\nAnother value to compare.\n\nDiscussion\n\nInequality is the inverse of equality. For any values a and b, a != b implies that a == b is false.\n\nThis is the default implementation of the not-equal-to operator (!=) for any type that conforms to Equatable."
+  },
+  {
+    "title": "Equatable Implementations",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/textproperties-swift.struct/equatable-implementations",
+    "html": "Topics\nOperators\nstatic func != (Self, Self) -> Bool\nReturns a Boolean value indicating whether two values are not equal."
+  },
+  {
+    "title": "CustomReflectable Implementations",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/textproperties-swift.struct/customreflectable-implementations",
+    "html": "Topics\nInstance Properties\nvar customMirror: Mirror\nThe custom mirror for this instance."
+  },
+  {
+    "title": "hash(into:)",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/textproperties-swift.struct/hash(into:)",
+    "html": "Parameters\nhasher\n\nThe hasher to use when combining the components of this instance.\n\nSee Also\nAccessing the Hash Value\nvar hashValue: Int\nThe hash value."
+  },
+  {
+    "title": "hashValue",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/textproperties-swift.struct/hashvalue",
+    "html": "See Also\nAccessing the Hash Value\nfunc hash(into: inout Hasher)\nHashes the essential components of the value by passing them into the hasher."
+  },
+  {
+    "title": "CustomDebugStringConvertible Implementations",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/textproperties-swift.struct/customdebugstringconvertible-implementations",
+    "html": "Topics\nInstance Properties\nvar debugDescription: String\nA textual representation that’s suitable for output during debugging."
+  },
+  {
+    "title": "customMirror",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/textproperties-swift.struct/custommirror",
+    "html": "See Also\nInspecting Text Properties\nvar description: String\nA textual representation of this instance.\nvar debugDescription: String\nA textual representation that’s suitable for output during debugging."
+  },
+  {
+    "title": "description",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/textproperties-swift.struct/description",
+    "html": "See Also\nInspecting Text Properties\nvar customMirror: Mirror\nThe custom mirror for this instance.\nvar debugDescription: String\nA textual representation that’s suitable for output during debugging."
+  },
+  {
+    "title": "==(_:_:)",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/textproperties-swift.struct/==(_:_:)",
+    "html": "Parameters\na\n\nA value to compare.\n\nb\n\nAnother value to compare.\n\nSee Also\nComparing Text Properties\nstatic func != (Self, Self) -> Bool\nReturns a Boolean value indicating whether two values are not equal."
+  },
+  {
+    "title": "Equatable Implementations",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/textproperties-swift.struct/texttransform/equatable-implementations",
+    "html": "Topics\nOperators\nstatic func != (Self, Self) -> Bool\nReturns a Boolean value indicating whether two values are not equal."
+  },
+  {
+    "title": "hashValue",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/textproperties-swift.struct/texttransform/hashvalue",
+    "html": "See Also\nAccessing the Hash Value\nfunc hash(into: inout Hasher)\nHashes the essential components of the value by passing them into the hasher."
+  },
+  {
+    "title": "!=(_:_:)",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/textproperties-swift.struct/!=(_:_:)",
+    "html": "Parameters\nlhs\n\nA value to compare.\n\nrhs\n\nAnother value to compare.\n\nDiscussion\n\nInequality is the inverse of equality. For any values a and b, a != b implies that a == b is false.\n\nThis is the default implementation of the not-equal-to operator (!=) for any type that conforms to Equatable.\n\nSee Also\nComparing Text Properties\nstatic func == (TVMonogramContentConfiguration.TextProperties, TVMonogramContentConfiguration.TextProperties) -> Bool\nReturns a Boolean value that indicates whether two values are equal."
+  },
+  {
+    "title": "font",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/textproperties-swift.struct/font",
+    "html": "See Also\nConfiguring Text Properties\nvar color: UIColor\nThe color of the text.\nenum TextTransform\nConstants that specify the transform to apply to the text."
+  },
+  {
+    "title": "!=(_:_:)",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/textproperties-swift.struct/texttransform/!=(_:_:)",
+    "html": "Parameters\nlhs\n\nA value to compare.\n\nrhs\n\nAnother value to compare.\n\nDiscussion\n\nInequality is the inverse of equality. For any values a and b, a != b implies that a == b is false.\n\nThis is the default implementation of the not-equal-to operator (!=) for any type that conforms to Equatable.\n\nSee Also\nComparing Text Transforms\nstatic func == (TVMediaItemContentConfiguration.TextProperties.TextTransform, TVMediaItemContentConfiguration.TextProperties.TextTransform) -> Bool\nReturns a Boolean value that indicates whether two values are equal."
+  },
+  {
+    "title": "TVMediaItemContentConfiguration.TextProperties.TextTransform.uppercase",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/textproperties-swift.struct/texttransform/uppercase",
+    "html": "See Also\nText Transforms\ncase none\nAn option with no transform.\ncase capitalized\nA transform for displaying the text with the first character capitalized.\ncase lowercase\nA transform for displaying the text in all lowercase characters."
+  },
+  {
+    "title": "hash(into:)",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/textproperties-swift.struct/texttransform/hash(into:)",
+    "html": "Parameters\nhasher\n\nThe hasher to use when combining the components of this instance.\n\nSee Also\nAccessing the Hash Value\nvar hashValue: Int\nThe hash value."
+  },
+  {
+    "title": "==(_:_:)",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/textproperties-swift.struct/texttransform/==(_:_:)",
+    "html": "Parameters\na\n\nA value to compare.\n\nb\n\nAnother value to compare.\n\nSee Also\nComparing Text Transforms\nstatic func != (Self, Self) -> Bool\nReturns a Boolean value indicating whether two values are not equal."
+  },
+  {
+    "title": "TVMediaItemContentConfiguration.TextProperties.TextTransform.lowercase",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/textproperties-swift.struct/texttransform/lowercase",
+    "html": "See Also\nText Transforms\ncase none\nAn option with no transform.\ncase capitalized\nA transform for displaying the text with the first character capitalized.\ncase uppercase\nA transform for displaying the text in all uppercase characters."
+  },
+  {
+    "title": "TVMediaItemContentConfiguration.TextProperties.TextTransform.none",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/textproperties-swift.struct/texttransform/none",
+    "html": "See Also\nText Transforms\ncase capitalized\nA transform for displaying the text with the first character capitalized.\ncase lowercase\nA transform for displaying the text in all lowercase characters.\ncase uppercase\nA transform for displaying the text in all uppercase characters."
+  },
+  {
+    "title": "debugDescription",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/textproperties-swift.struct/debugdescription",
+    "html": "See Also\nInspecting Text Properties\nvar customMirror: Mirror\nThe custom mirror for this instance.\nvar description: String\nA textual representation of this instance."
+  },
+  {
+    "title": "CustomStringConvertible Implementations",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/badgeproperties-swift.struct/customstringconvertible-implementations",
+    "html": "Topics\nInstance Properties\nvar description: String\nA textual representation of this instance."
+  },
+  {
+    "title": "!=(_:_:)",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/textproperties-swift.struct/!=(_:_:)",
+    "html": "Parameters\nlhs\n\nA value to compare.\n\nrhs\n\nAnother value to compare.\n\nDiscussion\n\nInequality is the inverse of equality. For any values a and b, a != b implies that a == b is false.\n\nThis is the default implementation of the not-equal-to operator (!=) for any type that conforms to Equatable.\n\nSee Also\nComparing Text Properties\nstatic func == (TVMediaItemContentConfiguration.TextProperties, TVMediaItemContentConfiguration.TextProperties) -> Bool\nReturns a Boolean value that indicates whether two values are equal."
+  },
+  {
+    "title": "hashValue",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/textproperties-swift.struct/hashvalue",
+    "html": "See Also\nAccessing the Hash Value\nfunc hash(into: inout Hasher)\nHashes the essential components of the value by passing them into the hasher."
+  },
+  {
+    "title": "TVMonogramContentConfiguration.TextProperties.TextTransform",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/textproperties-swift.struct/texttransform",
+    "html": "Topics\nText Transforms\ncase none\nAn option with no transform.\ncase capitalized\nA transform for displaying the text with the first character capitalized.\ncase lowercase\nA transform for displaying the text in all lowercase characters.\ncase uppercase\nA transform for displaying the text in all uppercase characters.\nComparing Text Transforms\nstatic func == (TVMonogramContentConfiguration.TextProperties.TextTransform, TVMonogramContentConfiguration.TextProperties.TextTransform) -> Bool\nReturns a Boolean value that indicates whether two values are equal.\nstatic func != (Self, Self) -> Bool\nReturns a Boolean value indicating whether two values are not equal.\nAccessing the Hash Value\nfunc hash(into: inout Hasher)\nHashes the essential components of the value by passing them into the hasher.\nvar hashValue: Int\nThe hash value.\nDefault Implementations\nEquatable Implementations\nRelationships\nConforms To\nEquatable\nHashable\nSee Also\nConfiguring Text Properties\nvar font: UIFont\nThe font for the text.\nvar color: UIColor\nThe color of the text."
+  },
+  {
+    "title": "color",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/textproperties-swift.struct/color",
+    "html": "See Also\nConfiguring Text Properties\nvar font: UIFont\nThe font for the text.\nenum TextTransform\nConstants that specify the transform to apply to the text."
+  },
+  {
+    "title": "TVCaptionButtonViewMotionDirection.none",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcaptionbuttonviewmotiondirection/none",
+    "html": "See Also\nTilt Directions\ncase all\nThe caption button view can tilt in all directions.\ncase horizontal\nThe caption button view can tilt in the horzontal direction.\ncase vertical\nThe caption button view can tilt in the vertical direction."
+  },
+  {
+    "title": "color",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontenttextproperties/color",
+    "html": "See Also\nConfiguring Text Properties\nfont\nThe font for the text."
+  },
+  {
+    "title": "color",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontenttextproperties/3784664-color",
+    "html": "See Also\nConfiguring Text Properties\nfont\nThe font for the text."
+  },
+  {
+    "title": "font",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontenttextproperties/3784665-font",
+    "html": "See Also\nConfiguring Text Properties\ncolor\nThe color of the text."
+  },
+  {
+    "title": "clearEntry(animated:)",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvdigitentryviewcontroller/clearentry(animated:)",
+    "html": "Parameters\nanimated\n\nA Boolean value indicating whether the digit entry view animates when the digits are cleared.\n\nDiscussion\n\nThe digit entry view animates the digit removal when the animated parameter is YES.\n\nSee Also\nEntering Information\nvar entryCompletionHandler: (String) -> Void\nA completion handler that cues the app that the user has entered the required number of digits for the digit entry view."
+  },
+  {
+    "title": "font",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontenttextproperties/font",
+    "html": "See Also\nConfiguring Text Properties\ncolor\nThe color of the text."
+  },
+  {
+    "title": "RawRepresentable Implementations",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcaptionbuttonviewmotiondirection/rawrepresentable-implementations",
+    "html": "Topics\nInstance Properties\nvar hashValue: Int\nAvailable when Self conforms to Hashable and RawValue conforms to Hashable.\nInstance Methods\nfunc hash(into: inout Hasher)\nAvailable when Self conforms to Hashable and RawValue conforms to Hashable."
+  },
+  {
+    "title": "Equatable Implementations",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcaptionbuttonviewmotiondirection/equatable-implementations",
+    "html": "Topics\nOperators\nstatic func != (Self, Self) -> Bool\nReturns a Boolean value indicating whether two values are not equal."
+  },
+  {
+    "title": "TVMonogramContentConfiguration.TextProperties",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/textproperties-swift.struct",
+    "html": "Topics\nConfiguring Text Properties\nvar font: UIFont\nThe font for the text.\nvar color: UIColor\nThe color of the text.\nenum TextTransform\nConstants that specify the transform to apply to the text.\nComparing Text Properties\nstatic func == (TVMonogramContentConfiguration.TextProperties, TVMonogramContentConfiguration.TextProperties) -> Bool\nReturns a Boolean value that indicates whether two values are equal.\nstatic func != (Self, Self) -> Bool\nReturns a Boolean value indicating whether two values are not equal.\nInspecting Text Properties\nvar customMirror: Mirror\nThe custom mirror for this instance.\nvar description: String\nA textual representation of this instance.\nvar debugDescription: String\nA textual representation that’s suitable for output during debugging.\nAccessing the Hash Value\nfunc hash(into: inout Hasher)\nHashes the essential components of the value by passing them into the hasher.\nvar hashValue: Int\nThe hash value.\nDefault Implementations\nCustomDebugStringConvertible Implementations\nCustomReflectable Implementations\nCustomStringConvertible Implementations\nEquatable Implementations\nRelationships\nConforms To\nCustomDebugStringConvertible\nCustomReflectable\nCustomStringConvertible\nEquatable\nHashable\nSee Also\nCustomizing Appearance\nvar textProperties: TVMonogramContentConfiguration.TextProperties\nProperties for configuring the primary text.\nvar secondaryTextProperties: TVMonogramContentConfiguration.TextProperties\nProperties for configuring the secondary text."
+  },
+  {
+    "title": "TVCaptionButtonViewMotionDirection.vertical",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcaptionbuttonviewmotiondirection/vertical",
+    "html": "See Also\nTilt Directions\ncase all\nThe caption button view can tilt in all directions.\ncase horizontal\nThe caption button view can tilt in the horzontal direction.\ncase none\nThe caption button view can’t tilt."
+  },
+  {
+    "title": "TVCaptionButtonViewMotionDirection.all",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcaptionbuttonviewmotiondirection/all",
+    "html": "See Also\nTilt Directions\ncase horizontal\nThe caption button view can tilt in the horzontal direction.\ncase none\nThe caption button view can’t tilt.\ncase vertical\nThe caption button view can tilt in the vertical direction."
+  },
+  {
+    "title": "Equatable Implementations",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/badgeproperties-swift.struct/equatable-implementations",
+    "html": "Topics\nOperators\nstatic func != (Self, Self) -> Bool\nReturns a Boolean value indicating whether two values are not equal."
+  },
+  {
+    "title": "textProperties",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/textproperties-swift.property",
+    "html": "See Also\nCustomizing Appearance\nvar secondaryTextProperties: TVMonogramContentConfiguration.TextProperties\nProperties for configuring the secondary text.\nstruct TextProperties\nProperties that affect the monogram content configuration’s text."
+  },
+  {
+    "title": "personNameComponents",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/personnamecomponents",
+    "html": "See Also\nCustomizing Content\nvar image: UIImage?\nThe image to display.\nvar text: String?\nThe primary text.\nvar secondaryText: String?\nThe secondary text."
+  },
+  {
+    "title": "title",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvposterview/title",
+    "html": "Discussion\n\nThe title appears beneath the image in the poster view.\n\nSee Also\nConfiguring a Poster View\nvar image: UIImage?\nThe image for the poster view.\nvar imageView: UIImageView\nThe image view associated with the poster view.\nvar subtitle: String?\nThe subtitle for the poster view."
+  },
+  {
+    "title": "CustomReflectable Implementations",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/badgeproperties-swift.struct/customreflectable-implementations",
+    "html": "Topics\nInstance Properties\nvar customMirror: Mirror\nThe custom mirror for this instance."
+  },
+  {
+    "title": "imageView",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvposterview/imageview",
+    "html": "Discussion\n\nUse the image view to add additional information, such as overlays or badges, to the main content image. Don’t set an image directly on the image view. Always use the poster view’s image property.\n\nSee Also\nConfiguring a Poster View\nvar image: UIImage?\nThe image for the poster view.\nvar title: String?\nThe title for the poster view.\nvar subtitle: String?\nThe subtitle for the poster view."
+  },
+  {
+    "title": "contentViewInsets",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvlockupview/contentviewinsets",
+    "html": "Discussion\n\nUse negative values for positive spacing. The top and bottom values represent the spacing between the content view and the header and footer views, respectively. The leading and trailing values represent the spacing between the content view and the lockup view. The default value is zero.\n\nSee Also\nSetting view size\nvar contentSize: CGSize\nThe size of the content view.\nvar focusSizeIncrease: NSDirectionalEdgeInsets\nThe inset or outset values specifying your content’s size increase when in focus."
+  },
+  {
+    "title": "CustomDebugStringConvertible Implementations",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/badgeproperties-swift.struct/customdebugstringconvertible-implementations",
+    "html": "Topics\nInstance Properties\nvar debugDescription: String\nA textual representation that’s suitable for output during debugging."
+  },
+  {
+    "title": "hashValue",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/badgeproperties-swift.struct/hashvalue",
+    "html": "See Also\nAccessing the Hash Value\nfunc hash(into: inout Hasher)\nHashes the essential components of the value by passing them into the hasher."
+  },
+  {
+    "title": "==(_:_:)",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/badgeproperties-swift.struct/==(_:_:)",
+    "html": "Parameters\na\n\nA value to compare.\n\nb\n\nAnother value to compare.\n\nSee Also\nComparing Badge Properties\nstatic func != (Self, Self) -> Bool\nReturns a Boolean value indicating whether two values are not equal."
+  },
+  {
+    "title": "!=(_:_:)",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/badgeproperties-swift.struct/!=(_:_:)",
+    "html": "Parameters\nlhs\n\nA value to compare.\n\nrhs\n\nAnother value to compare.\n\nDiscussion\n\nInequality is the inverse of equality. For any values a and b, a != b implies that a == b is false.\n\nThis is the default implementation of the not-equal-to operator (!=) for any type that conforms to Equatable.\n\nSee Also\nComparing Badge Properties\nstatic func == (TVMediaItemContentConfiguration.BadgeProperties, TVMediaItemContentConfiguration.BadgeProperties) -> Bool\nReturns a Boolean value that indicates whether two values are equal."
+  },
+  {
+    "title": "Equatable Implementations",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/textproperties-swift.struct/equatable-implementations",
+    "html": "Topics\nOperators\nstatic func != (Self, Self) -> Bool\nReturns a Boolean value indicating whether two values are not equal."
+  },
+  {
+    "title": "debugDescription",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/badgeproperties-swift.struct/debugdescription",
+    "html": "See Also\nInspecting Badge Properties\nvar customMirror: Mirror\nThe custom mirror for this instance.\nvar description: String\nA textual representation of this instance."
+  },
+  {
+    "title": "CustomDebugStringConvertible Implementations",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/textproperties-swift.struct/customdebugstringconvertible-implementations",
+    "html": "Topics\nInstance Properties\nvar debugDescription: String\nA textual representation that’s suitable for output during debugging."
+  },
+  {
+    "title": "CustomReflectable Implementations",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/textproperties-swift.struct/customreflectable-implementations",
+    "html": "Topics\nInstance Properties\nvar customMirror: Mirror\nThe custom mirror for this instance."
+  },
+  {
+    "title": "CustomStringConvertible Implementations",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/textproperties-swift.struct/customstringconvertible-implementations",
+    "html": "Topics\nInstance Properties\nvar description: String\nA textual representation of this instance."
+  },
+  {
+    "title": "hash(into:)",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/textproperties-swift.struct/hash(into:)",
+    "html": "Parameters\nhasher\n\nThe hasher to use when combining the components of this instance.\n\nSee Also\nAccessing the Hash Value\nvar hashValue: Int\nThe hash value."
+  },
+  {
+    "title": "==(_:_:)",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/textproperties-swift.struct/==(_:_:)",
+    "html": "Parameters\na\n\nA value to compare.\n\nb\n\nAnother value to compare.\n\nSee Also\nComparing Text Properties\nstatic func != (Self, Self) -> Bool\nReturns a Boolean value indicating whether two values are not equal."
+  },
+  {
+    "title": "description",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/textproperties-swift.struct/description",
+    "html": "See Also\nInspecting Text Properties\nvar customMirror: Mirror\nThe custom mirror for this instance.\nvar debugDescription: String\nA textual representation that’s suitable for output during debugging."
+  },
+  {
+    "title": "debugDescription",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/textproperties-swift.struct/debugdescription",
+    "html": "See Also\nInspecting Text Properties\nvar customMirror: Mirror\nThe custom mirror for this instance.\nvar description: String\nA textual representation of this instance."
+  },
+  {
+    "title": "customMirror",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/textproperties-swift.struct/custommirror",
+    "html": "See Also\nInspecting Text Properties\nvar description: String\nA textual representation of this instance.\nvar debugDescription: String\nA textual representation that’s suitable for output during debugging."
+  },
+  {
+    "title": "TVMediaItemContentConfiguration.TextProperties.TextTransform",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/textproperties-swift.struct/texttransform",
+    "html": "Topics\nText Transforms\ncase none\nAn option with no transform.\ncase capitalized\nA transform for displaying the text with the first character capitalized.\ncase lowercase\nA transform for displaying the text in all lowercase characters.\ncase uppercase\nA transform for displaying the text in all uppercase characters.\nComparing Text Transforms\nstatic func == (TVMediaItemContentConfiguration.TextProperties.TextTransform, TVMediaItemContentConfiguration.TextProperties.TextTransform) -> Bool\nReturns a Boolean value that indicates whether two values are equal.\nstatic func != (Self, Self) -> Bool\nReturns a Boolean value indicating whether two values are not equal.\nAccessing the Hash Value\nfunc hash(into: inout Hasher)\nHashes the essential components of the value by passing them into the hasher.\nvar hashValue: Int\nThe hash value.\nDefault Implementations\nEquatable Implementations\nRelationships\nConforms To\nEquatable\nHashable\nSee Also\nCustomizing Content\nvar font: UIFont\nThe font for the badge text.\nvar color: UIColor\nThe color of the badge text.\nvar backgroundColor: UIColor\nThe background tint color of the badge.\nvar transform: TVMediaItemContentConfiguration.TextProperties.TextTransform\nThe transform to apply to the text before displaying it."
+  },
+  {
+    "title": "transform",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/textproperties-swift.struct/transform",
+    "html": "See Also\nConfiguring Text Properties\nvar font: UIFont\nThe font for the text.\nvar color: UIColor\nThe color of the text.\nenum TextTransform\nConstants that specify the transform to apply to the text."
+  },
+  {
+    "title": "color",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/textproperties-swift.struct/color",
+    "html": "See Also\nConfiguring Text Properties\nvar font: UIFont\nThe font for the text.\nvar transform: TVMediaItemContentConfiguration.TextProperties.TextTransform\nThe transform to apply to the text before displaying it.\nenum TextTransform\nConstants that specify the transform to apply to the text."
+  },
+  {
+    "title": "font",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/textproperties-swift.struct/font",
+    "html": "See Also\nConfiguring Text Properties\nvar color: UIColor\nThe color of the text.\nvar transform: TVMediaItemContentConfiguration.TextProperties.TextTransform\nThe transform to apply to the text before displaying it.\nenum TextTransform\nConstants that specify the transform to apply to the text."
+  },
+  {
+    "title": "Equatable Implementations",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/equatable-implementations",
+    "html": "Topics\nOperators\nstatic func != (Self, Self) -> Bool\nReturns a Boolean value indicating whether two values are not equal."
+  },
+  {
+    "title": "CustomDebugStringConvertible Implementations",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/customdebugstringconvertible-implementations",
+    "html": "Topics\nInstance Properties\nvar debugDescription: String\nA textual representation that’s suitable for output during debugging."
+  },
+  {
+    "title": "CustomReflectable Implementations",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/customreflectable-implementations",
+    "html": "Topics\nInstance Properties\nvar customMirror: Mirror\nThe custom mirror for this instance."
+  },
+  {
+    "title": "secondaryText",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-c.class/secondarytext",
+    "html": "See Also\nCustomizing Content\nimage\nThe image to display.\ntext\nThe primary text.\npersonNameComponents\nThe name the system uses when creating a monogram image."
+  },
+  {
+    "title": "isSecureDigitEntry",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvdigitentryviewcontroller/issecuredigitentry",
+    "html": "Discussion\n\nThe defualt value is NO.\n\nSee Also\nConfiguring the Digit Entry View\nvar numberOfDigits: Int\nThe number of required digits.\nvar titleText: String?\nThe title of the digit entry view.\nvar promptText: String?\nA prompt that displays any additional required information."
+  },
+  {
+    "title": "secondaryTextProperties",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/secondarytextproperties",
+    "html": "See Also\nCustomizing Appearance\nvar textProperties: TVMonogramContentConfiguration.TextProperties\nProperties for configuring the primary text.\nstruct TextProperties\nProperties that affect the monogram content configuration’s text."
+  },
+  {
+    "title": "secondaryText",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/secondarytext",
+    "html": "See Also\nCustomizing Content\nvar image: UIImage?\nThe image to display.\nvar text: String?\nThe primary text.\nvar personNameComponents: PersonNameComponents?\nThe name the system uses when creating a monogram image."
+  },
+  {
+    "title": "text",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/text",
+    "html": "See Also\nCustomizing Content\nvar image: UIImage?\nThe image to display.\nvar secondaryText: String?\nThe secondary text.\nvar personNameComponents: PersonNameComponents?\nThe name the system uses when creating a monogram image."
+  },
+  {
+    "title": "image",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/image",
+    "html": "See Also\nCustomizing Content\nvar text: String?\nThe primary text.\nvar secondaryText: String?\nThe secondary text.\nvar personNameComponents: PersonNameComponents?\nThe name the system uses when creating a monogram image."
+  },
+  {
+    "title": "cell()",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/cell()",
+    "html": "Return Value\n\nA new TVMonogramContentConfiguration instance."
+  },
+  {
+    "title": "TVCaptionButtonViewMotionDirection.horizontal",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcaptionbuttonviewmotiondirection/horizontal",
+    "html": "See Also\nTilt Directions\ncase all\nThe caption button view can tilt in all directions.\ncase none\nThe caption button view can’t tilt.\ncase vertical\nThe caption button view can tilt in the vertical direction."
+  },
+  {
+    "title": "subtitle",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvposterview/subtitle",
+    "html": "Discussion\n\nA subtitle for a poster view is optional. If it exists, it appears beneath the title.\n\nSee Also\nConfiguring a Poster View\nvar image: UIImage?\nThe image for the poster view.\nvar imageView: UIImageView\nThe image view associated with the poster view.\nvar title: String?\nThe title for the poster view."
+  },
+  {
+    "title": "image",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvposterview/image",
+    "html": "Discussion\n\nThe size of the poster view is determined by the natural size of the supplied image when no frame or content size is explicitly set.\n\nSee Also\nConfiguring a Poster View\nvar imageView: UIImageView\nThe image view associated with the poster view.\nvar title: String?\nThe title for the poster view.\nvar subtitle: String?\nThe subtitle for the poster view."
+  },
+  {
+    "title": "init(image:)",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvposterview/init(image:)",
+    "html": "Parameters\nimage\n\nThe image to be displayed in the content view area of the lockup view.\n\nDiscussion\n\nThe size of the poster view is determined by the natural size of the passed image when no frame or content size is explicitly set."
+  },
+  {
+    "title": "CustomStringConvertible Implementations",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/customstringconvertible-implementations",
+    "html": "Topics\nInstance Properties\nvar description: String\nA textual representation of this instance."
+  },
+  {
+    "title": "hash(into:)",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/badgeproperties-swift.struct/hash(into:)",
+    "html": "Parameters\nhasher\n\nThe hasher to use when combining the components of this instance.\n\nSee Also\nAccessing the Hash Value\nvar hashValue: Int\nThe hash value."
+  },
+  {
+    "title": "customMirror",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/badgeproperties-swift.struct/custommirror",
+    "html": "See Also\nInspecting Badge Properties\nvar description: String\nA textual representation of this instance.\nvar debugDescription: String\nA textual representation that’s suitable for output during debugging."
+  },
+  {
+    "title": "description",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/badgeproperties-swift.struct/description",
+    "html": "See Also\nInspecting Badge Properties\nvar customMirror: Mirror\nThe custom mirror for this instance.\nvar debugDescription: String\nA textual representation that’s suitable for output during debugging."
+  },
+  {
+    "title": "color",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/badgeproperties-swift.struct/color",
+    "html": "See Also\nCustomizing Content\nvar font: UIFont\nThe font for the badge text.\nvar backgroundColor: UIColor\nThe background tint color of the badge.\nvar transform: TVMediaItemContentConfiguration.TextProperties.TextTransform\nThe transform to apply to the text before displaying it.\nenum TextTransform\nConstants that specify the transform to apply to the text."
+  },
+  {
+    "title": "transform",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/badgeproperties-swift.struct/transform",
+    "html": "See Also\nCustomizing Content\nvar font: UIFont\nThe font for the badge text.\nvar color: UIColor\nThe color of the badge text.\nvar backgroundColor: UIColor\nThe background tint color of the badge.\nenum TextTransform\nConstants that specify the transform to apply to the text."
+  },
+  {
+    "title": "default()",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/badgeproperties-swift.struct/default()",
+    "html": "Return Value\n\nA new TVMediaItemContentConfiguration.BadgeProperties instance.\n\nSee Also\nCreating a Default Configuration\nstatic func liveContent() -> TVMediaItemContentConfiguration.BadgeProperties\nCreates the default configuration for a badge representing live content."
+  },
+  {
+    "title": "backgroundColor",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/badgeproperties-swift.struct/backgroundcolor",
+    "html": "See Also\nCustomizing Content\nvar font: UIFont\nThe font for the badge text.\nvar color: UIColor\nThe color of the badge text.\nvar transform: TVMediaItemContentConfiguration.TextProperties.TextTransform\nThe transform to apply to the text before displaying it.\nenum TextTransform\nConstants that specify the transform to apply to the text."
+  },
+  {
+    "title": "liveContent()",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/badgeproperties-swift.struct/livecontent()",
+    "html": "Return Value\n\nA new TVMediaItemContentConfiguration.BadgeProperties instance.\n\nSee Also\nCreating a Default Configuration\nstatic func `default`() -> TVMediaItemContentConfiguration.BadgeProperties\nCreates the default configuration for a badge."
+  },
+  {
+    "title": "font",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/badgeproperties-swift.struct/font",
+    "html": "See Also\nCustomizing Content\nvar color: UIColor\nThe color of the badge text.\nvar backgroundColor: UIColor\nThe background tint color of the badge.\nvar transform: TVMediaItemContentConfiguration.TextProperties.TextTransform\nThe transform to apply to the text before displaying it.\nenum TextTransform\nConstants that specify the transform to apply to the text."
+  },
+  {
+    "title": "entryCompletionHandler",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvdigitentryviewcontroller/entrycompletionhandler",
+    "html": "Parameters\nentry\n\nThe digits that the user entered into the digit entry view.\n\nDiscussion\n\nYour app should respond with any required actions in response to the user’s entry.\n\nSee Also\nEntering Information\nfunc clearEntry(animated: Bool)\nRemoves all digits from the digit entry view."
+  },
+  {
+    "title": "promptText",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvdigitentryviewcontroller/prompttext",
+    "html": "Discussion\n\nThe prompt text is displayed immediately below the title text.\n\nSee Also\nConfiguring the Digit Entry View\nvar numberOfDigits: Int\nThe number of required digits.\nvar titleText: String?\nThe title of the digit entry view.\nvar isSecureDigitEntry: Bool\nA Boolean value that indicates whether an entered digit is immediately obscured."
+  },
+  {
+    "title": "numberOfDigits",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvdigitentryviewcontroller/numberofdigits",
+    "html": "Discussion\n\nThe default value is 4.\n\nSee Also\nConfiguring the Digit Entry View\nvar titleText: String?\nThe title of the digit entry view.\nvar promptText: String?\nA prompt that displays any additional required information.\nvar isSecureDigitEntry: Bool\nA Boolean value that indicates whether an entered digit is immediately obscured."
+  },
+  {
+    "title": "titleText",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvdigitentryviewcontroller/titletext",
+    "html": "Discussion\n\nThe title is displayed along the top of the view.\n\nSee Also\nConfiguring the Digit Entry View\nvar numberOfDigits: Int\nThe number of required digits.\nvar promptText: String?\nA prompt that displays any additional required information.\nvar isSecureDigitEntry: Bool\nA Boolean value that indicates whether an entered digit is immediately obscured."
+  },
+  {
+    "title": "collectionView(_:layout:didCenterCellAt:)",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcollectionviewdelegatefullscreenlayout/collectionview(_:layout:didcentercellat:)",
+    "html": "See Also\nManaging Cell Transitions\nfunc collectionView(UICollectionView, layout: UICollectionViewLayout, willCenterCellAt: IndexPath)\nTells the delegate when a cell is to be the center cell.\n\nRequired"
+  },
+  {
+    "title": "TVMonogramContentTextProperties",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontenttextproperties",
+    "html": "Topics\nConfiguring Text Properties\nfont\nThe font for the text.\ncolor\nThe color of the text.\nRelationships\nInherits From\nConforms To\nSee Also\nCustomizing Appearance\ntextProperties\nProperties for configuring the primary text.\nsecondaryTextProperties\nProperties for configuring the secondary text."
+  },
+  {
+    "title": "collectionView(_:layout:willCenterCellAt:)",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcollectionviewdelegatefullscreenlayout/collectionview(_:layout:willcentercellat:)",
+    "html": "Required\n\nSee Also\nManaging Cell Transitions\nfunc collectionView(UICollectionView, layout: UICollectionViewLayout, didCenterCellAt: IndexPath)\nTells the delegate when a cell has completed the transition and has become the center cell."
+  },
+  {
+    "title": "secondaryTextProperties",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-c.class/secondarytextproperties",
+    "html": "See Also\nCustomizing Appearance\ntextProperties\nProperties for configuring the primary text.\nTVMonogramContentTextProperties\nProperties that affect the monogram content configuration’s text."
+  },
+  {
+    "title": "textProperties",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-c.class/textproperties",
+    "html": "See Also\nCustomizing Appearance\nsecondaryTextProperties\nProperties for configuring the secondary text.\nTVMonogramContentTextProperties\nProperties that affect the monogram content configuration’s text."
+  },
+  {
+    "title": "text",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-c.class/text",
+    "html": "See Also\nCustomizing Content\nimage\nThe image to display.\nsecondaryText\nThe secondary text.\npersonNameComponents\nThe name the system uses when creating a monogram image."
+  },
+  {
+    "title": "==(_:_:)",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/==(_:_:)",
+    "html": "Parameters\na\n\nA value to compare.\n\nb\n\nAnother value to compare.\n\nSee Also\nComparing Configurations\nstatic func != (Self, Self) -> Bool\nReturns a Boolean value indicating whether two values are not equal."
+  },
+  {
+    "title": "CustomStringConvertible Implementations",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/customstringconvertible-implementations",
+    "html": "Topics\nInstance Properties\nvar description: String\nA textual representation of this instance."
+  },
+  {
+    "title": "!=(_:_:)",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/!=(_:_:)",
+    "html": "Parameters\nlhs\n\nA value to compare.\n\nrhs\n\nAnother value to compare.\n\nDiscussion\n\nInequality is the inverse of equality. For any values a and b, a != b implies that a == b is false.\n\nThis is the default implementation of the not-equal-to operator (!=) for any type that conforms to Equatable.\n\nSee Also\nComparing Configurations\nstatic func == (TVMonogramContentConfiguration, TVMonogramContentConfiguration) -> Bool\nReturns a Boolean value that indicates whether two values are equal."
+  },
+  {
+    "title": "hashValue",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/hashvalue",
+    "html": "See Also\nAccessing the Hash Value\nfunc hash(into: inout Hasher)\nHashes the essential components of the value by passing them into the hasher."
+  },
+  {
+    "title": "hash(into:)",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/hash(into:)",
+    "html": "Parameters\nhasher\n\nThe hasher to use when combining the components of this instance.\n\nSee Also\nAccessing the Hash Value\nvar hashValue: Int\nThe hash value."
+  },
+  {
+    "title": "cellConfiguration",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-c.class/cellconfiguration",
+    "html": "Return Value\n\nA new TVMonogramContentConfiguration instance."
+  },
+  {
+    "title": "customMirror",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/custommirror",
+    "html": "See Also\nInspecting Configuration Properties\nvar description: String\nA textual representation of this instance.\nvar debugDescription: String\nA textual representation that’s suitable for output during debugging."
+  },
+  {
+    "title": "debugDescription",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/debugdescription",
+    "html": "See Also\nInspecting Configuration Properties\nvar customMirror: Mirror\nThe custom mirror for this instance.\nvar description: String\nA textual representation of this instance."
+  },
+  {
+    "title": "description",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct/description",
+    "html": "See Also\nInspecting Configuration Properties\nvar customMirror: Mirror\nThe custom mirror for this instance.\nvar debugDescription: String\nA textual representation that’s suitable for output during debugging."
+  },
+  {
+    "title": "TVMonogramContentConfiguration",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-c.class",
+    "html": "Topics\nCreating Default Configurations\n+ cellConfiguration\nCreates the default configuration for a circular monogram cell.\nCustomizing Content\nimage\nThe image to display.\ntext\nThe primary text.\nsecondaryText\nThe secondary text.\npersonNameComponents\nThe name the system uses when creating a monogram image.\nCustomizing Appearance\ntextProperties\nProperties for configuring the primary text.\nsecondaryTextProperties\nProperties for configuring the secondary text.\nTVMonogramContentTextProperties\nProperties that affect the monogram content configuration’s text.\nRelationships\nInherits From\nConforms To\nUIContentConfiguration\nSee Also\nCreating a Monogram Content View\n- initWithConfiguration:\nCreates a monogram content view with the configuration you specify."
+  },
+  {
+    "title": "TVCaptionButtonViewMotionDirection",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcaptionbuttonviewmotiondirection",
+    "html": "Topics\nTilt Directions\ncase all\nThe caption button view can tilt in all directions.\ncase horizontal\nThe caption button view can tilt in the horzontal direction.\ncase none\nThe caption button view can’t tilt.\ncase vertical\nThe caption button view can tilt in the vertical direction.\nInitializers\ninit?(rawValue: Int)\nDefault Implementations\nEquatable Implementations\nRawRepresentable Implementations\nRelationships\nConforms To\nEquatable\nHashable\nRawRepresentable\nSendable\nSee Also\nSetting the Motion Direction\nvar motionDirection: TVCaptionButtonViewMotionDirection\nThe direction that the caption button view tilts in response to user interaction on the remote."
+  },
+  {
+    "title": "initWithConfiguration:",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentview/initwithconfiguration:",
+    "html": "Parameters\nconfiguration\n\nThe configuration you specify to supply its styling and content.\n\nReturn Value\n\nA new TVMonogramContentView instance.\n\nSee Also\nCreating a Monogram Content View\nTVMonogramContentConfiguration\nA content configuration for a monogram view."
+  },
+  {
+    "title": "Equatable Implementations",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/equatable-implementations",
+    "html": "Topics\nOperators\nstatic func != (Self, Self) -> Bool\nReturns a Boolean value indicating whether two values are not equal."
+  },
+  {
+    "title": "init(configuration:)",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentview/init(configuration:)",
+    "html": "Parameters\nconfiguration\n\nThe configuration you specify to supply its styling and content.\n\nSee Also\nCreating a Media Item Content View\nstruct TVMediaItemContentConfiguration\nA content configuration for a media item view."
+  },
+  {
+    "title": "headerView",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvlockupview/headerview",
+    "html": "See Also\nAdding subviews\nvar contentView: UIView\nThe main view for the lockup.\nvar footerView: TVLockupHeaderFooterView?\nA view containing footer information."
+  },
+  {
+    "title": "CustomDebugStringConvertible Implementations",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/customdebugstringconvertible-implementations",
+    "html": "Topics\nInstance Properties\nvar debugDescription: String\nA textual representation that’s suitable for output during debugging."
+  },
+  {
+    "title": "focusSizeIncrease",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvlockupview/focussizeincrease",
+    "html": "Discussion\n\nUse negative values for a size increase. The values contribute to the lockup view’s intrinsic content size and guide layout update when focus state changes.\n\nSee Also\nSetting view size\nvar contentSize: CGSize\nThe size of the content view.\nvar contentViewInsets: NSDirectionalEdgeInsets\nThe spacing between the content view and its peer and containing views."
+  },
+  {
+    "title": "footerView",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvlockupview/footerview",
+    "html": "See Also\nAdding subviews\nvar contentView: UIView\nThe main view for the lockup.\nvar headerView: TVLockupHeaderFooterView?\nA view containing header information."
+  },
+  {
+    "title": "CustomReflectable Implementations",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/customreflectable-implementations",
+    "html": "Topics\nInstance Properties\nvar customMirror: Mirror\nThe custom mirror for this instance."
+  },
+  {
+    "title": "hashValue",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/hashvalue",
+    "html": "See Also\nAccessing the Hash Value\nfunc hash(into: inout Hasher)\nHashes the essential components of the value by passing them into the hasher."
+  },
+  {
+    "title": "contentSize",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvlockupview/contentsize",
+    "html": "Discussion\n\nUse this property to explicitly set the size of the content view. If frame is explicitly set, it takes precedence over contentSize.\n\nSee Also\nSetting view size\nvar contentViewInsets: NSDirectionalEdgeInsets\nThe spacing between the content view and its peer and containing views.\nvar focusSizeIncrease: NSDirectionalEdgeInsets\nThe inset or outset values specifying your content’s size increase when in focus."
+  },
+  {
+    "title": "description",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/description",
+    "html": "See Also\nInspecting Configuration Properties\nvar customMirror: Mirror\nThe custom mirror for this instance.\nvar debugDescription: String\nA textual representation that’s suitable for output during debugging."
+  },
+  {
+    "title": "==(_:_:)",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/==(_:_:)",
+    "html": "Parameters\na\n\nA value to compare.\n\nb\n\nAnother value to compare.\n\nSee Also\nComparing Configurations\nstatic func != (Self, Self) -> Bool\nReturns a Boolean value indicating whether two values are not equal."
+  },
+  {
+    "title": "!=(_:_:)",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/!=(_:_:)",
+    "html": "Parameters\nlhs\n\nA value to compare.\n\nrhs\n\nAnother value to compare.\n\nDiscussion\n\nInequality is the inverse of equality. For any values a and b, a != b implies that a == b is false.\n\nThis is the default implementation of the not-equal-to operator (!=) for any type that conforms to Equatable.\n\nSee Also\nComparing Configurations\nstatic func == (TVMediaItemContentConfiguration, TVMediaItemContentConfiguration) -> Bool\nReturns a Boolean value that indicates whether two values are equal."
+  },
+  {
+    "title": "customMirror",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/custommirror",
+    "html": "See Also\nInspecting Configuration Properties\nvar description: String\nA textual representation of this instance.\nvar debugDescription: String\nA textual representation that’s suitable for output during debugging."
+  },
+  {
+    "title": "TVMediaItemContentConfiguration.BadgeProperties",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/badgeproperties-swift.struct",
+    "html": "Topics\nCreating a Default Configuration\nstatic func `default`() -> TVMediaItemContentConfiguration.BadgeProperties\nCreates the default configuration for a badge.\nstatic func liveContent() -> TVMediaItemContentConfiguration.BadgeProperties\nCreates the default configuration for a badge representing live content.\nCustomizing Content\nvar font: UIFont\nThe font for the badge text.\nvar color: UIColor\nThe color of the badge text.\nvar backgroundColor: UIColor\nThe background tint color of the badge.\nvar transform: TVMediaItemContentConfiguration.TextProperties.TextTransform\nThe transform to apply to the text before displaying it.\nenum TextTransform\nConstants that specify the transform to apply to the text.\nInspecting Badge Properties\nvar customMirror: Mirror\nThe custom mirror for this instance.\nvar description: String\nA textual representation of this instance.\nvar debugDescription: String\nA textual representation that’s suitable for output during debugging.\nComparing Badge Properties\nstatic func == (TVMediaItemContentConfiguration.BadgeProperties, TVMediaItemContentConfiguration.BadgeProperties) -> Bool\nReturns a Boolean value that indicates whether two values are equal.\nstatic func != (Self, Self) -> Bool\nReturns a Boolean value indicating whether two values are not equal.\nAccessing the Hash Value\nfunc hash(into: inout Hasher)\nHashes the essential components of the value by passing them into the hasher.\nvar hashValue: Int\nThe hash value.\nDefault Implementations\nCustomDebugStringConvertible Implementations\nCustomReflectable Implementations\nCustomStringConvertible Implementations\nEquatable Implementations\nRelationships\nConforms To\nCustomDebugStringConvertible\nCustomReflectable\nCustomStringConvertible\nEquatable\nHashable\nSee Also\nCustomizing Content\nvar image: UIImage?\nThe image to display.\nvar text: String?\nThe primary text.\nvar secondaryText: String?\nThe secondary text.\nvar badgeText: String?\nThe text to display in a badge in the top corner of the content.\nvar badgeProperties: TVMediaItemContentConfiguration.BadgeProperties\nProperties for configuring the badge.\nvar overlayView: UIView?\nAn overlay view the system places above the image and automatically resizes to fill the frame.\nvar playbackProgress: Float\nThe playback progress to display for the media item."
+  },
+  {
+    "title": "TVMediaItemContentConfiguration.TextProperties",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/textproperties-swift.struct",
+    "html": "Topics\nConfiguring Text Properties\nvar font: UIFont\nThe font for the text.\nvar color: UIColor\nThe color of the text.\nvar transform: TVMediaItemContentConfiguration.TextProperties.TextTransform\nThe transform to apply to the text before displaying it.\nenum TextTransform\nConstants that specify the transform to apply to the text.\nInspecting Text Properties\nvar customMirror: Mirror\nThe custom mirror for this instance.\nvar description: String\nA textual representation of this instance.\nvar debugDescription: String\nA textual representation that’s suitable for output during debugging.\nComparing Text Properties\nstatic func == (TVMediaItemContentConfiguration.TextProperties, TVMediaItemContentConfiguration.TextProperties) -> Bool\nReturns a Boolean value that indicates whether two values are equal.\nstatic func != (Self, Self) -> Bool\nReturns a Boolean value indicating whether two values are not equal.\nAccessing the Hash Value\nfunc hash(into: inout Hasher)\nHashes the essential components of the value by passing them into the hasher.\nvar hashValue: Int\nThe hash value.\nDefault Implementations\nCustomDebugStringConvertible Implementations\nCustomReflectable Implementations\nCustomStringConvertible Implementations\nEquatable Implementations\nRelationships\nConforms To\nCustomDebugStringConvertible\nCustomReflectable\nCustomStringConvertible\nEquatable\nHashable\nSee Also\nCustomizing Appearance\nvar textProperties: TVMediaItemContentConfiguration.TextProperties\nProperties for configuring the primary text.\nvar secondaryTextProperties: TVMediaItemContentConfiguration.TextProperties\nProperties for configuring the secondary text."
+  },
+  {
+    "title": "textProperties",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/textproperties-swift.property",
+    "html": "See Also\nCustomizing Appearance\nstruct TextProperties\nProperties that affect the media item content configuration’s text.\nvar secondaryTextProperties: TVMediaItemContentConfiguration.TextProperties\nProperties for configuring the secondary text."
+  },
+  {
+    "title": "secondaryTextProperties",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/secondarytextproperties",
+    "html": "See Also\nCustomizing Appearance\nstruct TextProperties\nProperties that affect the media item content configuration’s text.\nvar textProperties: TVMediaItemContentConfiguration.TextProperties\nProperties for configuring the primary text."
+  },
+  {
+    "title": "badgeProperties",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/badgeproperties-swift.property",
+    "html": "See Also\nCustomizing Content\nvar image: UIImage?\nThe image to display.\nvar text: String?\nThe primary text.\nvar secondaryText: String?\nThe secondary text.\nvar badgeText: String?\nThe text to display in a badge in the top corner of the content.\nstruct BadgeProperties\nProperties that affect the media item content badge.\nvar overlayView: UIView?\nAn overlay view the system places above the image and automatically resizes to fill the frame.\nvar playbackProgress: Float\nThe playback progress to display for the media item."
+  },
+  {
+    "title": "secondaryText",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/secondarytext",
+    "html": "See Also\nCustomizing Content\nvar image: UIImage?\nThe image to display.\nvar text: String?\nThe primary text.\nvar badgeText: String?\nThe text to display in a badge in the top corner of the content.\nvar badgeProperties: TVMediaItemContentConfiguration.BadgeProperties\nProperties for configuring the badge.\nstruct BadgeProperties\nProperties that affect the media item content badge.\nvar overlayView: UIView?\nAn overlay view the system places above the image and automatically resizes to fill the frame.\nvar playbackProgress: Float\nThe playback progress to display for the media item."
+  },
+  {
+    "title": "badgeText",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/badgetext",
+    "html": "See Also\nCustomizing Content\nvar image: UIImage?\nThe image to display.\nvar text: String?\nThe primary text.\nvar secondaryText: String?\nThe secondary text.\nvar badgeProperties: TVMediaItemContentConfiguration.BadgeProperties\nProperties for configuring the badge.\nstruct BadgeProperties\nProperties that affect the media item content badge.\nvar overlayView: UIView?\nAn overlay view the system places above the image and automatically resizes to fill the frame.\nvar playbackProgress: Float\nThe playback progress to display for the media item."
+  },
+  {
+    "title": "text",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/text",
+    "html": "See Also\nCustomizing Content\nvar image: UIImage?\nThe image to display.\nvar secondaryText: String?\nThe secondary text.\nvar badgeText: String?\nThe text to display in a badge in the top corner of the content.\nvar badgeProperties: TVMediaItemContentConfiguration.BadgeProperties\nProperties for configuring the badge.\nstruct BadgeProperties\nProperties that affect the media item content badge.\nvar overlayView: UIView?\nAn overlay view the system places above the image and automatically resizes to fill the frame.\nvar playbackProgress: Float\nThe playback progress to display for the media item."
+  },
+  {
+    "title": "image",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/image",
+    "html": "See Also\nCustomizing Content\nvar text: String?\nThe primary text.\nvar secondaryText: String?\nThe secondary text.\nvar badgeText: String?\nThe text to display in a badge in the top corner of the content.\nvar badgeProperties: TVMediaItemContentConfiguration.BadgeProperties\nProperties for configuring the badge.\nstruct BadgeProperties\nProperties that affect the media item content badge.\nvar overlayView: UIView?\nAn overlay view the system places above the image and automatically resizes to fill the frame.\nvar playbackProgress: Float\nThe playback progress to display for the media item."
+  },
+  {
+    "title": "wideCell()",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/widecell()",
+    "html": "Return Value\n\nA new TVMediaItemContentConfiguration instance for a wide cell with a 16:9 aspect ratio."
+  },
+  {
+    "title": "titleLabel",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvlockupheaderfooterview/titlelabel",
+    "html": "See Also\nAdding Titles\nvar subtitleLabel: UILabel?\nThe subtitle for a header or footer."
+  },
+  {
+    "title": "subtitleLabel",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvlockupheaderfooterview/subtitlelabel",
+    "html": "See Also\nAdding Titles\nvar titleLabel: UILabel?\nThe title for a header or footer."
+  },
+  {
+    "title": "TVMonogramContentConfiguration",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-swift.struct",
+    "html": "Topics\nCreating Default Configurations\nstatic func cell() -> TVMonogramContentConfiguration\nCreates the default configuration for a circular monogram cell.\nCustomizing Content\nvar image: UIImage?\nThe image to display.\nvar text: String?\nThe primary text.\nvar secondaryText: String?\nThe secondary text.\nvar personNameComponents: PersonNameComponents?\nThe name the system uses when creating a monogram image.\nCustomizing Appearance\nvar textProperties: TVMonogramContentConfiguration.TextProperties\nProperties for configuring the primary text.\nvar secondaryTextProperties: TVMonogramContentConfiguration.TextProperties\nProperties for configuring the secondary text.\nstruct TextProperties\nProperties that affect the monogram content configuration’s text.\nCreating a Content View\nfunc makeContentView() -> any UIView & UIContentView\nCreates a new instance of the content view using this configuration.\nUpdating the Configuration\nfunc updated(for: any UIConfigurationState) -> TVMonogramContentConfiguration\nGenerates a configuration for the specified state by applying the configuration’s default values for that state to any properties that you haven’t customized.\nInspecting Configuration Properties\nvar customMirror: Mirror\nThe custom mirror for this instance.\nvar description: String\nA textual representation of this instance.\nvar debugDescription: String\nA textual representation that’s suitable for output during debugging.\nComparing Configurations\nstatic func == (TVMonogramContentConfiguration, TVMonogramContentConfiguration) -> Bool\nReturns a Boolean value that indicates whether two values are equal.\nstatic func != (Self, Self) -> Bool\nReturns a Boolean value indicating whether two values are not equal.\nAccessing the Hash Value\nfunc hash(into: inout Hasher)\nHashes the essential components of the value by passing them into the hasher.\nvar hashValue: Int\nThe hash value.\nDefault Implementations\nCustomDebugStringConvertible Implementations\nCustomReflectable Implementations\nCustomStringConvertible Implementations\nEquatable Implementations\nRelationships\nConforms To\nCustomDebugStringConvertible\nCustomReflectable\nCustomStringConvertible\nEquatable\nHashable\nUIContentConfiguration\nSee Also\nCreating a Monogram Content View\nconvenience init(configuration: TVMonogramContentConfiguration)\nCreates a monogram content view with the configuration you specify."
+  },
+  {
+    "title": "contentText",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcaptionbuttonview/contenttext",
+    "html": "Discussion\n\nThe content text is displayed in the caption button and indicates the purpose of the caption button. The last instance of contentImage or contentText that was set in your app is displayed by the caption button view.\n\nSee Also\nConfiguring the Caption Button\nvar contentImage: UIImage?\nThe image displayed in the main content view.\nvar title: String?\nThe title for the caption button.\nvar subtitle: String?\nThe subtitle of the caption button."
+  },
+  {
+    "title": "title",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcaptionbuttonview/title",
+    "html": "Discussion\n\nThe title appears below the caption button.\n\nSee Also\nConfiguring the Caption Button\nvar contentImage: UIImage?\nThe image displayed in the main content view.\nvar contentText: String?\nThe text displayed in the main content view.\nvar subtitle: String?\nThe subtitle of the caption button."
+  },
+  {
+    "title": "contentImage",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcaptionbuttonview/contentimage",
+    "html": "Discussion\n\nThe content image is displayed in the caption button and indicates the purpose of the caption button. The last instance of contentImage or contentText that was set in your app is displayed by the caption button view.\n\nSee Also\nConfiguring the Caption Button\nvar contentText: String?\nThe text displayed in the main content view.\nvar title: String?\nThe title for the caption button.\nvar subtitle: String?\nThe subtitle of the caption button."
+  },
+  {
+    "title": "subtitle",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcaptionbuttonview/subtitle",
+    "html": "Discussion\n\nThe subtitle appears below the title of the caption button.\n\nSee Also\nConfiguring the Caption Button\nvar contentImage: UIImage?\nThe image displayed in the main content view.\nvar contentText: String?\nThe text displayed in the main content view.\nvar title: String?\nThe title for the caption button."
+  },
+  {
+    "title": "motionDirection",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcaptionbuttonview/motiondirection",
+    "html": "Discussion\n\nThe default value is TVCaptionButtonViewMotionDirection.horizontal.\n\nSee Also\nSetting the Motion Direction\nenum TVCaptionButtonViewMotionDirection\nThe directions that the caption button view can tilt in response to user interactions on the remote."
+  },
+  {
+    "title": "TVPosterView",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvposterview",
+    "html": "Overview\n\nThe TVPosterView object is a specialized TVLockupView used to display media items. The size of the poster view expands when it comes into focus.\n\nTopics\nCreating a Poster View\ninit(image: UIImage?)\nCreates a new poster view using the supplied image.\nConfiguring a Poster View\nvar image: UIImage?\nThe image for the poster view.\nvar imageView: UIImageView\nThe image view associated with the poster view.\nvar title: String?\nThe title for the poster view.\nvar subtitle: String?\nThe subtitle for the poster view.\nRelationships\nInherits From\nTVLockupView\nConforms To\nCALayerDelegate\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSCoding\nNSObjectProtocol\nSendable\nUIAccessibilityIdentification\nUIAppearance\nUIAppearanceContainer\nUIContextMenuInteractionDelegate\nUICoordinateSpace\nUIDynamicItem\nUIFocusEnvironment\nUIFocusItem\nUIFocusItemContainer\nUIResponderStandardEditActions\nUITraitChangeObservable\nUITraitEnvironment\nUIUserActivityRestoring\nSee Also\nLockup views\nclass TVLockupView\nA focusable view that presents main content, like a movie poster, and an optional header and footer.\nprotocol TVLockupViewComponent\nThe protocol for responding to lockup view state changes.\nclass TVLockupHeaderFooterView\nA view that contains header and footer information.\nclass TVCardView\nA view that responds to focus interaction with a motion effect it applies to all of its subviews.\nclass TVCaptionButtonView\nA button-like view that responds to user interactions.\nclass TVMonogramView\nA specialized lockup view that contains a circular image of a person or the person’s initials, along with a footer view.\nDeprecated"
+  },
+  {
+    "title": "personNameComponents",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramview/personnamecomponents",
+    "html": "Discussion\n\nIf no image is provided, the monogram object creates an image using the first initial of the givenName and familyName attributes contained in this property. The person’s name appears below the monogram image.\n\nSee Also\nConfiguring a Monogram\nvar image: UIImage?\nThe custom image for the monogram.\nvar title: String?\nThe title for the monogram.\nvar subtitle: String?\nThe subtitle for the monogram."
+  },
+  {
+    "title": "interitemSpacing",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcollectionviewfullscreenlayout/interitemspacing",
+    "html": "Discussion\n\nUse the interitemSpacing property to set a fixed space between each cell in the collection view.\n\nThe default value of this property is 20.0."
+  },
+  {
+    "title": "centerIndexPath",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcollectionviewfullscreenlayout/centerindexpath",
+    "html": "Discussion\n\nThe centerIndexPath property returns the index path of the cell currently centered on the screen. TVUIKit calculates the current index path using the current content offset of the collection view."
+  },
+  {
+    "title": "subtitle",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramview/subtitle",
+    "html": "Discussion\n\nThe subtitle appears below the title.\n\nSee Also\nConfiguring a Monogram\nvar personNameComponents: PersonNameComponents?\nThe names used to create a monogram image.\nvar image: UIImage?\nThe custom image for the monogram.\nvar title: String?\nThe title for the monogram."
+  },
+  {
+    "title": "title",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramview/title",
+    "html": "Discussion\n\nThe title appears below the person’s name and usually describes the person’s role in the media item.\n\nSee Also\nConfiguring a Monogram\nvar personNameComponents: PersonNameComponents?\nThe names used to create a monogram image.\nvar image: UIImage?\nThe custom image for the monogram.\nvar subtitle: String?\nThe subtitle for the monogram."
+  },
+  {
+    "title": "image",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramview/image",
+    "html": "Discussion\n\nIf you supply an image, the system uses this image instead of a generic image or an image created from the name components.\n\nSee Also\nConfiguring a Monogram\nvar personNameComponents: PersonNameComponents?\nThe names used to create a monogram image.\nvar title: String?\nThe title for the monogram.\nvar subtitle: String?\nThe subtitle for the monogram."
+  },
+  {
+    "title": "contentView",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvlockupview/contentview",
+    "html": "Discussion\n\nAdd subviews to the contentView. Don’t add views direcly to the lockup view.\n\nSee Also\nAdding subviews\nvar headerView: TVLockupHeaderFooterView?\nA view containing header information.\nvar footerView: TVLockupHeaderFooterView?\nA view containing footer information."
+  },
+  {
+    "title": "hash(into:)",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/hash(into:)",
+    "html": "Parameters\nhasher\n\nThe hasher to use when combining the components of this instance.\n\nSee Also\nAccessing the Hash Value\nvar hashValue: Int\nThe hash value."
+  },
+  {
+    "title": "debugDescription",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/debugdescription",
+    "html": "See Also\nInspecting Configuration Properties\nvar customMirror: Mirror\nThe custom mirror for this instance.\nvar description: String\nA textual representation of this instance."
+  },
+  {
+    "title": "overlayView",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/overlayview",
+    "html": "See Also\nCustomizing Content\nvar image: UIImage?\nThe image to display.\nvar text: String?\nThe primary text.\nvar secondaryText: String?\nThe secondary text.\nvar badgeText: String?\nThe text to display in a badge in the top corner of the content.\nvar badgeProperties: TVMediaItemContentConfiguration.BadgeProperties\nProperties for configuring the badge.\nstruct BadgeProperties\nProperties that affect the media item content badge.\nvar playbackProgress: Float\nThe playback progress to display for the media item."
+  },
+  {
+    "title": "playbackProgress",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct/playbackprogress",
+    "html": "Discussion\n\nThe system clamps the value between 0.0 and 1.0.\n\nSee Also\nCustomizing Content\nvar image: UIImage?\nThe image to display.\nvar text: String?\nThe primary text.\nvar secondaryText: String?\nThe secondary text.\nvar badgeText: String?\nThe text to display in a badge in the top corner of the content.\nvar badgeProperties: TVMediaItemContentConfiguration.BadgeProperties\nProperties for configuring the badge.\nstruct BadgeProperties\nProperties that affect the media item content badge.\nvar overlayView: UIView?\nAn overlay view the system places above the image and automatically resizes to fill the frame."
+  },
+  {
+    "title": "TVDigitEntryViewController",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvdigitentryviewcontroller",
+    "html": "Overview\n\nUse the TVDigitEntryViewController class to manage a digit entry view. The digit entry view is automatically presented by the view controller and consists of boxes that display digits and a digit keyboard.\n\nTopics\nConfiguring the Digit Entry View\nvar numberOfDigits: Int\nThe number of required digits.\nvar titleText: String?\nThe title of the digit entry view.\nvar promptText: String?\nA prompt that displays any additional required information.\nvar isSecureDigitEntry: Bool\nA Boolean value that indicates whether an entered digit is immediately obscured.\nEntering Information\nvar entryCompletionHandler: (String) -> Void\nA completion handler that cues the app that the user has entered the required number of digits for the digit entry view.\nfunc clearEntry(animated: Bool)\nRemoves all digits from the digit entry view.\nRelationships\nInherits From\nUIViewController\nConforms To\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSCoding\nNSExtensionRequestHandling\nNSObjectProtocol\nSendable\nUIAppearanceContainer\nUIContentContainer\nUIFocusEnvironment\nUIResponderStandardEditActions\nUIStateRestoring\nUITraitChangeObservable\nUITraitEnvironment\nUIUserActivityRestoring"
+  },
+  {
+    "title": "showsOnlyWhenAncestorFocused",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvlockupheaderfooterview/showsonlywhenancestorfocused",
+    "html": "Discussion\n\nSet this value to FALSE to display header and footer information while the lockup view is not in focus. Header and footer information is always shown when a lockup view is in focus, regardless of this property’s value."
+  },
+  {
+    "title": "personNameComponents",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-c.class/personnamecomponents",
+    "html": "See Also\nCustomizing Content\nimage\nThe image to display.\ntext\nThe primary text.\nsecondaryText\nThe secondary text."
+  },
+  {
+    "title": "updateAppearance(forLockupViewState:)",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvlockupviewcomponent/updateappearance(forlockupviewstate:)",
+    "html": "Required"
+  },
+  {
+    "title": "TVCollectionViewDelegateFullScreenLayout",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcollectionviewdelegatefullscreenlayout",
+    "html": "Overview\n\nThe methods contained in this protocol help you manage and control cell transitions.\n\nTopics\nManaging Cell Transitions\nfunc collectionView(UICollectionView, layout: UICollectionViewLayout, willCenterCellAt: IndexPath)\nTells the delegate when a cell is to be the center cell.\n\nRequired\n\nfunc collectionView(UICollectionView, layout: UICollectionViewLayout, didCenterCellAt: IndexPath)\nTells the delegate when a cell has completed the transition and has become the center cell.\nRelationships\nInherits From\nNSObjectProtocol\nUICollectionViewDelegate\nUIScrollViewDelegate\nSee Also\nCollections of content\nCreating immersive experiences using a full-screen layout\nDisplay content with a collection view that maximizes the tvOS experience.\nclass TVCollectionViewFullScreenLayout\nA collection view layout that organizes items into a browsable, full-screen display format.\nclass TVCollectionViewFullScreenCell\nA full-screen cell to use in full-screen display format.\nclass TVCollectionViewFullScreenLayoutAttributes\nAttributes to manage the appearance of the collection view’s layout."
+  },
+  {
+    "title": "image",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentconfiguration-c.class/image",
+    "html": "See Also\nCustomizing Content\ntext\nThe primary text.\nsecondaryText\nThe secondary text.\npersonNameComponents\nThe name the system uses when creating a monogram image."
+  },
+  {
+    "title": "UIContentView Implementations",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentview/uicontentview-implementations",
+    "html": "Topics\nInstance Properties\nvar configuration: any UIContentConfiguration\nThe current configuration of the view.\nInstance Methods\nfunc supports(any UIContentConfiguration) -> Bool"
+  },
+  {
+    "title": "init(configuration:)",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentview/init(configuration:)",
+    "html": "Parameters\nconfiguration\n\nThe configuration you specify to supply its styling and content.\n\nSee Also\nCreating a Monogram Content View\nstruct TVMonogramContentConfiguration\nA content configuration for a monogram view."
+  },
+  {
+    "title": "parallaxOffset",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcollectionviewfullscreencell/parallaxoffset",
+    "html": "Discussion\n\nA larger offset value creates a more dramatic parallax effect, and a smaller offset value creates a less dramatic effect."
+  },
+  {
+    "title": "normalizedPositionDidChange()",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcollectionviewfullscreencell/normalizedpositiondidchange()",
+    "html": "Discussion\nSee Also\nManaging Cell Position\nfunc normalizedPositionWillChange(CGFloat)\nNotifies the cell when its normalized position is about to change."
+  },
+  {
+    "title": "maskedBackgroundView",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcollectionviewfullscreencell/maskedbackgroundview",
+    "html": "Discussion\n\nThe maskedBackgroundView property returns the current cell’s background view. Modify properties of this view to customize the parallax effect. Generally, you should add an opaque image to the view.\n\nSee Also\nAccessing Cell Views\nvar maskedContentView: UIView\nThe content view in focus."
+  },
+  {
+    "title": "normalizedPosition",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcollectionviewfullscreencell/normalizedposition",
+    "html": "Discussion\n\nA value of 0 indicates that the cell is positioned at the center of the collection view. A negative value indicates that the cell is positioned to the left of the center. A positive value indicates that the cell is positioned to the right of the center."
+  },
+  {
+    "title": "maskedContentView",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcollectionviewfullscreencell/maskedcontentview",
+    "html": "Discussion\n\nUse this property to modify the parallax effect applied on the cell and its content. Add any other UI elements to be included on the cell to this view.\n\nThis view fills the entire screen.\n\nSee Also\nAccessing Cell Views\nvar maskedBackgroundView: UIView\nThe background view that performs the parallax effect."
+  },
+  {
+    "title": "cornerRadius",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcollectionviewfullscreencell/cornerradius",
+    "html": "Discussion\n\nSetting the radius to a value greater than 0.0 points applies increasingly rounded corners to the cell.\n\nSee Also\nModifying Cell Appearance\nvar contentBleed: UIEdgeInsets\nThe amount of content that overlaps into the masked portions of the cell.\nvar maskAmount: CGFloat\nThe factor that determines the amount of masking applied on the cell."
+  },
+  {
+    "title": "maskAmount",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcollectionviewfullscreencell/maskamount",
+    "html": "Discussion\n\nThe amount of masking is determined by attributes of the collection view. A value of 0.0 is applied automatically when the cell is in full screen mode, indicating that there is no masking around the cell. A value of 1.0 is the default masking applied in browsing mode.\n\nSee Also\nModifying Cell Appearance\nvar contentBleed: UIEdgeInsets\nThe amount of content that overlaps into the masked portions of the cell.\nvar cornerRadius: CGFloat\nThe radius to use when drawing rounded corners for the cell."
+  },
+  {
+    "title": "contentBleed",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcollectionviewfullscreencell/contentbleed",
+    "html": "Discussion\n\nThe portions of content that bleed into the masked portions go out of bounds, and consequently disappear from view.\n\nSee Also\nModifying Cell Appearance\nvar cornerRadius: CGFloat\nThe radius to use when drawing rounded corners for the cell.\nvar maskAmount: CGFloat\nThe factor that determines the amount of masking applied on the cell."
+  },
+  {
+    "title": "normalizedPosition",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcollectionviewfullscreenlayoutattributes/normalizedposition",
+    "html": "Discussion\n\nA negative value indicates that the cell is positioned to the left of the center cell in the collection view. A positive value indicates that the cell is positioned to the right of the center cell. A 0 value indicates the cell is in the neutral position, in the center of the collection view."
+  },
+  {
+    "title": "maskAmount",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcollectionviewfullscreenlayoutattributes/maskamount",
+    "html": "See Also\nModifying Cell Appearance\nvar contentBleed: UIEdgeInsets\nThe amount of content that bleeds into the masked portions of the cell.\nvar cornerRadius: CGFloat\nThe radius to use when drawing rounded corners for the cell."
+  },
+  {
+    "title": "parallaxOffset",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcollectionviewfullscreenlayoutattributes/parallaxoffset",
+    "html": "Discussion\n\nA larger offset value creates a more dramatic parallax effect, and a smaller offset value creates a less dramatic effect."
+  },
+  {
+    "title": "cornerRadius",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcollectionviewfullscreenlayoutattributes/cornerradius",
+    "html": "See Also\nModifying Cell Appearance\nvar contentBleed: UIEdgeInsets\nThe amount of content that bleeds into the masked portions of the cell.\nvar maskAmount: CGFloat\nThe amount of masking to apply to the cell."
+  },
+  {
+    "title": "isTransitioningToCenterIndexPath",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcollectionviewfullscreenlayout/istransitioningtocenterindexpath",
+    "html": "Discussion\n\nUse this property to determine whether the cell is changing focus to another cell.\n\nSee Also\nManaging transitions\nvar parallaxFactor: CGFloat\nA value that specifies how slowly the background should move relative to the foreground."
+  },
+  {
+    "title": "contentBleed",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcollectionviewfullscreenlayoutattributes/contentbleed",
+    "html": "See Also\nModifying Cell Appearance\nvar cornerRadius: CGFloat\nThe radius to use when drawing rounded corners for the cell.\nvar maskAmount: CGFloat\nThe amount of masking to apply to the cell."
+  },
+  {
+    "title": "parallaxFactor",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcollectionviewfullscreenlayout/parallaxfactor",
+    "html": "Discussion\n\nA large parallaxFactor value causes the background to move more slowly compared to the foreground. A small value makes the foreground and background move at a similar pace. The parallax effect becomes more apparent as the value of parallaxFactor increases.\n\nThe default value of this property is 0.8. The minimum value is 0.0.\n\nSee Also\nManaging transitions\nvar isTransitioningToCenterIndexPath: Bool\nA Boolean value that indicates whether the cell is changing index paths."
+  },
+  {
+    "title": "cornerRadius",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcollectionviewfullscreenlayout/cornerradius",
+    "html": "Discussion\n\nSetting the radius to a value greater than 0.0 points applies increasingly rounded corners on the cell.\n\nThe default value of this property is 36.0 points."
+  },
+  {
+    "title": "maskInset",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcollectionviewfullscreenlayout/maskinset",
+    "html": "Discussion\n\nUse the maskInset property to create a mask around the cell that is only revealed when the cell is brought into focus.\n\nThe default value of this property is UIEdgeInsetsMake(32.0, 120.0, 0.0, 120.0).\n\nSee Also\nConfiguring cell masks\nvar maskAmount: CGFloat\nThe amount by which to mask the cells in a collection view."
+  },
+  {
+    "title": "maskAmount",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcollectionviewfullscreenlayout/maskamount",
+    "html": "Discussion\n\nUse the maskAmount property to change how much masking the collection view applies to its cells. Setting the value of the property on the layout updates the maskAmount value of all the cells.\n\nThis property can take on a float value between 0 and 1.0. A value of 0 indicates that the cells are full-screen, and a value of 1.0 indicates that the collection view applies the full mask to its cells.\n\nThe default value of this property is 1.0.\n\nSee Also\nConfiguring cell masks\nvar maskInset: UIEdgeInsets\nThe edge insets of the cell mask."
+  },
+  {
+    "title": "TVLockupView",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvlockupview",
+    "html": "Overview\n\nA TVLockupView object consists of three views that operate as a single view. The content view typically contains a media item image, like a movie poster, with additional information in the header and footer views. The TVLockupView object expands when it comes into focus, using focusSizeIncrease and contentSize to calculate the size increase. Provide sufficient focusSizeIncrease values so that your custom content doesn’t overlap other objects when the content comes into focus.\n\nThe following figure shows a TVLockupView object that’s in focus. The yellow, vertical bars indicate the space between views. The center view is in focus and has increased in size, expanding into the space between views. Views don’t move as other views come into focus.\n\nNote\n\nDon’t create a TVLockupView directly. Instead, create an instance of the subclass that best suits your use case, such as TVPosterView or TVCardView.\n\nTopics\nSetting view size\nvar contentSize: CGSize\nThe size of the content view.\nvar contentViewInsets: NSDirectionalEdgeInsets\nThe spacing between the content view and its peer and containing views.\nvar focusSizeIncrease: NSDirectionalEdgeInsets\nThe inset or outset values specifying your content’s size increase when in focus.\nAdding subviews\nvar contentView: UIView\nThe main view for the lockup.\nvar headerView: TVLockupHeaderFooterView?\nA view containing header information.\nvar footerView: TVLockupHeaderFooterView?\nA view containing footer information.\nRelationships\nInherits From\nUIControl\nInherited By\nTVCaptionButtonView\nTVCardView\nTVMonogramView\nTVPosterView\nConforms To\nCALayerDelegate\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSCoding\nNSObjectProtocol\nUIAccessibilityIdentification\nUIAppearance\nUIAppearanceContainer\nUIContextMenuInteractionDelegate\nUICoordinateSpace\nUIDynamicItem\nUIFocusEnvironment\nUIFocusItem\nUIFocusItemContainer\nUIResponderStandardEditActions\nUITraitChangeObservable\nUITraitEnvironment\nUIUserActivityRestoring\nSee Also\nLockup views\nprotocol TVLockupViewComponent\nThe protocol for responding to lockup view state changes.\nclass TVLockupHeaderFooterView\nA view that contains header and footer information.\nclass TVCardView\nA view that responds to focus interaction with a motion effect it applies to all of its subviews.\nclass TVPosterView\nAn optimized view for displaying an image, a header, and a footer.\nclass TVCaptionButtonView\nA button-like view that responds to user interactions.\nclass TVMonogramView\nA specialized lockup view that contains a circular image of a person or the person’s initials, along with a footer view.\nDeprecated"
+  },
+  {
+    "title": "TVMediaItemContentConfiguration",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentconfiguration-swift.struct",
+    "html": "Topics\nCreating Default Configurations\nstatic func wideCell() -> TVMediaItemContentConfiguration\nCreates the default configuration for a wide media item cell.\nCustomizing Content\nvar image: UIImage?\nThe image to display.\nvar text: String?\nThe primary text.\nvar secondaryText: String?\nThe secondary text.\nvar badgeText: String?\nThe text to display in a badge in the top corner of the content.\nvar badgeProperties: TVMediaItemContentConfiguration.BadgeProperties\nProperties for configuring the badge.\nstruct BadgeProperties\nProperties that affect the media item content badge.\nvar overlayView: UIView?\nAn overlay view the system places above the image and automatically resizes to fill the frame.\nvar playbackProgress: Float\nThe playback progress to display for the media item.\nCustomizing Appearance\nstruct TextProperties\nProperties that affect the media item content configuration’s text.\nvar textProperties: TVMediaItemContentConfiguration.TextProperties\nProperties for configuring the primary text.\nvar secondaryTextProperties: TVMediaItemContentConfiguration.TextProperties\nProperties for configuring the secondary text.\nCreating a Content View\nfunc makeContentView() -> any UIView & UIContentView\nCreates a new instance of the content view using this configuration.\nUpdating the Configuration\nfunc updated(for: any UIConfigurationState) -> TVMediaItemContentConfiguration\nGenerates a configuration for the specified state by applying the configuration’s default values for that state to any properties that you haven’t customized.\nInspecting Configuration Properties\nvar customMirror: Mirror\nThe custom mirror for this instance.\nvar description: String\nA textual representation of this instance.\nvar debugDescription: String\nA textual representation that’s suitable for output during debugging.\nComparing Configurations\nstatic func == (TVMediaItemContentConfiguration, TVMediaItemContentConfiguration) -> Bool\nReturns a Boolean value that indicates whether two values are equal.\nstatic func != (Self, Self) -> Bool\nReturns a Boolean value indicating whether two values are not equal.\nAccessing the Hash Value\nfunc hash(into: inout Hasher)\nHashes the essential components of the value by passing them into the hasher.\nvar hashValue: Int\nThe hash value.\nDefault Implementations\nCustomDebugStringConvertible Implementations\nCustomReflectable Implementations\nCustomStringConvertible Implementations\nEquatable Implementations\nRelationships\nConforms To\nCustomDebugStringConvertible\nCustomReflectable\nCustomStringConvertible\nEquatable\nHashable\nUIContentConfiguration\nSee Also\nCreating a Media Item Content View\nconvenience init(configuration: TVMediaItemContentConfiguration)\nCreates a media item content view with the configuration you specify."
+  },
+  {
+    "title": "UIContentView Implementations",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentview/uicontentview-implementations",
+    "html": "Topics\nInstance Properties\nvar configuration: any UIContentConfiguration\nThe current configuration of the view.\nInstance Methods\nfunc supports(any UIContentConfiguration) -> Bool"
+  },
+  {
+    "title": "maskAmountWillChange(_:)",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcollectionviewfullscreencell/maskamountwillchange(_:)",
+    "html": "Discussion\nSee Also\nManaging Cell Mask\nfunc maskAmountDidChange()\nNotifies the cell when its mask amount changes."
+  },
+  {
+    "title": "normalizedPositionWillChange(_:)",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcollectionviewfullscreencell/normalizedpositionwillchange(_:)",
+    "html": "See Also\nManaging Cell Position\nfunc normalizedPositionDidChange()\nNotifies the cell when its normalized position changes."
+  },
+  {
+    "title": "maskAmountDidChange()",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcollectionviewfullscreencell/maskamountdidchange()",
+    "html": "Discussion\nSee Also\nManaging Cell Mask\nfunc maskAmountWillChange(CGFloat)\nNotifies the cell when its mask amount is about to change."
+  },
+  {
+    "title": "TVCaptionButtonView",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcaptionbuttonview",
+    "html": "Overview\n\nA caption button responds to user interactions and can contain an image or text. When the caption button comes into focus, the caption button expands in the leading, top, and trailing directions. The user can click the caption button to select an option. As the user moves their finger on the Siri Remote up and down, or left and right, the caption button may limit the direction of the tilt based on the type set in motionDirection.\n\nTopics\nSetting the Motion Direction\nvar motionDirection: TVCaptionButtonViewMotionDirection\nThe direction that the caption button view tilts in response to user interaction on the remote.\nenum TVCaptionButtonViewMotionDirection\nThe directions that the caption button view can tilt in response to user interactions on the remote.\nConfiguring the Caption Button\nvar contentImage: UIImage?\nThe image displayed in the main content view.\nvar contentText: String?\nThe text displayed in the main content view.\nvar title: String?\nThe title for the caption button.\nvar subtitle: String?\nThe subtitle of the caption button.\nRelationships\nInherits From\nTVLockupView\nConforms To\nCALayerDelegate\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSCoding\nNSObjectProtocol\nUIAccessibilityIdentification\nUIAppearance\nUIAppearanceContainer\nUIContextMenuInteractionDelegate\nUICoordinateSpace\nUIDynamicItem\nUIFocusEnvironment\nUIFocusItem\nUIFocusItemContainer\nUIResponderStandardEditActions\nUITraitChangeObservable\nUITraitEnvironment\nUIUserActivityRestoring\nSee Also\nLockup views\nclass TVLockupView\nA focusable view that presents main content, like a movie poster, and an optional header and footer.\nprotocol TVLockupViewComponent\nThe protocol for responding to lockup view state changes.\nclass TVLockupHeaderFooterView\nA view that contains header and footer information.\nclass TVCardView\nA view that responds to focus interaction with a motion effect it applies to all of its subviews.\nclass TVPosterView\nAn optimized view for displaying an image, a header, and a footer.\nclass TVMonogramView\nA specialized lockup view that contains a circular image of a person or the person’s initials, along with a footer view.\nDeprecated"
+  },
+  {
+    "title": "TVMonogramView",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramview",
+    "html": "Deprecated\n\nUse TVMonogramContentView instead.\n\nOverview\n\nIf you don’t provide an image, the system provides a generic placeholder image. If personNameComponents is not nil, the system creates a localized monogram image using the first initials from the name components.\n\nTopics\nConfiguring a Monogram\nvar personNameComponents: PersonNameComponents?\nThe names used to create a monogram image.\nvar image: UIImage?\nThe custom image for the monogram.\nvar title: String?\nThe title for the monogram.\nvar subtitle: String?\nThe subtitle for the monogram.\nRelationships\nInherits From\nTVLockupView\nConforms To\nCALayerDelegate\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSCoding\nNSObjectProtocol\nSendable\nUIAccessibilityIdentification\nUIAppearance\nUIAppearanceContainer\nUIContextMenuInteractionDelegate\nUICoordinateSpace\nUIDynamicItem\nUIFocusEnvironment\nUIFocusItem\nUIFocusItemContainer\nUIResponderStandardEditActions\nUITraitChangeObservable\nUITraitEnvironment\nUIUserActivityRestoring\nSee Also\nLockup views\nclass TVLockupView\nA focusable view that presents main content, like a movie poster, and an optional header and footer.\nprotocol TVLockupViewComponent\nThe protocol for responding to lockup view state changes.\nclass TVLockupHeaderFooterView\nA view that contains header and footer information.\nclass TVCardView\nA view that responds to focus interaction with a motion effect it applies to all of its subviews.\nclass TVPosterView\nAn optimized view for displaying an image, a header, and a footer.\nclass TVCaptionButtonView\nA button-like view that responds to user interactions."
+  },
+  {
+    "title": "TVCardView",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcardview",
+    "html": "Overview\n\nA TVCardView object is a specialized version of TVLockupView that presents an arbitrarily composed view hierarchy in a floating content view. You add custom subviews to the contentView property, and the subviews act as a single unit in regard to selection and motion effects. You typically use a TVCardView to display ratings and reviews for a media item. The following figure shows a rating card that consists of two label views (the rating and related information) and an image view (the stars).\n\nTopics\nSetting the Background Color\nvar cardBackgroundColor: UIColor?\nThe background color of the content view.\nRelationships\nInherits From\nTVLockupView\nConforms To\nCALayerDelegate\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSCoding\nNSObjectProtocol\nSendable\nUIAccessibilityIdentification\nUIAppearance\nUIAppearanceContainer\nUIContextMenuInteractionDelegate\nUICoordinateSpace\nUIDynamicItem\nUIFocusEnvironment\nUIFocusItem\nUIFocusItemContainer\nUIResponderStandardEditActions\nUITraitChangeObservable\nUITraitEnvironment\nUIUserActivityRestoring\nSee Also\nLockup views\nclass TVLockupView\nA focusable view that presents main content, like a movie poster, and an optional header and footer.\nprotocol TVLockupViewComponent\nThe protocol for responding to lockup view state changes.\nclass TVLockupHeaderFooterView\nA view that contains header and footer information.\nclass TVPosterView\nAn optimized view for displaying an image, a header, and a footer.\nclass TVCaptionButtonView\nA button-like view that responds to user interactions.\nclass TVMonogramView\nA specialized lockup view that contains a circular image of a person or the person’s initials, along with a footer view.\nDeprecated"
+  },
+  {
+    "title": "TVMediaItemContentView",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmediaitemcontentview",
+    "html": "Overview\n\nThe following code illustrates how to update the configuration for a wide media item:\n\noverride func updateConfiguration(using state: UICellConfigurationState) {\n    var configuration = TVMediaItemContentConfiguration.wideCell().updatedConfiguration(for: state)\n\n\n    configuration.image = coverArtImage\n    configuration.text = // The title of the media content.\n    configuration.secondaryText = \"S1, E1\"\n    configuration.playbackProgress = 0.4\n    configuration.badgeText = \"Live\"\n    configuration.badgeProperties = TVMediaItemContentConfiguration.BadgeProperties.liveContent()\n\n\n    self.contentConfiguration = configuration\n}\n\nTopics\nCreating a Media Item Content View\nconvenience init(configuration: TVMediaItemContentConfiguration)\nCreates a media item content view with the configuration you specify.\nstruct TVMediaItemContentConfiguration\nA content configuration for a media item view.\nManaging the Content Configuration\nvar configuration: any UIContentConfiguration\nThe current configuration of the view.\nManaging the Content Layout\nvar focusedFrameGuide: UILayoutGuide\nA guide for positioning other elements with the content view image’s focused frame.\nDefault Implementations\nUIContentView Implementations\nRelationships\nInherits From\nUIView\nConforms To\nCALayerDelegate\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSCoding\nNSObjectProtocol\nSendable\nUIAccessibilityIdentification\nUIAppearance\nUIAppearanceContainer\nUIContentView\nUICoordinateSpace\nUIDynamicItem\nUIFocusEnvironment\nUIFocusItem\nUIFocusItemContainer\nUIResponderStandardEditActions\nUITraitChangeObservable\nUITraitEnvironment\nUIUserActivityRestoring\nSee Also\nContent views\nclass TVMonogramContentView\nA view that contains a circular image of a person or the person’s initials."
+  },
+  {
+    "title": "TVLockupHeaderFooterView",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvlockupheaderfooterview",
+    "html": "Overview\n\nYou can add header and footer views containing titles and subtitles to the lockup view. Headers and footers are always displayed when the lockup view is in focus.\n\nTopics\nAdding Titles\nvar titleLabel: UILabel?\nThe title for a header or footer.\nvar subtitleLabel: UILabel?\nThe subtitle for a header or footer.\nConfiguring Focus Behavior\nvar showsOnlyWhenAncestorFocused: Bool\nA Boolean value indicating whether titles and subtitles are displayed when a lockup view isn’t in focus.\nRelationships\nInherits From\nUIView\nConforms To\nCALayerDelegate\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSCoding\nNSObjectProtocol\nSendable\nTVLockupViewComponent\nUIAccessibilityIdentification\nUIAppearance\nUIAppearanceContainer\nUICoordinateSpace\nUIDynamicItem\nUIFocusEnvironment\nUIFocusItem\nUIFocusItemContainer\nUIResponderStandardEditActions\nUITraitChangeObservable\nUITraitEnvironment\nUIUserActivityRestoring\nSee Also\nLockup views\nclass TVLockupView\nA focusable view that presents main content, like a movie poster, and an optional header and footer.\nprotocol TVLockupViewComponent\nThe protocol for responding to lockup view state changes.\nclass TVCardView\nA view that responds to focus interaction with a motion effect it applies to all of its subviews.\nclass TVPosterView\nAn optimized view for displaying an image, a header, and a footer.\nclass TVCaptionButtonView\nA button-like view that responds to user interactions.\nclass TVMonogramView\nA specialized lockup view that contains a circular image of a person or the person’s initials, along with a footer view.\nDeprecated"
+  },
+  {
+    "title": "TVLockupViewComponent",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvlockupviewcomponent",
+    "html": "Topics\nUpdating the Lockup View Appearance\nfunc updateAppearance(forLockupViewState: UIControl.State)\nProvides an opportunity to change the appearance of a view when a state changes.\n\nRequired\n\nRelationships\nInherits From\nNSObjectProtocol\nConforming Types\nTVLockupHeaderFooterView\nSee Also\nLockup views\nclass TVLockupView\nA focusable view that presents main content, like a movie poster, and an optional header and footer.\nclass TVLockupHeaderFooterView\nA view that contains header and footer information.\nclass TVCardView\nA view that responds to focus interaction with a motion effect it applies to all of its subviews.\nclass TVPosterView\nAn optimized view for displaying an image, a header, and a footer.\nclass TVCaptionButtonView\nA button-like view that responds to user interactions.\nclass TVMonogramView\nA specialized lockup view that contains a circular image of a person or the person’s initials, along with a footer view.\nDeprecated"
+  },
+  {
+    "title": "TVMonogramContentView",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvmonogramcontentview",
+    "html": "Overview\n\nThe system provides a generic placeholder image if image is nil. If personNameComponents isn’t nil, the system creates a localized monogram image using the first initials from the name components.\n\nThe following code illustrates how to update the configuration for a monogram:\n\noverride func updateConfiguration(using state: UICellConfigurationState) {\n    var configuration = TVMonogramContentConfiguration().updatedConfiguration(for: state)\n\n\n    configuration.image = avatarImage\n    configuration.text = \"Anne Johnson\"\n    configuration.secondaryText = \"Actor\"\n    configuration.personNameComponents = nameComponents\n\n\n    self.contentConfiguration = configuration\n}\n\nTopics\nCreating a Monogram Content View\nconvenience init(configuration: TVMonogramContentConfiguration)\nCreates a monogram content view with the configuration you specify.\nstruct TVMonogramContentConfiguration\nA content configuration for a monogram view.\nManaging the Content Configuration\nvar configuration: any UIContentConfiguration\nThe current configuration of the view.\nManaging the Content Layout\nvar focusedFrameGuide: UILayoutGuide\nA guide for positioning other elements with the content view image’s focused frame.\nDefault Implementations\nUIContentView Implementations\nRelationships\nInherits From\nUIView\nConforms To\nCALayerDelegate\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSCoding\nNSObjectProtocol\nSendable\nUIAccessibilityIdentification\nUIAppearance\nUIAppearanceContainer\nUIContentView\nUICoordinateSpace\nUIDynamicItem\nUIFocusEnvironment\nUIFocusItem\nUIFocusItemContainer\nUIResponderStandardEditActions\nUITraitChangeObservable\nUITraitEnvironment\nUIUserActivityRestoring\nSee Also\nContent views\nclass TVMediaItemContentView\nA view that represents media content, such as movies and TV shows."
+  },
+  {
+    "title": "TVCollectionViewFullScreenCell",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcollectionviewfullscreencell",
+    "html": "Overview\n\nUse TVCollectionViewFullScreenCell to populate the full-screen collection view with content.\n\nTopics\nModifying Cell Appearance\nvar contentBleed: UIEdgeInsets\nThe amount of content that overlaps into the masked portions of the cell.\nvar cornerRadius: CGFloat\nThe radius to use when drawing rounded corners for the cell.\nvar maskAmount: CGFloat\nThe factor that determines the amount of masking applied on the cell.\nAccessing Cell Views\nvar maskedContentView: UIView\nThe content view in focus.\nvar maskedBackgroundView: UIView\nThe background view that performs the parallax effect.\nAccessing Cell Position\nvar normalizedPosition: CGFloat\nThe value that determines the current cell’s relative position on the screen.\nManaging Cell Position\nfunc normalizedPositionDidChange()\nNotifies the cell when its normalized position changes.\nfunc normalizedPositionWillChange(CGFloat)\nNotifies the cell when its normalized position is about to change.\nManaging Cell Mask\nfunc maskAmountDidChange()\nNotifies the cell when its mask amount changes.\nfunc maskAmountWillChange(CGFloat)\nNotifies the cell when its mask amount is about to change.\nManaging the Parallax Effect\nvar parallaxOffset: CGFloat\nThe number of pixels by which to shift the background from the center when moving focus.\nRelationships\nInherits From\nUICollectionViewCell\nConforms To\nCALayerDelegate\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSCoding\nNSObjectProtocol\nSendable\nUIAccessibilityIdentification\nUIAppearance\nUIAppearanceContainer\nUICoordinateSpace\nUIDynamicItem\nUIFocusEnvironment\nUIFocusItem\nUIFocusItemContainer\nUIResponderStandardEditActions\nUITraitChangeObservable\nUITraitEnvironment\nUIUserActivityRestoring\nSee Also\nCollections of content\nCreating immersive experiences using a full-screen layout\nDisplay content with a collection view that maximizes the tvOS experience.\nclass TVCollectionViewFullScreenLayout\nA collection view layout that organizes items into a browsable, full-screen display format.\nprotocol TVCollectionViewDelegateFullScreenLayout\nMethods that send notifications of events during cell transitions.\nclass TVCollectionViewFullScreenLayoutAttributes\nAttributes to manage the appearance of the collection view’s layout."
+  },
+  {
+    "title": "TVCollectionViewFullScreenLayoutAttributes",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcollectionviewfullscreenlayoutattributes",
+    "html": "Topics\nModifying Cell Appearance\nvar contentBleed: UIEdgeInsets\nThe amount of content that bleeds into the masked portions of the cell.\nvar cornerRadius: CGFloat\nThe radius to use when drawing rounded corners for the cell.\nvar maskAmount: CGFloat\nThe amount of masking to apply to the cell.\nModifying the Parallax Effect\nvar parallaxOffset: CGFloat\nThe number of points by which to shift the background from the center when moving focus.\nManaging Cell Position\nvar normalizedPosition: CGFloat\nA value that indicates the distance of the current cell from the collection view’s center cell.\nRelationships\nInherits From\nUICollectionViewLayoutAttributes\nConforms To\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSCopying\nNSObjectProtocol\nUIDynamicItem\nSee Also\nCollections of content\nCreating immersive experiences using a full-screen layout\nDisplay content with a collection view that maximizes the tvOS experience.\nclass TVCollectionViewFullScreenLayout\nA collection view layout that organizes items into a browsable, full-screen display format.\nprotocol TVCollectionViewDelegateFullScreenLayout\nMethods that send notifications of events during cell transitions.\nclass TVCollectionViewFullScreenCell\nA full-screen cell to use in full-screen display format."
+  },
+  {
+    "title": "TVCollectionViewFullScreenLayout",
+    "url": "https://developer.apple.com/documentation/tvuikit/tvcollectionviewfullscreenlayout",
+    "html": "Overview\n\nUse this class to create a full-screen browsing experience. Full-screen layouts are an immersive way to present and navigate through content.\n\nTopics\nManaging a collection view’s appearance\nvar interitemSpacing: CGFloat\nThe spacing between each cell in a collection view.\nAccessing collection view items\nvar centerIndexPath: IndexPath?\nThe index path of the currently centered item.\nConfiguring cell masks\nvar maskAmount: CGFloat\nThe amount by which to mask the cells in a collection view.\nvar maskInset: UIEdgeInsets\nThe edge insets of the cell mask.\nManaging cell appearance\nvar cornerRadius: CGFloat\nThe radius to use when drawing rounded corners for the cell.\nManaging transitions\nvar parallaxFactor: CGFloat\nA value that specifies how slowly the background should move relative to the foreground.\nvar isTransitioningToCenterIndexPath: Bool\nA Boolean value that indicates whether the cell is changing index paths.\nRelationships\nInherits From\nUICollectionViewLayout\nConforms To\nCVarArg\nCustomDebugStringConvertible\nCustomStringConvertible\nEquatable\nHashable\nNSCoding\nNSObjectProtocol\nSee Also\nCollections of content\nCreating immersive experiences using a full-screen layout\nDisplay content with a collection view that maximizes the tvOS experience.\nprotocol TVCollectionViewDelegateFullScreenLayout\nMethods that send notifications of events during cell transitions.\nclass TVCollectionViewFullScreenCell\nA full-screen cell to use in full-screen display format.\nclass TVCollectionViewFullScreenLayoutAttributes\nAttributes to manage the appearance of the collection view’s layout."
+  },
+  {
+    "title": "Creating immersive experiences using a full-screen layout",
+    "url": "https://developer.apple.com/documentation/tvuikit/creating-immersive-experiences-using-a-full-screen-layout",
+    "html": "Overview\n\nNote\n\nThis sample code project is associated with WWDC 2019 session 211: Mastering the Living Room with tvOS.\n\nSee Also\nCollections of content\nclass TVCollectionViewFullScreenLayout\nA collection view layout that organizes items into a browsable, full-screen display format.\nprotocol TVCollectionViewDelegateFullScreenLayout\nMethods that send notifications of events during cell transitions.\nclass TVCollectionViewFullScreenCell\nA full-screen cell to use in full-screen display format.\nclass TVCollectionViewFullScreenLayoutAttributes\nAttributes to manage the appearance of the collection view’s layout."
+  },
+  {
+    "title": "TVUIKit",
+    "url": "https://developer.apple.com/documentation/TVUIKit",
+    "html": "Overview\n\nWhen you build an app for tvOS with UIKit, you can use TVUIKit to refine the display of your content for a TV environment. Use the TV Services framework to provide deeper integration between your app and Apple TV.\n\nFor more information about combining Apple technologies to build a great Apple TV experience, see Planning your tvOS app.\n\nTopics\nCollections of content\nCreating immersive experiences using a full-screen layout\nDisplay content with a collection view that maximizes the tvOS experience.\nclass TVCollectionViewFullScreenLayout\nA collection view layout that organizes items into a browsable, full-screen display format.\nprotocol TVCollectionViewDelegateFullScreenLayout\nMethods that send notifications of events during cell transitions.\nclass TVCollectionViewFullScreenCell\nA full-screen cell to use in full-screen display format.\nclass TVCollectionViewFullScreenLayoutAttributes\nAttributes to manage the appearance of the collection view’s layout.\nContent views\nclass TVMediaItemContentView\nA view that represents media content, such as movies and TV shows.\nclass TVMonogramContentView\nA view that contains a circular image of a person or the person’s initials.\nNumeric input\nclass TVDigitEntryViewController\nA view controller that enables the user to enter digits, like a passcode, in your app.\nLockup views\nclass TVLockupView\nA focusable view that presents main content, like a movie poster, and an optional header and footer.\nprotocol TVLockupViewComponent\nThe protocol for responding to lockup view state changes.\nclass TVLockupHeaderFooterView\nA view that contains header and footer information.\nclass TVCardView\nA view that responds to focus interaction with a motion effect it applies to all of its subviews.\nclass TVPosterView\nAn optimized view for displaying an image, a header, and a footer.\nclass TVCaptionButtonView\nA button-like view that responds to user interactions.\nclass TVMonogramView\nA specialized lockup view that contains a circular image of a person or the person’s initials, along with a footer view.\nDeprecated"
+  }
+]
